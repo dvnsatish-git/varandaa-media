@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="వరండా టాకీస్ — Telugu News, OTT, Raashifalalu, Farmers, Traffic, Spiritual content for Telugu people worldwide">
+<meta name="keywords" content="Telugu News, Varandaa Talkies, Telugu Channel, Raashifalalu, Telugu Calendar, Telugu Farmers">
+<meta property="og:title" content="వరండా టాకీస్ | Varandaa Talkies">
+<meta property="og:description" content="Telugu News, Culture & Community — India and USA">
+<meta property="og:url" content="https://varandaatalkies.com">
+<title>వరండా టాకీస్ | Varandaa Talkies — Telugu News & Media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Telugu:ital@0;1&family=Noto+Serif+Telugu:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════
+   DESIGN TOKENS
+═══════════════════════════════════ */
+:root {
+  --saffron:   #E8590C;
+  --deep:      #B84208;
+  --turmeric:  #F5A623;
+  --night:     #0C0A06;
+  --charcoal:  #1E1A14;
+  --warm-dark: #2A1F0E;
+  --cream:     #FBF7F0;
+  --parchment: #F7F1E8;
+  --warm-white:#FEFCF8;
+  --ash:       #9E8E7A;
+  --border:    #E5D9C8;
+  --farmer:    #2E7D32;
+  --house:     #AD1457;
+  --civic:     #1565C0;
+  --traffic:   #E65100;
+  --spirit:    #7B1C1C;
+  --teal:      #00766C;
+  --nav-h:     56px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--night);overflow-x:hidden}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+.te {font-family:'Noto Serif Telugu',serif}
+.te-body{font-family:'Tiro Telugu',serif}
+.serif{font-family:'Cormorant Garamond',serif}
+.mono{font-family:'DM Mono',monospace}
+
+/* ═══════════════════════════════════
+   BREAKING TICKER
+═══════════════════════════════════ */
+.ticker{height:32px;background:var(--saffron);display:flex;align-items:center;overflow:hidden;flex-shrink:0}
+.ticker-lbl{background:var(--night);color:var(--turmeric);font-size:8.5px;font-weight:700;letter-spacing:2.5px;padding:0 14px;height:100%;display:flex;align-items:center;white-space:nowrap;flex-shrink:0}
+.ticker-track{display:flex;animation:ticker 55s linear infinite;white-space:nowrap}
+.ticker-track:hover{animation-play-state:paused}
+.t-item{font-size:11.5px;color:white;font-weight:500;padding:0 44px 0 0}
+.t-item::before{content:"◆ ";color:rgba(255,255,255,.55);font-size:7px}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ═══════════════════════════════════
+   HEADER
+═══════════════════════════════════ */
+.hdr{background:var(--night);border-bottom:2px solid var(--turmeric);position:sticky;top:0;z-index:200}
+.hdr-in{max-width:1320px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:60px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.brand-mark{width:40px;height:40px;background:var(--saffron);border-radius:5px;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif Telugu',serif;font-size:17px;font-weight:900;color:white;flex-shrink:0}
+.brand-te{font-family:'Noto Serif Telugu',serif;font-size:19px;font-weight:700;color:white;display:block;line-height:1}
+.brand-en{font-size:8.5px;color:var(--turmeric);letter-spacing:2.5px;text-transform:uppercase;display:block;margin-top:2px}
+.hdr-search{flex:1;max-width:360px;position:relative}
+.hdr-search input{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:white;padding:8px 36px 8px 14px;border-radius:4px;font-size:13px;font-family:'Outfit',sans-serif;outline:none;transition:all .2s}
+.hdr-search input::placeholder{color:rgba(255,255,255,.3)}
+.hdr-search input:focus{background:rgba(255,255,255,.13);border-color:rgba(245,166,35,.5)}
+.hdr-search-icon{position:absolute;right:10px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.35);font-size:14px;pointer-events:none}
+.hdr-right{margin-left:auto;display:flex;align-items:center;gap:10px}
+.edition-pill{background:rgba(245,166,35,.12);border:1px solid rgba(245,166,35,.25);color:var(--turmeric);font-size:9.5px;font-weight:600;letter-spacing:1px;padding:5px 11px;border-radius:3px;white-space:nowrap}
+.yt-cta{display:flex;align-items:center;gap:6px;background:var(--saffron);color:white;padding:8px 15px;border-radius:3px;font-size:12px;font-weight:600;transition:background .2s;white-space:nowrap;flex-shrink:0}
+.yt-cta:hover{background:var(--deep)}
+.yt-cta svg{flex-shrink:0}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:6px;border-radius:3px;transition:background .2s}
+.hamburger:hover{background:rgba(255,255,255,.1)}
+.ham-line{width:22px;height:2px;background:white;border-radius:1px;transition:all .3s}
+.hamburger.open .ham-line:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open .ham-line:nth-child(2){opacity:0}
+.hamburger.open .ham-line:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ═══════════════════════════════════
+   MAIN NAV
+═══════════════════════════════════ */
+.mainnav{background:var(--charcoal);border-bottom:1px solid rgba(255,255,255,.05);position:sticky;top:60px;z-index:190}
+.mainnav-in{max-width:1320px;margin:0 auto;padding:0 24px;display:flex;align-items:center;overflow-x:auto;scrollbar-width:none}
+.mainnav-in::-webkit-scrollbar{display:none}
+.nav-link{color:rgba(255,255,255,.45);font-size:11.5px;font-weight:600;padding:0 14px;height:44px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .2s;flex-shrink:0}
+.nav-link .nl-sub{font-family:'Noto Serif Telugu',serif;font-size:9.5px;color:rgba(255,255,255,.2)}
+.nav-link:hover,.nav-link.active{color:white}
+.nav-link:hover .nl-sub,.nav-link.active .nl-sub{color:var(--turmeric)}
+.nav-link[data-sec="home"]:hover,.nav-link[data-sec="home"].active{border-bottom-color:var(--saffron)}
+.nav-link[data-sec="politics"]:hover,.nav-link[data-sec="politics"].active{border-bottom-color:#E53935}
+.nav-link[data-sec="entertainment"]:hover,.nav-link[data-sec="entertainment"].active{border-bottom-color:var(--turmeric)}
+.nav-link[data-sec="america"]:hover,.nav-link[data-sec="america"].active{border-bottom-color:#1976D2}
+.nav-link[data-sec="ott"]:hover,.nav-link[data-sec="ott"].active{border-bottom-color:var(--teal)}
+.nav-link[data-sec="spiritual"]:hover,.nav-link[data-sec="spiritual"].active{border-bottom-color:#B71C1C}
+.nav-link[data-sec="farmers"]:hover,.nav-link[data-sec="farmers"].active{border-bottom-color:var(--farmer)}
+.nav-link[data-sec="housewives"]:hover,.nav-link[data-sec="housewives"].active{border-bottom-color:var(--house)}
+.nav-link[data-sec="everyone"]:hover,.nav-link[data-sec="everyone"].active{border-bottom-color:var(--civic)}
+.nav-link[data-sec="traffic"]:hover,.nav-link[data-sec="traffic"].active{border-bottom-color:var(--traffic)}
+.nav-link[data-sec="weekend"]:hover,.nav-link[data-sec="weekend"].active{border-bottom-color:#7B1FA2}
+.nav-link[data-sec="achievements"]:hover,.nav-link[data-sec="achievements"].active{border-bottom-color:#F9A825}
+.nav-divider{width:1px;height:20px;background:rgba(255,255,255,.07);flex-shrink:0;margin:0 4px}
+
+/* Mobile nav overlay */
+.mobile-nav{display:none;position:fixed;top:60px;left:0;right:0;bottom:0;background:var(--night);z-index:195;overflow-y:auto;padding:16px 0 40px}
+.mobile-nav.open{display:block}
+.mnav-section{padding:0 20px;margin-bottom:8px}
+.mnav-label{font-size:8.5px;font-weight:700;color:rgba(255,255,255,.3);letter-spacing:2px;text-transform:uppercase;padding:12px 0 6px}
+.mnav-link{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.65);font-size:14px;font-weight:600;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.mnav-link .ml-te{font-family:'Noto Serif Telugu',serif;font-size:15px;color:white}
+.mnav-link .ml-en{font-size:11px;color:rgba(255,255,255,.35);margin-top:1px}
+.mnav-link .ml-icon{font-size:20px;width:28px;text-align:center}
+.mnav-link:hover{color:white}
+
+/* ═══════════════════════════════════
+   SEARCH OVERLAY
+═══════════════════════════════════ */
+.search-overlay{display:none;position:fixed;inset:0;background:rgba(8,6,2,.94);z-index:500;backdrop-filter:blur(6px);align-items:flex-start;justify-content:center;padding-top:80px}
+.search-overlay.open{display:flex}
+.search-box{width:100%;max-width:680px;padding:0 20px}
+.sb-input-wrap{position:relative;margin-bottom:20px}
+.sb-input-wrap input{width:100%;background:rgba(255,255,255,.08);border:2px solid rgba(245,166,35,.4);color:white;padding:16px 48px 16px 18px;border-radius:6px;font-size:18px;font-family:'Outfit',sans-serif;outline:none}
+.sb-input-wrap input::placeholder{color:rgba(255,255,255,.25)}
+.sb-close{position:absolute;right:12px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.4);font-size:22px;cursor:pointer}
+.sb-close:hover{color:white}
+.search-results{display:none}
+.search-results.has-results{display:block}
+.sr-count{font-size:11px;color:rgba(255,255,255,.4);margin-bottom:12px}
+.sr-item{display:flex;gap:12px;align-items:flex-start;padding:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-radius:5px;margin-bottom:8px;cursor:pointer;transition:background .15s}
+.sr-item:hover{background:rgba(255,255,255,.09)}
+.sr-icon{font-size:20px;flex-shrink:0;margin-top:2px}
+.sr-title{font-size:14px;font-weight:600;color:white;margin-bottom:2px}
+.sr-te{font-family:'Noto Serif Telugu',serif;font-size:12px;color:rgba(255,255,255,.5)}
+.sr-cat{font-size:9px;font-weight:700;color:var(--turmeric);letter-spacing:1px;text-transform:uppercase;margin-top:3px}
+.no-results{font-family:'Noto Serif Telugu',serif;font-size:16px;color:rgba(255,255,255,.4);text-align:center;padding:40px 0}
+
+/* ═══════════════════════════════════
+   LAYOUT PRIMITIVES
+═══════════════════════════════════ */
+.wrap{max-width:1320px;margin:0 auto;padding:0 24px}
+.page-grid{display:grid;grid-template-columns:1fr 300px;gap:40px;padding:40px 0 60px}
+.section{margin-bottom:52px}
+.sh{display:flex;align-items:flex-end;padding-bottom:10px;border-bottom:2px solid var(--night);margin-bottom:22px;position:relative}
+.sh::after{content:'';position:absolute;bottom:-2px;left:0;width:50px;height:2px}
+.sh h2{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:700;margin-right:8px}
+.sh-te{font-family:'Noto Serif Telugu',serif;font-size:13px;color:var(--ash)}
+.sh-more{margin-left:auto;font-size:11px;font-weight:600;color:var(--saffron)}
+.sh-more:hover{color:var(--deep)}
+
+/* Section accent colours */
+[data-accent="saffron"] .sh::after{background:var(--saffron)}
+[data-accent="turmeric"] .sh::after{background:var(--turmeric)}
+[data-accent="farmer"]   .sh::after{background:var(--farmer)}
+[data-accent="house"]    .sh::after{background:var(--house)}
+[data-accent="civic"]    .sh::after{background:var(--civic)}
+[data-accent="traffic"]  .sh::after{background:var(--traffic)}
+[data-accent="spirit"]   .sh::after{background:var(--spirit)}
+[data-accent="teal"]     .sh::after{background:var(--teal)}
+
+/* ═══════════════════════════════════
+   HERO SECTION
+═══════════════════════════════════ */
+#home{background:var(--night)}
+.hero-grid{display:grid;grid-template-columns:58fr 42fr;grid-template-rows:300px 190px;gap:2px;max-width:1320px;margin:0 auto}
+.hc{position:relative;overflow:hidden;cursor:pointer}
+.hc img{transition:transform .5s;width:100%;height:100%}
+.hc:hover img{transform:scale(1.04)}
+.hc-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 20%,rgba(8,6,2,.55) 55%,rgba(8,6,2,.92) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:18px 22px}
+.hc.main{grid-row:1/3}
+.hc.main .hc-overlay{padding:26px 30px}
+.hc-tag{display:inline-block;font-size:8.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;padding:3px 9px;border-radius:2px;margin-bottom:7px}
+.tag-red   {background:var(--saffron);color:white}
+.tag-gold  {background:var(--turmeric);color:var(--night)}
+.tag-blue  {background:#1565C0;color:white}
+.tag-teal  {background:var(--teal);color:white}
+.tag-green {background:var(--farmer);color:white}
+.tag-dark  {background:rgba(255,255,255,.15);color:white;backdrop-filter:blur(4px)}
+.hc-title{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;color:white;line-height:1.3;margin-bottom:3px}
+.hc.main .hc-title{font-size:26px;line-height:1.28;margin-bottom:6px}
+.hc-te{font-family:'Noto Serif Telugu',serif;font-size:12px;color:rgba(255,255,255,.7);line-height:1.55}
+.hc.main .hc-te{font-size:14px;margin-bottom:8px}
+.hc-meta{font-size:10px;color:rgba(255,255,255,.4);display:flex;gap:10px}
+
+/* ═══════════════════════════════════
+   VIDEO CARD
+═══════════════════════════════════ */
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.vcard{background:var(--warm-white);border:1px solid var(--border);border-radius:5px;overflow:hidden;cursor:pointer;transition:transform .22s,box-shadow .22s}
+.vcard:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(0,0,0,.09)}
+.vthumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:#111}
+.vthumb img{transition:transform .4s}
+.vcard:hover .vthumb img{transform:scale(1.05)}
+.vplay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.vplay-btn{width:42px;height:42px;background:rgba(232,89,12,.88);border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;transform:scale(.7);transition:all .22s}
+.vcard:hover .vplay-btn{opacity:1;transform:scale(1)}
+.vplay-btn svg{width:14px;fill:white;margin-left:3px}
+.vdur{position:absolute;bottom:6px;right:7px;background:rgba(0,0,0,.82);color:white;font-size:10px;font-family:'DM Mono',monospace;padding:2px 6px;border-radius:2px}
+.vauto{position:absolute;top:7px;left:7px;background:rgba(12,10,6,.8);color:var(--turmeric);font-size:8px;font-weight:700;letter-spacing:1px;padding:2px 7px;border-radius:2px}
+.vbody{padding:12px 14px}
+.vcat{font-size:8.5px;font-weight:700;color:var(--saffron);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px}
+.vtitle{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:700;line-height:1.35;margin-bottom:3px;transition:color .2s}
+.vcard:hover .vtitle{color:var(--saffron)}
+.vte{font-family:'Noto Serif Telugu',serif;font-size:11px;color:var(--ash);line-height:1.5;margin-bottom:8px}
+.vmeta{display:flex;justify-content:space-between;font-size:10px;color:var(--ash)}
+.vpill{background:var(--parchment);padding:2px 7px;border-radius:10px;font-size:9px}
+
+/* ═══════════════════════════════════
+   HORIZONTAL STRIP (America / Achievements)
+═══════════════════════════════════ */
+.hstrip{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.hcard{display:flex;gap:12px;background:var(--warm-white);border:1px solid var(--border);border-radius:5px;padding:13px;cursor:pointer;transition:all .2s}
+.hcard:hover{border-color:var(--saffron);box-shadow:0 4px 16px rgba(232,89,12,.08)}
+.hcard img{width:76px;height:56px;border-radius:3px;flex-shrink:0}
+.hc-body{}
+.hc-cat{font-size:8px;font-weight:700;color:var(--saffron);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px}
+.hc-t{font-size:12.5px;font-weight:600;line-height:1.35;margin-bottom:2px;transition:color .2s}
+.hcard:hover .hc-t{color:var(--saffron)}
+.hc-te2{font-family:'Noto Serif Telugu',serif;font-size:11px;color:var(--ash);line-height:1.5}
+.hc-meta{font-size:9.5px;color:var(--ash);margin-top:4px}
+
+/* ═══════════════════════════════════
+   USA PANEL
+═══════════════════════════════════ */
+.usa-panel{background:#0A1628;border-radius:6px;padding:22px;margin-bottom:0}
+.usa-head{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.07)}
+.usa-title{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:700;color:white}
+.usa-te-sub{font-family:'Noto Serif Telugu',serif;font-size:12px;color:rgba(255,255,255,.35)}
+.usa-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.usa-item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:4px;padding:12px 13px;cursor:pointer;transition:border-color .2s}
+.usa-item:hover{border-color:rgba(232,89,12,.4)}
+.usa-cat{font-size:8px;font-weight:700;color:var(--turmeric);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px}
+.usa-t{font-size:12.5px;font-weight:600;color:white;line-height:1.35;margin-bottom:2px;transition:color .2s}
+.usa-item:hover .usa-t{color:var(--turmeric)}
+.usa-te2{font-family:'Noto Serif Telugu',serif;font-size:11px;color:rgba(255,255,255,.4);line-height:1.5}
+.usa-time{font-size:9px;color:rgba(255,255,255,.22);margin-top:4px}
+
+/* ═══════════════════════════════════
+   OTT GRID
+═══════════════════════════════════ */
+.ott-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.ott-card{background:var(--night);border-radius:5px;overflow:hidden;cursor:pointer;border:1px solid rgba(255,255,255,.05);transition:transform .2s}
+.ott-card:hover{transform:translateY(-3px)}
+.ott-thumb{position:relative;aspect-ratio:16/9;overflow:hidden}
+.ott-plat{position:absolute;top:7px;right:7px;font-size:8.5px;font-weight:700;padding:2px 7px;border-radius:2px;letter-spacing:.5px}
+.p-netflix{background:#E50914;color:white}
+.p-prime  {background:#00A8E0;color:white}
+.p-hotstar{background:#1F80E0;color:white}
+.p-aha    {background:#F5D000;color:#111}
+.p-zee    {background:#6B2D8B;color:white}
+.ott-body{padding:10px 12px}
+.ott-t{font-size:13px;font-weight:600;color:white;line-height:1.3;margin-bottom:2px}
+.ott-te2{font-family:'Noto Serif Telugu',serif;font-size:11px;color:rgba(255,255,255,.5)}
+.ott-meta{font-size:9px;color:rgba(255,255,255,.3);margin-top:4px}
+
+/* ═══════════════════════════════════
+   SPIRITUAL SECTION
+═══════════════════════════════════ */
+.spirit-banner{background:linear-gradient(135deg,#3D0C0C,#1A0A00);border-radius:6px;padding:22px 26px;display:flex;align-items:center;gap:20px;margin-bottom:22px;border:1px solid rgba(245,166,35,.15)}
+.sb-ornament{font-size:50px;opacity:.2;flex-shrink:0}
+.sb-content{}
+.sb-te{font-family:'Noto Serif Telugu',serif;font-size:20px;font-weight:900;color:white;margin-bottom:3px}
+.sb-en{font-family:'Cormorant Garamond',serif;font-size:14px;color:rgba(255,255,255,.5);font-style:italic;margin-bottom:12px}
+.sb-pills{display:flex;gap:7px;flex-wrap:wrap}
+.spill{padding:5px 13px;border-radius:20px;font-size:11px;font-weight:600;border:1px solid rgba(245,166,35,.3);color:var(--turmeric);background:rgba(245,166,35,.08);cursor:pointer;transition:all .2s}
+.spill:hover{background:var(--turmeric);color:var(--night)}
+
+.raashi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.rcard{background:var(--warm-white);border:1px solid var(--border);border-radius:5px;padding:14px 12px;cursor:pointer;transition:all .22s;text-align:center;position:relative;overflow:hidden}
+.rcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--turmeric);transform:scaleX(0);transition:transform .25s;transform-origin:left}
+.rcard:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.rcard:hover::before{transform:scaleX(1)}
+.rcard-sym{font-size:26px;margin-bottom:6px}
+.rcard-name{font-family:'Noto Serif Telugu',serif;font-size:15px;font-weight:700;margin-bottom:2px}
+.rcard-en{font-size:9.5px;color:var(--ash);text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px}
+.rcard-stars{color:var(--turmeric);font-size:11px}
+
+.cal-dual{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:22px}
+.cal-panel{background:var(--warm-white);border:1px solid var(--border);border-radius:5px;overflow:hidden}
+.cal-hd{padding:12px 16px;display:flex;align-items:center;justify-content:space-between}
+.cal-india .cal-hd{background:linear-gradient(135deg,var(--saffron),var(--deep))}
+.cal-usa   .cal-hd{background:linear-gradient(135deg,#1E3A5F,#0D2137)}
+.cal-hd-title{font-family:'Noto Serif Telugu',serif;font-size:14px;font-weight:700;color:white}
+.cal-hd-sub{font-size:9.5px;color:rgba(255,255,255,.6);margin-top:1px}
+.cal-nav{display:flex;align-items:center;justify-content:space-between;padding:9px 14px;border-bottom:1px solid var(--border)}
+.cal-nav button{background:none;border:1px solid var(--border);color:var(--ash);width:26px;height:26px;border-radius:3px;font-size:13px;cursor:pointer;transition:all .15s}
+.cal-nav button:hover{border-color:var(--saffron);color:var(--saffron)}
+.cal-month-t{font-family:'Noto Serif Telugu',serif;font-size:13px;font-weight:700;text-align:center}
+.cal-month-t span{font-family:'Outfit',sans-serif;font-size:10px;color:var(--ash);font-weight:400;display:block;margin-top:1px}
+.cal-body{padding:10px 12px 12px}
+.cal-dh{display:grid;grid-template-columns:repeat(7,1fr);margin-bottom:4px}
+.cal-dh div{text-align:center;font-size:8.5px;font-weight:700;color:var(--ash);padding:3px 0}
+.cal-dh .sun{color:var(--saffron)}
+.cal-dates{display:grid;grid-template-columns:repeat(7,1fr);gap:1px}
+.cdate{aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:3px;cursor:pointer;transition:background .1s;font-size:11.5px}
+.cdate:hover{background:rgba(232,89,12,.07)}
+.cdate.today{background:var(--saffron);color:white}
+.cdate.today .cte{color:rgba(255,255,255,.7)}
+.cdate.fest{background:rgba(245,166,35,.1);border:1px solid rgba(245,166,35,.3)}
+.cdate.empty{opacity:0;pointer-events:none}
+.cdate-n{font-size:11px;font-weight:500;line-height:1}
+.cte{font-family:'Noto Serif Telugu',serif;font-size:7.5px;color:var(--ash);margin-top:1px}
+.cdot{width:3px;height:3px;background:var(--turmeric);border-radius:50%;margin-top:1px}
+
+/* ═══════════════════════════════════
+   FARMERS
+═══════════════════════════════════ */
+.mandi-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.mt{padding:5px 12px;border-radius:3px;font-size:11px;font-weight:600;cursor:pointer;border:1px solid var(--border);background:var(--warm-white);color:var(--ash);transition:all .2s}
+.mt.active{background:var(--farmer);color:white;border-color:var(--farmer)}
+.price-tbl{width:100%;border-collapse:collapse;margin-bottom:22px;font-size:12.5px}
+.price-tbl th{background:var(--farmer);color:white;padding:9px 12px;text-align:left;font-size:10.5px;font-family:'Noto Serif Telugu',serif}
+.price-tbl tr:nth-child(even){background:#E8F5E9}
+.price-tbl tr:hover{background:#C8E6C9}
+.price-tbl td{padding:9px 12px;border-bottom:1px solid #DCEDC8;vertical-align:middle}
+.crop-te{font-family:'Noto Serif Telugu',serif;font-size:13.5px;font-weight:700;display:block}
+.crop-en{font-size:10px;color:var(--ash)}
+.pval{font-family:'DM Mono',monospace;font-size:13px;font-weight:700}
+.chg-up{color:var(--farmer);font-size:11px;font-weight:700}
+.chg-dn{color:#C62828;font-size:11px;font-weight:700}
+.weather-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:22px}
+.wcard{background:#E8F5E9;border:1px solid #A5D6A7;border-radius:4px;padding:13px;text-align:center}
+.wc-city{font-family:'Noto Serif Telugu',serif;font-size:12px;font-weight:700;margin-bottom:3px}
+.wc-icon{font-size:24px;margin-bottom:3px}
+.wc-temp{font-family:'DM Mono',monospace;font-size:20px;font-weight:700;color:#1B5E20}
+.wc-rain{font-size:10px;color:#1565C0;font-weight:600;margin-top:2px}
+
+/* ═══════════════════════════════════
+   HOUSEWIVES
+═══════════════════════════════════ */
+.recipe-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rcp-card{background:var(--warm-white);border:1px solid var(--border);border-radius:5px;overflow:hidden;cursor:pointer;transition:all .22s}
+.rcp-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.rcp-img{position:relative;aspect-ratio:4/3;overflow:hidden}
+.rcp-img img{transition:transform .4s}
+.rcp-card:hover .rcp-img img{transform:scale(1.05)}
+.rcp-time{position:absolute;bottom:7px;right:7px;background:rgba(0,0,0,.75);color:white;font-size:10px;padding:2px 7px;border-radius:3px}
+.rcp-new{position:absolute;top:7px;left:7px;background:var(--house);color:white;font-size:8px;font-weight:700;padding:2px 7px;border-radius:2px}
+.rcp-body{padding:12px 13px}
+.rcp-cat{font-size:8px;font-weight:700;color:var(--house);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px}
+.rcp-title{font-family:'Noto Serif Telugu',serif;font-size:14px;font-weight:700;line-height:1.4;margin-bottom:2px;transition:color .2s}
+.rcp-card:hover .rcp-title{color:var(--house)}
+.rcp-te2{font-family:'Tiro Telugu',serif;font-size:11px;color:var(--ash);line-height:1.6;margin-bottom:7px}
+
+/* ═══════════════════════════════════
+   RIGHTS / CIVIC
+═══════════════════════════════════ */
+.big-rights{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:22px}
+.br-card{background:var(--warm-white);border:2px solid #BBDEFB;border-radius:6px;padding:18px;cursor:pointer;transition:all .2s;text-align:center}
+.br-card:hover{border-color:var(--civic);transform:translateY(-2px)}
+.br-icon{font-size:40px;margin-bottom:8px}
+.br-title{font-family:'Noto Serif Telugu',serif;font-size:18px;font-weight:900;color:#0D47A1;margin-bottom:5px}
+.br-desc{font-family:'Tiro Telugu',serif;font-size:13px;color:var(--ash);line-height:1.75}
+.helpline-row{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+.hl-card{border-radius:5px;padding:14px 8px;text-align:center;cursor:pointer;transition:transform .2s}
+.hl-card:hover{transform:scale(1.03)}
+.hl-num{font-family:'DM Mono',monospace;font-size:22px;font-weight:700;margin-bottom:3px}
+.hl-te2{font-family:'Noto Serif Telugu',serif;font-size:11px;font-weight:700;margin-bottom:1px}
+.hl-en2{font-size:9px;opacity:.65}
+
+/* ═══════════════════════════════════
+   TRAFFIC
+═══════════════════════════════════ */
+.city-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.ctab{padding:6px 14px;border-radius:4px;font-size:12px;font-weight:600;cursor:pointer;border:1px solid var(--border);background:var(--warm-white);color:var(--ash);transition:all .2s}
+.ctab.active{background:var(--traffic);color:white;border-color:var(--traffic)}
+.route-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:18px}
+.route-card{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:13px 14px;display:flex;gap:10px;align-items:center}
+.rdot{width:11px;height:11px;border-radius:50%;flex-shrink:0}
+.rdot-clear{background:#43A047}
+.rdot-slow {background:#FB8C00}
+.rdot-heavy{background:#E53935}
+.rinfo{flex:1}
+.rname-te{font-family:'Noto Serif Telugu',serif;font-size:13px;font-weight:700}
+.rname-en{font-size:10.5px;color:var(--ash)}
+.rstatus{font-size:11px;font-weight:600}
+.st-clear{color:#2E7D32}.st-slow{color:#E65100}.st-heavy{color:#C62828}
+.rtime{font-family:'DM Mono',monospace;font-size:11px;color:var(--ash)}
+.alert-list{display:flex;flex-direction:column;gap:9px}
+.al-item{display:flex;gap:11px;padding:12px 14px;border-radius:4px;cursor:pointer}
+.al-high  {background:#FFEBEE;border:1px solid #FFCDD2}
+.al-medium{background:#FFF3E0;border:1px solid #FFCC80}
+.al-info  {background:#E3F2FD;border:1px solid #90CAF9}
+.al-icon{font-size:20px;flex-shrink:0}
+.al-title{font-family:'Noto Serif Telugu',serif;font-size:13.5px;font-weight:700;margin-bottom:2px}
+.al-te2{font-family:'Tiro Telugu',serif;font-size:12px;color:var(--charcoal);line-height:1.65}
+.al-time{font-size:9px;color:var(--ash);margin-top:3px}
+.live-pill{display:inline-flex;align-items:center;gap:4px;background:#C62828;color:white;font-size:9px;font-weight:700;padding:2px 8px;border-radius:2px;letter-spacing:1px;margin-left:8px}
+.ldot{width:5px;height:5px;background:white;border-radius:50%;animation:blink 1.2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* ═══════════════════════════════════
+   TIPS / REELS / WEEKEND
+═══════════════════════════════════ */
+.tips-row{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}
+.tip-card{background:var(--warm-white);border:1px solid var(--border);border-radius:5px;padding:15px 13px;cursor:pointer;transition:all .2s;text-align:center}
+.tip-card:hover{border-color:var(--saffron);transform:translateY(-2px)}
+.tip-icon{font-size:24px;margin-bottom:7px}
+.tip-cat{font-size:8.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--ash);margin-bottom:4px}
+.tip-title{font-size:12px;font-weight:600;line-height:1.35;margin-bottom:3px;transition:color .2s}
+.tip-card:hover .tip-title{color:var(--saffron)}
+.tip-te2{font-family:'Noto Serif Telugu',serif;font-size:11px;color:var(--ash);line-height:1.5}
+
+.reels-row{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}
+.reel{background:var(--night);border-radius:5px;overflow:hidden;cursor:pointer;aspect-ratio:9/16;position:relative;max-height:190px;transition:transform .2s}
+.reel:hover{transform:scale(1.03)}
+.reel img{width:100%;height:100%}
+.reel-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.85) 0%,transparent 55%);display:flex;flex-direction:column;justify-content:flex-end;padding:9px}
+.reel-lbl{font-size:8.5px;font-weight:700;color:var(--turmeric);letter-spacing:1px;margin-bottom:3px}
+.reel-t{font-size:11px;font-weight:600;color:white;line-height:1.3}
+
+.wknd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.wknd-card{background:var(--warm-white);border:1px solid var(--border);border-radius:5px;overflow:hidden;cursor:pointer;transition:all .22s}
+.wknd-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.07)}
+.wknd-img{aspect-ratio:4/3;overflow:hidden}
+.wknd-img img{transition:transform .4s}
+.wknd-card:hover .wknd-img img{transform:scale(1.05)}
+.wknd-body{padding:12px 13px}
+.wknd-cat{font-size:8px;font-weight:700;color:#7B1FA2;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px}
+.wknd-t{font-size:13px;font-weight:600;line-height:1.35;margin-bottom:3px;transition:color .2s}
+.wknd-card:hover .wknd-t{color:var(--saffron)}
+.wknd-te2{font-family:'Noto Serif Telugu',serif;font-size:11px;color:var(--ash)}
+
+/* Achievements */
+.ach-list{display:flex;flex-direction:column;gap:10px}
+.ach-item{display:flex;gap:12px;align-items:center;background:var(--warm-white);border:1px solid var(--border);border-radius:5px;padding:13px 14px;cursor:pointer;transition:border-color .2s}
+.ach-item:hover{border-color:var(--turmeric)}
+.ach-flag{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--saffron),var(--turmeric));display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.ach-title{font-size:13.5px;font-weight:600;margin-bottom:2px;transition:color .2s}
+.ach-item:hover .ach-title{color:var(--saffron)}
+.ach-te2{font-family:'Noto Serif Telugu',serif;font-size:12px;color:var(--ash)}
+.ach-badge{font-size:9px;font-weight:700;color:var(--turmeric);background:rgba(245,166,35,.1);border:1px solid rgba(245,166,35,.2);padding:2px 8px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+
+/* Fest strip */
+.fest-strip{display:flex;gap:9px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.fest-strip::-webkit-scrollbar{display:none}
+.fest-card{background:var(--warm-white);border:1px solid var(--border);border-radius:4px;padding:13px 14px;min-width:148px;flex-shrink:0;cursor:pointer;text-align:center;transition:all .2s}
+.fest-card:hover{border-color:var(--saffron);background:rgba(232,89,12,.02)}
+.fest-icon{font-size:28px;margin-bottom:5px}
+.fest-name{font-family:'Noto Serif Telugu',serif;font-size:13px;font-weight:700;margin-bottom:2px}
+.fest-date{font-size:10px;font-weight:600;color:var(--saffron);margin-top:4px}
+.fest-days{font-size:9.5px;color:var(--ash)}
+
+/* ═══════════════════════════════════
+   SIDEBAR
+═══════════════════════════════════ */
+.sb-widget{background:var(--warm-white);border:1px solid var(--border);border-radius:5px;padding:18px;margin-bottom:20px}
+.sw-title{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;margin-bottom:2px}
+.sw-te{font-family:'Noto Serif Telugu',serif;font-size:11px;color:var(--ash);margin-bottom:13px}
+.yt-sub-btn{display:flex;align-items:center;justify-content:center;gap:6px;background:var(--saffron);color:white;padding:10px;border-radius:3px;font-weight:600;font-size:12.5px;transition:background .2s;width:100%}
+.yt-sub-btn:hover{background:var(--deep)}
+.yt-stats{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:11px}
+.ys{background:var(--parchment);border-radius:3px;padding:9px 6px;text-align:center}
+.ys-n{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:700;color:var(--saffron)}
+.ys-l{font-size:9px;color:var(--ash)}
+.soc-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.soc{display:flex;align-items:center;justify-content:center;gap:5px;padding:8px 6px;border-radius:3px;font-size:11px;font-weight:600;color:white;transition:opacity .2s;cursor:pointer}
+.soc:hover{opacity:.82}
+.panch{background:linear-gradient(135deg,#2A1000,#1A0800);border-radius:5px;padding:18px;margin-bottom:20px;border:1px solid rgba(245,166,35,.15)}
+.panch-title{font-family:'Noto Serif Telugu',serif;font-size:15px;font-weight:700;color:var(--turmeric);margin-bottom:2px}
+.panch-sub{font-size:9px;color:rgba(255,255,255,.3);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:13px}
+.panch-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.panch-row:last-child{border-bottom:none;padding-bottom:0}
+.panch-lbl{font-size:10px;color:rgba(255,255,255,.35)}
+.panch-val{font-family:'Noto Serif Telugu',serif;font-size:12.5px;color:white;font-weight:600}
+.panch-val span{font-family:'Outfit',sans-serif;font-size:9px;color:rgba(255,255,255,.3);display:block;font-weight:400;margin-top:1px}
+.sch-widget{background:var(--charcoal);border-radius:5px;padding:18px;margin-bottom:20px}
+.schw-title{font-family:'Noto Serif Telugu',serif;font-size:15px;font-weight:700;color:var(--turmeric);margin-bottom:3px}
+.schw-sub{font-size:9px;color:rgba(255,255,255,.3);margin-bottom:12px;text-transform:uppercase;letter-spacing:1.5px}
+.sch-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.sch-row:last-child{border-bottom:none;padding-bottom:0}
+.sch-lbl{font-size:11.5px;color:rgba(255,255,255,.65)}
+.sch-time{font-family:'DM Mono',monospace;font-size:11px;color:var(--turmeric)}
+.ug-countdown{background:linear-gradient(135deg,#FFF8F0,#FFF3E0);border:1px solid rgba(245,166,35,.3);border-radius:5px;padding:18px;margin-bottom:20px;text-align:center}
+.ug-icon{font-size:28px;margin-bottom:5px}
+.ug-name{font-family:'Noto Serif Telugu',serif;font-size:17px;font-weight:700;color:var(--night);margin-bottom:2px}
+.ug-en{font-size:10px;color:var(--ash);margin-bottom:8px}
+.ug-days{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:700;color:var(--saffron);line-height:1}
+.ug-label{font-size:10px;color:var(--ash);margin-top:3px}
+.hl-sidebar{display:flex;flex-direction:column;gap:7px}
+.hls{display:flex;align-items:center;gap:9px;background:var(--parchment);border-radius:4px;padding:8px 11px}
+.hls-num{font-family:'DM Mono',monospace;font-size:15px;font-weight:700;color:var(--saffron);min-width:46px}
+.hls-te{font-family:'Noto Serif Telugu',serif;font-size:12px;font-weight:700}
+.hls-en{font-size:9.5px;color:var(--ash)}
+.trend-list{display:flex;flex-direction:column;gap:0}
+.tl-item{display:flex;gap:9px;padding:9px 0;border-bottom:1px solid var(--border);cursor:pointer}
+.tl-item:last-child{border-bottom:none;padding-bottom:0}
+.tl-n{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--border);min-width:22px;line-height:1}
+.tl-t{font-size:12px;font-weight:600;line-height:1.35;margin-bottom:1px;transition:color .2s}
+.tl-item:hover .tl-t{color:var(--saffron)}
+.tl-te{font-family:'Noto Serif Telugu',serif;font-size:10px;color:var(--ash)}
+
+/* ═══════════════════════════════════
+   ARTICLE MODAL
+═══════════════════════════════════ */
+.modal{display:none;position:fixed;inset:0;background:rgba(8,6,2,.88);z-index:600;overflow-y:auto;backdrop-filter:blur(5px)}
+.modal.open{display:block}
+.modal-close-btn{position:fixed;top:16px;right:16px;background:var(--charcoal);color:white;border:1px solid rgba(255,255,255,.15);width:36px;height:36px;border-radius:50%;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:601;cursor:pointer;transition:background .2s}
+.modal-close-btn:hover{background:var(--saffron)}
+.modal-inner{max-width:700px;margin:40px auto;background:var(--warm-white);border-radius:6px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.modal-hero{height:290px;position:relative;overflow:hidden}
+.modal-hero img{width:100%;height:100%}
+.modal-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,6,2,.8) 0%,transparent 50%);display:flex;flex-direction:column;justify-content:flex-end;padding:22px}
+.modal-body{padding:26px 34px 40px}
+.modal-title{font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:700;line-height:1.3;margin-bottom:6px}
+.modal-te-title{font-family:'Noto Serif Telugu',serif;font-size:17px;color:var(--charcoal);line-height:1.65;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.modal-meta{font-size:10px;color:var(--ash);display:flex;gap:10px;align-items:center;margin-bottom:18px;flex-wrap:wrap}
+.ai-badge{background:rgba(232,89,12,.08);color:var(--saffron);border:1px solid rgba(232,89,12,.2);padding:1px 7px;border-radius:2px;font-size:9px;font-weight:600}
+.modal-te-body{font-family:'Tiro Telugu',serif;font-size:15px;color:var(--charcoal);line-height:2.1;margin-bottom:18px}
+.modal-en-body{font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--charcoal);line-height:1.8;font-style:italic;padding-top:16px;border-top:1px dashed var(--border)}
+.modal-actions{display:flex;gap:8px;margin-top:20px;flex-wrap:wrap}
+.ma-yt{display:inline-flex;align-items:center;gap:6px;background:var(--saffron);color:white;padding:10px 20px;border-radius:3px;font-size:13px;font-weight:600;transition:background .2s}
+.ma-yt:hover{background:var(--deep)}
+.share-row{display:flex;gap:6px;margin-top:14px;padding-top:14px;border-top:1px solid var(--border)}
+.share-btn{flex:1;padding:8px 4px;border-radius:3px;font-size:11px;font-weight:600;color:white;cursor:pointer;transition:opacity .2s;border:none}
+.share-btn:hover{opacity:.82}
+
+/* WhatsApp floating button */
+.wa-float{position:fixed;bottom:24px;right:24px;background:#25D366;color:white;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 4px 20px rgba(0,0,0,.25);z-index:300;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(0,0,0,.3)}
+
+/* ═══════════════════════════════════
+   SECTION HEADER BANDS
+═══════════════════════════════════ */
+.sec-band{display:flex;align-items:center;gap:14px;padding:14px 22px;border-radius:5px 5px 0 0;margin-bottom:0}
+.sec-band+.sec-band-body{background:var(--warm-white);border:1px solid var(--border);border-top:none;border-radius:0 0 5px 5px;padding:24px;margin-bottom:52px}
+.sb-icon2{font-size:26px}
+.sb-te2{font-family:'Noto Serif Telugu',serif;font-size:20px;font-weight:900;color:white}
+.sb-en2{font-size:10px;color:rgba(255,255,255,.55);letter-spacing:1.5px;text-transform:uppercase;margin-top:1px}
+.sb-yt{margin-left:auto;display:flex;align-items:center;gap:5px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:white;padding:6px 13px;border-radius:3px;font-size:11px;font-weight:600;transition:background .2s;white-space:nowrap}
+.sb-yt:hover{background:rgba(255,255,255,.22)}
+.band-farmer {background:linear-gradient(135deg,#1B5E20,#2E7D32)}
+.band-house  {background:linear-gradient(135deg,#880E4F,#AD1457)}
+.band-civic  {background:linear-gradient(135deg,#0D47A1,#1565C0)}
+.band-traffic{background:linear-gradient(135deg,#BF360C,#E65100)}
+.band-spirit {background:linear-gradient(135deg,#3D0C0C,#7B1C1C)}
+
+/* ═══════════════════════════════════
+   FOOTER
+═══════════════════════════════════ */
+footer{background:var(--night);border-top:2px solid var(--saffron);margin-top:40px}
+.ft{max-width:1320px;margin:0 auto;padding:32px 24px;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:24px}
+.ft-brand-te{font-family:'Noto Serif Telugu',serif;font-size:19px;font-weight:700;color:white}
+.ft-brand-en{font-size:8.5px;letter-spacing:3px;color:var(--turmeric);text-transform:uppercase;margin-bottom:10px}
+.ft-desc{font-size:11px;color:rgba(255,255,255,.3);line-height:1.7}
+.ft-col-title{font-size:9px;font-weight:700;letter-spacing:2px;color:var(--turmeric);text-transform:uppercase;margin-bottom:10px}
+.ft-link{display:block;font-size:11.5px;color:rgba(255,255,255,.4);padding:3px 0;transition:color .2s}
+.ft-link:hover{color:white}
+.ft-bottom{max-width:1320px;margin:0 auto;padding:12px 24px;border-top:1px solid rgba(255,255,255,.05);display:flex;justify-content:space-between;font-size:10px;color:rgba(255,255,255,.2)}
+
+/* ═══════════════════════════════════
+   DEPLOY GUIDE
+═══════════════════════════════════ */
+.deploy-strip{background:linear-gradient(135deg,var(--charcoal),var(--warm-dark));border-top:1px solid rgba(245,166,35,.2);padding:32px 24px}
+.deploy-in{max-width:1320px;margin:0 auto}
+.deploy-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:white;margin-bottom:4px}
+.deploy-sub{font-size:12px;color:rgba(255,255,255,.4);margin-bottom:24px}
+.deploy-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ds{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:5px;padding:18px}
+.ds-num{font-family:'DM Mono',monospace;font-size:28px;font-weight:700;color:var(--turmeric);margin-bottom:8px;line-height:1}
+.ds-title{font-size:13.5px;font-weight:600;color:white;margin-bottom:5px}
+.ds-desc{font-size:11.5px;color:rgba(255,255,255,.4);line-height:1.6}
+.ds-link{display:inline-block;margin-top:10px;font-size:11px;font-weight:600;color:var(--turmeric);border-bottom:1px solid rgba(245,166,35,.3)}
+
+/* ═══════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════ */
+@media(max-width:1100px){
+  .page-grid{grid-template-columns:1fr}
+  .hero-grid{grid-template-columns:1fr 1fr}
+  .hc.main{grid-row:1;grid-column:1/3;height:260px}
+  .vgrid{grid-template-columns:repeat(2,1fr)}
+  .deploy-steps{grid-template-columns:repeat(2,1fr)}
+  .ft{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .hdr-search,.edition-pill{display:none}
+  .hamburger{display:flex}
+  .mainnav{display:none}
+  .hero-grid{grid-template-columns:1fr;grid-template-rows:auto}
+  .hc.main{grid-column:1;height:240px}
+  .hc:not(.main){display:none}
+  .vgrid,.raashi-grid,.cal-dual,.ott-grid,.usa-grid,.hstrip,.route-grid,.big-rights,.wknd-grid,.recipe-grid,.tips-row,.reels-row{grid-template-columns:1fr 1fr}
+  .weather-row,.helpline-row{grid-template-columns:repeat(2,1fr)}
+  .deploy-steps{grid-template-columns:1fr}
+  .ft{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+  .hdr-in{padding:0 14px}
+  .wrap{padding:0 14px}
+  .vgrid,.raashi-grid,.ott-grid,.hstrip,.route-grid,.wknd-grid,.recipe-grid,.tips-row,.reels-row,.cal-dual,.big-rights{grid-template-columns:1fr}
+  .ft{grid-template-columns:1fr}
+  .ft-bottom{flex-direction:column;gap:4px}
+}
+</style>
+</head>
+<body>
+
+<!-- ── TICKER ── -->
+<div class="ticker">
+  <div class="ticker-lbl">BREAKING</div>
+  <div class="ticker-track" id="tickerTrack"></div>
+</div>
+
+<!-- ── HEADER ── -->
+<header class="hdr">
+  <div class="hdr-in">
+    <a href="#home" class="brand">
+      <div class="brand-mark">వ</div>
+      <div><span class="brand-te">వరండా టాకీస్</span><span class="brand-en">Varandaa Talkies</span></div>
+    </a>
+    <div class="hdr-search">
+      <input type="text" id="searchInput" placeholder="వార్తలు వెతకండి... Search news" autocomplete="off">
+      <span class="hdr-search-icon">🔍</span>
+    </div>
+    <div class="hdr-right">
+      <span class="edition-pill" id="editionPill">🌅 MORNING · 8:00 AM</span>
+      <a href="https://youtube.com/@varandaatalkies" target="_blank" class="yt-cta">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.6-.8-2-.9C16.2 5 12 5 12 5s-4.2 0-7 .1c-.4.1-1.2.1-2 .9-.6.6-.8 2-.8 2S2 9.5 2 11v1.4c0 1.5.2 3 .2 3s.2 1.4.8 2c.8.8 1.8.8 2.2.9C6.8 18.4 12 18.5 12 18.5s4.2 0 7-.2c.4-.1 1.2-.1 2-.9.6-.6.8-2 .8-2s.2-1.5.2-3V11c0-1.5-.2-3-.2-3zM10 15V9l5.2 3L10 15z"/></svg>
+        Subscribe
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ── DESKTOP NAV ── -->
+<nav class="mainnav">
+  <div class="mainnav-in">
+    <a href="#home"         class="nav-link active" data-sec="home">హోమ్<span class="nl-sub">Home</span></a>
+    <a href="#politics"     class="nav-link" data-sec="politics">రాజకీయాలు<span class="nl-sub">Politics</span></a>
+    <a href="#entertainment"class="nav-link" data-sec="entertainment">వినోదం<span class="nl-sub">Entertainment</span></a>
+    <div class="nav-divider"></div>
+    <a href="#america"      class="nav-link" data-sec="america">🇺🇸 America<span class="nl-sub">అమెరికా</span></a>
+    <a href="#ott"          class="nav-link" data-sec="ott">▶ OTT<span class="nl-sub">స్ట్రీమింగ్</span></a>
+    <a href="#weekend"      class="nav-link" data-sec="weekend">🎉 Weekend<span class="nl-sub">వారాంతం</span></a>
+    <div class="nav-divider"></div>
+    <a href="#spiritual"    class="nav-link" data-sec="spiritual">🪔 ఆధ్యాత్మికం<span class="nl-sub">Spiritual</span></a>
+    <a href="#farmers"      class="nav-link" data-sec="farmers">🌾 రైతులు<span class="nl-sub">Farmers</span></a>
+    <a href="#housewives"   class="nav-link" data-sec="housewives">🏠 ఇల్లాళ్ళు<span class="nl-sub">Housewives</span></a>
+    <a href="#everyone"     class="nav-link" data-sec="everyone">📚 హక్కులు<span class="nl-sub">Rights</span></a>
+    <a href="#traffic"      class="nav-link" data-sec="traffic">🚦 ట్రాఫిక్<span class="nl-sub">Traffic</span></a>
+    <div class="nav-divider"></div>
+    <a href="#achievements" class="nav-link" data-sec="achievements">🏆 విజయాలు<span class="nl-sub">Achievements</span></a>
+  </div>
+</nav>
+
+<!-- ── MOBILE NAV ── -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mnav-section">
+    <div class="mnav-label">Main</div>
+    <a href="#home"          class="mnav-link" onclick="closeMobileNav()"><span class="ml-icon">🏠</span><div><div class="ml-te">హోమ్</div><div class="ml-en">Home</div></div></a>
+    <a href="#politics"      class="mnav-link" onclick="closeMobileNav()"><span class="ml-icon">⚡</span><div><div class="ml-te">రాజకీయాలు</div><div class="ml-en">Politics</div></div></a>
+    <a href="#entertainment" class="mnav-link" onclick="closeMobileNav()"><span class="ml-icon">🎬</span><div><div class="ml-te">వినోదం</div><div class="ml-en">Entertainment</div></div></a>
+    <a href="#america"       class="mnav-link" onclick="closeMobileNav()"><span class="ml-icon">🇺🇸</span><div><div class="ml-te">అమెరికా</div><div class="ml-en">America Trending</div></div></a>
+    <a href="#ott"           class="mnav-link" onclick="closeMobileNav()"><span class="ml-icon">▶</span><div><div class="ml-te">OTT అప్‌డేట్</div><div class="ml-en">Streaming This Week</div></div></a>
+  </div>
+  <div class="mnav-section">
+    <div class="mnav-label">Community</div>
+    <a href="#spiritual"     class="mnav-link" onclick="closeMobileNav()"><span class="ml-icon">🪔</span><div><div class="ml-te">ఆధ్యాత్మికం</div><div class="ml-en">Raashifalalu · Calendar · Temples</div></div></a>
+    <a href="#farmers"       class="mnav-link" onclick="closeMobileNav()"><span class="ml-icon">🌾</span><div><div class="ml-te">రైతు సమాచారం</div><div class="ml-en">Farmers · Market Prices</div></div></a>
+    <a href="#housewives"    class="mnav-link" onclick="closeMobileNav()"><span class="ml-icon">🏠</span><div><div class="ml-te">ఇల్లాళ్ళ కోసం</div><div class="ml-en">Recipes · Health · Budget</div></div></a>
+    <a href="#everyone"      class="mnav-link" onclick="closeMobileNav()"><span class="ml-icon">📚</span><div><div class="ml-te">మీ హక్కులు</div><div class="ml-en">Rights · Helplines · Scam Alerts</div></div></a>
+    <a href="#traffic"       class="mnav-link" onclick="closeMobileNav()"><span class="ml-icon">🚦</span><div><div class="ml-te">ట్రాఫిక్</div><div class="ml-en">Live Traffic Updates</div></div></a>
+    <a href="#achievements"  class="mnav-link" onclick="closeMobileNav()"><span class="ml-icon">🏆</span><div><div class="ml-te">తెలుగు విజయాలు</div><div class="ml-en">Telugu Achievements</div></div></a>
+  </div>
+  <div class="mnav-section" style="padding-top:16px">
+    <a href="https://youtube.com/@varandaatalkies" target="_blank" class="yt-cta" style="width:100%;justify-content:center;border-radius:4px;">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.6-.8-2-.9C16.2 5 12 5 12 5s-4.2 0-7 .1c-.4.1-1.2.1-2 .9-.6.6-.8 2-.8 2S2 9.5 2 11v1.4c0 1.5.2 3 .2 3s.2 1.4.8 2c.8.8 1.8.8 2.2.9C6.8 18.4 12 18.5 12 18.5s4.2 0 7-.2c.4-.1 1.2-.1 2-.9.6-.6.8-2 .8-2s.2-1.5.2-3V11c0-1.5-.2-3-.2-3zM10 15V9l5.2 3L10 15z"/></svg>
+      Subscribe on YouTube
+    </a>
+  </div>
+</div>
+
+<!-- ── SEARCH OVERLAY ── -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <div class="sb-input-wrap">
+      <input type="text" id="searchBigInput" placeholder="వార్తలు, రాశిఫలాలు, రెసిపీలు వెతకండి...">
+      <button class="sb-close" onclick="closeSearch()">✕</button>
+    </div>
+    <div class="search-results" id="searchResults">
+      <div class="sr-count" id="srCount"></div>
+      <div id="srItems"></div>
+    </div>
+    <div class="no-results" id="noResults" style="display:none">ఫలితాలు కనిపించలేదు · No results found</div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section id="home">
+  <div class="hero-grid" id="heroGrid"></div>
+</section>
+
+<!-- ════════════════════════════════════════
+     MAIN CONTENT
+════════════════════════════════════════ -->
+<div class="wrap">
+<div class="page-grid">
+<main>
+
+<!-- LATEST VIDEOS -->
+<div class="section" id="politics" data-accent="saffron">
+  <div class="sh"><h2>తాజా వీడియోలు</h2><span class="sh-te">&nbsp;Latest from YouTube</span><a href="https://youtube.com/@varandaatalkies" target="_blank" class="sh-more">మరిన్ని →</a></div>
+  <div class="vgrid" id="videoGrid"></div>
+</div>
+
+<!-- AMERICA -->
+<div class="section" id="america" data-accent="civic">
+  <div class="sh"><h2>🇺🇸 America lo Trending</h2><span class="sh-te">&nbsp;అమెరికాలో ట్రెండింగ్</span><a href="#" class="sh-more">అన్నీ →</a></div>
+  <div class="usa-panel"><div class="usa-head"><span style="font-size:22px">🇺🇸</span><div><div class="usa-title">Telugu in America</div><div class="usa-te-sub">H-1B · Immigration · Jobs · Telugu Community</div></div></div><div class="usa-grid" id="usaGrid"></div></div>
+</div>
+
+<!-- OTT -->
+<div class="section" id="ott" data-accent="teal">
+  <div class="sh"><h2>▶ OTT This Week</h2><span class="sh-te">&nbsp;ఈ వారం స్ట్రీమింగ్</span><a href="#" class="sh-more">అన్నీ →</a></div>
+  <div class="ott-grid" id="ottGrid"></div>
+</div>
+
+<!-- SPIRITUAL -->
+<div id="spiritual">
+  <div class="sec-band band-spirit">
+    <span class="sb-icon2">🕉️</span>
+    <div><div class="sb-te2">ఆధ్యాత్మికం & సంస్కృతి</div><div class="sb-en2">Raashifalalu · Calendar · Temples · Pooja</div></div>
+    <a href="https://youtube.com/@varandaatalkies" target="_blank" class="sb-yt">▶ Pooja Videos</a>
+  </div>
+  <div class="sec-band-body">
+    <div class="section" data-accent="spirit">
+      <div class="sh"><h2>🔯 ఉగాది రాశిఫలాలు 2026</h2><span class="sh-te">&nbsp;క్రోధి నామ సంవత్సరం</span></div>
+      <div class="raashi-grid" id="raashiGrid"></div>
+      <div style="margin-top:16px">
+        <div class="sh" style="margin-bottom:16px"><h2>📅 తెలుగు కేలండర్</h2><span class="sh-te">&nbsp;India & USA</span></div>
+        <div class="cal-dual" id="calDual"></div>
+      </div>
+      <div class="sh" style="margin-bottom:16px"><h2>🛕 Temples in USA</h2><span class="sh-te">&nbsp;అమెరికాలో తెలుగు మందిరాలు</span></div>
+      <div class="hstrip" id="templeStrip"></div>
+    </div>
+  </div>
+</div>
+
+<!-- FARMERS -->
+<div id="farmers">
+  <div class="sec-band band-farmer">
+    <span class="sb-icon2">🌾</span>
+    <div><div class="sb-te2">రైతు సమాచారం</div><div class="sb-en2">Market Prices · Weather · Govt Schemes · Tips</div></div>
+    <a href="https://youtube.com/@varandaatalkies" target="_blank" class="sb-yt">▶ వ్యవసాయ Videos</a>
+  </div>
+  <div class="sec-band-body">
+    <div class="section" data-accent="farmer">
+      <div class="sh"><h2>📊 నేటి మంది ధరలు</h2><span class="sh-te">&nbsp;Market Prices</span></div>
+      <div class="mandi-tabs" id="mandiTabs"></div>
+      <div style="overflow-x:auto"><table class="price-tbl" id="priceTable"><thead><tr><th>పంట</th><th>కనిష్ట</th><th>గరిష్ట</th><th>Modal ధర</th><th>మార్పు</th></tr></thead><tbody id="priceTbody"></tbody></table></div>
+      <div class="sh"><h2>🌦️ వాతావరణం</h2><span class="sh-te">&nbsp;4-City Forecast</span></div>
+      <div class="weather-row" id="weatherRow"></div>
+    </div>
+  </div>
+</div>
+
+<!-- HOUSEWIVES -->
+<div id="housewives">
+  <div class="sec-band band-house">
+    <span class="sb-icon2">🏠</span>
+    <div><div class="sb-te2">ఇల్లాళ్ళ కోసం</div><div class="sb-en2">Recipes · Health Tips · Household Budget</div></div>
+    <a href="https://youtube.com/@varandaatalkies" target="_blank" class="sb-yt">▶ వంటకాల Videos</a>
+  </div>
+  <div class="sec-band-body">
+    <div class="section" data-accent="house">
+      <div class="sh"><h2>🍳 ఈ వారం వంటకాలు</h2><span class="sh-te">&nbsp;Telugu Recipes</span></div>
+      <div class="recipe-grid" id="recipeGrid"></div>
+    </div>
+  </div>
+</div>
+
+<!-- EVERYONE / RIGHTS -->
+<div id="everyone">
+  <div class="sec-band band-civic">
+    <span class="sb-icon2">📚</span>
+    <div><div class="sb-te2">అందరి కోసం — మీ హక్కులు</div><div class="sb-en2">Rights · Helplines · Scam Alerts · Govt Services</div></div>
+    <a href="https://youtube.com/@varandaatalkies" target="_blank" class="sb-yt">▶ హక్కుల Videos</a>
+  </div>
+  <div class="sec-band-body">
+    <div class="section" data-accent="civic">
+      <div class="sh"><h2>⚖️ మీ హక్కులు</h2><span class="sh-te">&nbsp;Your Rights</span></div>
+      <div class="big-rights" id="bigRights"></div>
+      <div class="sh" style="margin-top:8px"><h2>📞 హెల్ప్‌లైన్ నంబర్లు</h2><span class="sh-te">&nbsp;Emergency Helplines</span></div>
+      <div class="helpline-row" id="helplineRow"></div>
+    </div>
+  </div>
+</div>
+
+<!-- TRAFFIC -->
+<div id="traffic">
+  <div class="sec-band band-traffic">
+    <span class="sb-icon2">🚦</span>
+    <div><div style="display:flex;align-items:center;gap:8px"><div class="sb-te2">ట్రాఫిక్ & రోడ్లు</div><span class="live-pill"><span class="ldot"></span>LIVE</span></div><div class="sb-en2">Hyderabad · Vijayawada · Visakhapatnam · Warangal</div></div>
+    <a href="https://youtube.com/@varandaatalkies" target="_blank" class="sb-yt">▶ ట్రాఫిక్ Updates</a>
+  </div>
+  <div class="sec-band-body">
+    <div class="section" data-accent="traffic">
+      <div class="city-tabs" id="cityTabs"></div>
+      <div class="sh"><h2>🗺️ Route Status</h2><span class="sh-te">&nbsp;ముఖ్య రహదారులు</span></div>
+      <div class="route-grid" id="routeGrid"></div>
+      <div class="sh"><h2>🚨 Alerts</h2><span class="sh-te">&nbsp;ట్రాఫిక్ హెచ్చరికలు</span></div>
+      <div class="alert-list" id="alertList"></div>
+    </div>
+  </div>
+</div>
+
+<!-- WEEKEND -->
+<div class="section" id="weekend" data-accent="turmeric">
+  <div class="sh"><h2>🎉 Weekend Ideas</h2><span class="sh-te">&nbsp;వారాంతపు ఆలోచనలు</span><a href="#" class="sh-more">మరిన్ని →</a></div>
+  <div class="wknd-grid" id="wkndGrid"></div>
+</div>
+
+<!-- TIPS -->
+<div class="section" id="entertainment" data-accent="saffron">
+  <div class="sh"><h2>📱 Insta Reels Trending</h2><span class="sh-te">&nbsp;ట్రెండింగ్ రీల్స్</span></div>
+  <div class="reels-row" id="reelsRow"></div>
+  <div class="sh" style="margin-top:24px"><h2>💡 చిన్న చిన్న చిట్కాలు</h2><span class="sh-te">&nbsp;Quick Tips</span></div>
+  <div class="tips-row" id="tipsRow"></div>
+</div>
+
+<!-- ACHIEVEMENTS -->
+<div class="section" id="achievements" data-accent="turmeric">
+  <div class="sh"><h2>🏆 Telugu Achievements</h2><span class="sh-te">&nbsp;తెలుగు వారి విజయాలు</span><a href="#" class="sh-more">మరిన్ని →</a></div>
+  <div class="ach-list" id="achList"></div>
+</div>
+
+<!-- FESTIVALS -->
+<div class="section" data-accent="spirit">
+  <div class="sh"><h2>🪔 పండుగలు 2026</h2><span class="sh-te">&nbsp;Upcoming Festivals</span></div>
+  <div class="fest-strip" id="festStrip"></div>
+</div>
+
+</main>
+
+<!-- ── SIDEBAR ── -->
+<aside>
+  <div class="sb-widget">
+    <div class="sw-title">వరండా టాకీస్</div>
+    <div class="sw-te">YouTube చానెల్ సబ్‌స్క్రైబ్ చేయండి</div>
+    <a href="https://youtube.com/@varandaatalkies" target="_blank" class="yt-sub-btn">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.6-.8-2-.9C16.2 5 12 5 12 5s-4.2 0-7 .1c-.4.1-1.2.1-2 .9-.6.6-.8 2-.8 2S2 9.5 2 11v1.4c0 1.5.2 3 .2 3s.2 1.4.8 2c.8.8 1.8.8 2.2.9C6.8 18.4 12 18.5 12 18.5s4.2 0 7-.2c.4-.1 1.2-.1 2-.9.6-.6.8-2 .8-2s.2-1.5.2-3V11c0-1.5-.2-3-.2-3zM10 15V9l5.2 3L10 15z"/></svg>
+      Subscribe చేయండి
+    </a>
+    <div class="yt-stats">
+      <div class="ys"><div class="ys-n">YT</div><div class="ys-l">Channel</div></div>
+      <div class="ys"><div class="ys-n" style="font-size:14px;color:var(--farmer)">LIVE</div><div class="ys-l">Auto-publish</div></div>
+    </div>
+  </div>
+
+  <!-- Schedule -->
+  <div class="sch-widget">
+    <div class="schw-title">⏰ Publishing Schedule</div>
+    <div class="schw-sub">ప్రచురణ సమయం</div>
+    <div class="sch-row"><span class="sch-lbl">🌅 Morning Edition</span><span class="sch-time">8:00 AM IST</span></div>
+    <div class="sch-row"><span class="sch-lbl">🌆 Evening Edition</span><span class="sch-time">7:00 PM IST</span></div>
+    <div class="sch-row"><span class="sch-lbl">🇺🇸 US Morning</span><span class="sch-time">8:30 AM EST</span></div>
+    <div class="sch-row" style="border-bottom:none;padding-top:10px"><span style="font-size:9.5px;color:rgba(255,255,255,.25)">Via Buffer Free · Zero extra cost</span></div>
+  </div>
+
+  <!-- Panchangam -->
+  <div class="panch">
+    <div class="panch-title">📿 ఈరోజు పంచాంగం</div>
+    <div class="panch-sub">Today's Panchangam · IST</div>
+    <div class="panch-row"><span class="panch-lbl">తిథి</span><div class="panch-val">చతుర్దశి<span>Chaturdashi</span></div></div>
+    <div class="panch-row"><span class="panch-lbl">నక్షత్రం</span><div class="panch-val">రేవతి<span>Revathi</span></div></div>
+    <div class="panch-row"><span class="panch-lbl">యోగం</span><div class="panch-val">సిద్ధి<span>Siddhi</span></div></div>
+    <div class="panch-row"><span class="panch-lbl">శుభ సమయం</span><div class="panch-val">11:22–12:12<span>Abhijit Muhurta</span></div></div>
+  </div>
+
+  <!-- Ugadi countdown -->
+  <div class="ug-countdown">
+    <div class="ug-icon">🌸</div>
+    <div class="ug-name">ఉగాది 2026</div>
+    <div class="ug-en">Telugu New Year · March 30</div>
+    <div class="ug-days" id="ugadiDays">21</div>
+    <div class="ug-label">రోజులు మిగిలాయి</div>
+  </div>
+
+  <!-- Social -->
+  <div class="sb-widget">
+    <div class="sw-title">మాతో అనుసరించండి</div>
+    <div class="sw-te">Follow on Social Media</div>
+    <div class="soc-grid">
+      <a href="#" class="soc" style="background:#1877F2">📘 Facebook</a>
+      <a href="#" class="soc" style="background:#000">𝕏 Twitter</a>
+      <a href="#" class="soc" style="background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366)">📸 Insta</a>
+      <a href="#" class="soc" style="background:#25D366">💬 WhatsApp</a>
+      <a href="#" class="soc" style="background:#229ED9;grid-column:1/3">✈️ Telegram Channel</a>
+    </div>
+  </div>
+
+  <!-- Helplines -->
+  <div class="sb-widget">
+    <div class="sw-title">🆘 హెల్ప్‌లైన్స్</div>
+    <div class="sw-te">Emergency Numbers</div>
+    <div class="hl-sidebar" id="hlSidebar"></div>
+  </div>
+
+  <!-- Trending -->
+  <div class="sb-widget">
+    <div class="sw-title">ట్రెండింగ్ ఈరోజు</div>
+    <div class="sw-te">Most Read Today</div>
+    <div class="trend-list" id="trendList"></div>
+  </div>
+</aside>
+</div>
+</div>
+
+<!-- ── ARTICLE MODAL ── -->
+<div class="modal" id="articleModal">
+  <button class="modal-close-btn" onclick="closeModal()">✕</button>
+  <div class="modal-inner">
+    <div class="modal-hero"><img id="m-img" src="" alt=""><div class="modal-hero-grad"><span class="hc-tag" id="m-tag"></span></div></div>
+    <div class="modal-body">
+      <div id="m-cat" style="font-size:9px;font-weight:700;color:var(--saffron);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px"></div>
+      <div class="modal-title" id="m-title"></div>
+      <div class="modal-te-title" id="m-te"></div>
+      <div class="modal-meta"><span id="m-date"></span><span class="ai-badge">AI GENERATED</span><span>📺 Varandaa Talkies</span></div>
+      <div class="modal-te-body" id="m-body-te"></div>
+      <div class="modal-en-body" id="m-body-en"></div>
+      <div class="modal-actions">
+        <a href="https://youtube.com/@varandaatalkies" target="_blank" class="ma-yt">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.6-.8-2-.9C16.2 5 12 5 12 5s-4.2 0-7 .1c-.4.1-1.2.1-2 .9-.6.6-.8 2-.8 2S2 9.5 2 11v1.4c0 1.5.2 3 .2 3s.2 1.4.8 2c.8.8 1.8.8 2.2.9C6.8 18.4 12 18.5 12 18.5s4.2 0 7-.2c.4-.1 1.2-.1 2-.9.6-.6.8-2 .8-2s.2-1.5.2-3V11c0-1.5-.2-3-.2-3zM10 15V9l5.2 3L10 15z"/></svg>
+          YouTube లో చూడండి
+        </a>
+      </div>
+      <div class="share-row" id="modalShareRow"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="ft">
+    <div>
+      <div class="ft-brand-te">వరండా టాకీస్</div>
+      <div class="ft-brand-en">Varandaa Talkies</div>
+      <div class="ft-desc">తెలుగు వార్తలు, వినోదం, అమెరికా అప్‌డేట్స్, OTT, పండుగలు, రైతులు, ఇల్లాళ్ళు, మీ హక్కులు మరియు ట్రాఫిక్ — Telugu people worldwide కోసం.</div>
+    </div>
+    <div>
+      <div class="ft-col-title">విభాగాలు</div>
+      <a href="#politics"     class="ft-link">రాజకీయాలు</a>
+      <a href="#entertainment" class="ft-link">వినోదం</a>
+      <a href="#america"      class="ft-link">🇺🇸 America</a>
+      <a href="#ott"          class="ft-link">▶ OTT</a>
+      <a href="#spiritual"    class="ft-link">🪔 ఆధ్యాత్మికం</a>
+      <a href="#farmers"      class="ft-link">🌾 రైతులు</a>
+    </div>
+    <div>
+      <div class="ft-col-title">Community</div>
+      <a href="#housewives"   class="ft-link">🏠 ఇల్లాళ్ళు</a>
+      <a href="#everyone"     class="ft-link">📚 హక్కులు</a>
+      <a href="#traffic"      class="ft-link">🚦 ట్రాఫిక్</a>
+      <a href="#achievements" class="ft-link">🏆 విజయాలు</a>
+      <a href="#weekend"      class="ft-link">🎉 Weekend</a>
+    </div>
+    <div>
+      <div class="ft-col-title">Follow Us</div>
+      <a href="https://youtube.com/@varandaatalkies" target="_blank" class="ft-link">YouTube</a>
+      <a href="#" class="ft-link">Facebook Page</a>
+      <a href="#" class="ft-link">Instagram</a>
+      <a href="#" class="ft-link">Twitter / X</a>
+      <a href="#" class="ft-link">Telegram</a>
+      <a href="#" class="ft-link">WhatsApp Channel</a>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <span>© 2026 వరండా టాకీస్ · Varandaa Talkies. All rights reserved.</span>
+    <span>🌅 8 AM + 🌆 7 PM IST · Auto-published twice daily</span>
+  </div>
+</footer>
+
+<!-- ── DEPLOY GUIDE ── -->
+<div class="deploy-strip">
+  <div class="deploy-in">
+    <div class="deploy-title">🚀 Deploy Live — 4 Steps to varandaatalkies.com</div>
+    <div class="deploy-sub">Get this website live on the internet for free in under 30 minutes</div>
+    <div class="deploy-steps">
+      <div class="ds"><div class="ds-num">01</div><div class="ds-title">Download This File</div><div class="ds-desc">Download index.html from Claude. This single file contains the entire website — no other files needed.</div></div>
+      <div class="ds"><div class="ds-num">02</div><div class="ds-title">Create Free Netlify Account</div><div class="ds-desc">Go to netlify.com → Sign up free → Click "Add new site" → "Deploy manually". Drag and drop index.html.</div><a href="https://netlify.com" target="_blank" class="ds-link">netlify.com →</a></div>
+      <div class="ds"><div class="ds-num">03</div><div class="ds-title">Connect Your Domain</div><div class="ds-desc">Buy varandaatalkies.com (~₹800/yr on GoDaddy/Namecheap). In Netlify → Domain settings → Add custom domain. Point DNS to Netlify.</div></div>
+      <div class="ds"><div class="ds-num">04</div><div class="ds-title">Enable HTTPS & Go Live</div><div class="ds-desc">Netlify auto-generates free SSL certificate. Your site is now live at varandaatalkies.com with HTTPS. Share on WhatsApp!</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- WhatsApp floating button -->
+<div class="wa-float" onclick="shareWhatsApp()" title="Share on WhatsApp">💬</div>
+
+<script>
+// ══════════════════════════════════════════
+// ALL CONTENT DATA
+// ══════════════════════════════════════════
+const TICKER_ITEMS = [
+  "H-1B 2027 లాటరీ: USCIS April 1 నుండి నమోదు ప్రారంభం","Aha OTT: 3 కొత్త Telugu originals ఈ వారం","తెలంగాణ CM నూతన సంక్షేమ పథకాలు ప్రకటించారు",
+  "Prabhas New Project: ₹400 Crore confirmed","వరి ధర: ₹2,183/క్వి — నేటి హైదరాబాద్ మంది","ఉగాది 2026: మార్చి 30 — 21 రోజులు మిగిలాయి",
+  "Darwinbox Telugu startup raises $140M","SRH vs MI IPL 2026 opener — Sunday 7:30 PM","H-1B 2027 లాటరీ: USCIS April 1 నుండి నమోదు ప్రారంభం","Aha OTT: 3 కొత్త Telugu originals ఈ వారం",
+];
+
+const HERO_ITEMS = [
+  {id:0,main:true,tag:"tag-red",tagLabel:"🔴 BREAKING",cat:"రాజకీయాలు",title:"Telangana Announces ₹12,000 Crore Rural Welfare Package",te:"తెలంగాణ ₹12,000 కోట్ల గ్రామీణ సంక్షేమ ప్యాకేజ్ — 50 లక్షల కుటుంబాలకు",tebody:"హైదరాబాద్, మార్చి 9: తెలంగాణ ముఖ్యమంత్రి నేడు 50 లక్షల కుటుంబాలకు ప్రత్యక్ష నగదు బదిలీ, రైతులకు ఉచిత విద్యుత్ పొడిగింపు, మహిళా సంక్షేమ పథకాల విస్తరణతో కూడిన సమగ్ర ప్యాకేజీని ప్రకటించారు.",en:"The Telangana CM unveiled a ₹12,000 crore welfare package — the state's largest-ever social intervention with direct transfers to 50 lakh families.",img:"https://picsum.photos/seed/h1/900/600",time:"2 గంటల క్రితం",views:"18.4K",dur:"14:22"},
+  {id:1,main:false,tag:"tag-gold",tagLabel:"వినోదం",cat:"Entertainment",title:"Prabhas New Project: ₹400 Crore",te:"ప్రభాస్ కొత్త ప్రాజెక్ట్ — నూతన అవతారం",tebody:"పాన్-ఇండియా స్టార్ ప్రభాస్ ₹400 కోట్ల బడ్జెట్‌తో కొత్త దర్శకుడితో పని చేస్తున్నారు.",en:"Prabhas takes his biggest creative risk with a ₹400 crore untitled project with a debutant director.",img:"https://picsum.photos/seed/h2/600/320",time:"5 గంటల క్రితం",views:"31.2K",dur:"9:15"},
+  {id:2,main:false,tag:"tag-blue",tagLabel:"🇺🇸 H-1B",cat:"America",title:"H-1B 2027 Registration Opens April 1",te:"H-1B 2027 నమోదు ఏప్రిల్ 1 నుండి",tebody:"USCIS H-1B 2027 లాటరీ నమోదు ఏప్రిల్ 1 నుండి. ఫీజు $215కి పెరిగింది. ముందే మీ యజమానిని సంప్రదించండి.",en:"USCIS announces H-1B 2027 registration opens April 1. Fee increases to $215. Telugu IT professionals advised to contact employers immediately.",img:"https://picsum.photos/seed/h3/600/200",time:"నిన్న",views:"9.8K",dur:"22:40"},
+  {id:3,main:false,tag:"tag-teal",tagLabel:"OTT",cat:"OTT",title:"7 Telugu Films on OTT This Weekend",te:"ఈ వారాంతం OTT లో 7 తెలుగు చిత్రాలు",tebody:"Netflix, Aha, Amazon Prime Video లపై ఈ వారాంతం అద్భుతమైన తెలుగు కంటెంట్ అందుబాటులో ఉంది.",en:"A fantastic lineup of Telugu content across OTT platforms this weekend — new originals, classics and web series.",img:"https://picsum.photos/seed/h4/600/200",time:"ఈరోజు",views:"14.6K",dur:"7:55"},
+];
+
+const VIDEOS = HERO_ITEMS.slice(0,3).map((a,i)=>({...a,id:i+10})).concat([
+  {id:13,cat:"వ్యవసాయం",title:"వరి పంటలో చీడపురుగుల నివారణ — Organic Methods",te:"Organic pest control for paddy crop",img:"https://picsum.photos/seed/v4/320/180",time:"నిన్న",views:"22.1K",dur:"18:30",tebody:"సేంద్రియ పద్ధతుల్లో వరి పంటను చీడ పురుగుల నుండి రక్షించే సులభమైన మార్గాలు.",en:"Natural ways to protect paddy crops from pests without chemical pesticides."},
+  {id:14,cat:"వంటకాలు",title:"ఉగాది పచ్చడి — సరైన నిష్పత్తులు",te:"Ugadi Pachadi correct recipe Telugu",img:"https://picsum.photos/seed/v5/320/180",time:"2 రోజులు",views:"45.3K",dur:"12:20",tebody:"ఉగాది పచ్చడి తయారీలో ఆరు రుచులు సరిగ్గా వేయడం ఎలా — వంటగది రహస్యం.",en:"How to make perfect Ugadi Pachadi with all six tastes in the right proportions."},
+]);
+
+const USA_DATA=[
+  {cat:"H-1B · వీసా",t:"H-1B 2027 Registration: Complete Guide for Telugu Applicants",te:"తెలుగు దరఖాస్తుదారులకు పూర్తి గైడ్",time:"3 గంటల క్రితం"},
+  {cat:"Jobs · ఉద్యోగాలు",t:"Silicon Valley: 12,000 New Tech Jobs — Telugu Opportunities",te:"12,000 కొత్త టెక్ ఉద్యోగాలు",time:"5 గంటల క్రితం"},
+  {cat:"Community · కమ్యూనిటీ",t:"TANA 2026 Conference Dates Announced — Houston, Texas",te:"TANA 2026 సమావేశం తేదీలు",time:"నిన్న"},
+  {cat:"Education · విద్య",t:"Top 10 US Universities for Telugu Students — 2026 Rankings",te:"తెలుగు విద్యార్థులకు టాప్ 10 విశ్వవిద్యాలయాలు",time:"2 రోజుల క్రితం"},
+];
+
+const OTT_DATA=[
+  {plat:"Netflix",pc:"p-netflix",t:"Unstoppable with NBK S4",te:"NBK తో ఆపలేనిది S4",meta:"New · Talk Show",img:"https://picsum.photos/seed/o1/320/180"},
+  {plat:"Aha",pc:"p-aha",t:"Vivaha Bhojanambu",te:"వివాహ భోజనంబు",meta:"New · Comedy Series",img:"https://picsum.photos/seed/o2/320/180"},
+  {plat:"Prime",pc:"p-prime",t:"Ramabanam",te:"రామబాణం",meta:"Streaming · Action",img:"https://picsum.photos/seed/o3/320/180"},
+  {plat:"Hotstar",pc:"p-hotstar",t:"Bigg Boss Telugu S8",te:"బిగ్ బాస్ తెలుగు S8",meta:"Live · Reality Show",img:"https://picsum.photos/seed/o4/320/180"},
+  {plat:"Aha",pc:"p-aha",t:"Kalki 2898 AD",te:"కల్కి 2898 AD",meta:"Trending · Sci-Fi",img:"https://picsum.photos/seed/o5/320/180"},
+  {plat:"Zee5",pc:"p-zee",t:"Naa Saami Ranga",te:"నా సామి రంగా",meta:"New · Drama",img:"https://picsum.photos/seed/o6/320/180"},
+];
+
+const RAASHIS=[
+  {sym:"♈",name:"మేషం",en:"Aries",stars:"★★★★☆"},
+  {sym:"♉",name:"వృషభం",en:"Taurus",stars:"★★★☆☆"},
+  {sym:"♊",name:"మిథునం",en:"Gemini",stars:"★★★★★"},
+  {sym:"♋",name:"కర్కాటకం",en:"Cancer",stars:"★★★☆☆"},
+  {sym:"♌",name:"సింహం",en:"Leo",stars:"★★★★☆"},
+  {sym:"♍",name:"కన్య",en:"Virgo",stars:"★★★★☆"},
+  {sym:"♎",name:"తుల",en:"Libra",stars:"★★★☆☆"},
+  {sym:"♏",name:"వృశ్చికం",en:"Scorpio",stars:"★★★☆☆"},
+  {sym:"♐",name:"ధనుస్సు",en:"Sagittarius",stars:"★★★★☆"},
+  {sym:"♑",name:"మకరం",en:"Capricorn",stars:"★★★☆☆"},
+  {sym:"♒",name:"కుంభం",en:"Aquarius",stars:"★★★★☆"},
+  {sym:"♓",name:"మీనం",en:"Pisces",stars:"★★★★☆"},
+];
+
+const TEMPLES=[
+  {name:"శ్రీ వేంకటేశ్వర స్వామి మందిరం",en:"Sri Venkateswara Temple, Houston TX",city:"Houston, TX",deity:"వేంకటేశ్వర స్వామి",img:"https://picsum.photos/seed/t1/80/60"},
+  {name:"శ్రీ మహా గణపతి మందిరం",en:"Sri Maha Ganapathi Temple, NJ",city:"Flushing, NJ",deity:"గణపతి",img:"https://picsum.photos/seed/t2/80/60"},
+  {name:"శ్రీ లక్ష్మి-నారాయణ మందిరం",en:"Sri Lakshmi Narayana Temple, CA",city:"Livermore, CA",deity:"లక్ష్మి నారాయణ",img:"https://picsum.photos/seed/t3/80/60"},
+  {name:"SVBF తిరుపతి మందిరం",en:"SVBF Tirupati Temple, Bridgewater NJ",city:"Bridgewater, NJ",deity:"వేంకటేశ్వర స్వామి",img:"https://picsum.photos/seed/t4/80/60"},
+];
+
+const PRICES_HYD=[
+  {te:"వరి",en:"Paddy",min:"2050",max:"2280",modal:"2183",chg:"+₹45",dir:"up"},
+  {te:"టమాట",en:"Tomato",min:"15",max:"22",modal:"18",chg:"-₹6",dir:"dn"},
+  {te:"ఉల్లి",en:"Onion",min:"28",max:"38",modal:"32",chg:"+₹4",dir:"up"},
+  {te:"మిర్చి",en:"Chilli",min:"125",max:"160",modal:"140",chg:"+₹12",dir:"up"},
+  {te:"పత్తి",en:"Cotton",min:"6800",max:"7400",modal:"7200",chg:"→₹0",dir:""},
+  {te:"మొక్కజొన్న",en:"Maize",min:"1720",max:"1960",modal:"1850",chg:"-₹30",dir:"dn"},
+];
+const PRICES_GNT=[
+  {te:"మిర్చి",en:"Chilli",min:"130",max:"168",modal:"148",chg:"+₹15",dir:"up"},
+  {te:"పత్తి",en:"Cotton",min:"6900",max:"7600",modal:"7300",chg:"+₹100",dir:"up"},
+  {te:"వరి",en:"Paddy",min:"2100",max:"2300",modal:"2200",chg:"+₹50",dir:"up"},
+  {te:"అరటి",en:"Banana",min:"12",max:"18",modal:"15",chg:"→₹0",dir:""},
+];
+const PRICES={hyderabad:PRICES_HYD,guntur:PRICES_GNT,warangal:PRICES_GNT,vijayawada:PRICES_HYD};
+
+const WEATHER=[
+  {city:"హైదరాబాద్",icon:"⛅",temp:"34°C",rain:"20%"},
+  {city:"గుంటూరు",icon:"☀️",temp:"37°C",rain:"5%"},
+  {city:"వరంగల్",icon:"🌩️",temp:"31°C",rain:"60%"},
+  {city:"విశాఖపట్నం",icon:"🌤️",temp:"33°C",rain:"15%"},
+];
+
+const RECIPES=[
+  {cat:"పప్పు వంటలు",title:"పెసరపప్పు పులుసు — అమ్మ చేతి రుచి",te:"Pesarapappu pulusu recipe",time:"30min",isNew:true,img:"https://picsum.photos/seed/rc1/320/240"},
+  {cat:"అల్పాహారం",title:"రవ్వ ఉపమా — 15 నిమిషాల్లో రెడీ",te:"Rava upma quick recipe",time:"15min",isNew:false,img:"https://picsum.photos/seed/rc2/320/240"},
+  {cat:"పండుగ వంటలు",title:"ఉగాది పచ్చడి — సరైన నిష్పత్తులు",te:"Ugadi pachadi correct recipe",time:"20min",isNew:true,img:"https://picsum.photos/seed/rc3/320/240"},
+];
+
+const BIG_RIGHTS=[
+  {icon:"🗳️",title:"మీ ఓటు మీ శక్తి",desc:"ఓటు వేయడం మీ రాజ్యాంగ హక్కు. Aadhaar చూపిస్తే ఓటు వేయొచ్చు."},
+  {icon:"🏥",title:"ఉచిత వైద్యం హక్కు",desc:"ప్రభుత్వ ఆసుపత్రిలో డబ్బు లేదని తిరస్కరించే హక్కు లేదు. 104 కి కాల్ చేయండి."},
+  {icon:"📋",title:"రేషన్ కార్డ్ హక్కు",desc:"ప్రతి పేద కుటుంబానికి రేషన్ కార్డ్ రావాలి. ఇప్పుడే apply చేయండి."},
+  {icon:"⚖️",title:"అరెస్ట్ హక్కులు",desc:"అరెస్ట్ అయినప్పుడు కారణం అడిగే హక్కు మీకు ఉంది. లాయర్ కోసం అడగండి."},
+];
+
+const HELPLINES=[
+  {num:"112",te:"అత్యవసర సేవలు",en:"All Emergency"},
+  {num:"181",te:"మహిళా హెల్ప్‌లైన్",en:"Women Safety"},
+  {num:"1098",te:"చైల్డ్‌లైన్",en:"Child Protection"},
+  {num:"1930",te:"సైబర్ క్రైమ్",en:"Cyber Crime"},
+  {num:"108",te:"అంబులెన్స్",en:"Medical Emergency"},
+  {num:"1800-180-1551",te:"కిసాన్ కాల్",en:"Farmer Helpline Free"},
+];
+
+const HELPLINES_FULL=[
+  {num:"112",te:"అత్యవసర సేవలు",en:"All Emergency",bg:"#C62828"},
+  {num:"181",te:"మహిళా హెల్ప్‌లైన్",en:"Women Safety",bg:"#AD1457"},
+  {num:"1098",te:"చైల్డ్‌లైన్",en:"Child Protection",bg:"#1565C0"},
+  {num:"1930",te:"సైబర్ క్రైమ్",en:"Cyber Crime",bg:"#4527A0"},
+  {num:"108",te:"అంబులెన్స్",en:"Medical Emergency",bg:"#00695C"},
+  {num:"1800",te:"కిసాన్ కాల్",en:"Farmer Helpline",bg:"#2E7D32"},
+  {num:"104",te:"ఆరోగ్య హెల్ప్‌లైన్",en:"Health Helpline",bg:"#00838F"},
+  {num:"14567",te:"వృద్ధుల హెల్ప్‌లైన్",en:"Elderly Helpline",bg:"#E65100"},
+];
+
+const TRAFFIC_DATA={
+  hyd:{label:"హైదరాబాద్",
+    routes:[
+      {te:"ORR (బాహ్య వలయం)",en:"Outer Ring Road",s:"clear",time:"Normal"},
+      {te:"HITECH సిటీ → Gachibowli",en:"IT Corridor",s:"heavy",time:"+35 min"},
+      {te:"ట్యాంక్‌బండ్ రోడ్",en:"Tank Bund Road",s:"slow",time:"+15 min"},
+      {te:"నాంపల్లి → సికింద్రాబాద్",en:"NH-44 Corridor",s:"slow",time:"+20 min"},
+    ],
+    alerts:[
+      {sev:"high",icon:"🚧",title:"HITECH సిటీ ప్రమాదం",te:"Flyover దగ్గర రెండు వాహనాలు ఢీకొన్నాయి. కుడి లేన్ మూసివేశారు.",time:"30 నిమిషాల క్రితం"},
+      {sev:"medium",icon:"🔧",title:"ORR Exit 14 రిపేర్",te:"రోడ్డు రిపేర్ పని — Exit 13 లేదా 15 వాడండి.",time:"2 గంటల క్రితం"},
+    ]},
+  vjw:{label:"విజయవాడ",
+    routes:[
+      {te:"బందర్ రోడ్",en:"Bandar Road NH-16",s:"slow",time:"+20 min"},
+      {te:"రైల్వే స్టేషన్ Road",en:"Railway Station Approach",s:"heavy",time:"+30 min"},
+      {te:"పంటమూడి జంక్షన్",en:"Pantamoodi Junction",s:"clear",time:"Normal"},
+      {te:"అమరావతి రోడ్",en:"Amaravati Road",s:"clear",time:"Normal"},
+    ],
+    alerts:[
+      {sev:"medium",icon:"🌊",title:"పి.బి. రోడ్ — నీరు నిలిచింది",te:"వర్షం నీరు నిలిచింది. వేరే మార్గం వాడండి.",time:"45 నిమిషాల క్రితం"},
+    ]},
+  vsp:{label:"విశాఖపట్నం",
+    routes:[
+      {te:"Beach Road",en:"RK Beach to NAD",s:"clear",time:"Normal"},
+      {te:"Waltair Main Road",en:"Waltair Uplands",s:"slow",time:"+10 min"},
+      {te:"Steel Plant Road",en:"VSP Gate",s:"heavy",time:"+25 min"},
+      {te:"Simhachalam Road",en:"Bypass Road",s:"clear",time:"Normal"},
+    ],
+    alerts:[
+      {sev:"info",icon:"🚆",title:"Trains On Time Today",te:"ఈరోజు అన్ని ట్రెయిన్లు సమయానికి నడుస్తున్నాయి.",time:"1 గంట క్రితం"},
+    ]},
+  wrg:{label:"వరంగల్",
+    routes:[
+      {te:"హనుమకొండ రోడ్",en:"Hanamkonda Road",s:"clear",time:"Normal"},
+      {te:"JNTU రోడ్",en:"JNTU Corridor",s:"slow",time:"+15 min"},
+    ],
+    alerts:[
+      {sev:"info",icon:"🏗️",title:"Flyover నిర్మాణం",te:"వేలమకన్న వద్ద flyover పని — ఒక లేన్ తగ్గింది.",time:"3 గంటల క్రితం"},
+    ]},
+};
+
+const WKND=[
+  {cat:"🎬 Movie Pick",t:"This Weekend's Must-Watch: 'Devara' on OTT",te:"ఈ వారాంతం చూడాల్సిన సినిమా",img:"https://picsum.photos/seed/w1/320/240"},
+  {cat:"🍳 Recipe",t:"Make Pesarattu at Home — Andhra Classic",te:"ఇంట్లో పెసరట్టు తయారీ",img:"https://picsum.photos/seed/w2/320/240"},
+  {cat:"🚗 Road Trip",t:"Hyderabad to Araku: Perfect Weekend Drive",te:"హైదరాబాద్ నుండి అరకు ప్రయాణం",img:"https://picsum.photos/seed/w3/320/240"},
+];
+
+const REELS=[
+  {lbl:"🔥 1.2M",t:"Ugadi Pachadi Making — Grandma's Secret",img:"https://picsum.photos/seed/r1/200/360"},
+  {lbl:"💃 890K",t:"Telugu Bridal Look 2026 Makeup",img:"https://picsum.photos/seed/r2/200/360"},
+  {lbl:"😂 2.1M",t:"NRI Telugu lo Matladataniki...",img:"https://picsum.photos/seed/r3/200/360"},
+  {lbl:"🎵 1.5M",t:"Pushpa 2 Song Challenge Viral",img:"https://picsum.photos/seed/r4/200/360"},
+];
+
+const TIPS=[
+  {icon:"💊",cat:"Health",t:"5 Ayurvedic Tips Using Kitchen Spices",te:"మీ వంటగది మసాలాలతో 5 చిట్కాలు"},
+  {icon:"💰",cat:"Finance",t:"Transfer Money India↔USA Zero Fee",te:"జీరో ఫీతో డబ్బు పంపండి"},
+  {icon:"📱",cat:"Tech",t:"WhatsApp Settings You Must Enable",te:"WhatsApp సెట్టింగ్స్ తప్పకుండా చేయండి"},
+  {icon:"👨‍👩‍👧",cat:"Parenting",t:"Teach Telugu to Kids Born in USA",te:"అమెరికాలో పుట్టిన పిల్లలకు తెలుగు"},
+];
+
+const ACHIEVEMENTS=[
+  {icon:"💻",t:"Sundar Pichai Leads Google's Biggest AI Expansion in India",te:"సుందర్ పిచాయ్ Google AI విస్తరణకు నేతృత్వం",badge:"Google CEO"},
+  {icon:"🚀",t:"Darwinbox (Telugu Founded) Raises $140M Unicorn",te:"డార్విన్‌బాక్స్ $140M — HR Tech Unicorn",badge:"Startup"},
+  {icon:"🏆",t:"Telugu Badminton Star Wins All England Championship 2026",te:"తెలుగు బ్యాడ్మింటన్ స్టార్ విజయం",badge:"Sports"},
+];
+
+const FESTS=[
+  {icon:"🌸",name:"ఉగాది",en:"Telugu New Year",date:"Mar 30",days:21},
+  {icon:"🔱",name:"రామ నవమి",en:"Sri Rama Navami",date:"Apr 6",days:28},
+  {icon:"🐘",name:"వినాయక చవితి",en:"Vinayaka Chavithi",date:"Aug 27",days:171},
+  {icon:"🎆",name:"దసరా",en:"Dussehra",date:"Oct 2",days:207},
+  {icon:"🪔",name:"దీపావళి",en:"Diwali",date:"Oct 20",days:225},
+];
+
+const TRENDING=[
+  {t:"AP Budget 2026 Key Highlights",te:"ఏపీ బడ్జెట్ ముఖ్య అంశాలు"},
+  {t:"H-1B 2027 Registration Guide",te:"H-1B 2027 నమోదు గైడ్"},
+  {t:"Tollywood Box Office This Week",te:"ఈ వారం బాక్సాఫీస్"},
+  {t:"Ugadi 2026 Celebration Guide",te:"ఉగాది 2026 వేడుకల గైడ్"},
+  {t:"Darwinbox Telugu Startup $140M",te:"డార్విన్‌బాక్స్ ఫండింగ్"},
+];
+
+const CAL_TE_MONTHS=["జనవరి","ఫిబ్రవరి","మార్చి","ఏప్రిల్","మే","జూన్","జూలై","ఆగస్ట్","సెప్టెంబర్","అక్టోబర్","నవంబర్","డిసెంబర్"];
+const EN_MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
+const FEST_DATES={"2026-3-30":"ఉగాది","2026-4-6":"రామ నవమి","2026-8-27":"వినాయక చవితి","2026-10-2":"దసరా","2026-10-20":"దీపావళి"};
+
+// Search index — all content in one flat array
+const SEARCH_INDEX=[
+  ...HERO_ITEMS.map(a=>({icon:"📰",t:a.title,te:a.te,cat:a.cat,id:a.id,type:"article"})),
+  ...VIDEOS.map(a=>({icon:"▶",t:a.title,te:a.te,cat:a.cat,id:a.id,type:"article"})),
+  ...USA_DATA.map(a=>({icon:"🇺🇸",t:a.t,te:a.te,cat:"America",type:"usa"})),
+  ...OTT_DATA.map(a=>({icon:"▶",t:a.t,te:a.te,cat:"OTT",type:"ott"})),
+  ...RAASHIS.map(r=>({icon:r.sym,t:r.name+" రాశిఫలం 2026",te:r.en+" Ugadi Prediction",cat:"రాశిఫలాలు",type:"raashi"})),
+  ...TEMPLES.map(t=>({icon:"🛕",t:t.name,te:t.en,cat:"Temples USA",type:"temple"})),
+  ...RECIPES.map(r=>({icon:"🍳",t:r.title,te:r.te,cat:"వంటకాలు",type:"recipe"})),
+  ...WKND.map(w=>({icon:"🎉",t:w.t,te:w.te,cat:"Weekend",type:"weekend"})),
+  ...TIPS.map(tp=>({icon:tp.icon,t:tp.t,te:tp.te,cat:tp.cat,type:"tip"})),
+  ...ACHIEVEMENTS.map(a=>({icon:a.icon,t:a.t,te:a.te,cat:"Achievements",type:"achievement"})),
+  {icon:"🌾",t:"నేటి మంది ధరలు — వరి, టమాట, ఉల్లి",te:"Market Prices Today",cat:"Farmers",type:"farmers"},
+  {icon:"🚦",t:"హైదరాబాద్ ట్రాఫిక్ అప్‌డేట్",te:"Hyderabad Live Traffic",cat:"Traffic",type:"traffic"},
+  {icon:"📞",t:"అత్యవసర హెల్ప్‌లైన్ నంబర్లు 112, 181, 108",te:"Emergency Helpline Numbers",cat:"Civic",type:"civic"},
+];
+
+// ══════════════════════════════════════════
+// RENDER FUNCTIONS
+// ══════════════════════════════════════════
+function renderTicker(){
+  const items=[...TICKER_ITEMS,...TICKER_ITEMS];
+  document.getElementById('tickerTrack').innerHTML=items.map(i=>`<span class="t-item">${i}</span>`).join('');
+}
+
+function renderHero(){
+  document.getElementById('heroGrid').innerHTML=HERO_ITEMS.map(a=>`
+    <div class="hc ${a.main?'main':''}" onclick="openModal(${a.id})">
+      <img src="${a.img}" alt="" loading="${a.main?'eager':'lazy'}">
+      <div class="hc-overlay">
+        <span class="hc-tag ${a.tag}">${a.tagLabel}</span>
+        <div class="hc-title">${a.title}</div>
+        <div class="hc-te">${a.te}</div>
+        ${a.main?`<div class="hc-meta"><span>🕐 ${a.time}</span><span>👁 ${a.views}</span></div>`:''}
+      </div>
+    </div>`).join('');
+}
+
+function renderVideos(){
+  document.getElementById('videoGrid').innerHTML=VIDEOS.slice(0,6).map(a=>`
+    <div class="vcard" onclick="openModal(${a.id})">
+      <div class="vthumb"><img src="${a.img}" alt="" loading="lazy">
+        <div class="vplay"><div class="vplay-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="vdur">${a.dur}</div><div class="vauto">⚡ AUTO</div>
+      </div>
+      <div class="vbody"><div class="vcat">${a.cat}</div><div class="vtitle">${a.title}</div>
+        <div class="vte">${a.te}</div>
+        <div class="vmeta"><span>${a.time}</span><span class="vpill">👁 ${a.views}</span></div>
+      </div>
+    </div>`).join('');
+}
+
+function renderUSA(){
+  document.getElementById('usaGrid').innerHTML=USA_DATA.map(u=>`
+    <div class="usa-item"><div class="usa-cat">${u.cat}</div><div class="usa-t">${u.t}</div>
+      <div class="usa-te2">${u.te}</div><div class="usa-time">${u.time}</div></div>`).join('');
+}
+
+function renderOTT(){
+  document.getElementById('ottGrid').innerHTML=OTT_DATA.map(o=>`
+    <div class="ott-card"><div class="ott-thumb"><img src="${o.img}" alt="" loading="lazy">
+      <div class="ott-plat ${o.pc}">${o.plat}</div></div>
+      <div class="ott-body"><div class="ott-t">${o.t}</div><div class="ott-te2">${o.te}</div>
+        <div class="ott-meta">${o.meta}</div></div>
+    </div>`).join('');
+}
+
+function renderRaashis(){
+  document.getElementById('raashiGrid').innerHTML=RAASHIS.map(r=>`
+    <div class="rcard"><div class="rcard-sym">${r.sym}</div>
+      <div class="rcard-name">${r.name}</div><div class="rcard-en">${r.en}</div>
+      <div class="rcard-stars">${r.stars}</div></div>`).join('');
+}
+
+// Calendar
+let calState={india:{y:2026,m:2},usa:{y:2026,m:2}};
+function buildCal(zone){
+  const s=calState[zone],y=s.y,m=s.m;
+  const te_months=CAL_TE_MONTHS,en_months=EN_MONTHS;
+  const first=new Date(y,m,1).getDay();
+  const days=new Date(y,m+1,0).getDate();
+  const today=new Date();
+  const todayStr=`${today.getFullYear()}-${today.getMonth()+1}-${today.getDate()}`;
+  let cells='';
+  for(let i=0;i<first;i++) cells+=`<div class="cdate empty"></div>`;
+  for(let d=1;d<=days;d++){
+    const key=`${y}-${m+1}-${d}`;
+    const isToday=key===todayStr;
+    const fest=FEST_DATES[key];
+    let cls='cdate'+(isToday?' today':fest?' fest':'');
+    cells+=`<div class="${cls}" title="${fest||''}"><span class="cdate-n">${d}</span>${fest?'<div class="cdot"></div>':''}</div>`;
+  }
+  const zoneLabel=zone==='india'?'🇮🇳 India Calendar':'🇺🇸 USA Calendar';
+  const tzLabel=zone==='india'?'IST (UTC+5:30)':'EST (UTC-5)';
+  return `<div class="cal-panel cal-${zone}">
+    <div class="cal-hd"><div><div class="cal-hd-title">${zoneLabel}</div><div class="cal-hd-sub">${tzLabel}</div></div></div>
+    <div class="cal-nav">
+      <button onclick="chgMonth(-1,'${zone}')">‹</button>
+      <div class="cal-month-t">${te_months[m]}<span>${en_months[m]} ${y}</span></div>
+      <button onclick="chgMonth(1,'${zone}')">›</button>
+    </div>
+    <div class="cal-body">
+      <div class="cal-dh"><div class="sun">ఆది</div><div>సోమ</div><div>మంగళ</div><div>బుధ</div><div>గురు</div><div>శుక్ర</div><div>శని</div></div>
+      <div class="cal-dates">${cells}</div>
+    </div>
+  </div>`;
+}
+function renderCal(){document.getElementById('calDual').innerHTML=buildCal('india')+buildCal('usa');}
+function chgMonth(d,z){
+  calState[z].m+=d;
+  if(calState[z].m>11){calState[z].m=0;calState[z].y++;}
+  if(calState[z].m<0){calState[z].m=11;calState[z].y--;}
+  renderCal();
+}
+
+function renderTemples(){
+  document.getElementById('templeStrip').innerHTML=TEMPLES.map(t=>`
+    <div class="hcard"><img src="${t.img}" alt="" loading="lazy">
+      <div class="hc-body"><div class="hc-cat">🛕 ${t.city}</div>
+        <div class="hc-t">${t.name}</div>
+        <div class="hc-te2">${t.en}</div>
+        <div class="hc-meta">🙏 ${t.deity}</div>
+      </div>
+    </div>`).join('');
+}
+
+let activeMandi='hyderabad';
+function renderPrices(city){
+  activeMandi=city||activeMandi;
+  const data=PRICES[activeMandi]||PRICES_HYD;
+  document.getElementById('priceTbody').innerHTML=data.map(r=>`
+    <tr><td><span class="crop-te">${r.te}</span><span class="crop-en">${r.en}</span></td>
+      <td><span class="pval">₹${r.min}</span></td>
+      <td><span class="pval">₹${r.max}</span></td>
+      <td><span class="pval" style="color:var(--farmer)">₹${r.modal}</span></td>
+      <td><span class="${r.dir==='up'?'chg-up':r.dir==='dn'?'chg-dn':''}">${r.chg}</span></td>
+    </tr>`).join('');
+  document.querySelectorAll('.mt').forEach(b=>{
+    b.classList.toggle('active',b.dataset.city===activeMandi);
+  });
+}
+function renderMandiTabs(){
+  const cities=[['hyderabad','హైదరాబాద్'],['guntur','గుంటూరు'],['warangal','వరంగల్'],['vijayawada','విజయవాడ']];
+  document.getElementById('mandiTabs').innerHTML=cities.map(([k,l])=>`
+    <div class="mt${k==='hyderabad'?' active':''}" data-city="${k}" onclick="renderPrices('${k}')">${l}</div>`).join('');
+}
+
+function renderWeather(){
+  document.getElementById('weatherRow').innerHTML=WEATHER.map(w=>`
+    <div class="wcard"><div class="wc-city">${w.city}</div><div class="wc-icon">${w.icon}</div>
+      <div class="wc-temp">${w.temp}</div><div class="wc-rain">🌧 ${w.rain}</div></div>`).join('');
+}
+
+function renderRecipes(){
+  document.getElementById('recipeGrid').innerHTML=RECIPES.map(r=>`
+    <div class="rcp-card" onclick="window.open('https://youtube.com/@varandaatalkies','_blank')">
+      <div class="rcp-img"><img src="${r.img}" alt="" loading="lazy">
+        ${r.isNew?'<div class="rcp-new">NEW</div>':''}<div class="rcp-time">⏱ ${r.time}</div></div>
+      <div class="rcp-body"><div class="rcp-cat">${r.cat}</div><div class="rcp-title">${r.title}</div>
+        <div class="rcp-te2">${r.te}</div></div>
+    </div>`).join('');
+}
+
+function renderRights(){
+  document.getElementById('bigRights').innerHTML=BIG_RIGHTS.map(c=>`
+    <div class="br-card"><div class="br-icon">${c.icon}</div>
+      <div class="br-title">${c.title}</div><div class="br-desc">${c.desc}</div></div>`).join('');
+  document.getElementById('helplineRow').innerHTML=HELPLINES_FULL.map(h=>`
+    <div class="hl-card" style="background:${h.bg};color:white">
+      <div class="hl-num">${h.num}</div><div class="hl-te2">${h.te}</div><div class="hl-en2">${h.en}</div>
+    </div>`).join('');
+}
+
+let activeCity='hyd';
+function renderTraffic(city){
+  activeCity=city||activeCity;
+  const d=TRAFFIC_DATA[activeCity];
+  const sc={clear:'rdot-clear',slow:'rdot-slow',heavy:'rdot-heavy'};
+  const ss={clear:'st-clear',slow:'st-slow',heavy:'st-heavy'};
+  const sl={clear:'Clear ✓',slow:'Slow ⚡',heavy:'Heavy 🔴'};
+  document.getElementById('routeGrid').innerHTML=d.routes.map(r=>`
+    <div class="route-card"><div class="rdot ${sc[r.s]}"></div>
+      <div class="rinfo"><div class="rname-te">${r.te}</div><div class="rname-en">${r.en}</div></div>
+      <div style="text-align:right"><div class="rstatus ${ss[r.s]}">${sl[r.s]}</div>
+        <div class="rtime">${r.time}</div></div></div>`).join('');
+  document.getElementById('alertList').innerHTML=d.alerts.map(a=>`
+    <div class="al-item al-${a.sev}"><div class="al-icon">${a.icon}</div>
+      <div><div class="al-title">${a.title}</div>
+        <div class="al-te2">${a.te}</div><div class="al-time">🕐 ${a.time}</div></div>
+    </div>`).join('');
+  document.querySelectorAll('.ctab').forEach(b=>b.classList.toggle('active',b.dataset.city===activeCity));
+}
+function renderCityTabs(){
+  const cities=[['hyd','🏙️ హైదరాబాద్'],['vjw','🏛️ విజయవాడ'],['vsp','🌊 విశాఖపట్నం'],['wrg','🌿 వరంగల్']];
+  document.getElementById('cityTabs').innerHTML=cities.map(([k,l])=>`
+    <div class="ctab${k==='hyd'?' active':''}" data-city="${k}" onclick="renderTraffic('${k}')">${l}</div>`).join('');
+}
+
+function renderWeekend(){
+  document.getElementById('wkndGrid').innerHTML=WKND.map(w=>`
+    <div class="wknd-card"><div class="wknd-img"><img src="${w.img}" alt="" loading="lazy"></div>
+      <div class="wknd-body"><div class="wknd-cat">${w.cat}</div>
+        <div class="wknd-t">${w.t}</div><div class="wknd-te2">${w.te}</div></div>
+    </div>`).join('');
+}
+
+function renderReels(){
+  document.getElementById('reelsRow').innerHTML=REELS.map(r=>`
+    <div class="reel"><img src="${r.img}" alt="" loading="lazy">
+      <div class="reel-ov"><div class="reel-lbl">${r.lbl}</div><div class="reel-t">${r.t}</div></div>
+    </div>`).join('');
+}
+
+function renderTips(){
+  document.getElementById('tipsRow').innerHTML=TIPS.map(t=>`
+    <div class="tip-card"><div class="tip-icon">${t.icon}</div>
+      <div class="tip-cat">${t.cat}</div><div class="tip-title">${t.t}</div>
+      <div class="tip-te2">${t.te}</div></div>`).join('');
+}
+
+function renderAchievements(){
+  document.getElementById('achList').innerHTML=ACHIEVEMENTS.map(a=>`
+    <div class="ach-item"><div class="ach-flag">${a.icon}</div>
+      <div style="flex:1"><div class="ach-title">${a.t}</div><div class="ach-te2">${a.te}</div></div>
+      <div class="ach-badge">${a.badge}</div></div>`).join('');
+}
+
+function renderFests(){
+  document.getElementById('festStrip').innerHTML=FESTS.map(f=>`
+    <div class="fest-card"><div class="fest-icon">${f.icon}</div>
+      <div class="fest-name">${f.name}</div>
+      <div style="font-size:10px;color:var(--ash)">${f.en}</div>
+      <div class="fest-date">${f.date}</div>
+      <div class="fest-days">${f.days} రోజులు</div>
+    </div>`).join('');
+}
+
+function renderSidebar(){
+  // Helplines
+  document.getElementById('hlSidebar').innerHTML=HELPLINES.map(h=>`
+    <div class="hls"><div class="hls-num">${h.num}</div>
+      <div><div class="hls-te">${h.te}</div><div class="hls-en">${h.en}</div></div></div>`).join('');
+  // Trending
+  document.getElementById('trendList').innerHTML=TRENDING.map((t,i)=>`
+    <div class="tl-item"><div class="tl-n">0${i+1}</div>
+      <div><div class="tl-t">${t.t}</div><div class="tl-te">${t.te}</div></div></div>`).join('');
+  // Ugadi countdown
+  const days=Math.ceil((new Date('2026-03-30')-new Date())/(864e5));
+  document.getElementById('ugadiDays').textContent=days>0?days:'🎊';
+  // Edition pill
+  const h=new Date().getHours();
+  document.getElementById('editionPill').textContent=h<12?'🌅 MORNING · 8:00 AM':'🌆 EVENING · 7:00 PM';
+}
+
+// ══════════════════════════════════════════
+// MODAL
+// ══════════════════════════════════════════
+const ALL_ARTICLES=[...HERO_ITEMS,...VIDEOS];
+function openModal(id){
+  const a=ALL_ARTICLES.find(x=>x.id===id);
+  if(!a)return;
+  document.getElementById('m-img').src=a.img;
+  document.getElementById('m-tag').className='hc-tag '+a.tag;
+  document.getElementById('m-tag').textContent=a.tagLabel||a.cat;
+  document.getElementById('m-cat').textContent=a.cat;
+  document.getElementById('m-title').textContent=a.title;
+  document.getElementById('m-te').textContent=a.te;
+  document.getElementById('m-date').textContent=(a.time||'ఈరోజు')+' · 👁 '+(a.views||'');
+  document.getElementById('m-body-te').textContent=a.tebody||'';
+  document.getElementById('m-body-en').textContent=a.en||'';
+  document.getElementById('modalShareRow').innerHTML=buildShareRow(a.title,a.te);
+  document.getElementById('articleModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){
+  document.getElementById('articleModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.getElementById('articleModal').addEventListener('click',e=>{
+  if(e.target===document.getElementById('articleModal'))closeModal();
+});
+
+// ══════════════════════════════════════════
+// WHATSAPP SHARING
+// ══════════════════════════════════════════
+function buildShareRow(title,te){
+  const url=encodeURIComponent('https://varandaatalkies.com');
+  const msg=encodeURIComponent(`${te}\n\n${title}\n\nవరండా టాకీస్ లో చదవండి: https://varandaatalkies.com`);
+  return `
+    <button class="share-btn" style="background:#25D366" onclick="window.open('https://wa.me/?text=${msg}','_blank')">💬 WhatsApp</button>
+    <button class="share-btn" style="background:#1877F2" onclick="window.open('https://facebook.com/sharer/sharer.php?u=${url}','_blank','width=600,height=400')">📘 Facebook</button>
+    <button class="share-btn" style="background:#000" onclick="window.open('https://twitter.com/intent/tweet?url=${url}&text=${encodeURIComponent(te)}','_blank','width=600,height=400')">𝕏 Twitter</button>
+    <button class="share-btn" style="background:#229ED9" onclick="window.open('https://t.me/share/url?url=${url}&text=${encodeURIComponent(te)}','_blank')">✈️ Telegram</button>`;
+}
+
+function shareWhatsApp(){
+  const msg=encodeURIComponent('వరండా టాకీస్ — తెలుగు వార్తలు, రాశిఫలాలు, OTT, రైతులు, ట్రాఫిక్ అన్నీ ఒకే చోట!\n\nhttps://varandaatalkies.com');
+  window.open(`https://wa.me/?text=${msg}`,'_blank');
+}
+
+// ══════════════════════════════════════════
+// SEARCH
+// ══════════════════════════════════════════
+function openSearch(){
+  document.getElementById('searchOverlay').classList.add('open');
+  setTimeout(()=>document.getElementById('searchBigInput').focus(),100);
+  document.body.style.overflow='hidden';
+}
+function closeSearch(){
+  document.getElementById('searchOverlay').classList.remove('open');
+  document.body.style.overflow='';
+  document.getElementById('searchBigInput').value='';
+  document.getElementById('searchResults').classList.remove('has-results');
+  document.getElementById('noResults').style.display='none';
+}
+function runSearch(q){
+  if(!q.trim()){document.getElementById('searchResults').classList.remove('has-results');document.getElementById('noResults').style.display='none';return;}
+  const lower=q.toLowerCase();
+  const results=SEARCH_INDEX.filter(item=>
+    item.t.toLowerCase().includes(lower)||
+    item.te.toLowerCase().includes(lower)||
+    item.cat.toLowerCase().includes(lower)
+  ).slice(0,8);
+  const sr=document.getElementById('searchResults');
+  const items=document.getElementById('srItems');
+  const none=document.getElementById('noResults');
+  if(results.length===0){sr.classList.remove('has-results');none.style.display='block';return;}
+  none.style.display='none';
+  document.getElementById('srCount').textContent=`${results.length} ఫలితాలు కనిపించాయి · results found`;
+  items.innerHTML=results.map(r=>`
+    <div class="sr-item" onclick="closeSearch()">
+      <div class="sr-icon">${r.icon}</div>
+      <div><div class="sr-title">${r.t}</div>
+        <div class="sr-te">${r.te}</div>
+        <div class="sr-cat">${r.cat}</div></div>
+    </div>`).join('');
+  sr.classList.add('has-results');
+}
+document.getElementById('searchBigInput').addEventListener('input',e=>runSearch(e.target.value));
+document.getElementById('searchInput').addEventListener('focus',openSearch);
+document.getElementById('searchInput').addEventListener('input',e=>{
+  openSearch();
+  document.getElementById('searchBigInput').value=e.target.value;
+  runSearch(e.target.value);
+});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){closeModal();closeSearch();closeMobileNav();}
+});
+
+// ══════════════════════════════════════════
+// HAMBURGER / MOBILE NAV
+// ══════════════════════════════════════════
+function closeMobileNav(){
+  document.getElementById('mobileNav').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.getElementById('hamburger').addEventListener('click',function(){
+  const open=this.classList.toggle('open');
+  document.getElementById('mobileNav').classList.toggle('open',open);
+  document.body.style.overflow=open?'hidden':'';
+});
+
+// ══════════════════════════════════════════
+// NAV ACTIVE ON SCROLL
+// ══════════════════════════════════════════
+const NAV_SECTIONS=['home','politics','entertainment','america','ott','spiritual','farmers','housewives','everyone','traffic','weekend','achievements'];
+function updateNav(){
+  const scrollY=window.scrollY+120;
+  let current='home';
+  NAV_SECTIONS.forEach(id=>{
+    const el=document.getElementById(id);
+    if(el&&el.offsetTop<=scrollY)current=id;
+  });
+  document.querySelectorAll('.nav-link').forEach(l=>{
+    l.classList.toggle('active',l.dataset.sec===current);
+  });
+}
+window.addEventListener('scroll',updateNav,{passive:true});
+
+// ══════════════════════════════════════════
+// INIT — render everything
+// ══════════════════════════════════════════
+renderTicker();
+renderHero();
+renderVideos();
+renderUSA();
+renderOTT();
+renderRaashis();
+renderCal();
+renderTemples();
+renderMandiTabs();
+renderPrices();
+renderWeather();
+renderRecipes();
+renderRights();
+renderCityTabs();
+renderTraffic();
+renderWeekend();
+renderReels();
+renderTips();
+renderAchievements();
+renderFests();
+renderSidebar();
+</script>
+</body>
+</html>
