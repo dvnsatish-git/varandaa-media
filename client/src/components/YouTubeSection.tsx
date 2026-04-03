@@ -25,7 +25,12 @@ function extractVideoId(url: string): string {
   return "";
 }
 
-export default function YouTubeSection() {
+interface YouTubeSectionProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  onArticleClick?: (article: any) => void;
+}
+
+export default function YouTubeSection({ onArticleClick }: YouTubeSectionProps = {}) {
   const [videos, setVideos] = useState<YTVideo[]>([]);
 
   useEffect(() => {
@@ -61,12 +66,10 @@ export default function YouTubeSection() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-[18px]">
         {videos.map((video) => (
-          <a
+          <div
             key={video.videoId}
-            href={video.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-warmWhite border border-border rounded-[5px] overflow-hidden transition-all duration-[220ms] hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.09)] group"
+            onClick={() => onArticleClick?.({ title: video.title, link: video.link, img: video.thumbnail, time: timeAgo(video.publishedAt), cat: "YouTube" })}
+            className="bg-warmWhite border border-border rounded-[5px] overflow-hidden transition-all duration-[220ms] hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.09)] group cursor-pointer"
           >
             <div className="relative aspect-video overflow-hidden bg-[#111]">
               <img
@@ -95,7 +98,7 @@ export default function YouTubeSection() {
                 <span>{timeAgo(video.publishedAt)}</span>
               </div>
             </div>
-          </a>
+          </div>
         ))}
       </div>
     </section>

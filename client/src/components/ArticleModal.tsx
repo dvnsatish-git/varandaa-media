@@ -19,20 +19,22 @@ interface ArticleModalProps {
   onClose: () => void;
 }
 
+function extractVideoId(url: string): string {
+  return (
+    url.match(/[?&]v=([^&]+)/)?.[1] ??
+    url.match(/shorts\/([^?&/]+)/)?.[1] ??
+    ""
+  );
+}
+
 export default function ArticleModal({ article, onClose }: ArticleModalProps) {
   useEffect(() => {
-    if (article) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = article ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [article]);
 
   useEffect(() => {
-    const handler = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-    };
+    const handler = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
   }, [onClose]);
@@ -40,15 +42,18 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
   if (!article) return null;
 
   const displayTitle = (article.title || article.t || "Article") as string;
-  const displayTe = (article.te || article.titleTe || "") as string;
-  const displayBody = (article.tebody || article.summaryTe || "") as string;
-  const displayEn = (article.en || article.summaryEn || article.summary || "") as string;
-  const displayImg = (article.img || article.image || `https://picsum.photos/seed/${displayTitle.slice(0,4)}/900/400`) as string;
-  const displayCat = (article.cat || article.category || "") as string;
-  const displayTime = (article.time || "") as string;
-  const displayViews = (article.views || "") as string;
-  const displayLink = (article.link || "") as string;
+  const displayTe    = (article.te || article.titleTe || "") as string;
+  const displayBody  = (article.tebody || article.summaryTe || "") as string;
+  const displayEn    = (article.en || article.summaryEn || article.summary || "") as string;
+  const displayImg   = (article.img || article.image || `https://picsum.photos/seed/${displayTitle.slice(0, 4)}/900/400`) as string;
+  const displayCat   = (article.cat || article.category || "") as string;
+  const displayTime  = (article.time || "") as string;
+  const displayLink  = (article.link || "") as string;
+
   const isYouTube = displayLink.includes("youtube.com/watch") || displayLink.includes("youtube.com/shorts");
+  const videoId   = isYouTube ? extractVideoId(displayLink) : "";
+  // YouTube embed: shorts use the same /embed/ URL
+  const embedUrl  = videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0` : "";
 
   return (
     <div
@@ -56,48 +61,42 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
       <div className="modal-animate bg-warmWhite rounded-[8px] w-full max-w-[720px] overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.5)]">
-        {/* Modal Header */}
+        {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-border">
           <div className="flex items-center gap-2">
             {displayCat && (
               <span className="bg-saffron text-white text-[8px] font-bold tracking-[1.5px] uppercase px-[8px] py-[3px] rounded-[2px]">
-                {displayCat}
+                {isYouTube ? "YouTube" : displayCat}
               </span>
             )}
             {displayTime && <span className="text-[11px] text-ash">{displayTime}</span>}
           </div>
-          <button
-            onClick={onClose}
-            className="text-ash hover:text-night text-[22px] leading-none transition-colors"
-          >
-            ✕
-          </button>
+          <button onClick={onClose} className="text-ash hover:text-night text-[22px] leading-none transition-colors">✕</button>
         </div>
 
-        {/* Image */}
+        {/* Media — embedded YouTube player OR article image */}
         <div className="aspect-video overflow-hidden bg-charcoal">
-          <img src={displayImg} alt={displayTitle} className="w-full h-full object-cover" />
+          {embedUrl ? (
+            <iframe
+              src={embedUrl}
+              title={displayTitle}
+              className="w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          ) : (
+            <img src={displayImg} alt={displayTitle} className="w-full h-full object-cover" />
+          )}
         </div>
 
         {/* Content */}
         <div className="p-6">
-          {/* Title */}
           <h1 className="font-serif text-[26px] font-bold leading-[1.28] mb-3">{displayTitle}</h1>
 
-          {/* Telugu Title */}
           {displayTe && (
             <p className="font-te text-[17px] font-bold text-night/80 mb-4 leading-[1.55]">{displayTe}</p>
           )}
 
-          {/* Meta */}
-          {(displayViews || displayTime) && (
-            <div className="flex items-center gap-4 text-[11px] text-ash mb-4 pb-4 border-b border-border">
-              {displayTime && <span>🕐 {displayTime}</span>}
-              {displayViews && <span>👁 {displayViews} views</span>}
-            </div>
-          )}
-
-          {/* Telugu Body */}
           {displayBody && (
             <div className="mb-5">
               <h3 className="font-te text-[13px] font-bold text-saffron mb-2 uppercase tracking-[1px]">తెలుగు</h3>
@@ -105,7 +104,6 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
             </div>
           )}
 
-          {/* English Body */}
           {displayEn && (
             <div className="mb-6">
               <h3 className="text-[11px] font-bold text-saffron mb-2 uppercase tracking-[1px]">English</h3>
@@ -115,42 +113,27 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
 
           {/* Actions */}
           <div className="flex gap-3 flex-wrap">
-            {isYouTube ? (
-              <a
-                href={displayLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-saffron text-white px-5 py-2.5 rounded-[4px] text-[13px] font-semibold hover:bg-deep transition-colors"
-              >
+            {!isYouTube && displayLink && (
+              <a href={displayLink} target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-night text-white px-5 py-2.5 rounded-[4px] text-[13px] font-semibold hover:bg-charcoal transition-colors">
+                🔗 Read Full Article
+              </a>
+            )}
+            {isYouTube && displayLink && (
+              <a href={displayLink} target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-saffron text-white px-5 py-2.5 rounded-[4px] text-[13px] font-semibold hover:bg-deep transition-colors">
                 <svg viewBox="0 0 24 24" className="w-4 h-4 fill-white">
                   <path d="M23.5 6.19a3.02 3.02 0 00-2.13-2.14C19.5 3.67 12 3.67 12 3.67s-7.5 0-9.37.38A3.02 3.02 0 00.5 6.19 31.8 31.8 0 000 12a31.8 31.8 0 00.5 5.81 3.02 3.02 0 002.13 2.14c1.87.38 9.37.38 9.37.38s7.5 0 9.37-.38a3.02 3.02 0 002.13-2.14A31.8 31.8 0 0024 12a31.8 31.8 0 00-.5-5.81zM9.75 15.5v-7l6.25 3.5-6.25 3.5z" />
                 </svg>
-                Watch on YouTube
+                Open on YouTube
               </a>
-            ) : displayLink ? (
-              <a
-                href={displayLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-night text-white px-5 py-2.5 rounded-[4px] text-[13px] font-semibold hover:bg-charcoal transition-colors"
-              >
-                🔗 Read Full Article
-              </a>
-            ) : null}
+            )}
             <button
-              onClick={() => {
-                if (navigator.share) {
-                  navigator.share({ title: displayTitle, text: displayTe || displayTitle, url: window.location.href });
-                }
-              }}
-              className="flex items-center gap-2 bg-parchment border border-border text-charcoal px-5 py-2.5 rounded-[4px] text-[13px] font-semibold hover:border-saffron transition-colors"
-            >
+              onClick={() => navigator.share?.({ title: displayTitle, text: displayTe || displayTitle, url: displayLink || window.location.href })}
+              className="flex items-center gap-2 bg-parchment border border-border text-charcoal px-5 py-2.5 rounded-[4px] text-[13px] font-semibold hover:border-saffron transition-colors">
               📤 Share
             </button>
-            <button
-              onClick={onClose}
-              className="ml-auto flex items-center gap-1 text-[12px] text-ash hover:text-saffron transition-colors"
-            >
+            <button onClick={onClose} className="ml-auto flex items-center gap-1 text-[12px] text-ash hover:text-saffron transition-colors">
               ← Back
             </button>
           </div>

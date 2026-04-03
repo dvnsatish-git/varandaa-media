@@ -5,9 +5,11 @@ const ICONS = ["🏆", "🌟", "🎖️", "🥇", "🎯", "✨"];
 
 interface AchievementsSectionProps {
   articles: Article[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  onArticleClick?: (article: any) => void;
 }
 
-export default function AchievementsSection({ articles }: AchievementsSectionProps) {
+export default function AchievementsSection({ articles, onArticleClick }: AchievementsSectionProps) {
   const liveItems = articles.filter((a) => a.category === "achievements").slice(0, 5);
 
   return (
@@ -21,7 +23,8 @@ export default function AchievementsSection({ articles }: AchievementsSectionPro
       <div className="flex flex-col gap-[10px] mb-[32px]">
         {(liveItems.length >= 2 ? liveItems : null)
           ? liveItems.map((article, i) => (
-            <a key={article.link} href={article.link} target="_blank" rel="noopener noreferrer"
+            <div key={article.link}
+              onClick={() => onArticleClick?.(article)}
               className="flex gap-3 items-center bg-warmWhite border border-border rounded-[5px] p-[13px_14px] cursor-pointer transition-colors hover:border-turmeric group">
               <div className="w-10 h-10 rounded-full flex items-center justify-center text-[18px] flex-shrink-0"
                 style={{ background: "linear-gradient(135deg, #E8590C, #F5A623)" }}>
@@ -34,7 +37,7 @@ export default function AchievementsSection({ articles }: AchievementsSectionPro
               <span className="text-[9px] font-bold text-turmeric bg-turmeric/10 border border-turmeric/20 px-2 py-[2px] rounded-[2px] whitespace-nowrap flex-shrink-0">
                 {timeAgo(article.publishedAt)}
               </span>
-            </a>
+            </div>
           ))
           : ACHIEVEMENTS.map((ach, i) => (
             <div key={i}
