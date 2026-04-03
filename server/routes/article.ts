@@ -28,6 +28,30 @@ router.get("/", async (req, res) => {
     return res.json({ content: cached.content });
   }
 
+  // Resolve Google News redirect URLs to the real article URL
+  if (url.includes("news.google.com")) {
+    try {
+      const redirectResp = await fetch(url, {
+        method: "HEAD",
+        redirect: "follow",
+        headers: { "User-Agent": "Mozilla/5.0 (compatible; VarandaaMedia/1.0)" },
+        signal: AbortSignal.timeout(8_000),
+      });
+      const resolved = redirectResp.url;
+      // Only use if we actually got a non-Google-News URL
+      if (resolved && !resolved.includes("news.google.com")) {
+        url = resolved;
+        // Check resolved URL cache too
+        const resolvedCached = articleCache.get(url);
+        if (resolvedCached && Date.now() - resolvedCached.ts < CACHE_TTL) {
+          return res.json({ content: resolvedCached.content });
+        }
+      }
+    } catch {
+      // If redirect resolution fails, fall through and try Jina directly with the original URL
+    }
+  }
+
   try {
     // Jina AI Reader: returns clean markdown of the article
     const jinaUrl = `https://r.jina.ai/${url}`;

@@ -163,7 +163,6 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
   const isYouTube = displayLink.includes("youtube.com/watch") || displayLink.includes("youtube.com/shorts");
   const videoId   = isYouTube ? extractVideoId(displayLink) : "";
   const embedUrl  = videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0` : "";
-  const isGoogleNews = displayLink.includes("news.google.com");
 
   return (
     <div
@@ -261,7 +260,7 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
 
           {/* Actions */}
           <div className="flex gap-3 flex-wrap">
-            {!isYouTube && displayLink && !isGoogleNews && !fullContent && !loadingContent && (
+            {!isYouTube && displayLink && !fullContent && !loadingContent && (
               <button
                 onClick={() => fetchFullContent(displayLink)}
                 className="flex items-center gap-2 bg-saffron text-white px-5 py-2.5 rounded-[4px] text-[13px] font-semibold hover:bg-deep transition-colors"
