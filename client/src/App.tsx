@@ -33,8 +33,7 @@ export default function App() {
   const handleArticleClick = (item: AnyArticle) => setSelectedArticle(item);
   const handleCloseModal = () => setSelectedArticle(null);
 
-  // Client-side dedup by normalised title (catches pipeline misses from multiple GNews queries)
-  // Requires whitespace before separator so "IIT-B" style dashes are not stripped
+  // Client-side dedup — mirrors backend normTitle + 6-word short key
   const seenKeys = new Set<string>();
   const allArticles = rawArticles.filter((a: Article) => {
     let t = a.title;
@@ -43,9 +42,11 @@ export default function App() {
       if (s === t || s.length < 8) break;
       t = s;
     }
-    const key = t.toLowerCase().replace(/\W+/g, " ").trim().slice(0, 60);
-    if (seenKeys.has(key)) return false;
-    seenKeys.add(key);
+    const full  = t.toLowerCase().replace(/\W+/g, " ").trim().slice(0, 80);
+    const short = full.split(" ").slice(0, 6).join(" ");
+    if (seenKeys.has(full) || seenKeys.has(short)) return false;
+    seenKeys.add(full);
+    seenKeys.add(short);
     return true;
   });
 

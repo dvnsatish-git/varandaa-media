@@ -2,6 +2,7 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import feedRouter from "./routes/feed.js";
+import articleRouter from "./routes/article.js";
 import { loadFromDisk, getFeedMeta } from "./storage/feedStore.js";
 import { startScheduler, runFeedPipeline } from "./jobs/scheduler.js";
 
@@ -20,6 +21,9 @@ app.get("/api/health", (_req, res) => {
 
 // Feed routes (/api/feed, /api/feed/:category, /api/feed/latest, etc.)
 app.use("/api/feed", feedRouter);
+
+// Article reader (/api/article?url=...)
+app.use("/api/article", articleRouter);
 
 // Serve static files in production
 const isProduction = process.env.NODE_ENV === "production";

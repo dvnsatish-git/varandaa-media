@@ -1,6 +1,7 @@
 // Vercel serverless entry point — wraps Express app
 import express from "express";
 import feedRouter from "../server/routes/feed.js";
+import articleRouter from "../server/routes/article.js";
 import { loadFromDisk, getFeedMeta } from "../server/storage/feedStore.js";
 
 const app = express();
@@ -21,5 +22,6 @@ app.get("/api/health", (_req, res) => {
 });
 
 app.use("/api/feed", feedRouter);
+app.use("/api/article", articleRouter);
 
 export default app;

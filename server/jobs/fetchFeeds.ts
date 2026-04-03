@@ -141,12 +141,16 @@ export async function fetchAllFeeds(maxPerCategory = 6): Promise<RawArticle[]> {
     }
   }
 
-  // Deduplicate by normalised title (strips publisher suffix before comparing)
+  // Deduplicate by normalised title.
+  // Two keys per article: full title + first-6-words (catches slightly-different-title
+  // duplicates that come from the same story via different Google News search queries).
   const seen = new Set<string>();
   const deduped = results.filter((a) => {
-    const key = normTitle(a.title);
-    if (seen.has(key)) return false;
-    seen.add(key);
+    const full = normTitle(a.title);
+    const short = full.split(" ").slice(0, 6).join(" ");
+    if (seen.has(full) || seen.has(short)) return false;
+    seen.add(full);
+    seen.add(short);
     return true;
   });
 
