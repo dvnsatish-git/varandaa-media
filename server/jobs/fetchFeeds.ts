@@ -4,8 +4,9 @@
 import Parser from "rss-parser";
 import { FEED_SOURCES, type FeedSource, type FeedCategory } from "./feedSources.js";
 
+// Shorter timeout on Vercel to stay within 60s function limit
 const parser = new Parser({
-  timeout: 10_000,
+  timeout: process.env.VERCEL ? 6_000 : 10_000,
   headers: { "User-Agent": "VarandaaTalkies/1.0 (news aggregator)" },
 });
 
@@ -21,23 +22,67 @@ export interface RawArticle {
   publishedAt: string;
 }
 
-// Extract first image from content/enclosure/media
-function extractImage(item: Parser.Item & Record<string, unknown>): string {
-  const enclosure = item.enclosure as { url?: string } | undefined;
-  if (enclosure?.url) return enclosure.url;
+// Stable numeric hash from a string (no Date.now())
+function stableHash(str: string): number {
+  let h = 0;
+  for (let i = 0; i < str.length; i++) {
+    h = Math.imul(31, h) + str.charCodeAt(i) | 0;
+  }
+  return Math.abs(h);
+}
+
+// Category fallback images (Unsplash free, no API key needed)
+const CAT_IMAGES: Record<string, string> = {
+  politics:      "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=640&q=80",
+  entertainment: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=640&q=80",
+  ott:           "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=640&q=80",
+  america:       "https://images.unsplash.com/photo-1501466044931-62695aada8e9?w=640&q=80",
+  spiritual:     "https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=640&q=80",
+  farmers:       "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=640&q=80",
+  achievements:  "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=640&q=80",
+  rights:        "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=640&q=80",
+  traffic:       "https://images.unsplash.com/photo-1597075095600-6fd10b7b6b87?w=640&q=80",
+  general:       "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=640&q=80",
+};
+
+// Extract first real image from content/enclosure/media; fall back to category image
+function extractImage(
+  item: Parser.Item & Record<string, unknown>,
+  category: string,
+  title: string
+): string {
+  const enclosure = item.enclosure as { url?: string; type?: string } | undefined;
+  if (enclosure?.url && enclosure.type?.startsWith("image")) return enclosure.url;
 
   const mediaThumbnail = item["media:thumbnail"] as { $?: { url?: string } } | undefined;
   if (mediaThumbnail?.$?.url) return mediaThumbnail.$.url;
 
-  const mediaContent = item["media:content"] as { $?: { url?: string } } | undefined;
-  if (mediaContent?.$?.url) return mediaContent.$.url;
+  const mediaContent = item["media:content"] as
+    | { $?: { url?: string; medium?: string } }
+    | undefined;
+  if (mediaContent?.$?.url && mediaContent.$?.medium === "image") return mediaContent.$.url;
 
   // Try to extract from content HTML
   const content = (item.content || item["content:encoded"] || "") as string;
   const imgMatch = content.match(/<img[^>]+src=["']([^"']+)["']/i);
-  if (imgMatch) return imgMatch[1];
+  if (imgMatch?.[1] && !imgMatch[1].includes("pixel") && !imgMatch[1].includes("tracking")) {
+    return imgMatch[1];
+  }
 
-  return `https://picsum.photos/seed/${Date.now()}/320/180`;
+  // Stable per-article fallback using category image + article hash as cache-buster variant
+  const base = CAT_IMAGES[category] ?? CAT_IMAGES.general;
+  return `${base}&sig=${stableHash(title) % 10000}`;
+}
+
+// Normalise title for deduplication: strip " - Publisher" suffix and lowercase
+function normTitle(title: string): string {
+  return title
+    .replace(/\s*[-–|]\s*[^-–|]{3,40}$/, "") // strip " - Source Name" at end
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, "")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 80);
 }
 
 // Fetch a single source, return raw articles (max 10 per source)
@@ -46,17 +91,26 @@ async function fetchSource(source: FeedSource): Promise<RawArticle[]> {
     const feed = await parser.parseURL(source.url);
     const items = (feed.items ?? []).slice(0, 10);
 
-    return items.map((item) => ({
-      sourceId: source.id,
-      sourceName: source.name,
-      category: source.category,
-      language: source.language,
-      title: item.title?.trim() ?? "",
-      link: item.link ?? item.guid ?? "",
-      summary: item.contentSnippet?.slice(0, 300) ?? item.summary?.slice(0, 300) ?? "",
-      image: extractImage(item as Parser.Item & Record<string, unknown>),
-      publishedAt: item.isoDate ?? item.pubDate ?? new Date().toISOString(),
-    }));
+    return items
+      .map((item) => {
+        const title = item.title?.trim() ?? "";
+        const summary = item.contentSnippet?.slice(0, 300) ?? item.summary?.slice(0, 300) ?? "";
+        // Skip articles where summary is just the title repeated (no real content)
+        const hasContent = summary.length > 20 && summary.toLowerCase() !== title.toLowerCase().slice(0, summary.length);
+        return {
+          sourceId: source.id,
+          sourceName: source.name,
+          category: source.category,
+          language: source.language,
+          title,
+          link: item.link ?? item.guid ?? "",
+          summary: hasContent ? summary : "",
+          image: extractImage(item as Parser.Item & Record<string, unknown>, source.category, title),
+          publishedAt: item.isoDate ?? item.pubDate ?? new Date().toISOString(),
+          _hasContent: hasContent,
+        };
+      })
+      .filter((a) => a.title.length > 5 && a.link.length > 0);
   } catch (err) {
     console.warn(`[fetchFeeds] Failed to fetch ${source.id}: ${(err as Error).message}`);
     return [];
@@ -67,8 +121,8 @@ async function fetchSource(source: FeedSource): Promise<RawArticle[]> {
 export async function fetchAllFeeds(maxPerCategory = 6): Promise<RawArticle[]> {
   console.log(`[fetchFeeds] Fetching ${FEED_SOURCES.length} sources…`);
 
-  // Fetch in parallel, max 8 concurrent
-  const CONCURRENCY = 8;
+  // On Vercel: fetch all sources in one shot to save time
+  const CONCURRENCY = process.env.VERCEL ? FEED_SOURCES.length : 8;
   const results: RawArticle[] = [];
   const sources = [...FEED_SOURCES];
 
@@ -80,13 +134,13 @@ export async function fetchAllFeeds(maxPerCategory = 6): Promise<RawArticle[]> {
     }
   }
 
-  // Deduplicate by title similarity (simple substring check)
+  // Deduplicate by normalised title (strips publisher suffix before comparing)
   const seen = new Set<string>();
   const deduped = results.filter((a) => {
-    const key = a.title.toLowerCase().replace(/\s+/g, " ").slice(0, 60);
+    const key = normTitle(a.title);
     if (seen.has(key)) return false;
     seen.add(key);
-    return a.title.length > 5;
+    return true;
   });
 
   // Cap per category so no single category dominates
@@ -97,5 +151,10 @@ export async function fetchAllFeeds(maxPerCategory = 6): Promise<RawArticle[]> {
   });
 
   console.log(`[fetchFeeds] Got ${results.length} raw → ${deduped.length} deduped → ${capped.length} capped`);
-  return capped;
+  // Strip internal _hasContent flag before returning
+  return capped.map(({ ...a }) => {
+    const out = a as RawArticle & { _hasContent?: boolean };
+    delete out._hasContent;
+    return out;
+  });
 }

@@ -43,9 +43,11 @@ snippet: ${a.summary || "(no snippet)"}
 Return ONLY a valid JSON array — no markdown, no explanation.`;
 
   try {
+    // ~200 tokens per article for titleTe + summaryEn + summaryTe + score + tags
+    const maxTokens = Math.min(4096, Math.max(1024, articles.length * 200));
     const response = await client.chat.completions.create({
       model: "gpt-4o-mini",
-      max_tokens: 4096,
+      max_tokens: maxTokens,
       messages: [{ role: "user", content: prompt }],
     });
 
@@ -99,8 +101,12 @@ export async function processArticlesWithAI(
     results.push(...processed);
   }
 
-  // Sort by relevance score descending
-  results.sort((a, b) => b.relevanceScore - a.relevanceScore);
+  // Sort: most recent first, with relevance as tiebreaker
+  results.sort((a, b) => {
+    const dateDiff = new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
+    if (dateDiff !== 0) return dateDiff;
+    return b.relevanceScore - a.relevanceScore;
+  });
 
   console.log(`[processWithAI] Done — ${results.length} articles processed`);
   return results;

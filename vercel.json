@@ -8,13 +8,7 @@
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "crons": [
-    {
-      "path": "/api/cron/feed",
-      "schedule": "30 2 * * *"
-    },
-    {
-      "path": "/api/cron/feed",
-      "schedule": "30 13 * * *"
-    }
+    { "path": "/api/feed/refresh", "schedule": "30 2 * * *" },
+    { "path": "/api/feed/refresh", "schedule": "30 13 * * *" }
   ]
 }

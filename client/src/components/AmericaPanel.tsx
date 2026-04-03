@@ -1,13 +1,13 @@
 import { USA_DATA, USAItem } from "../data/content";
-import { useFeedCategory, Article, timeAgo } from "../hooks/useFeed";
+import { Article, timeAgo } from "../hooks/useFeed";
 
 interface AmericaPanelProps {
+  articles: Article[];
   onArticleClick: (item: USAItem | Article) => void;
 }
 
-export default function AmericaPanel({ onArticleClick }: AmericaPanelProps) {
-  const { articles, loading } = useFeedCategory("america", 6);
-  const items = !loading && articles.length >= 2 ? articles : null;
+export default function AmericaPanel({ articles, onArticleClick }: AmericaPanelProps) {
+  const items = articles.filter((a) => a.category === "america").slice(0, 6);
 
   return (
     <section id="america" className="mb-[52px]">
@@ -22,32 +22,31 @@ export default function AmericaPanel({ onArticleClick }: AmericaPanelProps) {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-[10px]">
-          {items
-            ? items.map((article) => (
-              <div
-                key={article.link}
-                onClick={() => onArticleClick(article)}
-                className="bg-white/[0.04] border border-white/[0.07] rounded-[4px] p-[12px_13px] cursor-pointer transition-all hover:border-saffron/40 group"
-              >
-                <div className="text-[8px] font-bold text-turmeric tracking-[1.5px] uppercase mb-1">{article.sourceName}</div>
-                <h3 className="text-[12.5px] font-semibold text-white leading-[1.35] mb-0.5 transition-colors group-hover:text-turmeric">{article.title}</h3>
-                <p className="font-te text-[11px] text-white/40 leading-[1.5]">{article.titleTe}</p>
-                <div className="text-[9px] text-white/22 mt-1">{timeAgo(article.publishedAt)}</div>
+          {(items.length >= 2 ? items : USA_DATA.map((d) => ({ ...d, _static: true }))).map((item, i) => {
+            const isLive = "link" in item && !("_static" in item);
+            if (isLive) {
+              const a = item as Article;
+              return (
+                <div key={a.link} onClick={() => onArticleClick(a)}
+                  className="bg-white/[0.04] border border-white/[0.07] rounded-[4px] p-[12px_13px] cursor-pointer transition-all hover:border-saffron/40 group">
+                  <div className="text-[8px] font-bold text-turmeric tracking-[1.5px] uppercase mb-1">{a.sourceName}</div>
+                  <h3 className="text-[12.5px] font-semibold text-white leading-[1.35] mb-0.5 transition-colors group-hover:text-turmeric">{a.title}</h3>
+                  <p className="font-te text-[11px] text-white/40 leading-[1.5]">{a.titleTe}</p>
+                  <div className="text-[9px] text-white/22 mt-1">{timeAgo(a.publishedAt)}</div>
+                </div>
+              );
+            }
+            const s = item as USAItem & { _static?: boolean };
+            return (
+              <div key={i} onClick={() => onArticleClick(s as USAItem)}
+                className="bg-white/[0.04] border border-white/[0.07] rounded-[4px] p-[12px_13px] cursor-pointer transition-all hover:border-saffron/40 group">
+                <div className="text-[8px] font-bold text-turmeric tracking-[1.5px] uppercase mb-1">{s.cat}</div>
+                <h3 className="text-[12.5px] font-semibold text-white leading-[1.35] mb-0.5 transition-colors group-hover:text-turmeric">{s.t}</h3>
+                <p className="font-te text-[11px] text-white/40 leading-[1.5]">{s.te}</p>
+                <div className="text-[9px] text-white/22 mt-1">{s.time}</div>
               </div>
-            ))
-            : USA_DATA.map((item, i) => (
-              <div
-                key={i}
-                onClick={() => onArticleClick(item)}
-                className="bg-white/[0.04] border border-white/[0.07] rounded-[4px] p-[12px_13px] cursor-pointer transition-all hover:border-saffron/40 group"
-              >
-                <div className="text-[8px] font-bold text-turmeric tracking-[1.5px] uppercase mb-1">{item.cat}</div>
-                <h3 className="text-[12.5px] font-semibold text-white leading-[1.35] mb-0.5 transition-colors group-hover:text-turmeric">{item.t}</h3>
-                <p className="font-te text-[11px] text-white/40 leading-[1.5]">{item.te}</p>
-                <div className="text-[9px] text-white/22 mt-1">{item.time}</div>
-              </div>
-            ))
-          }
+            );
+          })}
         </div>
       </div>
     </section>

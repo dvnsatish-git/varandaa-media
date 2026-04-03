@@ -1,21 +1,26 @@
-// Vercel Cron handler — triggered at 8 AM IST + 7 PM IST
-// Vercel calls this endpoint on schedule defined in vercel.json
+// Vercel Cron handler — single-phase, tuned to fit within 60s Hobby limit
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { runFeedPipeline } from "../../server/jobs/scheduler.js";
-import { loadFromDisk } from "../../server/storage/feedStore.js";
+import { fetchAllFeeds } from "../../server/jobs/fetchFeeds.js";
+import { processArticlesWithAI } from "../../server/jobs/processWithAI.js";
+import { updateFeed, loadFromDisk, getFeedMeta } from "../../server/storage/feedStore.js";
+
+export const maxDuration = 60;
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-  // Vercel automatically verifies cron requests with CRON_SECRET
-  // Manual calls are also allowed for testing
-  if (
-    req.method !== "GET" ||
-    (req.headers.authorization !== `Bearer ${process.env.CRON_SECRET}` &&
-      process.env.NODE_ENV === "production")
-  ) {
+  const secret = process.env.CRON_SECRET;
+  if (secret && req.headers.authorization !== `Bearer ${secret}`) {
     return res.status(401).json({ error: "Unauthorized" });
   }
 
   await loadFromDisk();
-  await runFeedPipeline();
-  return res.json({ ok: true, ran: new Date().toISOString() });
+
+  // Fetch: all sources in parallel, 5s timeout, max 3 per category → ~15 articles
+  // AI:    single OpenAI call for all articles, 2048 tokens → ~10-15s
+  // Total target: ~30s
+  const raw = await fetchAllFeeds(3);
+  const processed = await processArticlesWithAI(raw, raw.length); // single batch
+  await updateFeed(processed);
+
+  const meta = getFeedMeta();
+  return res.json({ ok: true, total: meta.total, updatedAt: meta.updatedAt });
 }

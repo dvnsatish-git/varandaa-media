@@ -169,11 +169,10 @@ export const FEED_SOURCES: FeedSource[] = [
   },
 
   // ── YouTube RSS (Varandaa Talkies) ────────────────────────
-  // Replace CHANNEL_ID below with the actual YouTube channel ID
   {
     id: "yt-varandaa",
-    name: "Varandaa Talkies YouTube",
-    url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCxxxxxxxxxxxxxxxxxx",
+    name: "Varandaa Talkies",
+    url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCLVrk2qH3kZ7UtO7Q_HKbrg",
     category: "general",
     language: "te",
     priority: 1,

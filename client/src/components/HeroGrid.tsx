@@ -1,5 +1,5 @@
 import { HERO_ITEMS, HeroItem } from "../data/content";
-import { useFeed, Article, timeAgo } from "../hooks/useFeed";
+import { Article, timeAgo } from "../hooks/useFeed";
 
 const TAG_CLASSES: Record<string, string> = {
   "tag-red": "bg-saffron text-white",
@@ -40,14 +40,13 @@ function toHeroItem(a: Article, main: boolean): HeroItem {
 }
 
 interface HeroGridProps {
+  articles: Article[];
   onArticleClick: (item: HeroItem | Article) => void;
 }
 
-export default function HeroGrid({ onArticleClick }: HeroGridProps) {
-  const { articles, loading } = useFeed(5);
-
+export default function HeroGrid({ articles, onArticleClick }: HeroGridProps) {
   const items =
-    !loading && articles.length >= 3
+    articles.length >= 3
       ? articles.slice(0, 3).map((a, i) => toHeroItem(a, i === 0))
       : HERO_ITEMS;
 
@@ -58,22 +57,14 @@ export default function HeroGrid({ onArticleClick }: HeroGridProps) {
     <section id="home" className="bg-night">
       <div
         className="grid gap-0.5 max-w-[1320px] mx-auto"
-        style={{
-          gridTemplateColumns: "58fr 42fr",
-          gridTemplateRows: "300px 190px",
-        }}
+        style={{ gridTemplateColumns: "58fr 42fr", gridTemplateRows: "300px 190px" }}
       >
-        {/* Main Story */}
         <div
           className="relative overflow-hidden cursor-pointer group"
           style={{ gridRow: "1 / 3" }}
           onClick={() => onArticleClick(main)}
         >
-          <img
-            src={main.img}
-            alt={main.title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-          />
+          <img src={main.img} alt={main.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" />
           <div className="hero-overlay absolute inset-0 flex flex-col justify-end p-[26px_30px]">
             <span className={`inline-block text-[8.5px] font-bold tracking-[1.8px] uppercase px-[9px] py-[3px] rounded-[2px] mb-[7px] self-start ${TAG_CLASSES[main.tag] || "bg-white/15 text-white"}`}>
               {main.tagLabel}
@@ -83,23 +74,13 @@ export default function HeroGrid({ onArticleClick }: HeroGridProps) {
             <div className="flex gap-2.5 text-[10px] text-white/40">
               <span>{main.time}</span>
               <span>👁 {main.views}</span>
-              {main.dur && <span>▶ {main.dur}</span>}
             </div>
           </div>
         </div>
 
-        {/* Side Stories */}
         {rest.map((item, i) => (
-          <div
-            key={i}
-            className="relative overflow-hidden cursor-pointer group"
-            onClick={() => onArticleClick(item)}
-          >
-            <img
-              src={item.img}
-              alt={item.title}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-            />
+          <div key={i} className="relative overflow-hidden cursor-pointer group" onClick={() => onArticleClick(item)}>
+            <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" />
             <div className="hero-overlay absolute inset-0 flex flex-col justify-end p-[18px_22px]">
               <span className={`inline-block text-[8.5px] font-bold tracking-[1.8px] uppercase px-[9px] py-[3px] rounded-[2px] mb-[7px] self-start ${TAG_CLASSES[item.tag] || "bg-white/15 text-white"}`}>
                 {item.tagLabel}

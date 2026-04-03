@@ -48,6 +48,7 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
   const displayTime = (article.time || "") as string;
   const displayViews = (article.views || "") as string;
   const displayLink = (article.link || "") as string;
+  const isYouTube = displayLink.includes("youtube.com/watch") || displayLink.includes("youtube.com/shorts");
 
   return (
     <div
@@ -114,7 +115,19 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
 
           {/* Actions */}
           <div className="flex gap-3 flex-wrap">
-            {displayLink && (
+            {isYouTube ? (
+              <a
+                href={displayLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-saffron text-white px-5 py-2.5 rounded-[4px] text-[13px] font-semibold hover:bg-deep transition-colors"
+              >
+                <svg viewBox="0 0 24 24" className="w-4 h-4 fill-white">
+                  <path d="M23.5 6.19a3.02 3.02 0 00-2.13-2.14C19.5 3.67 12 3.67 12 3.67s-7.5 0-9.37.38A3.02 3.02 0 00.5 6.19 31.8 31.8 0 000 12a31.8 31.8 0 00.5 5.81 3.02 3.02 0 002.13 2.14c1.87.38 9.37.38 9.37.38s7.5 0 9.37-.38a3.02 3.02 0 002.13-2.14A31.8 31.8 0 0024 12a31.8 31.8 0 00-.5-5.81zM9.75 15.5v-7l6.25 3.5-6.25 3.5z" />
+                </svg>
+                Watch on YouTube
+              </a>
+            ) : displayLink ? (
               <a
                 href={displayLink}
                 target="_blank"
@@ -123,18 +136,7 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
               >
                 🔗 Read Full Article
               </a>
-            )}
-            <a
-              href="https://youtube.com/@VarandaaTalkies"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-saffron text-white px-5 py-2.5 rounded-[4px] text-[13px] font-semibold hover:bg-deep transition-colors"
-            >
-              <svg viewBox="0 0 24 24" className="w-4 h-4 fill-white">
-                <path d="M23.5 6.19a3.02 3.02 0 00-2.13-2.14C19.5 3.67 12 3.67 12 3.67s-7.5 0-9.37.38A3.02 3.02 0 00.5 6.19 31.8 31.8 0 000 12a31.8 31.8 0 00.5 5.81 3.02 3.02 0 002.13 2.14c1.87.38 9.37.38 9.37.38s7.5 0 9.37-.38a3.02 3.02 0 002.13-2.14A31.8 31.8 0 0024 12a31.8 31.8 0 00-.5-5.81zM9.75 15.5v-7l6.25 3.5-6.25 3.5z" />
-              </svg>
-              Watch on YouTube
-            </a>
+            ) : null}
             <button
               onClick={() => {
                 if (navigator.share) {

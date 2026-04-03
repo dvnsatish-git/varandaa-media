@@ -13,9 +13,11 @@ import RightsSection from "./components/RightsSection";
 import TrafficSection from "./components/TrafficSection";
 import WeekendSection from "./components/WeekendSection";
 import AchievementsSection from "./components/AchievementsSection";
+import YouTubeSection from "./components/YouTubeSection";
 import Sidebar from "./components/Sidebar";
 import ArticleModal from "./components/ArticleModal";
 import Footer from "./components/Footer";
+import { useFeed, Article } from "./hooks/useFeed";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type AnyArticle = Record<string, any>;
@@ -25,38 +27,29 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedArticle, setSelectedArticle] = useState<AnyArticle | null>(null);
 
-  const handleArticleClick = (item: AnyArticle) => {
-    setSelectedArticle(item);
-  };
+  // Fetch all articles once; slice them into sections so no duplicates appear
+  const { articles: allArticles } = useFeed(60);
 
-  const handleCloseModal = () => {
-    setSelectedArticle(null);
-  };
+  const handleArticleClick = (item: AnyArticle) => setSelectedArticle(item);
+  const handleCloseModal = () => setSelectedArticle(null);
+
+  // Split articles by category, no overlapping between sections
+  const topArticles      = allArticles.slice(0, 3);   // hero
+  const latestArticles   = allArticles.slice(3, 9);   // latest news grid
+  const usedLinks = new Set([...topArticles, ...latestArticles].map((a: Article) => a.link));
+
+  const remaining = allArticles.filter((a: Article) => !usedLinks.has(a.link));
 
   return (
     <div className="min-h-screen bg-cream">
-      {/* Breaking Ticker */}
       <BreakingTicker />
-
-      {/* Header */}
-      <Header
-        onSearch={setSearchQuery}
-        menuOpen={menuOpen}
-        setMenuOpen={setMenuOpen}
-      />
-
-      {/* Navigation */}
+      <Header onSearch={setSearchQuery} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Navigation menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <HeroGrid articles={topArticles} onArticleClick={handleArticleClick} />
 
-      {/* Hero Grid (full width, dark) */}
-      <HeroGrid onArticleClick={handleArticleClick} />
-
-      {/* Main content + Sidebar */}
       <div className="max-w-[1320px] mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-10 py-10 pb-[60px]">
-          {/* Main Column */}
           <main>
-            {/* Search result notice */}
             {searchQuery && (
               <div className="mb-6 p-4 bg-turmeric/10 border border-turmeric/30 rounded-[5px]">
                 <p className="font-te text-[13px]">
@@ -65,27 +58,23 @@ export default function App() {
               </div>
             )}
 
-            <VideoGrid onArticleClick={handleArticleClick} />
-            <AmericaPanel onArticleClick={handleArticleClick} />
-            <OTTGrid onArticleClick={handleArticleClick} />
+            <YouTubeSection />
+            <VideoGrid articles={latestArticles} onArticleClick={handleArticleClick} />
+            <AmericaPanel articles={remaining} onArticleClick={handleArticleClick} />
+            <OTTGrid articles={remaining} onArticleClick={handleArticleClick} />
             <SpiritualSection />
             <FarmersSection />
             <HousewivesSection onArticleClick={handleArticleClick} />
             <RightsSection />
             <TrafficSection />
             <WeekendSection onArticleClick={handleArticleClick} />
-            <AchievementsSection />
+            <AchievementsSection articles={remaining} />
           </main>
-
-          {/* Sidebar */}
           <Sidebar />
         </div>
       </div>
 
-      {/* Footer */}
       <Footer />
-
-      {/* Article Modal */}
       <ArticleModal article={selectedArticle} onClose={handleCloseModal} />
     </div>
   );

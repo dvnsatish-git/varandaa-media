@@ -18,9 +18,14 @@ export async function runFeedPipeline(): Promise<void> {
   const start = Date.now();
   console.log(`[scheduler] ── Feed pipeline started at ${new Date().toISOString()} ──`);
 
+  // On Vercel (60s limit): cap at 4 per category → ~32 articles → 2 OpenAI batches ~25s total
+  // Locally (no limit): 8 per category → 64 articles → full quality run
+  const perCategory = process.env.VERCEL ? 4 : 8;
+  const batchSize = process.env.VERCEL ? 32 : 20;
+
   try {
-    const raw = await fetchAllFeeds(8); // up to 8 per category
-    const processed = await processArticlesWithAI(raw);
+    const raw = await fetchAllFeeds(perCategory);
+    const processed = await processArticlesWithAI(raw, batchSize);
     await updateFeed(processed);
     console.log(`[scheduler] ── Pipeline done in ${((Date.now() - start) / 1000).toFixed(1)}s ──`);
   } catch (err) {
