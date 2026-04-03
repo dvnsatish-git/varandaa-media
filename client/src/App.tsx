@@ -28,10 +28,26 @@ export default function App() {
   const [selectedArticle, setSelectedArticle] = useState<AnyArticle | null>(null);
 
   // Fetch all articles once; slice them into sections so no duplicates appear
-  const { articles: allArticles } = useFeed(60);
+  const { articles: rawArticles } = useFeed(80);
 
   const handleArticleClick = (item: AnyArticle) => setSelectedArticle(item);
   const handleCloseModal = () => setSelectedArticle(null);
+
+  // Client-side dedup by normalised title (catches pipeline misses from multiple GNews queries)
+  // Requires whitespace before separator so "IIT-B" style dashes are not stripped
+  const seenKeys = new Set<string>();
+  const allArticles = rawArticles.filter((a: Article) => {
+    let t = a.title;
+    for (let i = 0; i < 3; i++) {
+      const s = t.replace(/\s+[-–—|]\s*[^\s-–—|]{2,60}$/, "");
+      if (s === t || s.length < 8) break;
+      t = s;
+    }
+    const key = t.toLowerCase().replace(/\W+/g, " ").trim().slice(0, 60);
+    if (seenKeys.has(key)) return false;
+    seenKeys.add(key);
+    return true;
+  });
 
   // Split articles by category, no overlapping between sections
   const topArticles      = allArticles.slice(0, 3);   // hero

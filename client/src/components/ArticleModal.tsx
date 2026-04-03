@@ -116,7 +116,7 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
             {!isYouTube && displayLink && (
               <a href={displayLink} target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-night text-white px-5 py-2.5 rounded-[4px] text-[13px] font-semibold hover:bg-charcoal transition-colors">
-                🔗 Read Full Article
+                🔗 Open Source ↗
               </a>
             )}
             {isYouTube && displayLink && (

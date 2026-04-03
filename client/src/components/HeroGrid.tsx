@@ -23,7 +23,7 @@ const CAT_LABEL: Record<string, string> = {
 
 function toHeroItem(a: Article, main: boolean): HeroItem {
   return {
-    id: a.link as unknown as number,
+    id: 0,
     main,
     tag: "tag-dark",
     tagLabel: CAT_LABEL[a.category] ?? "వార్తలు",
@@ -36,6 +36,7 @@ function toHeroItem(a: Article, main: boolean): HeroItem {
     time: timeAgo(a.publishedAt),
     views: `${(a.relevanceScore * 1200 + 800).toLocaleString()}`,
     dur: "",
+    link: a.link,
   };
 }
 

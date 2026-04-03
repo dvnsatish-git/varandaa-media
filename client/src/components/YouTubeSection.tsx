@@ -38,7 +38,7 @@ export default function YouTubeSection({ onArticleClick }: YouTubeSectionProps =
     fetch("/api/feed/youtube")
       .then((r) => r.json())
       .then((d: { videos?: YTVideo[] }) => {
-        if (d.videos?.length) setVideos(d.videos.slice(0, 2));
+        if (d.videos?.length) setVideos(d.videos.slice(0, 4));
       })
       .catch(() => {});
   }, []);
@@ -64,7 +64,7 @@ export default function YouTubeSection({ onArticleClick }: YouTubeSectionProps =
         </a>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-[18px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-[18px]">
         {videos.map((video) => (
           <div
             key={video.videoId}

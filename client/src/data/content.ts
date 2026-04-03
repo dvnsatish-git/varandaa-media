@@ -23,6 +23,7 @@ export interface HeroItem {
   time: string;
   views: string;
   dur: string;
+  link?: string;
 }
 
 export const HERO_ITEMS: HeroItem[] = [

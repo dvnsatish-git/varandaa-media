@@ -49,13 +49,39 @@ router.get("/meta", (_req, res) => {
   res.json(getFeedMeta());
 });
 
-// GET /api/feed/youtube — latest 2 videos from Varandaa Talkies channel (live, no cache)
+// GET /api/feed/youtube — latest videos from Varandaa Talkies (feed store first, live RSS fallback)
 router.get("/youtube", async (_req, res) => {
+  // Helper: extract YouTube video ID from a URL
+  const extractId = (url: string) =>
+    url.match(/[?&]v=([^&]+)/)?.[1] ?? url.match(/shorts\/([^?&/]+)/)?.[1] ?? "";
+
+  // Try feed store first (yt-varandaa articles already fetched during pipeline)
+  const stored = getAllArticles(60)
+    .filter((a) => a.sourceId === "yt-varandaa" && a.link.includes("youtube.com"))
+    .slice(0, 4);
+
+  if (stored.length >= 1) {
+    const videos = stored.map((a) => {
+      const videoId = extractId(a.link);
+      return {
+        title: a.title,
+        link: a.link,
+        videoId,
+        thumbnail: videoId
+          ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
+          : a.image,
+        publishedAt: a.publishedAt,
+      };
+    });
+    return res.json({ videos });
+  }
+
+  // Fall back to live RSS if store has no yt-varandaa articles
   try {
     const feed = await ytParser.parseURL(YT_RSS);
-    const videos = (feed.items ?? []).slice(0, 2).map((item) => {
+    const videos = (feed.items ?? []).slice(0, 4).map((item) => {
       const link = item.link ?? item.guid ?? "";
-      const videoId = link.match(/[?&]v=([^&]+)/)?.[1] ?? link.match(/shorts\/([^?&/]+)/)?.[1] ?? "";
+      const videoId = extractId(link);
       return {
         title: item.title?.trim() ?? "",
         link,
@@ -64,9 +90,9 @@ router.get("/youtube", async (_req, res) => {
         publishedAt: item.isoDate ?? item.pubDate ?? new Date().toISOString(),
       };
     });
-    res.json({ videos });
+    return res.json({ videos });
   } catch (err) {
-    res.json({ videos: [], error: (err as Error).message });
+    return res.json({ videos: [], error: (err as Error).message });
   }
 });
 

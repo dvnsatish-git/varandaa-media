@@ -74,10 +74,17 @@ function extractImage(
   return `${base}&sig=${stableHash(title) % 10000}`;
 }
 
-// Normalise title for deduplication: strip " - Publisher" suffix and lowercase
+// Normalise title for deduplication: strip all trailing " - Publisher" segments
 function normTitle(title: string): string {
-  return title
-    .replace(/\s*[-–|]\s*[^-–|]{3,40}$/, "") // strip " - Source Name" at end
+  let t = title;
+  // Strip up to 3 trailing " - Source" segments (requires whitespace before separator
+  // so intra-word dashes like "IIT-B" are not stripped)
+  for (let i = 0; i < 3; i++) {
+    const stripped = t.replace(/\s+[-–—|]\s*[^-–—|]{2,60}$/, "");
+    if (stripped === t || stripped.length < 10) break;
+    t = stripped;
+  }
+  return t
     .toLowerCase()
     .replace(/[^a-z0-9\s]/g, "")
     .replace(/\s+/g, " ")
