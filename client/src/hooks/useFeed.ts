@@ -8,6 +8,7 @@ export interface Article {
   title: string;
   titleTe: string;
   link: string;
+  realLink: string;  // resolved URL (direct publisher URL, or same as link for GNews)
   summary: string;
   summaryEn: string;
   summaryTe: string;

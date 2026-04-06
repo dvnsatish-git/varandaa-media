@@ -17,6 +17,7 @@ export interface RawArticle {
   language: "te" | "en";
   title: string;
   link: string;
+  realLink: string;    // resolved URL after following Google News redirects
   summary: string;
   image: string;
   publishedAt: string;
@@ -92,6 +93,27 @@ function normTitle(title: string): string {
     .slice(0, 80);
 }
 
+// Follow a Google News redirect URL to get the real article URL.
+// Uses GET (not HEAD) because Google News requires a browser-like GET to resolve.
+async function resolveGNewsUrl(url: string): Promise<string> {
+  if (!url.includes("news.google.com")) return url;
+  try {
+    const resp = await fetch(url, {
+      redirect: "follow",
+      headers: {
+        "User-Agent":
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+        Accept: "text/html,application/xhtml+xml,*/*",
+      },
+      signal: AbortSignal.timeout(10_000),
+    });
+    const resolved = resp.url;
+    return resolved && !resolved.includes("news.google.com") ? resolved : url;
+  } catch {
+    return url;
+  }
+}
+
 // Fetch a single source, return raw articles (max 10 per source)
 async function fetchSource(source: FeedSource): Promise<RawArticle[]> {
   try {
@@ -111,6 +133,7 @@ async function fetchSource(source: FeedSource): Promise<RawArticle[]> {
           language: source.language,
           title,
           link: item.link ?? item.guid ?? "",
+          realLink: item.link ?? item.guid ?? "",  // resolved later if RESOLVE_REDIRECTS=true
           summary: hasContent ? summary : "",
           image: extractImage(item as Parser.Item & Record<string, unknown>, source.category, title),
           publishedAt: item.isoDate ?? item.pubDate ?? new Date().toISOString(),
@@ -162,10 +185,28 @@ export async function fetchAllFeeds(maxPerCategory = 6): Promise<RawArticle[]> {
   });
 
   console.log(`[fetchFeeds] Got ${results.length} raw → ${deduped.length} deduped → ${capped.length} capped`);
-  // Strip internal _hasContent flag before returning
-  return capped.map(({ ...a }) => {
+
+  // Strip internal _hasContent flag
+  const cleaned = capped.map(({ ...a }) => {
     const out = a as RawArticle & { _hasContent?: boolean };
     delete out._hasContent;
     return out;
   });
+
+  // Resolve Google News redirect URLs when enabled (GitHub Actions pipeline only —
+  // adds latency so disabled on Vercel where each request has a 60s limit)
+  if (process.env.RESOLVE_REDIRECTS === "true") {
+    console.log("[fetchFeeds] Resolving Google News redirect URLs…");
+    const resolved = await Promise.all(
+      cleaned.map(async (a) => ({
+        ...a,
+        realLink: await resolveGNewsUrl(a.link),
+      }))
+    );
+    const resolvedCount = resolved.filter((a) => a.realLink !== a.link).length;
+    console.log(`[fetchFeeds] Resolved ${resolvedCount} Google News URLs`);
+    return resolved;
+  }
+
+  return cleaned;
 }

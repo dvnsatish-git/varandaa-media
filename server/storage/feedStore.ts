@@ -86,6 +86,12 @@ export function getLatestArticles(limit = 10): ProcessedArticle[] {
     .slice(0, limit);
 }
 
+export function getArticleByLink(link: string): ProcessedArticle | undefined {
+  return cache.articles.find(
+    (a) => a.link === link || a.realLink === link
+  );
+}
+
 export function getTickerItems(): string[] {
   // Top 8 most relevant articles, short titles for the ticker
   return cache.articles

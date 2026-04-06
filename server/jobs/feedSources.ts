@@ -1,5 +1,6 @@
 // ─────────────────────────────────────────────────────────────
-//  Feed Sources — all free RSS/Atom feeds, no API key needed
+//  Feed Sources — direct publisher RSS feeds (real URLs, no GNews redirect)
+//  + targeted Google News searches where no direct feed exists
 // ─────────────────────────────────────────────────────────────
 
 export type FeedCategory =
@@ -25,70 +26,120 @@ export interface FeedSource {
   priority: number; // 1 = highest
 }
 
-// Google News RSS — Telugu-relevant search queries
+// Google News RSS helper (used only where no direct publisher feed exists)
 const GN = (q: string) =>
   `https://news.google.com/rss/search?q=${encodeURIComponent(q)}&hl=en-IN&gl=IN&ceid=IN:en`;
 
 export const FEED_SOURCES: FeedSource[] = [
-  // ── Politics / Telangana / AP ──────────────────────────────
+  // ── Politics / Telangana / AP — direct publisher feeds ────
   {
-    id: "gn-telangana",
-    name: "Google News — Telangana",
-    url: GN("Telangana government news"),
+    id: "telangana-today",
+    name: "Telangana Today",
+    url: "https://telanganatoday.com/?feed=rss2",
     category: "politics",
     language: "en",
     priority: 1,
   },
   {
-    id: "gn-ap-politics",
-    name: "Google News — Andhra Pradesh",
-    url: GN("Andhra Pradesh YCP TDP politics"),
+    id: "hans-india",
+    name: "The Hans India",
+    url: "https://www.thehansindia.com/feed/",
     category: "politics",
     language: "en",
     priority: 1,
   },
   {
-    id: "gn-cm-revanth",
-    name: "Google News — AP/TG CM",
-    url: GN("Revanth Reddy Chandrababu Naidu news"),
+    id: "deccan-chronicle",
+    name: "Deccan Chronicle",
+    url: "https://www.deccanchronicle.com/rss_feed.xml",
+    category: "politics",
+    language: "en",
+    priority: 2,
+  },
+  {
+    id: "hindustan-times",
+    name: "Hindustan Times — India",
+    url: "https://www.hindustantimes.com/feeds/rss/india-news/rssfeed.xml",
+    category: "politics",
+    language: "en",
+    priority: 2,
+  },
+  {
+    id: "india-today",
+    name: "India Today",
+    url: "https://www.indiatoday.in/rss/home",
     category: "politics",
     language: "en",
     priority: 2,
   },
 
-  // ── Entertainment / Tollywood ──────────────────────────────
+  // ── Supplemental politics via GNews (AP/TG specific) ──────
   {
-    id: "gn-tollywood",
-    name: "Google News — Tollywood",
-    url: GN("tollywood telugu movies 2026"),
+    id: "gn-ap-politics",
+    name: "Google News — AP Politics",
+    url: GN("Andhra Pradesh Chandrababu Naidu YCP TDP 2026"),
+    category: "politics",
+    language: "en",
+    priority: 3,
+  },
+  {
+    id: "gn-telangana",
+    name: "Google News — Telangana",
+    url: GN("Telangana Revanth Reddy government 2026"),
+    category: "politics",
+    language: "en",
+    priority: 3,
+  },
+
+  // ── Entertainment / Tollywood — direct feeds ───────────────
+  {
+    id: "pinkvilla",
+    name: "PinkVilla",
+    url: "https://www.pinkvilla.com/rss",
     category: "entertainment",
     language: "en",
     priority: 1,
   },
   {
-    id: "gn-telugu-actors",
-    name: "Google News — Telugu Stars",
-    url: GN("Prabhas Mahesh Babu Allu Arjun Ram Charan news"),
+    id: "bollywood-hungama",
+    name: "Bollywood Hungama",
+    url: "https://www.bollywoodhungama.com/rss/news/feed/",
     category: "entertainment",
     language: "en",
-    priority: 1,
+    priority: 2,
+  },
+  {
+    id: "gn-tollywood",
+    name: "Google News — Tollywood",
+    url: GN("tollywood telugu movies Prabhas Allu Arjun 2026"),
+    category: "entertainment",
+    language: "en",
+    priority: 3,
   },
 
   // ── OTT ───────────────────────────────────────────────────
   {
     id: "gn-ott-telugu",
     name: "Google News — Telugu OTT",
-    url: GN("telugu OTT Netflix Aha Amazon Prime 2026"),
+    url: GN("telugu OTT Netflix Aha Amazon Prime Disney 2026"),
     category: "ott",
     language: "en",
-    priority: 1,
+    priority: 2,
+  },
+  {
+    id: "filmcompanion",
+    name: "Film Companion",
+    url: "https://www.filmcompanion.in/feed",
+    category: "entertainment",
+    language: "en",
+    priority: 2,
   },
 
   // ── America / Telugu Diaspora ──────────────────────────────
   {
     id: "gn-h1b",
-    name: "Google News — H-1B",
-    url: GN("H1B visa 2027 USCIS immigration"),
+    name: "Google News — H-1B / US Immigration",
+    url: GN("H1B visa USCIS immigration 2026 Indians"),
     category: "america",
     language: "en",
     priority: 1,
@@ -96,7 +147,7 @@ export const FEED_SOURCES: FeedSource[] = [
   {
     id: "gn-telugu-usa",
     name: "Google News — Telugu America",
-    url: GN("Telugu community USA Indians America jobs tech"),
+    url: GN("Telugu NRI community USA achievement 2026"),
     category: "america",
     language: "en",
     priority: 2,
@@ -104,17 +155,17 @@ export const FEED_SOURCES: FeedSource[] = [
 
   // ── Spiritual / Cultural ───────────────────────────────────
   {
-    id: "gn-festivals",
-    name: "Google News — Telugu Festivals",
-    url: GN("Telugu festivals Ugadi Sankranti puja 2026"),
+    id: "gn-temples",
+    name: "Google News — Tirumala/Tirupati",
+    url: GN("Tirumala Tirupati temple TTD 2026"),
     category: "spiritual",
     language: "en",
-    priority: 2,
+    priority: 1,
   },
   {
-    id: "gn-temples",
-    name: "Google News — Temples",
-    url: GN("Tirupati Tirumala temple news 2026"),
+    id: "gn-festivals",
+    name: "Google News — Telugu Festivals",
+    url: GN("Telugu festivals Ugadi puja 2026"),
     category: "spiritual",
     language: "en",
     priority: 2,
@@ -123,16 +174,8 @@ export const FEED_SOURCES: FeedSource[] = [
   // ── Farmers / Agriculture ──────────────────────────────────
   {
     id: "gn-farmers-ap",
-    name: "Google News — AP Farmers",
-    url: GN("Andhra Pradesh Telangana farmers agriculture crops 2026"),
-    category: "farmers",
-    language: "en",
-    priority: 1,
-  },
-  {
-    id: "gn-mandi",
-    name: "Google News — Mandi Prices",
-    url: GN("mandi prices paddy chilli cotton Andhra Telangana"),
+    name: "Google News — AP/TG Farmers",
+    url: GN("Andhra Pradesh Telangana farmers agriculture paddy cotton 2026"),
     category: "farmers",
     language: "en",
     priority: 1,
@@ -141,18 +184,18 @@ export const FEED_SOURCES: FeedSource[] = [
   // ── Rights / Civic ─────────────────────────────────────────
   {
     id: "gn-rights",
-    name: "Google News — Civic Rights AP/TG",
-    url: GN("consumer rights scam alert India Telugu helpline 2026"),
+    name: "Google News — Consumer Rights India",
+    url: GN("consumer rights scam fraud alert India 2026"),
     category: "rights",
     language: "en",
     priority: 2,
   },
 
-  // ── Traffic ────────────────────────────────────────────────
+  // ── Traffic / Hyderabad ────────────────────────────────────
   {
     id: "gn-traffic-hyd",
     name: "Google News — Hyderabad Traffic",
-    url: GN("Hyderabad traffic road accident news"),
+    url: GN("Hyderabad traffic road accident GHMC 2026"),
     category: "traffic",
     language: "en",
     priority: 2,
@@ -162,13 +205,13 @@ export const FEED_SOURCES: FeedSource[] = [
   {
     id: "gn-achievements",
     name: "Google News — Telugu Achievements",
-    url: GN("Telugu people achievement award success story 2026"),
+    url: GN("Telugu achievement award success story 2026"),
     category: "achievements",
     language: "en",
     priority: 2,
   },
 
-  // ── YouTube RSS (Varandaa Talkies) ────────────────────────
+  // ── YouTube — Varandaa Talkies (own channel) ──────────────
   {
     id: "yt-varandaa",
     name: "Varandaa Talkies",
@@ -176,23 +219,5 @@ export const FEED_SOURCES: FeedSource[] = [
     category: "general",
     language: "te",
     priority: 1,
-  },
-
-  // ── Other Telugu YouTube channels ─────────────────────────
-  {
-    id: "yt-tv9",
-    name: "TV9 Telugu YouTube",
-    url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCa3OzvKSBsHGBSGT_dMdMXQ",
-    category: "politics",
-    language: "te",
-    priority: 2,
-  },
-  {
-    id: "yt-ntv",
-    name: "NTV Telugu YouTube",
-    url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCld3spFlM1x3oQqlRFEVkIw",
-    category: "general",
-    language: "te",
-    priority: 2,
   },
 ];

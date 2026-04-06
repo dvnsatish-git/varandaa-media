@@ -159,6 +159,9 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
   const displayCat   = (article.cat || article.category || "") as string;
   const displayTime  = (article.time || "") as string;
   const displayLink  = (article.link || "") as string;
+  // realLink is the resolved publisher URL; falls back to link
+  const displayRealLink = (article.realLink || article.link || "") as string;
+  const isGoogleNews = displayRealLink.includes("news.google.com");
 
   const isYouTube = displayLink.includes("youtube.com/watch") || displayLink.includes("youtube.com/shorts");
   const videoId   = isYouTube ? extractVideoId(displayLink) : "";
@@ -260,9 +263,9 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
 
           {/* Actions */}
           <div className="flex gap-3 flex-wrap">
-            {!isYouTube && displayLink && !fullContent && !loadingContent && (
+            {!isYouTube && !isGoogleNews && displayRealLink && !fullContent && !loadingContent && (
               <button
-                onClick={() => fetchFullContent(displayLink)}
+                onClick={() => fetchFullContent(displayRealLink)}
                 className="flex items-center gap-2 bg-saffron text-white px-5 py-2.5 rounded-[4px] text-[13px] font-semibold hover:bg-deep transition-colors"
               >
                 📖 Read Full Article
