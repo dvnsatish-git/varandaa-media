@@ -299,6 +299,7 @@ export interface Temple {
   en: string;
   city: string;
   deity: string;
+  desc: string;
   img: string;
   url: string;
 }
@@ -306,35 +307,48 @@ export interface Temple {
 export const TEMPLES: Temple[] = [
   {
     name: "శ్రీ వేంకటేశ్వర స్వామి మందిరం",
-    en: "Sri Venkateswara Temple, Houston TX",
-    city: "Houston, TX",
+    en: "Sri Venkateswara Temple of Greater Houston",
+    city: "Pearland, TX",
     deity: "వేంకటేశ్వర స్వామి",
+    desc: "One of the largest Telugu temples in Texas, dedicated to Lord Venkateswara with authentic Agamic rituals and major festival celebrations.",
     img: "https://picsum.photos/seed/t1/76/56",
-    url: "https://www.svtemple.org",
+    url: "https://www.svtht.org",
   },
   {
-    name: "శ్రీ మహా గణపతి మందిరం",
-    en: "Sri Maha Ganapathi Temple, NJ",
-    city: "Flushing, NJ",
+    name: "శ్రీ గణేశ్ మందిరం — న్యూయార్క్",
+    en: "Sri Ganesha Temple, Flushing NY",
+    city: "Flushing, NY",
     deity: "గణపతి",
+    desc: "The oldest and most prominent Hindu temple in New York, established in 1977, following South Indian Agamic traditions.",
     img: "https://picsum.photos/seed/t2/76/56",
-    url: "https://www.ganapathitemple.org",
+    url: "https://nyganeshtemple.org",
   },
   {
     name: "శ్రీ లక్ష్మి-నారాయణ మందిరం",
-    en: "Sri Lakshmi Narayana Temple, CA",
+    en: "Sri Lakshmi Narayana Temple, Livermore CA",
     city: "Livermore, CA",
     deity: "లక్ష్మి నారాయణ",
+    desc: "A prominent Hindu temple in the Bay Area serving the Telugu and broader Hindu community with daily pujas and cultural programs.",
     img: "https://picsum.photos/seed/t3/76/56",
     url: "https://www.livermoretemple.org",
   },
   {
-    name: "SVBF తిరుపతి మందిరం",
-    en: "SVBF Tirupati Temple, Bridgewater NJ",
+    name: "SVBF శ్రీ వేంకటేశ్వర మందిరం",
+    en: "SVBF Sri Venkateswara Temple, Bridgewater NJ",
     city: "Bridgewater, NJ",
     deity: "వేంకటేశ్వర స్వామి",
+    desc: "Sringeri Vidya Bharati Foundation temple serving NJ's Hindu community with Vedic education, cultural events and daily temple services.",
     img: "https://picsum.photos/seed/t4/76/56",
     url: "https://www.svbf.org",
+  },
+  {
+    name: "ఓం శ్రీ సాయి బాలాజీ మందిరం",
+    en: "Om Sri Sai Balaji Temple, Monroe NJ",
+    city: "Monroe, NJ",
+    deity: "సాయి బాలాజీ",
+    desc: "Monroe Hindu Temple dedicated to Lord Venkateswara (Sai Balaji), serving as a community and cultural centre promoting arts, health, yoga and Telugu heritage.",
+    img: "https://picsum.photos/seed/t5/76/56",
+    url: "https://omsrisaibalajitemple.org",
   },
 ];
 

@@ -1,5 +1,59 @@
 import { useState } from "react";
-import { RAASHIS, TEMPLES } from "../data/content";
+import { RAASHIS, TEMPLES, Temple } from "../data/content";
+
+function TempleModal({ temple, onClose }: { temple: Temple; onClose: () => void }) {
+  const [iframeBlocked, setIframeBlocked] = useState(false);
+
+  return (
+    <div
+      className="fixed inset-0 bg-night/90 z-[600] flex items-center justify-center p-4"
+      onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
+    >
+      <div className="bg-warmWhite rounded-[8px] w-full max-w-[860px] overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.6)] flex flex-col"
+        style={{ maxHeight: "90vh" }}>
+        {/* Header */}
+        <div className="flex items-center gap-3 px-5 py-3 border-b border-border flex-shrink-0">
+          <div className="flex-1 min-w-0">
+            <div className="font-te text-[14px] font-bold text-night truncate">{temple.name}</div>
+            <div className="text-[10px] text-ash truncate">{temple.en} · {temple.city}</div>
+          </div>
+          <a href={temple.url} target="_blank" rel="noopener noreferrer"
+            className="flex items-center gap-1.5 bg-saffron text-white text-[11px] font-semibold px-3 py-1.5 rounded-[4px] hover:bg-deep transition-colors flex-shrink-0">
+            Open Website ↗
+          </a>
+          <button onClick={onClose} className="text-ash hover:text-night text-[20px] leading-none ml-1">✕</button>
+        </div>
+
+        {/* Description */}
+        <div className="px-5 py-2.5 bg-parchment/60 border-b border-border text-[12px] text-charcoal flex-shrink-0">
+          <span className="font-semibold text-saffron mr-2">🛕 {temple.deity}</span>{temple.desc}
+          <span className="ml-3 text-ash">📍 {temple.en.split(",").slice(1).join(",").trim() || temple.city}</span>
+        </div>
+
+        {/* iframe or blocked fallback */}
+        {iframeBlocked ? (
+          <div className="flex-1 flex flex-col items-center justify-center gap-4 p-8 text-center">
+            <div className="text-[40px]">🛕</div>
+            <p className="text-[13px] text-charcoal">This temple's website cannot be displayed inside the app.</p>
+            <a href={temple.url} target="_blank" rel="noopener noreferrer"
+              className="bg-saffron text-white px-6 py-2.5 rounded-[4px] text-[13px] font-semibold hover:bg-deep transition-colors">
+              Visit {temple.en.split(",")[0]} ↗
+            </a>
+          </div>
+        ) : (
+          <iframe
+            src={temple.url}
+            title={temple.en}
+            className="flex-1 w-full border-0"
+            style={{ minHeight: "500px" }}
+            onError={() => setIframeBlocked(true)}
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+          />
+        )}
+      </div>
+    </div>
+  );
+}
 
 const MONTHS_TE = ["జనవరి", "ఫిబ్రవరి", "మార్చి", "ఏప్రిల్", "మే", "జూన్", "జులై", "ఆగస్టు", "సెప్టెంబర్", "అక్టోబర్", "నవంబర్", "డిసెంబర్"];
 const DAYS_TE = ["ఆది", "సోమ", "మంగళ", "బుధ", "గురు", "శుక్ర", "శని"];
@@ -75,6 +129,8 @@ function CalendarPanel({ region }: { region: "india" | "usa" }) {
 }
 
 export default function SpiritualSection() {
+  const [activeTemple, setActiveTemple] = useState<Temple | null>(null);
+
   return (
     <section id="spiritual" className="mb-[52px]">
       <div className="flex items-end pb-[10px] border-b-2 border-night mb-[22px] relative">
@@ -144,22 +200,23 @@ export default function SpiritualSection() {
       <h3 className="font-te text-[16px] font-bold mb-3">అమెరికాలో తెలుగు మందిరాలు</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-[10px]">
         {TEMPLES.map((temple, i) => (
-          <a
+          <div
             key={i}
-            href={temple.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex gap-3 bg-warmWhite border border-border rounded-[5px] p-[13px] cursor-pointer hover:border-saffron transition-colors group"
+            onClick={() => setActiveTemple(temple)}
+            className="flex gap-3 bg-warmWhite border border-border rounded-[5px] p-[13px] cursor-pointer hover:border-saffron hover:shadow-[0_4px_16px_rgba(0,0,0,0.07)] transition-all group"
           >
             <img src={temple.img} alt={temple.name} className="w-[76px] h-[56px] rounded-[3px] flex-shrink-0 object-cover" loading="lazy" />
-            <div>
+            <div className="flex-1 min-w-0">
               <div className="font-te text-[13px] font-bold mb-0.5 group-hover:text-saffron transition-colors">{temple.name}</div>
-              <div className="text-[10.5px] text-ash mb-0.5">{temple.en}</div>
-              <div className="text-[9px] text-saffron font-semibold">{temple.city} ↗</div>
+              <div className="text-[10px] text-ash mb-1 leading-[1.4]">{temple.desc}</div>
+              <div className="text-[9px] text-saffron font-semibold">📍 {temple.city} · Click to visit ↗</div>
             </div>
-          </a>
+          </div>
         ))}
       </div>
+
+      {/* Temple iframe modal */}
+      {activeTemple && <TempleModal temple={activeTemple} onClose={() => setActiveTemple(null)} />}
     </section>
   );
 }
