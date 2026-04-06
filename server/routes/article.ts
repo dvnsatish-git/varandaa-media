@@ -2,7 +2,7 @@
 //  Article Reader — fetch HTML and extract with Mozilla Readability
 // ─────────────────────────────────────────────────────────────
 import { Router } from "express";
-import { JSDOM } from "jsdom";
+import { parseHTML } from "linkedom";
 import { Readability } from "@mozilla/readability";
 import { getArticleByLink } from "../storage/feedStore.js";
 
@@ -69,8 +69,9 @@ router.get("/", async (req, res) => {
     const html = await resp.text();
 
     // Parse with Mozilla Readability (same engine as Firefox Reader Mode)
-    const dom = new JSDOM(html, { url: target });
-    const reader = new Readability(dom.window.document);
+    const { document } = parseHTML(html);
+    (document as unknown as { URL: string }).URL = target;
+    const reader = new Readability(document as unknown as Document);
     const article = reader.parse();
 
     if (!article || !article.textContent?.trim()) {
