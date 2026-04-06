@@ -111,7 +111,7 @@ function renderMarkdown(md: string): React.ReactNode[] {
 export default function ArticleModal({ article, onClose }: ArticleModalProps) {
   const [fullContent, setFullContent] = useState<string | null>(null);
   const [loadingContent, setLoadingContent] = useState(false);
-  const [contentError, setContentError] = useState(false);
+  const [contentError, setContentError] = useState<string | null>(null);
 
   useEffect(() => {
     document.body.style.overflow = article ? "hidden" : "";
@@ -128,22 +128,27 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
   useEffect(() => {
     setFullContent(null);
     setLoadingContent(false);
-    setContentError(false);
+    setContentError(null);
   }, [article]);
 
   const fetchFullContent = useCallback(async (url: string) => {
     setLoadingContent(true);
-    setContentError(false);
+    setContentError(null);
     try {
-      const res = await fetch(`/api/article?url=${encodeURIComponent(url)}`);
+      const res = await fetch(`/api/article?url=${encodeURIComponent(url)}`, {
+        signal: AbortSignal.timeout(30_000),
+      });
       const data = await res.json() as { content?: string; error?: string };
       if (data.content) {
         setFullContent(data.content);
       } else {
-        setContentError(true);
+        setContentError(data.error ?? "Could not load article.");
       }
-    } catch {
-      setContentError(true);
+    } catch (err) {
+      const isTimeout = err instanceof Error && (err.name === "TimeoutError" || err.name === "AbortError");
+      setContentError(isTimeout
+        ? "Timed out — try 'Open Source ↗' to read it directly."
+        : "Could not load article.");
     } finally {
       setLoadingContent(false);
     }
@@ -257,7 +262,7 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
           )}
           {contentError && (
             <div className="text-[12px] text-ash bg-parchment border border-border rounded-[4px] px-4 py-3 mb-4">
-              Could not load full article — try "Open Source" below to read on the original site.
+              {contentError}
             </div>
           )}
 

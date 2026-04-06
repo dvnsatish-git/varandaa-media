@@ -10,6 +10,9 @@ const router = Router();
 const articleCache = new Map<string, { content: string; ts: number }>();
 const CACHE_TTL = 3_600_000; // 1 hour
 
+// Jina fetch timeout — must be well under the Vercel maxDuration (45s)
+const JINA_TIMEOUT_MS = 25_000;
+
 // GET /api/article?url=<encoded_url>
 router.get("/", async (req, res) => {
   const raw = req.query.url as string;
@@ -23,27 +26,29 @@ router.get("/", async (req, res) => {
     return res.status(400).json({ error: "Invalid URL" });
   }
 
-  // Check in-memory cache first
+  // Return cached content if still fresh
   const cached = articleCache.get(url);
   if (cached && Date.now() - cached.ts < CACHE_TTL) {
     return res.json({ content: cached.content });
   }
 
-  // Look up article in feed store to get the resolved real URL
-  // (realLink was set during the GitHub Actions pipeline run)
+  // Use the pre-resolved real URL from the feed store when available.
+  // realLink is set during the GitHub Actions pipeline run for direct-feed articles.
+  // For Google News articles realLink == link, so we skip those (Jina blocks them).
   const stored = getArticleByLink(url);
-  const jinaTarget = stored?.realLink && !stored.realLink.includes("news.google.com")
-    ? stored.realLink
-    : url;
+  const jinaTarget =
+    stored?.realLink && !stored.realLink.includes("news.google.com")
+      ? stored.realLink
+      : url;
 
-  // If jinaTarget is still a Google News URL, try to resolve it live
-  let resolvedTarget = jinaTarget;
-  if (resolvedTarget.includes("news.google.com")) {
-    resolvedTarget = await resolveGNewsLive(resolvedTarget);
+  if (jinaTarget.includes("news.google.com")) {
+    return res.status(422).json({
+      error: "This article is from a news aggregator — use 'Open Source ↗' to read it on the original site.",
+    });
   }
 
   try {
-    const jinaUrl = `https://r.jina.ai/${resolvedTarget}`;
+    const jinaUrl = `https://r.jina.ai/${jinaTarget}`;
     const resp = await fetch(jinaUrl, {
       headers: {
         Accept: "text/markdown,text/plain,*/*",
@@ -53,16 +58,22 @@ router.get("/", async (req, res) => {
           ? { Authorization: `Bearer ${process.env.JINA_API_KEY}` }
           : {}),
       },
-      signal: AbortSignal.timeout(20_000),
+      signal: AbortSignal.timeout(JINA_TIMEOUT_MS),
     });
 
     if (!resp.ok) {
-      return res.status(resp.status).json({ error: `Could not fetch article (${resp.status})` });
+      const msg =
+        resp.status === 451
+          ? "Article not available in your region."
+          : resp.status === 403
+          ? "Article is behind a paywall."
+          : `Could not fetch article (${resp.status}).`;
+      return res.status(resp.status).json({ error: msg });
     }
 
     const raw_text = await resp.text();
 
-    // Strip Jina metadata header lines (Title:, URL:, Published Time:, etc.)
+    // Strip Jina metadata header lines
     const content = raw_text
       .replace(/^(Title|URL|Published Time|Description|Author|Source):[^\n]*\n/gim, "")
       .replace(/^={3,}\s*\n/gm, "")
@@ -71,27 +82,13 @@ router.get("/", async (req, res) => {
     articleCache.set(url, { content, ts: Date.now() });
     return res.json({ content });
   } catch (err) {
-    return res.status(500).json({ error: (err as Error).message });
+    const isTimeout = (err as Error).name === "TimeoutError" || (err as Error).name === "AbortError";
+    return res.status(504).json({
+      error: isTimeout
+        ? "Article took too long to load. Try 'Open Source ↗' to read it directly."
+        : (err as Error).message,
+    });
   }
 });
-
-// Follow a Google News redirect live (fallback when realLink not stored)
-async function resolveGNewsLive(url: string): Promise<string> {
-  try {
-    const resp = await fetch(url, {
-      redirect: "follow",
-      headers: {
-        "User-Agent":
-          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-        Accept: "text/html,application/xhtml+xml,*/*",
-      },
-      signal: AbortSignal.timeout(10_000),
-    });
-    const resolved = resp.url;
-    return resolved && !resolved.includes("news.google.com") ? resolved : url;
-  } catch {
-    return url;
-  }
-}
 
 export default router;
