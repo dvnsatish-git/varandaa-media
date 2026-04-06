@@ -610,3 +610,97 @@ export const TRENDING: TrendingItem[] = [
   { t: "తెలంగాణ సంక్షేమ పథకాలు", te: "50 లక్షల కుటుంబాలు" },
   { t: "IPL 2026 Schedule", te: "SRH vs MI Sunday" },
 ];
+
+// ── OTT Releases This Week ─────────────────────────────────
+export interface OTTRelease {
+  title: string;
+  type: "Film" | "Series";
+  language: string;
+}
+
+export interface OTTPlatform {
+  name: string;
+  color: string;       // border/header color
+  textColor: string;   // header text color
+  releases: OTTRelease[];
+}
+
+export const OTT_WEEK: OTTPlatform[] = [
+  {
+    name: "Netflix",
+    color: "#E50914",
+    textColor: "#E50914",
+    releases: [
+      { title: "Mrityunjay", type: "Film", language: "Telugu" },
+      { title: "Sampradayini Suppini Suddapoosani", type: "Film", language: "Telugu" },
+      { title: "Happy Patel", type: "Film", language: "Hindi" },
+      { title: "Vadh 2", type: "Film", language: "Hindi" },
+      { title: "28 Years Later: Bone Temple", type: "Film", language: "English" },
+      { title: "Merrily We Roll Along", type: "Film", language: "English" },
+      { title: "Mamla Legal Hai S2", type: "Series", language: "Hindi" },
+      { title: "The Big Bang Theory S1-12", type: "Series", language: "English" },
+      { title: "XO Kitty S3", type: "Series", language: "English" },
+      { title: "Ripple S1", type: "Series", language: "English" },
+    ],
+  },
+  {
+    name: "Prime Video",
+    color: "#00A8E0",
+    textColor: "#00A8E0",
+    releases: [
+      { title: "S Sarawasthi", type: "Film", language: "Telugu" },
+      { title: "Crime 101", type: "Film", language: "English" },
+      { title: "London Calling", type: "Film", language: "English" },
+      { title: "Valathu Vashate Kallan", type: "Film", language: "Malayalam" },
+      { title: "Inuyashiki", type: "Film", language: "Japanese" },
+      { title: "Maa Ka Sum", type: "Series", language: "Hindi" },
+      { title: "PM Selfie Wali S1", type: "Series", language: "Hindi" },
+      { title: "The Best Thing S1", type: "Series", language: "Mandarin" },
+    ],
+  },
+  {
+    name: "Jio Hotstar",
+    color: "#1565C0",
+    textColor: "#1565C0",
+    releases: [
+      { title: "Phantom", type: "Film", language: "Hindi" },
+      { title: "Mike And Nick Nick And Nice", type: "Film", language: "English" },
+      { title: "The Carpenter Son", type: "Film", language: "English" },
+      { title: "Anemone", type: "Film", language: "English" },
+      { title: "Love Overboard S1", type: "Series", language: "English" },
+    ],
+  },
+  {
+    name: "Zee 5",
+    color: "#7B2D8B",
+    textColor: "#7B2D8B",
+    releases: [
+      { title: "Hey Balwanth", type: "Film", language: "Telugu" },
+      { title: "Sabdam", type: "Film", language: "Tamil" },
+      { title: "Hey Kay Navin", type: "Series", language: "Hindi" },
+      { title: "Rubaab", type: "Film", language: "Marathi" },
+      { title: "Krishna Aur Kans Antim Yudh", type: "Film", language: "Hindi" },
+    ],
+  },
+  {
+    name: "Aha",
+    color: "#F5C518",
+    textColor: "#c49a00",
+    releases: [
+      { title: "Euphoria", type: "Film", language: "Telugu" },
+      { title: "Love Policy", type: "Film", language: "Telugu" },
+      { title: "Unstoppable with NBK S5", type: "Series", language: "Telugu" },
+      { title: "Vivaha Bhojanambu", type: "Series", language: "Telugu" },
+    ],
+  },
+  {
+    name: "SUN NXT",
+    color: "#FF6B00",
+    textColor: "#FF6B00",
+    releases: [
+      { title: "Mayabimbum", type: "Film", language: "Tamil" },
+      { title: "Vadam", type: "Film", language: "Tamil" },
+      { title: "Velleppam", type: "Film", language: "Malayalam" },
+    ],
+  },
+];

@@ -85,7 +85,7 @@ export default function App() {
             <YouTubeSection onArticleClick={handleArticleClick} />
             <VideoGrid articles={latestArticles} onArticleClick={handleArticleClick} />
             <AmericaPanel articles={remaining} onArticleClick={handleArticleClick} />
-            <OTTGrid articles={remaining} onArticleClick={handleArticleClick} />
+            <OTTGrid />
             <SpiritualSection />
             <FarmersSection />
             <HousewivesSection onArticleClick={handleArticleClick} />
