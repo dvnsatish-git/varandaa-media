@@ -276,21 +276,22 @@ export interface Raashi {
   name: string;
   en: string;
   stars: string;
+  url: string;
 }
 
 export const RAASHIS: Raashi[] = [
-  { sym: "♈", name: "మేషం", en: "Aries", stars: "★★★★☆" },
-  { sym: "♉", name: "వృషభం", en: "Taurus", stars: "★★★☆☆" },
-  { sym: "♊", name: "మిథునం", en: "Gemini", stars: "★★★★★" },
-  { sym: "♋", name: "కర్కాటకం", en: "Cancer", stars: "★★★☆☆" },
-  { sym: "♌", name: "సింహం", en: "Leo", stars: "★★★★☆" },
-  { sym: "♍", name: "కన్య", en: "Virgo", stars: "★★★★☆" },
-  { sym: "♎", name: "తుల", en: "Libra", stars: "★★★☆☆" },
-  { sym: "♏", name: "వృశ్చికం", en: "Scorpio", stars: "★★★☆☆" },
-  { sym: "♐", name: "ధనుస్సు", en: "Sagittarius", stars: "★★★★☆" },
-  { sym: "♑", name: "మకరం", en: "Capricorn", stars: "★★★☆☆" },
-  { sym: "♒", name: "కుంభం", en: "Aquarius", stars: "★★★★☆" },
-  { sym: "♓", name: "మీనం", en: "Pisces", stars: "★★★★☆" },
+  { sym: "♈", name: "మేషం",     en: "Aries",       stars: "★★★★☆", url: "https://www.eenadu.net/rashifal/mesha-rashi" },
+  { sym: "♉", name: "వృషభం",   en: "Taurus",      stars: "★★★☆☆", url: "https://www.eenadu.net/rashifal/vrishabha-rashi" },
+  { sym: "♊", name: "మిథునం",  en: "Gemini",      stars: "★★★★★", url: "https://www.eenadu.net/rashifal/mithuna-rashi" },
+  { sym: "♋", name: "కర్కాటకం", en: "Cancer",     stars: "★★★☆☆", url: "https://www.eenadu.net/rashifal/karkataka-rashi" },
+  { sym: "♌", name: "సింహం",   en: "Leo",         stars: "★★★★☆", url: "https://www.eenadu.net/rashifal/simha-rashi" },
+  { sym: "♍", name: "కన్య",    en: "Virgo",       stars: "★★★★☆", url: "https://www.eenadu.net/rashifal/kanya-rashi" },
+  { sym: "♎", name: "తుల",     en: "Libra",       stars: "★★★☆☆", url: "https://www.eenadu.net/rashifal/tula-rashi" },
+  { sym: "♏", name: "వృశ్చికం", en: "Scorpio",    stars: "★★★☆☆", url: "https://www.eenadu.net/rashifal/vrischika-rashi" },
+  { sym: "♐", name: "ధనుస్సు", en: "Sagittarius", stars: "★★★★☆", url: "https://www.eenadu.net/rashifal/dhanus-rashi" },
+  { sym: "♑", name: "మకరం",   en: "Capricorn",   stars: "★★★☆☆", url: "https://www.eenadu.net/rashifal/makara-rashi" },
+  { sym: "♒", name: "కుంభం",  en: "Aquarius",    stars: "★★★★☆", url: "https://www.eenadu.net/rashifal/kumbha-rashi" },
+  { sym: "♓", name: "మీనం",   en: "Pisces",      stars: "★★★★☆", url: "https://www.eenadu.net/rashifal/meena-rashi" },
 ];
 
 export interface Temple {
@@ -299,6 +300,7 @@ export interface Temple {
   city: string;
   deity: string;
   img: string;
+  url: string;
 }
 
 export const TEMPLES: Temple[] = [
@@ -308,6 +310,7 @@ export const TEMPLES: Temple[] = [
     city: "Houston, TX",
     deity: "వేంకటేశ్వర స్వామి",
     img: "https://picsum.photos/seed/t1/76/56",
+    url: "https://www.svtemple.org",
   },
   {
     name: "శ్రీ మహా గణపతి మందిరం",
@@ -315,6 +318,7 @@ export const TEMPLES: Temple[] = [
     city: "Flushing, NJ",
     deity: "గణపతి",
     img: "https://picsum.photos/seed/t2/76/56",
+    url: "https://www.ganapathitemple.org",
   },
   {
     name: "శ్రీ లక్ష్మి-నారాయణ మందిరం",
@@ -322,6 +326,7 @@ export const TEMPLES: Temple[] = [
     city: "Livermore, CA",
     deity: "లక్ష్మి నారాయణ",
     img: "https://picsum.photos/seed/t3/76/56",
+    url: "https://www.livermoretemple.org",
   },
   {
     name: "SVBF తిరుపతి మందిరం",
@@ -329,6 +334,7 @@ export const TEMPLES: Temple[] = [
     city: "Bridgewater, NJ",
     deity: "వేంకటేశ్వర స్వామి",
     img: "https://picsum.photos/seed/t4/76/56",
+    url: "https://www.svbf.org",
   },
 ];
 
