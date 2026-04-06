@@ -67,7 +67,7 @@ export default function VideoGrid({ articles, onArticleClick }: VideoGridProps) 
               className="bg-warmWhite border border-border rounded-[5px] overflow-hidden cursor-pointer transition-all duration-[220ms] hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.09)] group"
             >
               <div className="relative aspect-video overflow-hidden bg-[#111]">
-                <img src={video.img} alt={video.title} className="w-full h-full object-cover transition-transform duration-400 group-hover:scale-[1.05]" />
+                <img src={video.img} alt={video.title} className="w-full h-full object-cover transition-transform duration-400 group-hover:scale-[1.05]"  loading="lazy"/>
                 <span className="absolute top-[7px] left-[7px] bg-night/80 text-turmeric text-[8px] font-bold tracking-[1px] px-[7px] py-[2px] rounded-[2px]">{video.cat}</span>
               </div>
               <div className="p-[12px_14px]">

@@ -24,7 +24,7 @@ export default function OTTGrid({ articles, onArticleClick }: OTTGridProps) {
             <div key={article.link} onClick={() => onArticleClick(article)}
               className="bg-night rounded-[5px] overflow-hidden cursor-pointer border border-white/[0.05] transition-transform hover:-translate-y-[3px] group">
               <div className="relative aspect-video overflow-hidden">
-                <img src={article.image} alt={article.title}
+                <img src={article.image} alt={article.title} loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.04]" />
                 <span className="absolute top-[7px] right-[7px] text-[8.5px] font-bold px-[7px] py-[2px] rounded-[2px] tracking-[0.5px] bg-teal text-white">
                   {article.tags[0] ?? "OTT"}
@@ -41,7 +41,7 @@ export default function OTTGrid({ articles, onArticleClick }: OTTGridProps) {
             <div key={i} onClick={() => onArticleClick(item)}
               className="bg-night rounded-[5px] overflow-hidden cursor-pointer border border-white/[0.05] transition-transform hover:-translate-y-[3px] group">
               <div className="relative aspect-video overflow-hidden">
-                <img src={item.img} alt={item.t} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.04]" />
+                <img src={item.img} alt={item.t} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.04]"  loading="lazy"/>
                 <span className="absolute top-[7px] right-[7px] text-[8.5px] font-bold px-[7px] py-[2px] rounded-[2px] tracking-[0.5px]"
                   style={{ background: item.platColor, color: item.platTextColor || "white" }}>
                   {item.plat}

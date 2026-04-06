@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback, useRef } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 // Browser-side article cache (survives modal close, cleared on page reload)
 const articleCache = new Map<string, string>();
@@ -114,9 +114,7 @@ function renderMarkdown(md: string): React.ReactNode[] {
 export default function ArticleModal({ article, onClose }: ArticleModalProps) {
   const [fullContent, setFullContent] = useState<string | null>(null);
   const [loadingContent, setLoadingContent] = useState(false);
-  const [prefetchReady, setPrefetchReady] = useState(false);
   const [contentError, setContentError] = useState<string | null>(null);
-  const prefetchAbortRef = useRef<AbortController | null>(null);
 
   useEffect(() => {
     document.body.style.overflow = article ? "hidden" : "";
@@ -129,53 +127,15 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
     return () => window.removeEventListener("keydown", handler);
   }, [onClose]);
 
-  // Reset reader state and start background pre-fetch whenever a new article opens
+  // Reset reader state whenever a new article opens
   useEffect(() => {
     setFullContent(null);
     setLoadingContent(false);
     setContentError(null);
-    setPrefetchReady(false);
-
-    // Cancel any previous prefetch
-    prefetchAbortRef.current?.abort();
-    prefetchAbortRef.current = null;
-
-    if (!article) return;
-
-    const link = (article.realLink || article.link || "") as string;
-    const isYT = (link.includes("youtube.com/watch") || link.includes("youtube.com/shorts"));
-    const isGNews = link.includes("news.google.com");
-    if (!link || isYT || isGNews) return;
-
-    // Serve from cache immediately if available
-    if (articleCache.has(link)) {
-      setPrefetchReady(true);
-      return;
-    }
-
-    // Pre-fetch in the background
-    const ctrl = new AbortController();
-    prefetchAbortRef.current = ctrl;
-
-    fetch(`/api/article?url=${encodeURIComponent(link)}`, {
-      signal: ctrl.signal,
-    })
-      .then((r) => r.json())
-      .then((data: { content?: string; error?: string }) => {
-        if (data.content) {
-          articleCache.set(link, data.content);
-          setPrefetchReady(true);
-        }
-      })
-      .catch(() => {}); // silent — user can still click the button to retry
-
-    return () => {
-      ctrl.abort();
-    };
   }, [article]);
 
   const fetchFullContent = useCallback(async (url: string) => {
-    // Serve from cache if prefetch already completed
+    // Serve from session cache if already fetched
     if (articleCache.has(url)) {
       setFullContent(articleCache.get(url)!);
       return;
@@ -252,7 +212,7 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
               allowFullScreen
             />
           ) : (
-            <img src={displayImg} alt={displayTitle} className="w-full h-full object-cover" />
+            <img src={displayImg} alt={displayTitle} className="w-full h-full object-cover"  loading="lazy"/>
           )}
         </div>
 
@@ -307,7 +267,7 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
               </svg>
-              <span className="text-[13px]">Loading full article… (may take up to 20 seconds)</span>
+              <span className="text-[13px]">Loading full article…</span>
             </div>
           )}
           {contentError && (
@@ -321,21 +281,9 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
             {!isYouTube && !isGoogleNews && displayRealLink && !fullContent && !loadingContent && (
               <button
                 onClick={() => fetchFullContent(displayRealLink)}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-[4px] text-[13px] font-semibold transition-colors ${
-                  prefetchReady
-                    ? "bg-saffron text-white hover:bg-deep"
-                    : "bg-saffron/70 text-white/90 hover:bg-saffron cursor-wait"
-                }`}
+                className="flex items-center gap-2 bg-saffron text-white px-5 py-2.5 rounded-[4px] text-[13px] font-semibold hover:bg-deep transition-colors"
               >
-                {prefetchReady ? "📖 Read Full Article" : (
-                  <>
-                    <svg className="animate-spin w-3 h-3" viewBox="0 0 24 24" fill="none">
-                      <circle className="opacity-40" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
-                      <path className="opacity-80" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
-                    </svg>
-                    Fetching article…
-                  </>
-                )}
+                📖 Read Full Article
               </button>
             )}
             {!isYouTube && displayLink && (

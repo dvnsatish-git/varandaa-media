@@ -65,7 +65,7 @@ export default function HeroGrid({ articles, onArticleClick }: HeroGridProps) {
           style={{ gridRow: "1 / 3" }}
           onClick={() => onArticleClick(main)}
         >
-          <img src={main.img} alt={main.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" />
+          <img src={main.img} alt={main.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"  loading="lazy"/>
           <div className="hero-overlay absolute inset-0 flex flex-col justify-end p-[26px_30px]">
             <span className={`inline-block text-[8.5px] font-bold tracking-[1.8px] uppercase px-[9px] py-[3px] rounded-[2px] mb-[7px] self-start ${TAG_CLASSES[main.tag] || "bg-white/15 text-white"}`}>
               {main.tagLabel}
@@ -81,7 +81,7 @@ export default function HeroGrid({ articles, onArticleClick }: HeroGridProps) {
 
         {rest.map((item, i) => (
           <div key={i} className="relative overflow-hidden cursor-pointer group" onClick={() => onArticleClick(item)}>
-            <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" />
+            <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"  loading="lazy"/>
             <div className="hero-overlay absolute inset-0 flex flex-col justify-end p-[18px_22px]">
               <span className={`inline-block text-[8.5px] font-bold tracking-[1.8px] uppercase px-[9px] py-[3px] rounded-[2px] mb-[7px] self-start ${TAG_CLASSES[item.tag] || "bg-white/15 text-white"}`}>
                 {item.tagLabel}

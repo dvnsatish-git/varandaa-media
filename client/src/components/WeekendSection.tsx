@@ -22,7 +22,7 @@ export default function WeekendSection({ onArticleClick }: WeekendSectionProps) 
             className="bg-warmWhite border border-border rounded-[5px] overflow-hidden cursor-pointer transition-all hover:-translate-y-[3px] hover:shadow-[0_8px_24px_rgba(0,0,0,0.07)] group"
           >
             <div className="aspect-[4/3] overflow-hidden">
-              <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-400 group-hover:scale-[1.05]" />
+              <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-400 group-hover:scale-[1.05]"  loading="lazy"/>
             </div>
             <div className="p-[12px_13px]">
               <div className="text-[8px] font-bold text-[#7B1FA2] tracking-[1.5px] uppercase mb-1">{item.cat}</div>
@@ -38,7 +38,7 @@ export default function WeekendSection({ onArticleClick }: WeekendSectionProps) 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-[11px] mb-[32px]">
         {REELS.map((reel, i) => (
           <div key={i} className="bg-night rounded-[5px] overflow-hidden cursor-pointer aspect-[9/16] relative max-h-[190px] transition-transform hover:scale-[1.03]">
-            <img src={reel.img} alt={reel.t} className="w-full h-full object-cover" />
+            <img src={reel.img} alt={reel.t} className="w-full h-full object-cover"  loading="lazy"/>
             <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 55%)" }}>
               <div className="absolute bottom-0 left-0 right-0 p-[9px]">
                 <div className="text-[8.5px] font-bold text-turmeric tracking-[1px] mb-[3px]">{reel.lbl}</div>

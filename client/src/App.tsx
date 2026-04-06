@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import BreakingTicker from "./components/BreakingTicker";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
@@ -27,35 +27,42 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedArticle, setSelectedArticle] = useState<AnyArticle | null>(null);
 
-  // Fetch all articles once; slice them into sections so no duplicates appear
-  const { articles: rawArticles } = useFeed(80);
+  // Fetch articles once; slice into sections with no overlaps
+  const { articles: rawArticles } = useFeed(40);
 
   const handleArticleClick = (item: AnyArticle) => setSelectedArticle(item);
   const handleCloseModal = () => setSelectedArticle(null);
 
-  // Client-side dedup — mirrors backend normTitle + 6-word short key
-  const seenKeys = new Set<string>();
-  const allArticles = rawArticles.filter((a: Article) => {
-    let t = a.title;
-    for (let i = 0; i < 3; i++) {
-      const s = t.replace(/\s+[-–—|]\s*[^\s-–—|]{2,60}$/, "");
-      if (s === t || s.length < 8) break;
-      t = s;
-    }
-    const full  = t.toLowerCase().replace(/\W+/g, " ").trim().slice(0, 80);
-    const short = full.split(" ").slice(0, 6).join(" ");
-    if (seenKeys.has(full) || seenKeys.has(short)) return false;
-    seenKeys.add(full);
-    seenKeys.add(short);
-    return true;
-  });
+  // Client-side dedup — memoized so it only reruns when rawArticles changes
+  const allArticles = useMemo(() => {
+    const seenKeys = new Set<string>();
+    return rawArticles.filter((a: Article) => {
+      let t = a.title;
+      for (let i = 0; i < 3; i++) {
+        const s = t.replace(/\s+[-–—|]\s*[^\s-–—|]{2,60}$/, "");
+        if (s === t || s.length < 8) break;
+        t = s;
+      }
+      const full  = t.toLowerCase().replace(/\W+/g, " ").trim().slice(0, 80);
+      const short = full.split(" ").slice(0, 6).join(" ");
+      if (seenKeys.has(full) || seenKeys.has(short)) return false;
+      seenKeys.add(full);
+      seenKeys.add(short);
+      return true;
+    });
+  }, [rawArticles]);
 
   // Split articles by category, no overlapping between sections
-  const topArticles      = allArticles.slice(0, 3);   // hero
-  const latestArticles   = allArticles.slice(3, 9);   // latest news grid
-  const usedLinks = new Set([...topArticles, ...latestArticles].map((a: Article) => a.link));
-
-  const remaining = allArticles.filter((a: Article) => !usedLinks.has(a.link));
+  const topArticles    = allArticles.slice(0, 3);
+  const latestArticles = allArticles.slice(3, 9);
+  const usedLinks = useMemo(
+    () => new Set([...topArticles, ...latestArticles].map((a: Article) => a.link)),
+    [topArticles, latestArticles]
+  );
+  const remaining = useMemo(
+    () => allArticles.filter((a: Article) => !usedLinks.has(a.link)),
+    [allArticles, usedLinks]
+  );
 
   return (
     <div className="min-h-screen bg-cream">

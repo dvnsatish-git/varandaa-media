@@ -131,7 +131,7 @@ export default function SpiritualSection() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-[10px]">
         {TEMPLES.map((temple, i) => (
           <div key={i} className="flex gap-3 bg-warmWhite border border-border rounded-[5px] p-[13px] cursor-pointer hover:border-saffron transition-colors">
-            <img src={temple.img} alt={temple.name} className="w-[76px] h-[56px] rounded-[3px] flex-shrink-0 object-cover" />
+            <img src={temple.img} alt={temple.name} className="w-[76px] h-[56px] rounded-[3px] flex-shrink-0 object-cover"  loading="lazy"/>
             <div>
               <div className="font-te text-[13px] font-bold mb-0.5">{temple.name}</div>
               <div className="text-[10.5px] text-ash mb-0.5">{temple.en}</div>
