@@ -80,12 +80,13 @@ router.get("/", async (req, res) => {
       });
     }
 
-    // Convert the plain text content to simple paragraphs
-    const content = article.textContent
-      .split(/\n{2,}/)
-      .map((p) => p.trim())
-      .filter((p) => p.length > 40)
-      .join("\n\n");
+    // Return Readability's cleaned HTML — retains headings, paragraphs, lists
+    // Strip img tags and href attributes so no external resources load
+    const content = (article.content || "")
+      .replace(/<img[^>]*>/gi, "")
+      .replace(/<figure[^>]*>[\s\S]*?<\/figure>/gi, "")
+      .replace(/\s*href="[^"]*"/gi, "")
+      .replace(/\s*src="[^"]*"/gi, "");
 
     articleCache.set(url, { content, ts: Date.now() });
     return res.json({ content, title: article.title, byline: article.byline });

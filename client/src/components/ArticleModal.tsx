@@ -254,9 +254,26 @@ export default function ArticleModal({ article, onClose }: ArticleModalProps) {
                   ← Show Summary
                 </button>
               </div>
-              <div className="border border-border rounded-[4px] p-4 bg-parchment/50 max-h-[420px] overflow-y-auto">
-                {renderMarkdown(fullContent)}
+
+              {/* Telugu summary pinned above the English article */}
+              {(displayBody || displayTe) && (
+                <div className="bg-turmeric/10 border border-turmeric/30 rounded-[4px] px-4 py-3 mb-3">
+                  <div className="text-[10px] font-bold text-saffron uppercase tracking-[1px] mb-1">తెలుగు సారాంశం</div>
+                  {displayTe && <p className="font-te text-[14px] font-bold text-night leading-[1.6] mb-1">{displayTe}</p>}
+                  {displayBody && <p className="font-te text-[13px] text-charcoal leading-[1.8]">{displayBody}</p>}
+                </div>
+              )}
+
+              <div className="text-[10px] text-ash mb-2 flex items-center gap-1">
+                <span className="w-3 h-[1px] bg-ash/40 inline-block" />
+                Full article in English from {(article.sourceName || displayCat) as string}
+                <span className="w-3 h-[1px] bg-ash/40 inline-block" />
               </div>
+
+              <div
+                className="border border-border rounded-[4px] p-4 bg-parchment/50 max-h-[420px] overflow-y-auto article-body"
+                dangerouslySetInnerHTML={{ __html: fullContent }}
+              />
             </div>
           )}
 
