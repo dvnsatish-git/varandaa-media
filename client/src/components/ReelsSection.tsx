@@ -1,21 +1,4 @@
-import { useState, useEffect } from "react";
-
-interface YTVideo {
-  title: string;
-  link: string;
-  thumbnail: string;
-  publishedAt: string;
-  videoId: string;
-}
-
-function timeAgo(iso: string): string {
-  const diff = Date.now() - new Date(iso).getTime();
-  const d = Math.floor(diff / 86_400_000);
-  const h = Math.floor(diff / 3_600_000);
-  if (d >= 1) return `${d}d ago`;
-  if (h >= 1) return `${h}h ago`;
-  return "Just now";
-}
+import { VIRAL_REELS } from "../data/content";
 
 interface ReelsSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -23,30 +6,14 @@ interface ReelsSectionProps {
 }
 
 export default function ReelsSection({ onArticleClick }: ReelsSectionProps = {}) {
-  const [shorts, setShorts] = useState<YTVideo[]>([]);
-
-  useEffect(() => {
-    fetch("/api/feed/youtube")
-      .then((r) => r.json())
-      .then((d: { videos?: YTVideo[] }) => {
-        // Prefer Shorts, fall back to any videos
-        const all = d.videos ?? [];
-        const s = all.filter((v) => v.link.includes("/shorts/"));
-        setShorts((s.length >= 2 ? s : all).slice(0, 6));
-      })
-      .catch(() => {});
-  }, []);
-
-  if (shorts.length === 0) return null;
-
   return (
     <section id="reels" className="mb-[52px]">
       <div className="flex items-end pb-[10px] border-b-2 border-night mb-[20px] relative">
         <div className="absolute bottom-[-2px] left-0 w-[50px] h-[2px] bg-saffron" />
         <h2 className="font-serif text-[24px] font-bold mr-2">Reels & Shorts</h2>
-        <span className="font-te text-[14px] text-ash">రీల్స్</span>
+        <span className="font-te text-[14px] text-ash">వైరల్ రీల్స్</span>
         <a
-          href="https://www.youtube.com/@VarandaaTalkies/shorts"
+          href="https://www.youtube.com/results?search_query=telugu+viral+shorts+2026"
           target="_blank"
           rel="noopener noreferrer"
           className="ml-auto text-[11px] font-semibold text-saffron hover:text-deep transition-colors"
@@ -56,22 +23,24 @@ export default function ReelsSection({ onArticleClick }: ReelsSectionProps = {})
       </div>
 
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-[10px]">
-        {shorts.map((s) => (
-          <div
-            key={s.videoId}
+        {VIRAL_REELS.map((reel) => (
+          <a
+            key={reel.id}
+            href={reel.link}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => onArticleClick?.({
-              title: s.title,
-              link: s.link,
-              img: s.thumbnail,
-              time: timeAgo(s.publishedAt),
-              cat: "YouTube",
+              title: reel.title,
+              link: reel.link,
+              img: reel.thumbnail,
+              cat: "Reels",
             })}
-            className="cursor-pointer group relative rounded-[6px] overflow-hidden bg-night"
+            className="cursor-pointer group relative rounded-[6px] overflow-hidden bg-night block"
             style={{ aspectRatio: "9/16" }}
           >
             <img
-              src={s.thumbnail}
-              alt={s.title}
+              src={reel.thumbnail}
+              alt={reel.title}
               loading="lazy"
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.05]"
             />
@@ -87,13 +56,13 @@ export default function ReelsSection({ onArticleClick }: ReelsSectionProps = {})
               </div>
             </div>
 
-            {/* Label + title */}
+            {/* Label + title + channel */}
             <div className="absolute bottom-0 left-0 right-0 p-[8px]">
-              <div className="text-[7.5px] font-bold text-saffron tracking-[1px] mb-[2px] uppercase">▶ Short</div>
-              <div className="text-[10px] font-semibold text-white leading-[1.3] line-clamp-2">{s.title}</div>
-              <div className="text-[8px] text-white/50 mt-0.5">{timeAgo(s.publishedAt)}</div>
+              <div className="text-[7.5px] font-bold text-saffron tracking-[1px] mb-[2px] uppercase">{reel.lbl}</div>
+              <div className="text-[10px] font-semibold text-white leading-[1.3] line-clamp-2">{reel.title}</div>
+              <div className="text-[8px] text-white/50 mt-0.5">{reel.channel}</div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </section>

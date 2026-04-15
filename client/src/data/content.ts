@@ -148,9 +148,9 @@ export const VIDEOS: VideoItem[] = [
   {
     id: 14,
     cat: "వంటకాలు",
-    title: "ఉగాది పచ్చడి — సరైన నిష్పత్తులు",
-    te: "Ugadi Pachadi correct recipe",
-    img: "https://picsum.photos/seed/v5/320/180",
+    title: "వేసవి స్పెషల్ — మామిడి పులిహోర",
+    te: "Summer special Mango Pulihora recipe",
+    img: "https://picsum.photos/seed/vs1/320/180",
     time: "2 రోజులు",
     views: "45.3K",
     dur: "12:20",
@@ -665,10 +665,71 @@ export interface Reel {
 }
 
 export const REELS: Reel[] = [
-  { lbl: "VIRAL", t: "ఉగాది వేడుకలు", img: "https://picsum.photos/seed/r1/180/320" },
-  { lbl: "TRENDING", t: "IPL హైలైట్స్", img: "https://picsum.photos/seed/r2/180/320" },
-  { lbl: "NEW", t: "వంట చిట్కాలు", img: "https://picsum.photos/seed/r3/180/320" },
-  { lbl: "HOT", t: "టెక్ రివ్యూ", img: "https://picsum.photos/seed/r4/180/320" },
+  { lbl: "VIRAL", t: "IPL 2026 హైలైట్స్", img: "https://picsum.photos/seed/rl1/180/320" },
+  { lbl: "TRENDING", t: "పుష్ప 2 డాన్స్ రీల్స్", img: "https://picsum.photos/seed/rl2/180/320" },
+  { lbl: "NEW", t: "వేసవి వంట చిట్కాలు", img: "https://picsum.photos/seed/rl3/180/320" },
+  { lbl: "HOT", t: "తెలుగు కమెడీ రీల్స్", img: "https://picsum.photos/seed/rl4/180/320" },
+];
+
+export interface ViralReel {
+  id: string;
+  lbl: string;
+  title: string;
+  channel: string;
+  link: string;
+  thumbnail: string;
+}
+
+// Curated top Telugu viral videos from YouTube/Instagram (not VarandaaTalkies)
+export const VIRAL_REELS: ViralReel[] = [
+  {
+    id: "vr1",
+    lbl: "🔥 VIRAL",
+    title: "SRH vs MI IPL 2026 — Winning Moment",
+    channel: "Star Sports Telugu",
+    link: "https://www.youtube.com/results?search_query=SRH+MI+IPL+2026+highlights+telugu",
+    thumbnail: "https://picsum.photos/seed/vr1/180/320",
+  },
+  {
+    id: "vr2",
+    lbl: "🎬 TRENDING",
+    title: "Pushpa 2 — Flower Bro Dance Challenge",
+    channel: "Trending Telugu",
+    link: "https://www.youtube.com/results?search_query=pushpa+2+flower+bro+dance+viral+telugu",
+    thumbnail: "https://picsum.photos/seed/vr2/180/320",
+  },
+  {
+    id: "vr3",
+    lbl: "😂 COMEDY",
+    title: "పల్లెటూరి అమ్మాయి — Viral Reel",
+    channel: "Telugu Memes",
+    link: "https://www.youtube.com/results?search_query=pallettouri+ammayyi+comedy+reel+telugu+viral",
+    thumbnail: "https://picsum.photos/seed/vr3/180/320",
+  },
+  {
+    id: "vr4",
+    lbl: "🍳 FOOD",
+    title: "అమ్మ చేతి వంట — 10M Views Reel",
+    channel: "Amma Vantalu",
+    link: "https://www.youtube.com/results?search_query=amma+vantalu+telugu+viral+cooking+reel",
+    thumbnail: "https://picsum.photos/seed/vr4/180/320",
+  },
+  {
+    id: "vr5",
+    lbl: "🎵 MUSIC",
+    title: "Kalki 2898-AD — Theme Song Reel",
+    channel: "Lahari Music",
+    link: "https://www.youtube.com/results?search_query=kalki+2898+theme+song+reel+viral",
+    thumbnail: "https://picsum.photos/seed/vr5/180/320",
+  },
+  {
+    id: "vr6",
+    lbl: "⭐ HOT",
+    title: "Allu Arjun — Stylish Entry Compilation",
+    channel: "Tollywood Shorts",
+    link: "https://www.youtube.com/results?search_query=allu+arjun+stylish+entry+compilation+telugu+shorts",
+    thumbnail: "https://picsum.photos/seed/vr6/180/320",
+  },
 ];
 
 export interface TrendingItem {
