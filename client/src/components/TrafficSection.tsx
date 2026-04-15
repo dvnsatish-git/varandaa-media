@@ -28,7 +28,7 @@ export default function TrafficSection() {
     <section id="traffic" className="mb-[52px]">
       <div className="flex items-end pb-[10px] border-b-2 border-night mb-[22px] relative">
         <div className="absolute bottom-[-2px] left-0 w-[50px] h-[2px] bg-traffic" />
-        <h2 className="font-serif text-[21px] font-bold mr-2">Traffic Updates</h2>
+        <h2 className="font-serif text-[24px] font-bold mr-2">Traffic Updates</h2>
         <span className="font-te text-[13px] text-ash">ట్రాఫిక్ వార్తలు</span>
         <span className="ml-3 inline-flex items-center gap-1 bg-[#C62828] text-white text-[9px] font-bold px-2 py-[2px] rounded-[2px] tracking-[1px]">
           <span className="blink-dot w-[5px] h-[5px] bg-white rounded-full inline-block" />

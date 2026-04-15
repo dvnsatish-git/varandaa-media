@@ -38,6 +38,7 @@ body {
   background: var(--cream);
   color: var(--night);
   overflow-x: hidden;
+  line-height: 1.6;
 }
 
 img {
@@ -59,6 +60,7 @@ button {
   font-family: inherit;
 }
 
+/* ── Animations ─────────────────────────────── */
 @keyframes ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
@@ -70,7 +72,12 @@ button {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(12px); }
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
@@ -79,12 +86,23 @@ button {
   to { opacity: 1; transform: scale(1) translateY(0); }
 }
 
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(232, 89, 12, 0.4); }
+  70% { box-shadow: 0 0 0 8px rgba(232, 89, 12, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(232, 89, 12, 0); }
+}
+
+/* ── Core utility classes ─────────────────────── */
 .ticker-track {
   display: flex;
   animation: ticker 55s linear infinite;
   white-space: nowrap;
 }
-
 .ticker-track:hover {
   animation-play-state: paused;
 }
@@ -97,32 +115,33 @@ button {
   animation: modalIn 0.28s ease-out;
 }
 
-/* Scrollbar hide */
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.fade-in-up {
+  animation: fadeInUp 0.4s ease-out both;
 }
 
-/* Calendar date styles */
+/* ── Scrollbar hide ─────────────────────────── */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ── Calendar ───────────────────────────────── */
 .cal-date-today {
   background: var(--saffron) !important;
   color: white !important;
+  border-radius: 4px;
+  font-weight: 700;
 }
-
 .cal-date-fest {
-  background: rgba(245, 166, 35, 0.1);
-  border: 1px solid rgba(245, 166, 35, 0.3);
+  background: rgba(245, 166, 35, 0.12);
+  border: 1px solid rgba(245, 166, 35, 0.35);
+  border-radius: 4px;
 }
 
-/* Hero card overlay */
+/* ── Hero overlay ───────────────────────────── */
 .hero-overlay {
-  background: linear-gradient(180deg, transparent 20%, rgba(8,6,2,0.55) 55%, rgba(8,6,2,0.92) 100%);
+  background: linear-gradient(180deg, transparent 15%, rgba(8,6,2,0.45) 50%, rgba(8,6,2,0.93) 100%);
 }
 
-/* Section header accent */
+/* ── Section header accents ─────────────────── */
 .sh-accent-saffron { background: var(--saffron); }
 .sh-accent-turmeric { background: var(--turmeric); }
 .sh-accent-farmer { background: var(--farmer); }
@@ -132,17 +151,59 @@ button {
 .sh-accent-spirit { background: var(--spirit); }
 .sh-accent-teal { background: var(--teal); }
 
-/* Article body — styles Readability HTML content */
-.article-body { font-size: 14px; color: #3a3530; line-height: 1.8; }
-.article-body h1, .article-body h2 { font-family: 'Cormorant Garamond', serif; font-weight: 700; margin: 1.2em 0 0.4em; color: #1a1a12; }
-.article-body h1 { font-size: 20px; }
-.article-body h2 { font-size: 17px; }
-.article-body h3, .article-body h4 { font-size: 14px; font-weight: 600; margin: 1em 0 0.3em; color: #2a2520; }
-.article-body p { margin: 0 0 0.9em; }
-.article-body ul, .article-body ol { padding-left: 1.4em; margin: 0.6em 0 0.9em; }
-.article-body li { margin-bottom: 0.3em; }
-.article-body strong, .article-body b { font-weight: 600; color: #1a1a12; }
-.article-body em, .article-body i { font-style: italic; }
-.article-body blockquote { border-left: 3px solid #E8590C; padding-left: 12px; margin: 0.8em 0; color: #6b6560; font-style: italic; }
+/* ── Card elevation system ──────────────────── */
+.card-hover {
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.10);
+}
+
+/* ── Skeleton loading shimmer ───────────────── */
+.skeleton {
+  background: linear-gradient(90deg, #f0e8dc 25%, #faf3e8 50%, #f0e8dc 75%);
+  background-size: 400px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* ── Article body — Readability HTML ────────── */
+.article-body {
+  font-size: 15px;
+  color: #3a3530;
+  line-height: 1.85;
+}
+.article-body h1,
+.article-body h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  margin: 1.4em 0 0.5em;
+  color: #1a1a12;
+}
+.article-body h1 { font-size: 22px; }
+.article-body h2 { font-size: 19px; }
+.article-body h3,
+.article-body h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 1em 0 0.4em;
+  color: #2a2520;
+}
+.article-body p { margin: 0 0 1em; }
+.article-body ul,
+.article-body ol { padding-left: 1.5em; margin: 0.6em 0 1em; }
+.article-body li { margin-bottom: 0.4em; }
+.article-body strong,
+.article-body b { font-weight: 600; color: #1a1a12; }
+.article-body em,
+.article-body i { font-style: italic; }
+.article-body blockquote {
+  border-left: 3px solid #E8590C;
+  padding-left: 14px;
+  margin: 1em 0;
+  color: #6b6560;
+  font-style: italic;
+}
 .article-body a { color: inherit; text-decoration: none; pointer-events: none; }
-.article-body figure, .article-body img { display: none; }
+.article-body figure,
+.article-body img { display: none; }

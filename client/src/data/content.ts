@@ -280,18 +280,18 @@ export interface Raashi {
 }
 
 export const RAASHIS: Raashi[] = [
-  { sym: "♈", name: "మేషం",     en: "Aries",       stars: "★★★★☆", url: "https://www.eenadu.net/rashifal/mesha-rashi" },
-  { sym: "♉", name: "వృషభం",   en: "Taurus",      stars: "★★★☆☆", url: "https://www.eenadu.net/rashifal/vrishabha-rashi" },
-  { sym: "♊", name: "మిథునం",  en: "Gemini",      stars: "★★★★★", url: "https://www.eenadu.net/rashifal/mithuna-rashi" },
-  { sym: "♋", name: "కర్కాటకం", en: "Cancer",     stars: "★★★☆☆", url: "https://www.eenadu.net/rashifal/karkataka-rashi" },
-  { sym: "♌", name: "సింహం",   en: "Leo",         stars: "★★★★☆", url: "https://www.eenadu.net/rashifal/simha-rashi" },
-  { sym: "♍", name: "కన్య",    en: "Virgo",       stars: "★★★★☆", url: "https://www.eenadu.net/rashifal/kanya-rashi" },
-  { sym: "♎", name: "తుల",     en: "Libra",       stars: "★★★☆☆", url: "https://www.eenadu.net/rashifal/tula-rashi" },
-  { sym: "♏", name: "వృశ్చికం", en: "Scorpio",    stars: "★★★☆☆", url: "https://www.eenadu.net/rashifal/vrischika-rashi" },
-  { sym: "♐", name: "ధనుస్సు", en: "Sagittarius", stars: "★★★★☆", url: "https://www.eenadu.net/rashifal/dhanus-rashi" },
-  { sym: "♑", name: "మకరం",   en: "Capricorn",   stars: "★★★☆☆", url: "https://www.eenadu.net/rashifal/makara-rashi" },
-  { sym: "♒", name: "కుంభం",  en: "Aquarius",    stars: "★★★★☆", url: "https://www.eenadu.net/rashifal/kumbha-rashi" },
-  { sym: "♓", name: "మీనం",   en: "Pisces",      stars: "★★★★☆", url: "https://www.eenadu.net/rashifal/meena-rashi" },
+  { sym: "♈", name: "మేషం",     en: "Aries",       stars: "★★★★☆", url: "https://www.drikpanchang.com/rashifal/aries-daily-rashifal.html" },
+  { sym: "♉", name: "వృషభం",   en: "Taurus",      stars: "★★★☆☆", url: "https://www.drikpanchang.com/rashifal/taurus-daily-rashifal.html" },
+  { sym: "♊", name: "మిథునం",  en: "Gemini",      stars: "★★★★★", url: "https://www.drikpanchang.com/rashifal/gemini-daily-rashifal.html" },
+  { sym: "♋", name: "కర్కాటకం", en: "Cancer",     stars: "★★★☆☆", url: "https://www.drikpanchang.com/rashifal/cancer-daily-rashifal.html" },
+  { sym: "♌", name: "సింహం",   en: "Leo",         stars: "★★★★☆", url: "https://www.drikpanchang.com/rashifal/leo-daily-rashifal.html" },
+  { sym: "♍", name: "కన్య",    en: "Virgo",       stars: "★★★★☆", url: "https://www.drikpanchang.com/rashifal/virgo-daily-rashifal.html" },
+  { sym: "♎", name: "తుల",     en: "Libra",       stars: "★★★☆☆", url: "https://www.drikpanchang.com/rashifal/libra-daily-rashifal.html" },
+  { sym: "♏", name: "వృశ్చికం", en: "Scorpio",    stars: "★★★☆☆", url: "https://www.drikpanchang.com/rashifal/scorpio-daily-rashifal.html" },
+  { sym: "♐", name: "ధనుస్సు", en: "Sagittarius", stars: "★★★★☆", url: "https://www.drikpanchang.com/rashifal/sagittarius-daily-rashifal.html" },
+  { sym: "♑", name: "మకరం",   en: "Capricorn",   stars: "★★★☆☆", url: "https://www.drikpanchang.com/rashifal/capricorn-daily-rashifal.html" },
+  { sym: "♒", name: "కుంభం",  en: "Aquarius",    stars: "★★★★☆", url: "https://www.drikpanchang.com/rashifal/aquarius-daily-rashifal.html" },
+  { sym: "♓", name: "మీనం",   en: "Pisces",      stars: "★★★★☆", url: "https://www.drikpanchang.com/rashifal/pisces-daily-rashifal.html" },
 ];
 
 export interface Temple {
@@ -399,6 +399,7 @@ export interface Recipe {
   time: string;
   isNew: boolean;
   img: string;
+  link: string;
 }
 
 export const RECIPES: Recipe[] = [
@@ -409,6 +410,7 @@ export const RECIPES: Recipe[] = [
     time: "30min",
     isNew: true,
     img: "https://picsum.photos/seed/rc1/320/240",
+    link: "https://www.youtube.com/results?search_query=pesarapappu+pulusu+recipe+telugu",
   },
   {
     cat: "అల్పాహారం",
@@ -417,6 +419,7 @@ export const RECIPES: Recipe[] = [
     time: "15min",
     isNew: false,
     img: "https://picsum.photos/seed/rc2/320/240",
+    link: "https://www.youtube.com/results?search_query=rava+upma+recipe+telugu+quick",
   },
   {
     cat: "పండుగ వంటలు",
@@ -425,6 +428,7 @@ export const RECIPES: Recipe[] = [
     time: "20min",
     isNew: true,
     img: "https://picsum.photos/seed/rc3/320/240",
+    link: "https://www.youtube.com/results?search_query=ugadi+pachadi+recipe+telugu",
   },
 ];
 
@@ -432,28 +436,78 @@ export interface RightsCard {
   icon: string;
   title: string;
   desc: string;
+  link: string;
+  linkLabel: string;
+  points: string[];
+  howTo: string;
+  law: string;
 }
 
 export const BIG_RIGHTS: RightsCard[] = [
   {
     icon: "🗳️",
     title: "మీ ఓటు మీ శక్తి",
-    desc: "ఓటు వేయడం మీ రాజ్యాంగ హక్కు. Aadhaar చూపిస్తే ఓటు వేయొచ్చు.",
+    desc: "ఓటు వేయడం మీ రాజ్యాంగ హక్కు. 18 ఏళ్ళు నిండిన ప్రతి పౌరుడికి ఓటు వేసే హక్కు ఉంది.",
+    link: "https://voters.eci.gov.in/",
+    linkLabel: "Voter Registration Portal",
+    law: "Article 326, Constitution of India",
+    howTo: "Aadhaar, Voter ID, లేదా మరే ఒక ప్రభుత్వ గుర్తింపు కార్డు చూపిస్తే ఓటు వేయవచ్చు. Online voter registration: voters.eci.gov.in",
+    points: [
+      "18 ఏళ్ళు నిండిన భారత పౌరులందరికీ ఓటు హక్కు ఉంటుంది",
+      "Voter ID card లేకపోయినా 12 ప్రత్యామ్నాయ IDs తో ఓటు వేయవచ్చు",
+      "Online voter registration, name correction: voters.eci.gov.in",
+      "Polling booth నుండి ఎవరూ అక్రమంగా తొలగించలేరు",
+      "ఓటు వేయడం వల్ల ఆఫీసు నుండి సెలవు నిరాకరించలేరు",
+    ],
   },
   {
     icon: "🏥",
     title: "ఉచిత వైద్యం హక్కు",
-    desc: "ప్రభుత్వ ఆసుపత్రిలో డబ్బు లేదని తిరస్కరించే హక్కు లేదు.",
+    desc: "ప్రభుత్వ ఆసుపత్రిలో డబ్బు లేదని వైద్యం నిరాకరించే హక్కు ఏ వైద్యుడికీ లేదు.",
+    link: "https://mohfw.gov.in/",
+    linkLabel: "Ministry of Health Portal",
+    law: "Right to Emergency Medical Treatment, Andhra Pradesh & Telangana Acts",
+    howTo: "Government hospital లో admission తిరస్కరించినా, Ayushman Bharat card లేకపోయినా — 104 helpline కి call చేయండి. CMO office కి complaint ఇవ్వండి.",
+    points: [
+      "Emergency లో ప్రభుత్వ ఆసుపత్రి admission నిరాకరించలేదు",
+      "Ayushman Bharat - PM-JAY: ₹5 lakh వరకు ఉచిత చికిత్స",
+      "CGHS, ESI card holders కి empanelled hospitals లో ఉచిత వైద్యం",
+      "వైద్య నిర్లక్ష్యానికి complaint: State Medical Council కి ఫిర్యాదు చేయవచ్చు",
+      "Andhra Pradesh: Aarogyasri scheme — ₹2.5 lakh వరకు ఉచిత సర్జరీలు",
+    ],
   },
   {
     icon: "📋",
     title: "రేషన్ కార్డ్ హక్కు",
-    desc: "ప్రతి పేద కుటుంబానికి రేషన్ కార్డ్ రావాలి.",
+    desc: "National Food Security Act ప్రకారం ప్రతి పేద కుటుంబానికి రేషన్ కార్డ్ రావాలి. తిరస్కరిస్తే appeal చేయవచ్చు.",
+    link: "https://nfsa.gov.in/",
+    linkLabel: "NFSA Portal",
+    law: "National Food Security Act 2013, PDS Control Order 2015",
+    howTo: "తహసీల్దార్ / MRO office లో application ఇవ్వండి. తిరస్కరిస్తే District Collector కి appeal చేయవచ్చు. Status check: nfsa.gov.in",
+    points: [
+      "Priority Household (PHH): 5 kg rice/wheat per person per month @ ₹2-3",
+      "Antyodaya Anna Yojana (AAY): 35 kg per family per month",
+      "Ration card apply చేయడానికి address proof + income certificate",
+      "Fake ration cards మరియు ghost beneficiaries report చేయవచ్చు",
+      "Online status check, complaints: Mee Seva / ePDS portal",
+    ],
   },
   {
     icon: "⚖️",
     title: "అరెస్ట్ హక్కులు",
-    desc: "అరెస్ట్ అయినప్పుడు కారణం అడిగే హక్కు మీకు ఉంది.",
+    desc: "అరెస్ట్ అయినప్పుడు మీకు అనేక రాజ్యాంగ హక్కులు ఉన్నాయి. వాటిని తెలుసుకోండి.",
+    link: "https://nalsa.gov.in/",
+    linkLabel: "NALSA Legal Aid",
+    law: "Article 21, 22 of the Constitution; CrPC Section 50, 56",
+    howTo: "అరెస్ట్ అయినప్పుడు: మీ పేరు + అరెస్ట్ కారణం అడగండి. Lawyer ని పంపించమని request చేయండి. NALSA helpline: 15100",
+    points: [
+      "అరెస్ట్ కారణం తెలుసుకునే హక్కు ఉంది (Article 22)",
+      "24 గంటల్లో magistrate ముందు హాజరుపరచాలి",
+      "వెంటనే lawyer ని సంప్రదించే హక్కు ఉంది",
+      "తన కుటుంబానికి లేదా మిత్రునికి inform చేయమని request చేయవచ్చు",
+      "Custody లో torture చేస్తే — NHRC, State Human Rights Commission కి complaint",
+      "ఉచిత legal aid: NALSA helpline 15100",
+    ],
   },
 ];
 

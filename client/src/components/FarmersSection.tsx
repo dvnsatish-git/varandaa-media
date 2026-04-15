@@ -16,7 +16,7 @@ export default function FarmersSection() {
     <section id="farmers" className="mb-[52px]">
       <div className="flex items-end pb-[10px] border-b-2 border-night mb-[22px] relative">
         <div className="absolute bottom-[-2px] left-0 w-[50px] h-[2px] bg-farmer" />
-        <h2 className="font-serif text-[21px] font-bold mr-2">Farmers Corner</h2>
+        <h2 className="font-serif text-[24px] font-bold mr-2">Farmers Corner</h2>
         <span className="font-te text-[13px] text-ash">రైతు వేదిక</span>
       </div>
 

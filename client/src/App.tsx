@@ -14,6 +14,7 @@ import TrafficSection from "./components/TrafficSection";
 import WeekendSection from "./components/WeekendSection";
 import AchievementsSection from "./components/AchievementsSection";
 import YouTubeSection from "./components/YouTubeSection";
+import ReelsSection from "./components/ReelsSection";
 import Sidebar from "./components/Sidebar";
 import ArticleModal from "./components/ArticleModal";
 import Footer from "./components/Footer";
@@ -83,18 +84,19 @@ export default function App() {
             )}
 
             <YouTubeSection onArticleClick={handleArticleClick} />
+            <ReelsSection onArticleClick={handleArticleClick} />
             <VideoGrid articles={latestArticles} onArticleClick={handleArticleClick} />
             <AmericaPanel articles={remaining} onArticleClick={handleArticleClick} />
             <OTTGrid />
             <SpiritualSection />
             <FarmersSection />
-            <HousewivesSection onArticleClick={handleArticleClick} />
+            <HousewivesSection />
             <RightsSection />
             <TrafficSection />
             <WeekendSection onArticleClick={handleArticleClick} />
             <AchievementsSection articles={remaining} onArticleClick={handleArticleClick} />
           </main>
-          <Sidebar />
+          <Sidebar articles={allArticles} onArticleClick={handleArticleClick} />
         </div>
       </div>
 

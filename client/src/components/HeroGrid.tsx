@@ -66,13 +66,13 @@ export default function HeroGrid({ articles, onArticleClick }: HeroGridProps) {
           onClick={() => onArticleClick(main)}
         >
           <img src={main.img} alt={main.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"  loading="lazy"/>
-          <div className="hero-overlay absolute inset-0 flex flex-col justify-end p-[26px_30px]">
-            <span className={`inline-block text-[8.5px] font-bold tracking-[1.8px] uppercase px-[9px] py-[3px] rounded-[2px] mb-[7px] self-start ${TAG_CLASSES[main.tag] || "bg-white/15 text-white"}`}>
+          <div className="hero-overlay absolute inset-0 flex flex-col justify-end p-[28px_32px]">
+            <span className={`inline-block text-[10px] font-bold tracking-[1.8px] uppercase px-[10px] py-[4px] rounded-[3px] mb-[8px] self-start ${TAG_CLASSES[main.tag] || "bg-white/15 text-white"}`}>
               {main.tagLabel}
             </span>
-            <h2 className="font-serif text-[26px] font-bold text-white leading-[1.28] mb-1.5">{main.title}</h2>
-            <p className="font-te text-[14px] text-white/70 leading-[1.55] mb-2">{main.te}</p>
-            <div className="flex gap-2.5 text-[10px] text-white/40">
+            <h2 className="font-serif text-[30px] font-bold text-white leading-[1.25] mb-2">{main.title}</h2>
+            <p className="font-te text-[15px] text-white/75 leading-[1.6] mb-2">{main.te}</p>
+            <div className="flex gap-2.5 text-[11px] text-white/50">
               <span>{main.time}</span>
               <span>👁 {main.views}</span>
             </div>
@@ -83,12 +83,12 @@ export default function HeroGrid({ articles, onArticleClick }: HeroGridProps) {
           <div key={i} className="relative overflow-hidden cursor-pointer group" onClick={() => onArticleClick(item)}>
             <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"  loading="lazy"/>
             <div className="hero-overlay absolute inset-0 flex flex-col justify-end p-[18px_22px]">
-              <span className={`inline-block text-[8.5px] font-bold tracking-[1.8px] uppercase px-[9px] py-[3px] rounded-[2px] mb-[7px] self-start ${TAG_CLASSES[item.tag] || "bg-white/15 text-white"}`}>
+              <span className={`inline-block text-[10px] font-bold tracking-[1.8px] uppercase px-[9px] py-[3px] rounded-[3px] mb-[7px] self-start ${TAG_CLASSES[item.tag] || "bg-white/15 text-white"}`}>
                 {item.tagLabel}
               </span>
-              <h3 className="font-serif text-[16px] font-bold text-white leading-[1.3] mb-0.5">{item.title}</h3>
-              <p className="font-te text-[12px] text-white/70 leading-[1.55]">{item.te}</p>
-              <div className="flex gap-2.5 text-[10px] text-white/40 mt-1">
+              <h3 className="font-serif text-[19px] font-bold text-white leading-[1.28] mb-1">{item.title}</h3>
+              <p className="font-te text-[13px] text-white/75 leading-[1.5]">{item.te}</p>
+              <div className="flex gap-2.5 text-[11px] text-white/50 mt-1">
                 <span>{item.time}</span>
                 <span>👁 {item.views}</span>
               </div>
