@@ -51,18 +51,20 @@ export function useVoice() {
   const [error,        setError]       = useState("");
   const [trialLeft,    setTrialLeft]   = useState(FREE_LIMIT - getTrialUses());
   const [subscribed,   setSubscribed]  = useState(isSubscribed());
-  const [wisprEnabled, setWisprEnabled] = useState(false);
+  const [wisprEnabled,  setWisprEnabled]  = useState(false);
+  const [avatarEnabled, setAvatarEnabled] = useState(false);
 
-  const mediaRef      = useRef<MediaRecorder | null>(null);
-  const chunksRef     = useRef<Blob[]>([]);
-  const srRef         = useRef<SpeechRecognition | null>(null);
+  const mediaRef  = useRef<MediaRecorder | null>(null);
+  const chunksRef = useRef<Blob[]>([]);
+  const srRef     = useRef<SpeechRecognition | null>(null);
 
-  // Check if wisprflow is configured server-side
+  // Check feature availability server-side
   useEffect(() => {
     fetch("/api/voice/config")
       .then((r) => r.json())
-      .then((d: { wisprflowEnabled?: boolean }) => {
+      .then((d: { wisprflowEnabled?: boolean; avatarEnabled?: boolean }) => {
         setWisprEnabled(!!d.wisprflowEnabled);
+        setAvatarEnabled(!!d.avatarEnabled);
       })
       .catch(() => {});
   }, []);
@@ -73,12 +75,12 @@ export function useVoice() {
     return getTrialUses() < FREE_LIMIT;
   }, []);
 
-  // Search articles by transcribed text
+  // Live search: Google News RSS + cached articles merged
   const searchArticles = useCallback(async (query: string) => {
     setTranscript(query);
     setStatus("processing");
     try {
-      const res = await fetch("/api/voice/search", {
+      const res = await fetch("/api/voice/livesearch", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query }),
@@ -241,6 +243,7 @@ export function useVoice() {
     trialLeft,
     subscribed,
     wisprEnabled,
+    avatarEnabled,
     startListening,
     stopListening,
     subscribe,

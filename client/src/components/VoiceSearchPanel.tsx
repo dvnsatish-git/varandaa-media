@@ -1,5 +1,7 @@
 // Voice search results panel + subscription gate
+import { useState } from "react";
 import type { VoiceStatus, VoiceResult } from "../hooks/useVoice";
+import VoiceAvatar, { type AvatarGender } from "./VoiceAvatar";
 
 interface VoiceSearchPanelProps {
   status: VoiceStatus;
@@ -8,6 +10,7 @@ interface VoiceSearchPanelProps {
   error: string;
   trialLeft: number;
   subscribed: boolean;
+  avatarEnabled: boolean;
   onArticleClick: (article: VoiceResult) => void;
   onSubscribe: () => void;
   onDismiss: () => void;
@@ -30,11 +33,14 @@ export default function VoiceSearchPanel({
   error,
   trialLeft,
   subscribed,
+  avatarEnabled,
   onArticleClick,
   onSubscribe,
   onDismiss,
   onReset,
 }: VoiceSearchPanelProps) {
+  const [avatarGender, setAvatarGender]     = useState<AvatarGender>("female");
+  const [customImageUrl, setCustomImageUrl] = useState("");
   if (status === "idle") return null;
 
   // ── Subscription gate ────────────────────────────────────────
@@ -215,6 +221,18 @@ export default function VoiceSearchPanel({
                   </button>
                 </div>
               )}
+
+              {/* D-ID Avatar — reads the top result summary */}
+              <VoiceAvatar
+                enabled={avatarEnabled}
+                text={results[0]
+                  ? `${results[0].title}. ${results[0].summaryEn ?? ""}`.slice(0, 500)
+                  : ""}
+                gender={avatarGender}
+                customImageUrl={customImageUrl}
+                onGenderChange={setAvatarGender}
+                onCustomImageChange={setCustomImageUrl}
+              />
             </div>
           )}
         </div>

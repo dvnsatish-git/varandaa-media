@@ -125,6 +125,7 @@ export default function App() {
         error={voice.error}
         trialLeft={voice.trialLeft}
         subscribed={voice.subscribed}
+        avatarEnabled={voice.avatarEnabled}
         onArticleClick={handleArticleClick}
         onSubscribe={voice.subscribe}
         onDismiss={voice.dismiss}
