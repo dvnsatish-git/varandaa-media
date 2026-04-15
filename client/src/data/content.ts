@@ -4,7 +4,7 @@ export const TICKER_ITEMS = [
   "తెలంగాణ CM నూతన సంక్షేమ పథకాలు ప్రకటించారు",
   "Prabhas New Project: ₹400 Crore confirmed",
   "వరి ధర: ₹2,183/క్వి — నేటి హైదరాబాద్ మంది",
-  "ఉగాది 2026: మార్చి 30 — 21 రోజులు మిగిలాయి",
+  "అక్షయ తృతీయ 2026: ఏప్రిల్ 30 — 15 రోజులు మిగిలాయి",
   "Darwinbox Telugu startup raises $140M",
   "SRH vs MI IPL 2026 opener — Sunday 7:30 PM",
 ];
@@ -404,13 +404,13 @@ export interface Recipe {
 
 export const RECIPES: Recipe[] = [
   {
-    cat: "పప్పు వంటలు",
-    title: "పెసరపప్పు పులుసు — అమ్మ చేతి రుచి",
-    te: "Pesarapappu pulusu recipe",
-    time: "30min",
+    cat: "వేసవి పానీయాలు",
+    title: "మామిడి పానకం — వేసవి కూలింగ్ డ్రింక్",
+    te: "Mango Panakam summer cooler recipe",
+    time: "10min",
     isNew: true,
-    img: "https://picsum.photos/seed/rc1/320/240",
-    link: "https://www.youtube.com/results?search_query=pesarapappu+pulusu+recipe+telugu",
+    img: "https://picsum.photos/seed/rc10/320/240",
+    link: "https://www.youtube.com/results?search_query=mango+panakam+recipe+telugu+summer",
   },
   {
     cat: "అల్పాహారం",
@@ -422,13 +422,13 @@ export const RECIPES: Recipe[] = [
     link: "https://www.youtube.com/results?search_query=rava+upma+recipe+telugu+quick",
   },
   {
-    cat: "పండుగ వంటలు",
-    title: "ఉగాది పచ్చడి — సరైన నిష్పత్తులు",
-    te: "Ugadi pachadi correct recipe",
-    time: "20min",
+    cat: "వేసవి వంటలు",
+    title: "దోసకాయ పప్పు — వేసవి స్పెషల్",
+    te: "Dosakaya pappu summer special recipe",
+    time: "25min",
     isNew: true,
-    img: "https://picsum.photos/seed/rc3/320/240",
-    link: "https://www.youtube.com/results?search_query=ugadi+pachadi+recipe+telugu",
+    img: "https://picsum.photos/seed/rc11/320/240",
+    link: "https://www.youtube.com/results?search_query=dosakaya+pappu+recipe+telugu",
   },
 ];
 
@@ -609,9 +609,9 @@ export interface Achievement {
 
 export const ACHIEVEMENTS: Achievement[] = [
   { icon: "🏆", title: "Darwinbox Raises $140M Series E", te: "హైదరాబాద్ స్టార్టప్ Darwinbox $140M సేకరించింది", badge: "Tech Unicorn" },
-  { icon: "🎬", title: "SS Rajamouli's RRR Oscar Legacy", te: "RRR Oscar విజయం తెలుగు చలనచిత్రం గర్వం", badge: "Global Cinema" },
-  { icon: "🚀", title: "ISRO's Chandrayaan-3 Success", te: "చంద్రయాన్-3 — భారత చంద్ర ప్రయాణం విజయం", badge: "Space Science" },
-  { icon: "🏅", title: "Neeraj Chopra: Olympic Gold", te: "నీరజ్ చోప్రా ఒలింపిక్ స్వర్ణం — భారత్ గర్వం", badge: "Olympics 2024" },
+  { icon: "🎬", title: "Pushpa 2 Earns ₹1,800 Cr Worldwide", te: "పుష్ప 2 ప్రపంచ వ్యాప్తంగా ₹1,800 కోట్లు సాధించింది", badge: "Box Office" },
+  { icon: "🚀", title: "Kalki 2898-AD: Global Blockbuster", te: "కల్కి 2898-AD ప్రపంచ వ్యాప్తంగా రికార్డులు", badge: "Sci-Fi Epic" },
+  { icon: "💼", title: "Satya Nadella Leads Microsoft to $3T", te: "సత్య నాదెళ్ళ నేతృత్వంలో Microsoft $3 ట్రిల్లియన్ సంస్థ", badge: "Tech Leader" },
 ];
 
 export interface Festival {
@@ -623,13 +623,12 @@ export interface Festival {
 }
 
 export const FESTIVALS: Festival[] = [
-  { icon: "🌸", name: "ఉగాది", en: "Telugu New Year", date: "Mar 30, 2026", days: 1 },
-  { icon: "🌺", name: "శ్రీరామ నవమి", en: "Sri Rama Navami", date: "Apr 6, 2026", days: 8 },
-  { icon: "🪔", name: "హనుమాన్ జయంతి", en: "Hanuman Jayanti", date: "Apr 12, 2026", days: 14 },
-  { icon: "🎊", name: "అక్షయ తృతీయ", en: "Akshaya Tritiya", date: "Apr 30, 2026", days: 32 },
-  { icon: "🌿", name: "వినాయక చవితి", en: "Vinayaka Chavithi", date: "Aug 22, 2026", days: 146 },
-  { icon: "💫", name: "దసరా", en: "Dussehra", date: "Oct 2, 2026", days: 187 },
-  { icon: "🪔", name: "దీపావళి", en: "Deepawali", date: "Oct 21, 2026", days: 206 },
+  { icon: "🎊", name: "అక్షయ తృతీయ", en: "Akshaya Tritiya", date: "Apr 30, 2026", days: 15 },
+  { icon: "🌕", name: "బుద్ధ పూర్ణిమ", en: "Buddha Purnima", date: "May 12, 2026", days: 27 },
+  { icon: "🌙", name: "ఈద్ అల్-అదా", en: "Bakrid / Eid ul-Adha", date: "Jun 7, 2026", days: 53 },
+  { icon: "🌿", name: "వినాయక చవితి", en: "Vinayaka Chavithi", date: "Aug 22, 2026", days: 129 },
+  { icon: "💫", name: "దసరా", en: "Dussehra", date: "Oct 2, 2026", days: 170 },
+  { icon: "🪔", name: "దీపావళి", en: "Deepawali", date: "Oct 21, 2026", days: 189 },
 ];
 
 export interface Weekend {
@@ -640,9 +639,9 @@ export interface Weekend {
 }
 
 export const WEEKEND: Weekend[] = [
-  { cat: "Family", title: "Hyderabad Zoo: Weekend Timings & New Attractions", te: "హైదరాబాద్ జూ — వారాంతపు సమయాలు", img: "https://picsum.photos/seed/wk1/320/240" },
-  { cat: "Food", title: "Best Ugadi Special Thali Restaurants", te: "ఉగాది స్పెషల్ థాళీ — మంచి రెస్టారెంట్లు", img: "https://picsum.photos/seed/wk2/320/240" },
-  { cat: "Travel", title: "Araku Valley: 2-Day Trip from Visakhapatnam", te: "అరకు వ్యాలీ — 2 రోజుల యాత్ర", img: "https://picsum.photos/seed/wk3/320/240" },
+  { cat: "Cricket", title: "IPL 2026: SRH vs MI — Sunday 7:30 PM", te: "IPL 2026: SRH vs MI — ఆదివారం సాయంత్రం", img: "https://picsum.photos/seed/wk10/320/240" },
+  { cat: "Travel", title: "Summer Getaway: Horsley Hills, AP", te: "వేసవి యాత్ర — హార్స్లీ హిల్స్, ఆంధ్రప్రదేశ్", img: "https://picsum.photos/seed/wk11/320/240" },
+  { cat: "OTT", title: "Top Telugu Films Releasing on OTT This Weekend", te: "ఈ వారాంతం OTT లో కొత్త తెలుగు చిత్రాలు", img: "https://picsum.photos/seed/wk12/320/240" },
 ];
 
 export interface Tip {
@@ -654,7 +653,7 @@ export interface Tip {
 
 export const TIPS: Tip[] = [
   { icon: "💰", cat: "Finance", title: "UPI Scam: ఈ 5 signs చూసి జాగ్రత్తపడండి", te: "UPI మోసాల నుండి రక్షణ" },
-  { icon: "🌿", cat: "Health", title: "ఉగాది పచ్చడి ఆరోగ్య ప్రయోజనాలు", te: "ఆరోగ్యకరమైన ఉగాది" },
+  { icon: "🌿", cat: "Health", title: "వేసవిలో చల్లగా ఉండటానికి 5 ఆహారాలు", te: "వేసవి ఆరోగ్య చిట్కాలు" },
   { icon: "📱", cat: "Tech", title: "WhatsApp: Privacy Settings మార్చండి", te: "WhatsApp గోప్యత సెట్టింగులు" },
   { icon: "🎓", cat: "Education", title: "NEET 2026 పరీక్ష తేదీలు విడుదల", te: "NEET 2026 నోటిఫికేషన్" },
 ];
