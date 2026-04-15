@@ -40,8 +40,10 @@ const DEFAULT_MALE_URL =
   process.env.DID_PRESENTER_MALE_URL ||
   "https://images.unsplash.com/photo-1566753323558-f4e0952af115?w=400&h=400&fit=crop&crop=faces&auto=format";
 
+// D-ID API key format from dashboard: base64(email):key_hash
+// This is already the Basic auth credential — do NOT re-encode it
 function didAuthHeader(apiKey: string) {
-  return `Basic ${Buffer.from(`${apiKey}:`).toString("base64")}`;
+  return `Basic ${apiKey}`;
 }
 
 // ── GET /api/voice/config ──────────────────────────────────────
@@ -72,7 +74,7 @@ router.post("/search", (req: Request, res: Response) => {
 });
 
 // ── POST /api/voice/livesearch ─────────────────────────────────
-// Live Google News RSS + cached articles merged and ranked
+// OpenAI query expansion → Google News RSS + cached articles merged
 router.post("/livesearch", async (req: Request, res: Response) => {
   const ip = req.ip ?? req.socket?.remoteAddress ?? "unknown";
   if (!checkRateLimit(ip)) return res.status(429).json({ error: "Too many requests." });
@@ -81,20 +83,21 @@ router.post("/livesearch", async (req: Request, res: Response) => {
   if (typeof rawQuery !== "string" || rawQuery.trim().length < 2)
     return res.status(400).json({ error: "Invalid query." });
 
-  const q     = sanitizeQuery(rawQuery).toLowerCase();
-  const terms = q.split(/\s+/).filter((t) => t.length > 2);
-  if (!terms.length) return res.status(400).json({ error: "Query too short." });
+  const q = sanitizeQuery(rawQuery).toLowerCase();
 
-  // Run live RSS fetch and cached search in parallel
+  // 1. Expand query with OpenAI for much better search accuracy
+  const [expandedTerms, rssQuery] = await expandQuery(q);
+
+  // 2. Run live RSS fetch and cached search in parallel
   const [liveResult, cachedResult] = await Promise.allSettled([
-    fetchGoogleNewsRSS(q),
-    Promise.resolve(scoreArticles(getAllArticles(100), terms).slice(0, 5)),
+    fetchGoogleNewsRSS(rssQuery),
+    Promise.resolve(scoreArticles(getAllArticles(100), expandedTerms).slice(0, 5)),
   ]);
 
   const live   = liveResult.status   === "fulfilled" ? liveResult.value   : [];
   const cached = cachedResult.status === "fulfilled" ? cachedResult.value : [];
 
-  // Merge: live first, then cached; deduplicate by normalised title
+  // 3. Merge: live first, then cached; deduplicate by normalised title
   const seen = new Set<string>();
   const merged = [...live, ...cached].filter((r) => {
     const key = r.title.toLowerCase().replace(/\W+/g, " ").trim().slice(0, 60);
@@ -271,6 +274,62 @@ function scoreArticles(
       realLink: a.realLink, image: a.image, sourceName: a.sourceName,
       publishedAt: a.publishedAt, tags: a.tags,
     }));
+}
+
+// ── OpenAI query expander ──────────────────────────────────────
+// Turns a casual voice query like "tell me about IPL today" into
+// specific search terms ["ipl", "cricket", "srh", "match", "score"]
+// and a clean RSS search string "IPL 2026 cricket telugu"
+async function expandQuery(query: string): Promise<[string[], string]> {
+  const apiKey = process.env.OPENAI_API_KEY;
+  const fallbackTerms = query.split(/\s+/).filter((t) => t.length > 1);
+
+  if (!apiKey) return [fallbackTerms, `${query} telugu`];
+
+  try {
+    const resp = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "gpt-4o-mini",
+        messages: [{
+          role: "system",
+          content: "You are a Telugu news search assistant. Extract precise search terms from voice queries.",
+        }, {
+          role: "user",
+          content: `Voice query from a Telugu news app user: "${query}"
+
+Return a JSON object with:
+- "terms": array of 6-10 specific lowercase keywords (include abbreviations, Telugu transliterations, related terms)
+- "rssQuery": a concise 3-5 word English search string for Google News RSS
+
+Examples:
+- "tell me about IPL match today" → {"terms":["ipl","cricket","match","score","today","srh","mi","rcb","bcci"],"rssQuery":"IPL 2026 cricket match"}
+- "prabhas new movie" → {"terms":["prabhas","movie","film","tollywood","telugu","project","release","actor"],"rssQuery":"Prabhas new Telugu film 2026"}
+- "H-1B visa news" → {"terms":["h-1b","visa","uscis","immigration","h1b","work","america","telugu"],"rssQuery":"H-1B visa 2026 news"}
+
+Return ONLY valid JSON, no markdown.`,
+        }],
+        max_tokens: 150,
+        temperature: 0,
+      }),
+      signal: AbortSignal.timeout(5_000),
+    });
+
+    if (!resp.ok) return [fallbackTerms, `${query} telugu`];
+
+    const data = await resp.json() as { choices?: { message?: { content?: string } }[] };
+    const content = data.choices?.[0]?.message?.content ?? "{}";
+    const parsed = JSON.parse(content) as { terms?: string[]; rssQuery?: string };
+    const terms    = Array.isArray(parsed.terms) ? parsed.terms.map(String) : fallbackTerms;
+    const rssQuery = typeof parsed.rssQuery === "string" ? parsed.rssQuery : `${query} telugu`;
+    return [terms, rssQuery];
+  } catch {
+    return [fallbackTerms, `${query} telugu`];
+  }
 }
 
 async function fetchGoogleNewsRSS(query: string): Promise<VoiceResult[]> {
