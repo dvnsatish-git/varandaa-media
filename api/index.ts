@@ -2,6 +2,7 @@
 import express from "express";
 import feedRouter from "../server/routes/feed.js";
 import articleRouter from "../server/routes/article.js";
+import voiceRouter from "../server/routes/voice.js";
 import { loadFromDisk, getFeedMeta } from "../server/storage/feedStore.js";
 
 const app = express();
@@ -23,5 +24,6 @@ app.get("/api/health", (_req, res) => {
 
 app.use("/api/feed", feedRouter);
 app.use("/api/article", articleRouter);
+app.use("/api/voice", voiceRouter);
 
 export default app;

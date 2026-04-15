@@ -17,8 +17,11 @@ import YouTubeSection from "./components/YouTubeSection";
 import ReelsSection from "./components/ReelsSection";
 import Sidebar from "./components/Sidebar";
 import ArticleModal from "./components/ArticleModal";
+import VoiceButton from "./components/VoiceButton";
+import VoiceSearchPanel from "./components/VoiceSearchPanel";
 import Footer from "./components/Footer";
 import { useFeed, Article } from "./hooks/useFeed";
+import { useVoice } from "./hooks/useVoice";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type AnyArticle = Record<string, any>;
@@ -27,6 +30,8 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedArticle, setSelectedArticle] = useState<AnyArticle | null>(null);
+
+  const voice = useVoice();
 
   // Fetch articles once; slice into sections with no overlaps
   const { articles: rawArticles } = useFeed(40);
@@ -70,6 +75,17 @@ export default function App() {
       <BreakingTicker />
       <Header onSearch={setSearchQuery} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Navigation menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+
+      {/* Voice Search Bar — sits below nav */}
+      <div className="max-w-[1320px] mx-auto px-6 pt-3 pb-0 flex justify-end">
+        <VoiceButton
+          status={voice.status}
+          trialLeft={voice.trialLeft}
+          subscribed={voice.subscribed}
+          onStart={voice.startListening}
+          onStop={voice.stopListening}
+        />
+      </div>
       <HeroGrid articles={topArticles} onArticleClick={handleArticleClick} />
 
       <div className="max-w-[1320px] mx-auto px-6">
@@ -102,6 +118,18 @@ export default function App() {
 
       <Footer />
       <ArticleModal article={selectedArticle} onClose={handleCloseModal} />
+      <VoiceSearchPanel
+        status={voice.status}
+        transcript={voice.transcript}
+        results={voice.results}
+        error={voice.error}
+        trialLeft={voice.trialLeft}
+        subscribed={voice.subscribed}
+        onArticleClick={handleArticleClick}
+        onSubscribe={voice.subscribe}
+        onDismiss={voice.dismiss}
+        onReset={voice.reset}
+      />
     </div>
   );
 }
