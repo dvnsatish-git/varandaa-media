@@ -17,8 +17,7 @@ import YouTubeSection from "./components/YouTubeSection";
 import ReelsSection from "./components/ReelsSection";
 import Sidebar from "./components/Sidebar";
 import ArticleModal from "./components/ArticleModal";
-import VoiceButton from "./components/VoiceButton";
-import VoiceSearchPanel from "./components/VoiceSearchPanel";
+import AvatarAgent from "./components/AvatarAgent";
 import Footer from "./components/Footer";
 import { useFeed, Article } from "./hooks/useFeed";
 import { useVoice } from "./hooks/useVoice";
@@ -76,16 +75,6 @@ export default function App() {
       <Header onSearch={setSearchQuery} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Navigation menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
-      {/* Voice Search Bar — sits below nav */}
-      <div className="max-w-[1320px] mx-auto px-6 pt-3 pb-0 flex justify-end">
-        <VoiceButton
-          status={voice.status}
-          trialLeft={voice.trialLeft}
-          subscribed={voice.subscribed}
-          onStart={voice.startListening}
-          onStop={voice.stopListening}
-        />
-      </div>
       <HeroGrid articles={topArticles} onArticleClick={handleArticleClick} />
 
       <div className="max-w-[1320px] mx-auto px-6">
@@ -118,7 +107,7 @@ export default function App() {
 
       <Footer />
       <ArticleModal article={selectedArticle} onClose={handleCloseModal} />
-      <VoiceSearchPanel
+      <AvatarAgent
         status={voice.status}
         transcript={voice.transcript}
         results={voice.results}
@@ -127,9 +116,11 @@ export default function App() {
         subscribed={voice.subscribed}
         avatarEnabled={voice.avatarEnabled}
         onArticleClick={handleArticleClick}
+        onStart={voice.startListening}
+        onStop={voice.stopListening}
+        onReset={voice.reset}
         onSubscribe={voice.subscribe}
         onDismiss={voice.dismiss}
-        onReset={voice.reset}
       />
     </div>
   );
