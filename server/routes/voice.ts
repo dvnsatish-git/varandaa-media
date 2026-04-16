@@ -31,14 +31,16 @@ function sanitizeQuery(raw: string): string {
   return raw.replace(/<[^>]*>/g, "").replace(/[\x00-\x1F\x7F]/g, " ").trim().slice(0, 300);
 }
 
-// Default D-ID presenter images (South Asian, Telugu-style modern educated)
+// Default D-ID presenter images — must be direct HTTPS URLs (no redirects).
+// Unsplash URLs redirect through CDN which D-ID rejects.
+// Using D-ID's own public sample images which are pre-approved and always work.
 // Override with env vars: DID_PRESENTER_FEMALE_URL / DID_PRESENTER_MALE_URL
 const DEFAULT_FEMALE_URL =
   process.env.DID_PRESENTER_FEMALE_URL ||
-  "https://images.unsplash.com/photo-1588516903720-8ceb67f9ef84?w=400&h=400&fit=crop&crop=faces&auto=format";
+  "https://d-id-public-bucket.s3.amazonaws.com/alice.jpg";
 const DEFAULT_MALE_URL =
   process.env.DID_PRESENTER_MALE_URL ||
-  "https://images.unsplash.com/photo-1566753323558-f4e0952af115?w=400&h=400&fit=crop&crop=faces&auto=format";
+  "https://d-id-public-bucket.s3.amazonaws.com/or-roman.jpg";
 
 // D-ID API key format from dashboard: base64(email):key_hash
 // This is already the Basic auth credential — do NOT re-encode it
@@ -200,9 +202,10 @@ router.post("/avatar", async (req: Request, res: Response) => {
     });
 
     if (!resp.ok) {
-      const err = await resp.text().catch(() => "");
-      console.error("[avatar] D-ID error", resp.status, err);
-      return res.status(502).json({ error: "Avatar service error." });
+      const errBody = await resp.text().catch(() => "");
+      console.error("[avatar] D-ID error", resp.status, errBody);
+      // Return the actual D-ID error for easier diagnosis
+      return res.status(502).json({ error: "Avatar service error.", didStatus: resp.status, didError: errBody });
     }
 
     const talk = await resp.json() as { id?: string; status?: string };
