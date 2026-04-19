@@ -179,13 +179,25 @@ export async function fetchAllFeeds(maxPerCategory = 6): Promise<RawArticle[]> {
   });
 
   // Sort by source priority so high-priority sources win category slots
-  // (lower number = higher priority; stable sort preserves publish order within same priority)
   const priorityMap = new Map(FEED_SOURCES.map((s) => [s.id, s.priority]));
   deduped.sort((a, b) => (priorityMap.get(a.sourceId) ?? 9) - (priorityMap.get(b.sourceId) ?? 9));
 
+  // Cap per publisher domain (max 3) — prevents any outlet from flooding
+  // through multiple GNews queries (e.g. Hans India appearing in every AP search).
+  function publisherDomain(link: string): string {
+    try { return new URL(link).hostname.replace(/^www\./, ""); } catch { return link; }
+  }
+  const countByDomain: Record<string, number> = {};
+  const domainCapped = deduped.filter((a) => {
+    const domain = publisherDomain(a.realLink || a.link);
+    countByDomain[domain] = (countByDomain[domain] ?? 0) + 1;
+    return countByDomain[domain] <= 3;
+  });
+  console.log(`[fetchFeeds] Publisher caps: ${Object.entries(countByDomain).sort((a,b)=>b[1]-a[1]).slice(0,8).map(([d,n])=>`${d}:${n}`).join(", ")}`);
+
   // Cap per category so no single category dominates
   const countByCategory: Record<string, number> = {};
-  const capped = deduped.filter((a) => {
+  const capped = domainCapped.filter((a) => {
     countByCategory[a.category] = (countByCategory[a.category] ?? 0) + 1;
     return countByCategory[a.category] <= maxPerCategory;
   });
