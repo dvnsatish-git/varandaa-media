@@ -182,27 +182,36 @@ export async function fetchAllFeeds(maxPerCategory = 6): Promise<RawArticle[]> {
   const priorityMap = new Map(FEED_SOURCES.map((s) => [s.id, s.priority]));
   deduped.sort((a, b) => (priorityMap.get(a.sourceId) ?? 9) - (priorityMap.get(b.sourceId) ?? 9));
 
-  // Cap per publisher domain (max 3) — prevents any outlet from flooding
-  // through multiple GNews queries (e.g. Hans India appearing in every AP search).
-  function publisherDomain(link: string): string {
-    try { return new URL(link).hostname.replace(/^www\./, ""); } catch { return link; }
+  // Extract publisher name — for GNews items the title ends with "- Publisher Name".
+  // For direct feeds we use the source name. This handles GNews links which all
+  // share the news.google.com domain and can't be domain-capped reliably.
+  function extractPublisher(title: string, sourceName: string): string {
+    const match = title.match(/[-–—]\s*([^-–—]{3,60})$/);
+    const fromTitle = match ? match[1].trim().toLowerCase() : "";
+    // Only use title-extracted publisher for GNews feeds (direct feeds have clean titles)
+    if (fromTitle && sourceName.toLowerCase().includes("google news")) return fromTitle;
+    // For direct feeds, cap by feed source name
+    return sourceName.toLowerCase();
   }
-  const countByDomain: Record<string, number> = {};
-  const domainCapped = deduped.filter((a) => {
-    const domain = publisherDomain(a.realLink || a.link);
-    countByDomain[domain] = (countByDomain[domain] ?? 0) + 1;
-    return countByDomain[domain] <= 3;
+
+  // Cap at 3 articles per publisher — prevents one outlet from flooding via multiple GNews queries
+  const countByPublisher: Record<string, number> = {};
+  const publisherCapped = deduped.filter((a) => {
+    const pub = extractPublisher(a.title, a.sourceName);
+    countByPublisher[pub] = (countByPublisher[pub] ?? 0) + 1;
+    return countByPublisher[pub] <= 3;
   });
-  console.log(`[fetchFeeds] Publisher caps: ${Object.entries(countByDomain).sort((a,b)=>b[1]-a[1]).slice(0,8).map(([d,n])=>`${d}:${n}`).join(", ")}`);
+  const topPublishers = Object.entries(countByPublisher).sort((a,b)=>b[1]-a[1]).slice(0,10).map(([p,n])=>`${p}:${n}`).join(", ");
+  console.log(`[fetchFeeds] Publisher distribution: ${topPublishers}`);
 
   // Cap per category so no single category dominates
   const countByCategory: Record<string, number> = {};
-  const capped = domainCapped.filter((a) => {
+  const capped = publisherCapped.filter((a) => {
     countByCategory[a.category] = (countByCategory[a.category] ?? 0) + 1;
     return countByCategory[a.category] <= maxPerCategory;
   });
 
-  console.log(`[fetchFeeds] Got ${results.length} raw → ${deduped.length} deduped → ${capped.length} capped`);
+  console.log(`[fetchFeeds] Got ${results.length} raw → ${deduped.length} deduped → ${publisherCapped.length} publisher-capped → ${capped.length} final`);
 
   // Strip internal _hasContent flag
   const cleaned = capped.map(({ ...a }) => {
