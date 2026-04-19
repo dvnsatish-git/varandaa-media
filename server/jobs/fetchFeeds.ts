@@ -33,23 +33,11 @@ function stableHash(str: string): number {
 }
 
 // Category fallback images (Unsplash free, no API key needed)
-const CAT_IMAGES: Record<string, string> = {
-  politics:      "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=640&q=80",
-  entertainment: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=640&q=80",
-  ott:           "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=640&q=80",
-  america:       "https://images.unsplash.com/photo-1501466044931-62695aada8e9?w=640&q=80",
-  spiritual:     "https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=640&q=80",
-  farmers:       "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=640&q=80",
-  achievements:  "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=640&q=80",
-  rights:        "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=640&q=80",
-  traffic:       "https://images.unsplash.com/photo-1597075095600-6fd10b7b6b87?w=640&q=80",
-  general:       "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=640&q=80",
-};
-
-// Extract first real image from content/enclosure/media; fall back to category image
+// Extract first real image from content/enclosure/media;
+// fall back to picsum with title-hash seed — unique per article, never repeats.
 function extractImage(
   item: Parser.Item & Record<string, unknown>,
-  category: string,
+  _category: string,
   title: string
 ): string {
   const enclosure = item.enclosure as { url?: string; type?: string } | undefined;
@@ -70,9 +58,10 @@ function extractImage(
     return imgMatch[1];
   }
 
-  // Stable per-article fallback using category image + article hash as cache-buster variant
-  const base = CAT_IMAGES[category] ?? CAT_IMAGES.general;
-  return `${base}&sig=${stableHash(title) % 10000}`;
+  // Unique per-article fallback: picsum.photos seed is deterministic on title hash.
+  // Each article gets a different photo; same article always gets the same one.
+  const seed = stableHash(title) % 1000;
+  return `https://picsum.photos/seed/${seed}/640/360`;
 }
 
 // Normalise title for deduplication: strip all trailing " - Publisher" segments
@@ -182,27 +171,29 @@ export async function fetchAllFeeds(maxPerCategory = 6): Promise<RawArticle[]> {
   const priorityMap = new Map(FEED_SOURCES.map((s) => [s.id, s.priority]));
   deduped.sort((a, b) => (priorityMap.get(a.sourceId) ?? 9) - (priorityMap.get(b.sourceId) ?? 9));
 
-  // Extract publisher name — for GNews items the title ends with "- Publisher Name".
-  // For direct feeds we use the source name. This handles GNews links which all
-  // share the news.google.com domain and can't be domain-capped reliably.
-  function extractPublisher(title: string, sourceName: string): string {
-    const match = title.match(/[-–—]\s*([^-–—]{3,60})$/);
-    const fromTitle = match ? match[1].trim().toLowerCase() : "";
-    // Only use title-extracted publisher for GNews feeds (direct feeds have clean titles)
-    if (fromTitle && sourceName.toLowerCase().includes("google news")) return fromTitle;
-    // For direct feeds, cap by feed source name
-    return sourceName.toLowerCase();
+  // Resolve the true publisher name for capping.
+  // For GNews items: extract the trailing "- Publisher Name" from the title.
+  // For direct feeds: strip sub-edition suffixes ("The Hindu — Andhra Pradesh" → "the hindu")
+  // so the same outlet doesn't get extra slots via multiple RSS feeds.
+  function resolvePublisher(title: string, sourceName: string): string {
+    const isGNews = sourceName.toLowerCase().includes("google news");
+    if (isGNews) {
+      const m = title.match(/[-–—]\s*([^-–—]{3,60})$/);
+      if (m) return m[1].trim().toLowerCase();
+    }
+    // Strip everything after em-dash / en-dash / " - " in source name
+    return sourceName.replace(/\s*[-–—]\s*.+$/, "").toLowerCase().trim();
   }
 
-  // Cap at 3 articles per publisher — prevents one outlet from flooding via multiple GNews queries
+  // 1 article per publisher — user requirement: strict source diversity
   const countByPublisher: Record<string, number> = {};
   const publisherCapped = deduped.filter((a) => {
-    const pub = extractPublisher(a.title, a.sourceName);
+    const pub = resolvePublisher(a.title, a.sourceName);
     countByPublisher[pub] = (countByPublisher[pub] ?? 0) + 1;
-    return countByPublisher[pub] <= 3;
+    return countByPublisher[pub] <= 1;
   });
-  const topPublishers = Object.entries(countByPublisher).sort((a,b)=>b[1]-a[1]).slice(0,10).map(([p,n])=>`${p}:${n}`).join(", ");
-  console.log(`[fetchFeeds] Publisher distribution: ${topPublishers}`);
+  const topPublishers = Object.entries(countByPublisher).sort((a,b)=>b[1]-a[1]).slice(0,12).map(([p,n])=>`${p}:${n}`).join(", ");
+  console.log(`[fetchFeeds] Publishers (capped at 1): ${topPublishers}`);
 
   // Cap per category so no single category dominates
   const countByCategory: Record<string, number> = {};
