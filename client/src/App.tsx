@@ -91,6 +91,8 @@ export default function App() {
             <YouTubeSection onArticleClick={handleArticleClick} />
             <ReelsSection onArticleClick={handleArticleClick} />
             <VideoGrid articles={latestArticles} onArticleClick={handleArticleClick} />
+            <WeekendSection onArticleClick={handleArticleClick} />
+            <AchievementsSection articles={remaining} onArticleClick={handleArticleClick} />
             <AmericaPanel articles={remaining} onArticleClick={handleArticleClick} />
             <OTTGrid />
             <SpiritualSection />
@@ -98,8 +100,6 @@ export default function App() {
             <HousewivesSection />
             <RightsSection />
             <TrafficSection />
-            <WeekendSection onArticleClick={handleArticleClick} />
-            <AchievementsSection articles={remaining} onArticleClick={handleArticleClick} />
           </main>
           <Sidebar articles={allArticles} onArticleClick={handleArticleClick} />
         </div>

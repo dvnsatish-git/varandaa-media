@@ -312,7 +312,7 @@ export const FEED_SOURCES: FeedSource[] = [
   {
     id: "gn-h1b-visa",
     name: "Google News — H-1B Visa",
-    url: GN("H1B visa USCIS immigration 2026 Indians"),
+    url: GN("H1B visa USCIS immigration Indians when:7d"),
     category: "america",
     language: "en",
     priority: 1,
@@ -320,7 +320,7 @@ export const FEED_SOURCES: FeedSource[] = [
   {
     id: "gn-telugu-nri-usa",
     name: "Google News — Telugu NRI USA",
-    url: GN("Telugu NRI America United States 2026"),
+    url: GN("Telugu NRI America United States when:7d"),
     category: "america",
     language: "en",
     priority: 2,
@@ -328,7 +328,7 @@ export const FEED_SOURCES: FeedSource[] = [
   {
     id: "gn-india-us-relations",
     name: "Google News — India-US",
-    url: GN("India US policy Modi Trump technology 2026"),
+    url: GN("India US policy Modi Trump technology when:7d"),
     category: "america",
     language: "en",
     priority: 2,
@@ -336,7 +336,7 @@ export const FEED_SOURCES: FeedSource[] = [
   {
     id: "gn-indian-techies-usa",
     name: "Google News — Indian tech in USA",
-    url: GN("Indian technology CEO Silicon Valley Telugu 2026"),
+    url: GN("Indian technology CEO Silicon Valley Telugu when:7d"),
     category: "america",
     language: "en",
     priority: 2,

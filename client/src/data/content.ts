@@ -277,21 +277,83 @@ export interface Raashi {
   en: string;
   stars: string;
   url: string;
+  summary: string;   // Telugu — positive highlight for today
+  caution: string;   // Telugu — thing to be careful about
 }
 
 export const RAASHIS: Raashi[] = [
-  { sym: "♈", name: "మేషం",     en: "Aries",       stars: "★★★★☆", url: "https://www.drikpanchang.com/rashifal/aries-daily-rashifal.html" },
-  { sym: "♉", name: "వృషభం",   en: "Taurus",      stars: "★★★☆☆", url: "https://www.drikpanchang.com/rashifal/taurus-daily-rashifal.html" },
-  { sym: "♊", name: "మిథునం",  en: "Gemini",      stars: "★★★★★", url: "https://www.drikpanchang.com/rashifal/gemini-daily-rashifal.html" },
-  { sym: "♋", name: "కర్కాటకం", en: "Cancer",     stars: "★★★☆☆", url: "https://www.drikpanchang.com/rashifal/cancer-daily-rashifal.html" },
-  { sym: "♌", name: "సింహం",   en: "Leo",         stars: "★★★★☆", url: "https://www.drikpanchang.com/rashifal/leo-daily-rashifal.html" },
-  { sym: "♍", name: "కన్య",    en: "Virgo",       stars: "★★★★☆", url: "https://www.drikpanchang.com/rashifal/virgo-daily-rashifal.html" },
-  { sym: "♎", name: "తుల",     en: "Libra",       stars: "★★★☆☆", url: "https://www.drikpanchang.com/rashifal/libra-daily-rashifal.html" },
-  { sym: "♏", name: "వృశ్చికం", en: "Scorpio",    stars: "★★★☆☆", url: "https://www.drikpanchang.com/rashifal/scorpio-daily-rashifal.html" },
-  { sym: "♐", name: "ధనుస్సు", en: "Sagittarius", stars: "★★★★☆", url: "https://www.drikpanchang.com/rashifal/sagittarius-daily-rashifal.html" },
-  { sym: "♑", name: "మకరం",   en: "Capricorn",   stars: "★★★☆☆", url: "https://www.drikpanchang.com/rashifal/capricorn-daily-rashifal.html" },
-  { sym: "♒", name: "కుంభం",  en: "Aquarius",    stars: "★★★★☆", url: "https://www.drikpanchang.com/rashifal/aquarius-daily-rashifal.html" },
-  { sym: "♓", name: "మీనం",   en: "Pisces",      stars: "★★★★☆", url: "https://www.drikpanchang.com/rashifal/pisces-daily-rashifal.html" },
+  {
+    sym: "♈", name: "మేషం", en: "Aries", stars: "★★★★☆",
+    url: "https://www.drikpanchang.com/rashifal/aries-daily-rashifal.html",
+    summary: "నేడు కొత్త అవకాశాలు మీ వైపు వస్తున్నాయి, ధైర్యంగా స్వీకరించండి.",
+    caution: "ఆర్థిక నిర్ణయాలలో తొందరపడకండి, జాగ్రత్తగా ఉండండి.",
+  },
+  {
+    sym: "♉", name: "వృషభం", en: "Taurus", stars: "★★★☆☆",
+    url: "https://www.drikpanchang.com/rashifal/taurus-daily-rashifal.html",
+    summary: "కుటుంబ సంతోషం మీకు శక్తిని ఇస్తుంది, బంధాలు మరింత బలపడతాయి.",
+    caution: "ఆరోగ్యం వైపు శ్రద్ధ అవసరం, విశ్రాంతి తగ్గించుకోకండి.",
+  },
+  {
+    sym: "♊", name: "మిథునం", en: "Gemini", stars: "★★★★★",
+    url: "https://www.drikpanchang.com/rashifal/gemini-daily-rashifal.html",
+    summary: "వ్యాపారంలో లాభాలు పెరుగుతాయి, బంధువులతో అనుబంధం పెరుగుతుంది.",
+    caution: "మాటల వల్ల అపోహలు రాకుండా జాగ్రత్త పడండి.",
+  },
+  {
+    sym: "♋", name: "కర్కాటకం", en: "Cancer", stars: "★★★☆☆",
+    url: "https://www.drikpanchang.com/rashifal/cancer-daily-rashifal.html",
+    summary: "ప్రేమ విషయాలలో శుభ సమయం, మనసు ఆనందంగా ఉంటుంది.",
+    caution: "అనవసర ఖర్చులు తగ్గించుకోండి, పొదుపుగా ఉండండి.",
+  },
+  {
+    sym: "♌", name: "సింహం", en: "Leo", stars: "★★★★☆",
+    url: "https://www.drikpanchang.com/rashifal/leo-daily-rashifal.html",
+    summary: "నాయకత్వ గుణాలు మీకు గుర్తింపు తెస్తాయి, పదోన్నతి సాధ్యమే.",
+    caution: "అహంభావం వల్ల సంబంధాలకు హాని జరగవచ్చు, వినయంగా ఉండండి.",
+  },
+  {
+    sym: "♍", name: "కన్య", en: "Virgo", stars: "★★★★☆",
+    url: "https://www.drikpanchang.com/rashifal/virgo-daily-rashifal.html",
+    summary: "శ్రమకు తగిన ఫలితాలు లభిస్తాయి, విద్యలో ముందడుగు పడుతుంది.",
+    caution: "ఆతురపడి నిర్ణయాలు తీసుకోకండి, ఆలోచించి వ్యవహరించండి.",
+  },
+  {
+    sym: "♎", name: "తుల", en: "Libra", stars: "★★★☆☆",
+    url: "https://www.drikpanchang.com/rashifal/libra-daily-rashifal.html",
+    summary: "సమతుల్యత మీ బలం, సంబంధాలు సుఖవంతంగా ఉంటాయి.",
+    caution: "ప్రయాణాలలో జాగ్రత్తగా ఉండండి, అనవసర వివాదాలు వద్దు.",
+  },
+  {
+    sym: "♏", name: "వృశ్చికం", en: "Scorpio", stars: "★★★☆☆",
+    url: "https://www.drikpanchang.com/rashifal/scorpio-daily-rashifal.html",
+    summary: "ఆంతరిక శక్తి మేల్కొంటుంది, పరిశోధనలో విజయం కలుగుతుంది.",
+    caution: "అనుమానాలు అనవసర కష్టాలు తెస్తాయి, నమ్మకంగా ఉండండి.",
+  },
+  {
+    sym: "♐", name: "ధనుస్సు", en: "Sagittarius", stars: "★★★★☆",
+    url: "https://www.drikpanchang.com/rashifal/sagittarius-daily-rashifal.html",
+    summary: "దీర్ఘకాల ప్రణాళికలు ఫలిస్తాయి, విదేశీ అనుభవాలు శుభప్రదం.",
+    caution: "సాహసాలలో అతిగా ముందుకు వెళ్ళకండి, జాగ్రత్తగా అడుగువేయండి.",
+  },
+  {
+    sym: "♑", name: "మకరం", en: "Capricorn", stars: "★★★☆☆",
+    url: "https://www.drikpanchang.com/rashifal/capricorn-daily-rashifal.html",
+    summary: "కఠిన శ్రమకు బహుమానం దొరుకుతుంది, ఉద్యోగంలో పురోగతి కనిపిస్తుంది.",
+    caution: "ఆరోగ్యంపై శ్రద్ధ అవసరం, తగినంత నిద్ర తీసుకోండి.",
+  },
+  {
+    sym: "♒", name: "కుంభం", en: "Aquarius", stars: "★★★★☆",
+    url: "https://www.drikpanchang.com/rashifal/aquarius-daily-rashifal.html",
+    summary: "నూతన ఆలోచనలు మీకు ముందుకు తీసుకెళ్తాయి, స్నేహితులతో ఆనందం.",
+    caution: "ఆర్థిక రంగంలో అవసరమైన జాగ్రత్తలు తీసుకోండి, పెట్టుబడులు ఆలోచించి చేయండి.",
+  },
+  {
+    sym: "♓", name: "మీనం", en: "Pisces", stars: "★★★★☆",
+    url: "https://www.drikpanchang.com/rashifal/pisces-daily-rashifal.html",
+    summary: "ఆధ్యాత్మిక చింతన మీకు శాంతిని ఇస్తుంది, సృజనాత్మకత వికసిస్తుంది.",
+    caution: "ఇతరులను అతిగా నమ్మడం వల్ల నష్టం రావచ్చు, వివేకంగా వ్యవహరించండి.",
+  },
 ];
 
 export interface Temple {
@@ -759,22 +821,19 @@ export interface OTTPlatform {
   releases: OTTRelease[];
 }
 
+// Week of Apr 14–20, 2026
 export const OTT_WEEK: OTTPlatform[] = [
   {
     name: "Netflix",
     color: "#E50914",
     textColor: "#E50914",
     releases: [
-      { title: "Mrityunjay", type: "Film", language: "Telugu" },
-      { title: "Sampradayini Suppini Suddapoosani", type: "Film", language: "Telugu" },
-      { title: "Happy Patel", type: "Film", language: "Hindi" },
-      { title: "Vadh 2", type: "Film", language: "Hindi" },
-      { title: "28 Years Later: Bone Temple", type: "Film", language: "English" },
-      { title: "Merrily We Roll Along", type: "Film", language: "English" },
-      { title: "Mamla Legal Hai S2", type: "Series", language: "Hindi" },
-      { title: "The Big Bang Theory S1-12", type: "Series", language: "English" },
-      { title: "XO Kitty S3", type: "Series", language: "English" },
-      { title: "Ripple S1", type: "Series", language: "English" },
+      { title: "Dragon: The Bruce Lee Story (Telugu Dub)", type: "Film", language: "Telugu" },
+      { title: "Retro", type: "Film", language: "Tamil/Telugu" },
+      { title: "Raid 2", type: "Film", language: "Hindi" },
+      { title: "Adolescence", type: "Series", language: "English" },
+      { title: "The Diplomat S3", type: "Series", language: "English" },
+      { title: "Running Point S1", type: "Series", language: "English" },
     ],
   },
   {
@@ -782,14 +841,11 @@ export const OTT_WEEK: OTTPlatform[] = [
     color: "#00A8E0",
     textColor: "#00A8E0",
     releases: [
-      { title: "S Sarawasthi", type: "Film", language: "Telugu" },
-      { title: "Crime 101", type: "Film", language: "English" },
-      { title: "London Calling", type: "Film", language: "English" },
-      { title: "Valathu Vashate Kallan", type: "Film", language: "Malayalam" },
-      { title: "Inuyashiki", type: "Film", language: "Japanese" },
-      { title: "Maa Ka Sum", type: "Series", language: "Hindi" },
-      { title: "PM Selfie Wali S1", type: "Series", language: "Hindi" },
-      { title: "The Best Thing S1", type: "Series", language: "Mandarin" },
+      { title: "HIT: The Third Case", type: "Film", language: "Telugu" },
+      { title: "Saathamindri", type: "Film", language: "Tamil" },
+      { title: "Clarkson's Farm S4", type: "Series", language: "English" },
+      { title: "Citadel: Diana S2", type: "Series", language: "Italian" },
+      { title: "The Summer I Turned Pretty S3", type: "Series", language: "English" },
     ],
   },
   {
@@ -797,11 +853,11 @@ export const OTT_WEEK: OTTPlatform[] = [
     color: "#1565C0",
     textColor: "#1565C0",
     releases: [
-      { title: "Phantom", type: "Film", language: "Hindi" },
-      { title: "Mike And Nick Nick And Nice", type: "Film", language: "English" },
-      { title: "The Carpenter Son", type: "Film", language: "English" },
-      { title: "Anemone", type: "Film", language: "English" },
-      { title: "Love Overboard S1", type: "Series", language: "English" },
+      { title: "Peddi", type: "Film", language: "Telugu" },
+      { title: "Paradise", type: "Film", language: "Hindi" },
+      { title: "Andor S2", type: "Series", language: "English" },
+      { title: "Daredevil: Born Again", type: "Series", language: "English" },
+      { title: "IPL 2026 Live", type: "Series", language: "Telugu/Hindi" },
     ],
   },
   {
@@ -809,11 +865,10 @@ export const OTT_WEEK: OTTPlatform[] = [
     color: "#7B2D8B",
     textColor: "#7B2D8B",
     releases: [
-      { title: "Hey Balwanth", type: "Film", language: "Telugu" },
-      { title: "Sabdam", type: "Film", language: "Tamil" },
-      { title: "Hey Kay Navin", type: "Series", language: "Hindi" },
-      { title: "Rubaab", type: "Film", language: "Marathi" },
-      { title: "Krishna Aur Kans Antim Yudh", type: "Film", language: "Hindi" },
+      { title: "Oke Oka Jeevitham 2", type: "Film", language: "Telugu" },
+      { title: "Viduthalai Part 2", type: "Film", language: "Tamil" },
+      { title: "Madgaon Express", type: "Film", language: "Hindi" },
+      { title: "Kushi (2023)", type: "Film", language: "Telugu" },
     ],
   },
   {
@@ -821,10 +876,10 @@ export const OTT_WEEK: OTTPlatform[] = [
     color: "#F5C518",
     textColor: "#c49a00",
     releases: [
-      { title: "Euphoria", type: "Film", language: "Telugu" },
-      { title: "Love Policy", type: "Film", language: "Telugu" },
-      { title: "Unstoppable with NBK S5", type: "Series", language: "Telugu" },
-      { title: "Vivaha Bhojanambu", type: "Series", language: "Telugu" },
+      { title: "Tillu Square", type: "Film", language: "Telugu" },
+      { title: "Unstoppable with NBK S5 Ep.4", type: "Series", language: "Telugu" },
+      { title: "Vivaha Bhojanambu Ep.5", type: "Series", language: "Telugu" },
+      { title: "Aha Cricket Live", type: "Series", language: "Telugu" },
     ],
   },
   {
@@ -832,9 +887,9 @@ export const OTT_WEEK: OTTPlatform[] = [
     color: "#FF6B00",
     textColor: "#FF6B00",
     releases: [
-      { title: "Mayabimbum", type: "Film", language: "Tamil" },
-      { title: "Vadam", type: "Film", language: "Tamil" },
-      { title: "Velleppam", type: "Film", language: "Malayalam" },
+      { title: "Vidaamuyarchi", type: "Film", language: "Tamil" },
+      { title: "Vaarisu", type: "Film", language: "Tamil" },
+      { title: "Lubber Pandhu", type: "Film", language: "Tamil" },
     ],
   },
 ];
