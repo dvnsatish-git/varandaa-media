@@ -86,20 +86,23 @@ Return ONLY a valid JSON array — no markdown, no explanation.`;
   }
 }
 
-// Process all raw articles in batches of 20
+// Process all raw articles — all batches run in parallel for speed
 export async function processArticlesWithAI(
   articles: RawArticle[],
   batchSize = 20
 ): Promise<ProcessedArticle[]> {
-  console.log(`[processWithAI] Processing ${articles.length} articles in batches of ${batchSize}`);
-  const results: ProcessedArticle[] = [];
-
+  console.log(`[processWithAI] Processing ${articles.length} articles in parallel batches of ${batchSize}`);
+  const batches: RawArticle[][] = [];
   for (let i = 0; i < articles.length; i += batchSize) {
-    const batch = articles.slice(i, i + batchSize);
-    console.log(`[processWithAI] Batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(articles.length / batchSize)}`);
-    const processed = await processBatch(batch);
-    results.push(...processed);
+    batches.push(articles.slice(i, i + batchSize));
   }
+  console.log(`[processWithAI] Running ${batches.length} batches concurrently`);
+
+  const batchResults = await Promise.all(batches.map((b, idx) => {
+    console.log(`[processWithAI] Starting batch ${idx + 1}/${batches.length} (${b.length} articles)`);
+    return processBatch(b);
+  }));
+  const results = batchResults.flat();
 
   // Sort: most recent first, with relevance as tiebreaker
   results.sort((a, b) => {

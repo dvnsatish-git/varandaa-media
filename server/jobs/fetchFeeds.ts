@@ -6,7 +6,7 @@ import { FEED_SOURCES, type FeedSource, type FeedCategory } from "./feedSources.
 
 // Shorter timeout on Vercel to stay within 60s function limit
 const parser = new Parser({
-  timeout: process.env.VERCEL ? 6_000 : 10_000,
+  timeout: process.env.VERCEL ? 3_000 : 8_000,
   headers: { "User-Agent": "VarandaaTalkies/1.0 (news aggregator)" },
 });
 
