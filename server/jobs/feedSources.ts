@@ -1,8 +1,9 @@
 // ─────────────────────────────────────────────────────────────
-//  Feed Sources — Telugu media landscape, comprehensive
-//  Priority ordering: Entertainment/Movies > TV News > Print > National
-//  Max 4 articles per source enforced in fetcher.
-//  Failed sources are silently skipped — safe to list speculative URLs.
+//  Feed Sources
+//  Strategy: verified direct RSS (known-working) + GNews for everything else.
+//  GNews queries never fail. Speculative direct URLs are gone — they silently
+//  fail and hand all slots back to Hans India.
+//  Priority ordering: Entertainment > TV/Politics > National > Niche
 // ─────────────────────────────────────────────────────────────
 
 export type FeedCategory =
@@ -25,7 +26,7 @@ export interface FeedSource {
   url: string;
   category: FeedCategory;
   language: "te" | "en";
-  priority: number; // 1 = highest
+  priority: number;
 }
 
 const GN = (q: string) =>
@@ -34,50 +35,98 @@ const GN = (q: string) =>
 export const FEED_SOURCES: FeedSource[] = [
 
   // ═══════════════════════════════════════════════════════════
-  //  ENTERTAINMENT / TOLLYWOOD / MOVIES  (user priority #1)
+  //  ENTERTAINMENT / TOLLYWOOD / MOVIES  — User priority #1
+  //  All GNews (reliable). Direct Telugu entertainment RSS rare.
   // ═══════════════════════════════════════════════════════════
-
-  // — Dedicated movie/entertainment sites —
   {
-    id: "greatandhra-movies",
-    name: "GreatAndhra — Movies",
-    url: "https://www.greatandhra.com/movies/rss.xml",
+    id: "gn-tollywood-latest",
+    name: "Google News — Tollywood Latest",
+    url: GN("tollywood telugu movie news 2026"),
     category: "entertainment",
     language: "en",
     priority: 1,
   },
   {
-    id: "greatandhra-feed",
-    name: "GreatAndhra",
-    url: "https://www.greatandhra.com/feed/",
+    id: "gn-prabhas",
+    name: "Google News — Prabhas",
+    url: GN("Prabhas new movie Spirit Kalki 2026"),
     category: "entertainment",
     language: "en",
     priority: 1,
   },
   {
-    id: "mirchi9",
-    name: "Mirchi9 (M9 News)",
-    url: "https://m9.news/feed/",
+    id: "gn-allu-arjun",
+    name: "Google News — Allu Arjun",
+    url: GN("Allu Arjun Pushpa 3 movie 2026"),
     category: "entertainment",
     language: "en",
     priority: 1,
   },
   {
-    id: "123telugu",
-    name: "123Telugu",
-    url: "https://www.123telugu.com/feed/",
+    id: "gn-ram-charan-ntr",
+    name: "Google News — Ram Charan & Jr NTR",
+    url: GN("Ram Charan Jr NTR telugu movie 2026"),
     category: "entertainment",
     language: "en",
     priority: 1,
   },
   {
-    id: "filmibeat-telugu",
-    name: "Filmibeat Telugu",
-    url: "https://telugu.filmibeat.com/rss/telugu-movies.xml",
+    id: "gn-mahesh-babu",
+    name: "Google News — Mahesh Babu",
+    url: GN("Mahesh Babu SSMB29 Rajamouli 2026"),
     category: "entertainment",
-    language: "te",
+    language: "en",
     priority: 1,
   },
+  {
+    id: "gn-tollywood-boxoffice",
+    name: "Google News — Telugu Box Office",
+    url: GN("telugu movie box office collection first day 2026"),
+    category: "entertainment",
+    language: "en",
+    priority: 1,
+  },
+  {
+    id: "gn-tollywood-review",
+    name: "Google News — Telugu Movie Reviews",
+    url: GN("telugu movie review rating release 2026"),
+    category: "entertainment",
+    language: "en",
+    priority: 2,
+  },
+  {
+    id: "gn-bigg-boss-telugu",
+    name: "Google News — Bigg Boss Telugu",
+    url: GN("Bigg Boss Telugu Star Maa Season 2026"),
+    category: "entertainment",
+    language: "en",
+    priority: 2,
+  },
+  {
+    id: "gn-gemini-zee-serials",
+    name: "Google News — Gemini Zee TV Serials",
+    url: GN("Gemini TV Zee Telugu serial new episode 2026"),
+    category: "entertainment",
+    language: "en",
+    priority: 2,
+  },
+  {
+    id: "gn-south-cinema",
+    name: "Google News — South Cinema",
+    url: GN("south indian cinema Kollywood Sandalwood telugu 2026"),
+    category: "entertainment",
+    language: "en",
+    priority: 2,
+  },
+  {
+    id: "gn-tollywood-celebs",
+    name: "Google News — Tollywood Celebrities",
+    url: GN("tollywood celebrity actor actress news gossip 2026"),
+    category: "entertainment",
+    language: "en",
+    priority: 2,
+  },
+  // Verified direct RSS for entertainment
   {
     id: "pinkvilla",
     name: "PinkVilla",
@@ -100,72 +149,6 @@ export const FEED_SOURCES: FeedSource[] = [
     url: "https://www.bollywoodhungama.com/rss/news/feed/",
     category: "entertainment",
     language: "en",
-    priority: 2,
-  },
-  {
-    id: "tollywood-net",
-    name: "Tollywood.net",
-    url: "https://www.tollywood.net/feed/",
-    category: "entertainment",
-    language: "en",
-    priority: 2,
-  },
-
-  // — Tollywood via Google News —
-  {
-    id: "gn-tollywood-top",
-    name: "Google News — Tollywood",
-    url: GN("tollywood telugu movies 2026"),
-    category: "entertainment",
-    language: "en",
-    priority: 2,
-  },
-  {
-    id: "gn-prabhas",
-    name: "Google News — Prabhas",
-    url: GN("Prabhas Telugu movie 2026"),
-    category: "entertainment",
-    language: "en",
-    priority: 2,
-  },
-  {
-    id: "gn-allu-arjun",
-    name: "Google News — Allu Arjun",
-    url: GN("Allu Arjun Pushpa Telugu 2026"),
-    category: "entertainment",
-    language: "en",
-    priority: 2,
-  },
-  {
-    id: "gn-ram-charan",
-    name: "Google News — Ram Charan NTR",
-    url: GN("Ram Charan Jr NTR telugu movie 2026"),
-    category: "entertainment",
-    language: "en",
-    priority: 3,
-  },
-  {
-    id: "gn-star-maa",
-    name: "Google News — Star Maa / Bigg Boss",
-    url: GN("Star Maa Bigg Boss Telugu 2026"),
-    category: "entertainment",
-    language: "en",
-    priority: 3,
-  },
-  {
-    id: "gn-gemini-zee-telugu",
-    name: "Google News — Gemini Zee Telugu serials",
-    url: GN("Gemini TV Zee Telugu serial 2026"),
-    category: "entertainment",
-    language: "en",
-    priority: 3,
-  },
-  {
-    id: "gn-south-box-office",
-    name: "Google News — South Box Office",
-    url: GN("south indian box office collection telugu 2026"),
-    category: "entertainment",
-    language: "en",
     priority: 3,
   },
 
@@ -175,207 +158,31 @@ export const FEED_SOURCES: FeedSource[] = [
   {
     id: "gn-ott-aha",
     name: "Google News — Aha OTT",
-    url: GN("Aha Video OTT Telugu web series 2026"),
+    url: GN("Aha Video OTT Telugu web series premiere 2026"),
     category: "ott",
     language: "en",
     priority: 1,
   },
   {
-    id: "gn-ott-telugu",
-    name: "Google News — Telugu OTT",
-    url: GN("telugu OTT Netflix Amazon Prime Disney Zee5 2026"),
+    id: "gn-ott-netflix-telugu",
+    name: "Google News — Netflix Telugu",
+    url: GN("Netflix Telugu movie series streaming 2026"),
+    category: "ott",
+    language: "en",
+    priority: 1,
+  },
+  {
+    id: "gn-ott-amazon-disney",
+    name: "Google News — Amazon Disney Telugu",
+    url: GN("Amazon Prime Disney Plus Telugu OTT release 2026"),
     category: "ott",
     language: "en",
     priority: 2,
   },
 
   // ═══════════════════════════════════════════════════════════
-  //  TV NEWS CHANNELS (direct RSS where available, else GNews)
+  //  AP / TELANGANA NEWS — verified direct RSS + GNews
   // ═══════════════════════════════════════════════════════════
-  {
-    id: "tv9-telugu",
-    name: "TV9 Telugu",
-    url: "https://www.tv9telugu.com/feed/",
-    category: "general",
-    language: "te",
-    priority: 1,
-  },
-  {
-    id: "v6-news",
-    name: "V6 News",
-    url: "https://www.v6news.tv/feed/",
-    category: "general",
-    language: "te",
-    priority: 1,
-  },
-  {
-    id: "etv-bharat-ap",
-    name: "ETV Bharat — Andhra Pradesh",
-    url: "https://www.etvbharat.com/rss/andhra-pradesh",
-    category: "politics",
-    language: "te",
-    priority: 1,
-  },
-  {
-    id: "etv-bharat-telangana",
-    name: "ETV Bharat — Telangana",
-    url: "https://www.etvbharat.com/rss/telangana",
-    category: "politics",
-    language: "te",
-    priority: 1,
-  },
-  {
-    id: "ntv-telugu",
-    name: "NTV Telugu",
-    url: "https://ntv.in/rss/all-news",
-    category: "general",
-    language: "te",
-    priority: 2,
-  },
-  {
-    id: "hmtv",
-    name: "HMTV",
-    url: "https://www.hmtv.in/rss",
-    category: "general",
-    language: "te",
-    priority: 2,
-  },
-  {
-    id: "10tv",
-    name: "10TV News",
-    url: "https://10tv.in/feed/",
-    category: "general",
-    language: "te",
-    priority: 2,
-  },
-  {
-    id: "mahaa-tv",
-    name: "Mahaa TV",
-    url: "https://www.maahanews.com/feed/",
-    category: "general",
-    language: "te",
-    priority: 2,
-  },
-  {
-    id: "t-news",
-    name: "T News",
-    url: "https://www.tnews.com/rss/",
-    category: "general",
-    language: "te",
-    priority: 2,
-  },
-  {
-    id: "sakshi-tv",
-    name: "Sakshi TV",
-    url: "https://www.sakshi.com/rss/sakshi-tv",
-    category: "general",
-    language: "te",
-    priority: 2,
-  },
-  {
-    id: "inews-telugu",
-    name: "iNews Telugu",
-    url: "https://www.inewslive.com/rss/",
-    category: "general",
-    language: "te",
-    priority: 3,
-  },
-  {
-    id: "zee-telugu-news",
-    name: "Zee News Telugu",
-    url: "https://zeenews.india.com/telugu/rss/",
-    category: "general",
-    language: "te",
-    priority: 3,
-  },
-
-  // ═══════════════════════════════════════════════════════════
-  //  PRINT / ONLINE — Telugu publishers
-  // ═══════════════════════════════════════════════════════════
-  {
-    id: "eenadu",
-    name: "Eenadu",
-    url: "https://www.eenadu.net/Rss.aspx?nw=1",
-    category: "politics",
-    language: "te",
-    priority: 1,
-  },
-  {
-    id: "sakshi",
-    name: "Sakshi",
-    url: "https://www.sakshi.com/rss/top-news",
-    category: "politics",
-    language: "te",
-    priority: 1,
-  },
-  {
-    id: "andhra-jyothy",
-    name: "Andhra Jyothy",
-    url: "https://www.andhrajyothy.com/andhrajyothy.xml",
-    category: "politics",
-    language: "te",
-    priority: 1,
-  },
-  {
-    id: "namasthe-telangana",
-    name: "Namasthe Telangana",
-    url: "https://www.namasthetelangana.com/feed/",
-    category: "politics",
-    language: "te",
-    priority: 1,
-  },
-  {
-    id: "vaartha",
-    name: "Vaartha",
-    url: "https://www.vaartha.com/feed/",
-    category: "politics",
-    language: "te",
-    priority: 2,
-  },
-  {
-    id: "prajasakti",
-    name: "Prajasakti",
-    url: "https://www.prajasakti.com/feed/",
-    category: "politics",
-    language: "te",
-    priority: 2,
-  },
-  {
-    id: "ap7am",
-    name: "AP7AM",
-    url: "https://www.ap7am.com/rss",
-    category: "politics",
-    language: "te",
-    priority: 2,
-  },
-  {
-    id: "abn-andhra-jyothy",
-    name: "ABN Andhra Jyothy",
-    url: "https://www.andhrabhoomi.net/feed",
-    category: "politics",
-    language: "te",
-    priority: 2,
-  },
-
-  // ═══════════════════════════════════════════════════════════
-  //  POLITICS AGGREGATORS — English
-  // ═══════════════════════════════════════════════════════════
-  {
-    id: "oneindia-telugu",
-    name: "Oneindia Telugu",
-    url: "https://telugu.oneindia.com/rss/telugu-news.xml",
-    category: "politics",
-    language: "te",
-    priority: 1,
-  },
-  {
-    id: "news18-telugu",
-    name: "News18 Telugu",
-    url: "https://telugu.news18.com/feeds/rss.xml",
-    category: "politics",
-    language: "te",
-    priority: 1,
-  },
   {
     id: "telangana-today",
     name: "Telangana Today",
@@ -390,12 +197,52 @@ export const FEED_SOURCES: FeedSource[] = [
     url: "https://www.thehindu.com/news/national/andhra-pradesh/?service=rss",
     category: "politics",
     language: "en",
-    priority: 2,
+    priority: 1,
   },
   {
     id: "the-hindu-telangana",
     name: "The Hindu — Telangana",
     url: "https://www.thehindu.com/news/national/telangana/?service=rss",
+    category: "politics",
+    language: "en",
+    priority: 1,
+  },
+  {
+    id: "gn-ap-chandrababu",
+    name: "Google News — AP Chandrababu TDP",
+    url: GN("Andhra Pradesh Chandrababu Naidu TDP government 2026"),
+    category: "politics",
+    language: "en",
+    priority: 1,
+  },
+  {
+    id: "gn-telangana-revanth",
+    name: "Google News — Telangana Revanth",
+    url: GN("Telangana Revanth Reddy Congress government 2026"),
+    category: "politics",
+    language: "en",
+    priority: 1,
+  },
+  {
+    id: "gn-ap-ysrcp-jagan",
+    name: "Google News — AP YSRCP Jagan",
+    url: GN("Andhra Pradesh YSRCP Jagan Mohan Reddy opposition 2026"),
+    category: "politics",
+    language: "en",
+    priority: 2,
+  },
+  {
+    id: "gn-telangana-brs",
+    name: "Google News — Telangana BRS KCR",
+    url: GN("Telangana BRS KCR KTR opposition 2026"),
+    category: "politics",
+    language: "en",
+    priority: 2,
+  },
+  {
+    id: "gn-hyderabad-news",
+    name: "Google News — Hyderabad",
+    url: GN("Hyderabad city news development 2026"),
     category: "politics",
     language: "en",
     priority: 2,
@@ -409,6 +256,16 @@ export const FEED_SOURCES: FeedSource[] = [
     priority: 2,
   },
   {
+    id: "gn-amaravati",
+    name: "Google News — Amaravati Capital",
+    url: GN("Amaravati capital city Andhra Pradesh construction 2026"),
+    category: "politics",
+    language: "en",
+    priority: 2,
+  },
+
+  // ── National English (lower priority — fills gaps only) ────
+  {
     id: "the-print",
     name: "The Print",
     url: "https://theprint.in/feed",
@@ -417,9 +274,17 @@ export const FEED_SOURCES: FeedSource[] = [
     priority: 3,
   },
   {
-    id: "ndtv-india",
+    id: "ndtv",
     name: "NDTV",
     url: "https://feeds.feedburner.com/ndtvnews-latest",
+    category: "politics",
+    language: "en",
+    priority: 3,
+  },
+  {
+    id: "scroll-in",
+    name: "Scroll.in",
+    url: "https://feeds.feedburner.com/ScrollinArticles.rss",
     category: "politics",
     language: "en",
     priority: 3,
@@ -430,25 +295,7 @@ export const FEED_SOURCES: FeedSource[] = [
     url: "https://www.thehansindia.com/feed/",
     category: "politics",
     language: "en",
-    priority: 4, // lowered — was flooding
-  },
-
-  // GNews for AP/TG political gaps
-  {
-    id: "gn-ap-politics",
-    name: "Google News — AP Politics",
-    url: GN("Andhra Pradesh Chandrababu Naidu TDP 2026"),
-    category: "politics",
-    language: "en",
-    priority: 4,
-  },
-  {
-    id: "gn-telangana",
-    name: "Google News — Telangana",
-    url: GN("Telangana Revanth Reddy BRS 2026"),
-    category: "politics",
-    language: "en",
-    priority: 4,
+    priority: 4,  // last resort — was dominating; only fills if nothing else available
   },
 
   // ═══════════════════════════════════════════════════════════
@@ -463,7 +310,7 @@ export const FEED_SOURCES: FeedSource[] = [
     priority: 1,
   },
   {
-    id: "gn-h1b",
+    id: "gn-h1b-visa",
     name: "Google News — H-1B Visa",
     url: GN("H1B visa USCIS immigration 2026 Indians"),
     category: "america",
@@ -471,20 +318,28 @@ export const FEED_SOURCES: FeedSource[] = [
     priority: 1,
   },
   {
-    id: "gn-telugu-nri",
-    name: "Google News — Telugu NRI",
-    url: GN("Telugu NRI America achievement community 2026"),
+    id: "gn-telugu-nri-usa",
+    name: "Google News — Telugu NRI USA",
+    url: GN("Telugu NRI America United States 2026"),
     category: "america",
     language: "en",
     priority: 2,
   },
   {
-    id: "gn-india-us-policy",
+    id: "gn-india-us-relations",
     name: "Google News — India-US",
-    url: GN("India US policy Modi Trump 2026"),
+    url: GN("India US policy Modi Trump technology 2026"),
     category: "america",
     language: "en",
-    priority: 3,
+    priority: 2,
+  },
+  {
+    id: "gn-indian-techies-usa",
+    name: "Google News — Indian tech in USA",
+    url: GN("Indian technology CEO Silicon Valley Telugu 2026"),
+    category: "america",
+    language: "en",
+    priority: 2,
   },
 
   // ═══════════════════════════════════════════════════════════
@@ -492,24 +347,24 @@ export const FEED_SOURCES: FeedSource[] = [
   // ═══════════════════════════════════════════════════════════
   {
     id: "gn-tirumala",
-    name: "Google News — Tirumala/TTD",
-    url: GN("Tirumala Tirupati TTD darshan 2026"),
+    name: "Google News — Tirumala TTD",
+    url: GN("Tirumala Tirupati TTD darshan prasadam 2026"),
     category: "spiritual",
     language: "en",
     priority: 1,
   },
   {
-    id: "svbc-gn",
-    name: "Google News — SVBC / Devotional",
-    url: GN("SVBC Telugu devotional bhajan temple 2026"),
+    id: "gn-telugu-temples",
+    name: "Google News — Telugu Temples",
+    url: GN("Andhra Pradesh Telangana temple festival puja 2026"),
     category: "spiritual",
     language: "en",
     priority: 2,
   },
   {
-    id: "gn-festivals",
-    name: "Google News — Telugu Festivals",
-    url: GN("Telugu festival puja Akshaya Tritiya 2026"),
+    id: "gn-svbc",
+    name: "Google News — SVBC Devotional",
+    url: GN("SVBC Telugu devotional bhajan Vedanta 2026"),
     category: "spiritual",
     language: "en",
     priority: 2,
@@ -527,19 +382,27 @@ export const FEED_SOURCES: FeedSource[] = [
     priority: 1,
   },
   {
-    id: "gn-farmers-ap",
-    name: "Google News — AP/TG Farmers",
-    url: GN("Andhra Pradesh Telangana farmers agriculture 2026"),
+    id: "gn-ap-farmers",
+    name: "Google News — AP Farmers",
+    url: GN("Andhra Pradesh farmers agriculture crop price 2026"),
+    category: "farmers",
+    language: "en",
+    priority: 1,
+  },
+  {
+    id: "gn-tg-farmers",
+    name: "Google News — Telangana Farmers",
+    url: GN("Telangana farmers paddy cotton Rytu Bandhu 2026"),
     category: "farmers",
     language: "en",
     priority: 2,
   },
 
   // ═══════════════════════════════════════════════════════════
-  //  RIGHTS / TRAFFIC / ACHIEVEMENTS
+  //  RIGHTS / CONSUMER
   // ═══════════════════════════════════════════════════════════
   {
-    id: "gn-rights",
+    id: "gn-consumer-rights",
     name: "Google News — Consumer Rights",
     url: GN("consumer rights scam fraud India 2026"),
     category: "rights",
@@ -547,24 +410,56 @@ export const FEED_SOURCES: FeedSource[] = [
     priority: 2,
   },
   {
-    id: "gn-traffic-hyd",
-    name: "Google News — Hyderabad",
-    url: GN("Hyderabad traffic metro GHMC road 2026"),
+    id: "gn-cyber-fraud",
+    name: "Google News — Cyber Fraud India",
+    url: GN("cyber fraud online scam Hyderabad Andhra 2026"),
+    category: "rights",
+    language: "en",
+    priority: 2,
+  },
+
+  // ═══════════════════════════════════════════════════════════
+  //  TRAFFIC / HYDERABAD CITY
+  // ═══════════════════════════════════════════════════════════
+  {
+    id: "gn-hyderabad-traffic",
+    name: "Google News — Hyderabad Traffic",
+    url: GN("Hyderabad traffic metro MMTS road accident 2026"),
     category: "traffic",
     language: "en",
     priority: 2,
   },
   {
-    id: "gn-achievements",
+    id: "gn-hyderabad-infra",
+    name: "Google News — Hyderabad Infrastructure",
+    url: GN("Hyderabad GHMC infrastructure flyover construction 2026"),
+    category: "traffic",
+    language: "en",
+    priority: 2,
+  },
+
+  // ═══════════════════════════════════════════════════════════
+  //  ACHIEVEMENTS
+  // ═══════════════════════════════════════════════════════════
+  {
+    id: "gn-telugu-achievements",
     name: "Google News — Telugu Achievements",
-    url: GN("Telugu achievement IIT IAS award success 2026"),
+    url: GN("Telugu achievement award IAS IIT NASA success 2026"),
+    category: "achievements",
+    language: "en",
+    priority: 2,
+  },
+  {
+    id: "gn-nri-achievements",
+    name: "Google News — NRI Achievements",
+    url: GN("Indian NRI achievement award success America 2026"),
     category: "achievements",
     language: "en",
     priority: 2,
   },
 
   // ═══════════════════════════════════════════════════════════
-  //  VARANDAA TALKIES (own channel — always priority 1)
+  //  VARANDAA TALKIES — always first
   // ═══════════════════════════════════════════════════════════
   {
     id: "yt-varandaa",

@@ -6,6 +6,12 @@
   "functions": {
     "api/index.ts": { "maxDuration": 60 }
   },
+  "crons": [
+    { "path": "/api/feed/refresh", "schedule": "30 2 * * *" },
+    { "path": "/api/feed/refresh", "schedule": "30 8 * * *" },
+    { "path": "/api/feed/refresh", "schedule": "30 13 * * *" },
+    { "path": "/api/feed/refresh", "schedule": "30 18 * * *" }
+  ],
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/index" },
     { "source": "/(.*)", "destination": "/index.html" }
