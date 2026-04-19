@@ -3,6 +3,7 @@ import express from "express";
 import feedRouter from "../server/routes/feed.js";
 import articleRouter from "../server/routes/article.js";
 import voiceRouter from "../server/routes/voice.js";
+import panchangRouter from "../server/routes/panchang.js";
 import { loadFromDisk, getFeedMeta } from "../server/storage/feedStore.js";
 
 const app = express();
@@ -25,5 +26,6 @@ app.get("/api/health", (_req, res) => {
 app.use("/api/feed", feedRouter);
 app.use("/api/article", articleRouter);
 app.use("/api/voice", voiceRouter);
+app.use("/api/panchang", panchangRouter);
 
 export default app;
