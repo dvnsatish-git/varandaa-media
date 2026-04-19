@@ -114,11 +114,12 @@ async function resolveGNewsUrl(url: string): Promise<string> {
   }
 }
 
-// Fetch a single source, return raw articles (max 10 per source)
+// Fetch a single source, return raw articles (max 4 per source — prevents any
+// single publisher from dominating the feed regardless of how prolific they are)
 async function fetchSource(source: FeedSource): Promise<RawArticle[]> {
   try {
     const feed = await parser.parseURL(source.url);
-    const items = (feed.items ?? []).slice(0, 10);
+    const items = (feed.items ?? []).slice(0, 4);
 
     return items
       .map((item) => {
@@ -176,6 +177,11 @@ export async function fetchAllFeeds(maxPerCategory = 6): Promise<RawArticle[]> {
     seen.add(short);
     return true;
   });
+
+  // Sort by source priority so high-priority sources win category slots
+  // (lower number = higher priority; stable sort preserves publish order within same priority)
+  const priorityMap = new Map(FEED_SOURCES.map((s) => [s.id, s.priority]));
+  deduped.sort((a, b) => (priorityMap.get(a.sourceId) ?? 9) - (priorityMap.get(b.sourceId) ?? 9));
 
   // Cap per category so no single category dominates
   const countByCategory: Record<string, number> = {};
