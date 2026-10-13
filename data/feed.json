@@ -1,27 +1,130 @@
 {
-  "updatedAt": "2026-10-11T18:21:51.201Z",
+  "updatedAt": "2026-10-13T19:56:37.940Z",
   "articles": [
     {
       "sourceId": "the-hindu-ap",
       "sourceName": "The Hindu — Andhra Pradesh",
       "category": "politics",
       "language": "en",
-      "title": "KLU hosts ‘Skill Palaver’ to make students industry-ready",
-      "link": "https://www.thehindu.com/news/national/andhra-pradesh/klu-hosts-skill-palaver-to-make-students-industry-ready/article71572027.ece",
-      "realLink": "https://www.thehindu.com/news/national/andhra-pradesh/klu-hosts-skill-palaver-to-make-students-industry-ready/article71572027.ece",
+      "title": "MP distributes CMRF cheques worth ₹15.80 lakh to 27 beneficiaries",
+      "link": "https://www.thehindu.com/news/national/andhra-pradesh/mp-distributes-cmrf-cheques-worth-1580-lakh-to-27-beneficiaries/article71580560.ece",
+      "realLink": "https://www.thehindu.com/news/national/andhra-pradesh/mp-distributes-cmrf-cheques-worth-1580-lakh-to-27-beneficiaries/article71580560.ece",
       "summary": "",
-      "image": "https://picsum.photos/seed/687/640/360",
-      "publishedAt": "2026-10-11T18:04:34.000Z",
-      "titleTe": "KLU ‘స్కిల్ పలవర్’ను నిర్వహిస్తుంది",
-      "summaryEn": "KLU hosts 'Skill Palaver' to prepare students for industry readiness.",
-      "summaryTe": "KLU 'స్కిల్ పలవర్' ప్రోగ్రామ్‌ను అందిస్తుంది, ఇది విద్యార్థులను పరిశ్రమకు సన్నద్ధం చేయడానికి ఉద్దేశించినది. ఇది శ్రద్ధ వహించాల్సిన కార్యక్రమం.",
-      "relevanceScore": 4,
+      "image": "https://picsum.photos/seed/593/640/360",
+      "publishedAt": "2026-10-13T18:29:49.000Z",
+      "titleTe": "MP distributes CMRF cheques worth ₹15.80 lakh to 27 beneficiaries",
+      "summaryEn": "",
+      "summaryTe": "",
+      "relevanceScore": 5,
+      "tags": [],
+      "processedAt": "2026-10-13T19:56:30.250Z"
+    },
+    {
+      "sourceId": "gn-h1b-visa",
+      "sourceName": "Google News — H-1B Visa",
+      "category": "america",
+      "language": "en",
+      "title": "US visa alert: New USCIS rules tighten deadlines for Green Card applicants and H-1B workers; here's what's changing | Hindustan Times - Hindustan Times",
+      "link": "https://news.google.com/rss/articles/CBMijwJBVV95cUxQUG5uQVliS1UtazlnckJqSV9qN2hXdGxneDctOFZfX2E3Qy0zX19FRm5qZ0tqOUlsRUMwaXNtMjdSZk5zQmhEVEUyZkhsUzNsX1Y1N1ppRG13WUp0RTBEazliVUVCaGh4QjRiMEZZQ0VLMGRuZU96bmFOdjFicFR3UVZaeUxqNG1MU1NHVGF6eVJ5VnF0MDJwZk4yME52R2MweHNLZTJtS0lfOHk2SzI1Z2dtMzlteGw4VkloX21yU1VBbG5qa2RlRTlqbmlDM21pX0xkWENSVDBFaHpzem9RMEVnaFRyRF9fNkFlZF9MN29xaWNBSVB5Y2czNVlXZV9xaHJKbnVmQ1dya29oeUR30gGUAkFVX3lxTE8tRXlEcV9kandSVTdPMGFtcVFsTXhNQ2JBaDk0eE1tUFREMlQ2OXVGRXFOOUY5SHl6d29ieFlXdFQwTHRRd2xMVGs4TlBsZmQyNHNBeFN3VDIzNm5hcmI1X1NKNm9xNWIxR3A2WFVkV19wQ01PXzVoOC1TNktQUGpzNVA4Q1RRTGs4Vmh6cl9GVF9pcW9ETFBhN091QXcxc2djU2Z1V3ZRWW12Yi01TTA2dXVLQzFCT2k3LTh1Q3Jwc2hDZlphZHNleVZhNExrYXVBNjgwQ1BRTnhsdWV4RHFRNjRaZ0RfbHkwX2tkb2FFekh5YVVqTTJCRG0xYU1Lb2haRzlIUkNKb0tNZk8wdnFadHFjeA?oc=5",
+      "realLink": "https://news.google.com/rss/articles/CBMijwJBVV95cUxQUG5uQVliS1UtazlnckJqSV9qN2hXdGxneDctOFZfX2E3Qy0zX19FRm5qZ0tqOUlsRUMwaXNtMjdSZk5zQmhEVEUyZkhsUzNsX1Y1N1ppRG13WUp0RTBEazliVUVCaGh4QjRiMEZZQ0VLMGRuZU96bmFOdjFicFR3UVZaeUxqNG1MU1NHVGF6eVJ5VnF0MDJwZk4yME52R2MweHNLZTJtS0lfOHk2SzI1Z2dtMzlteGw4VkloX21yU1VBbG5qa2RlRTlqbmlDM21pX0xkWENSVDBFaHpzem9RMEVnaFRyRF9fNkFlZF9MN29xaWNBSVB5Y2czNVlXZV9xaHJKbnVmQ1dya29oeUR30gGUAkFVX3lxTE8tRXlEcV9kandSVTdPMGFtcVFsTXhNQ2JBaDk0eE1tUFREMlQ2OXVGRXFOOUY5SHl6d29ieFlXdFQwTHRRd2xMVGs4TlBsZmQyNHNBeFN3VDIzNm5hcmI1X1NKNm9xNWIxR3A2WFVkV19wQ01PXzVoOC1TNktQUGpzNVA4Q1RRTGs4Vmh6cl9GVF9pcW9ETFBhN091QXcxc2djU2Z1V3ZRWW12Yi01TTA2dXVLQzFCT2k3LTh1Q3Jwc2hDZlphZHNleVZhNExrYXVBNjgwQ1BRTnhsdWV4RHFRNjRaZ0RfbHkwX2tkb2FFekh5YVVqTTJCRG0xYU1Lb2haRzlIUkNKb0tNZk8wdnFadHFjeA?oc=5",
+      "summary": "US visa alert: New USCIS rules tighten deadlines for Green Card applicants and H-1B workers; here's what's changing | Hindustan Times  Hindustan Times",
+      "image": "https://picsum.photos/seed/361/640/360",
+      "publishedAt": "2026-10-13T10:39:37.000Z",
+      "titleTe": "యూఎస్ఎ వీసా అలర్ట్: కొత్త USCIS నియమాలు గ్రీన్ కార్డ్ అభ్యర్థుల కోసం గడువులను కట్టు మౌలికంగా పెడుతున్నాయి",
+      "summaryEn": "New USCIS rules impose stricter deadlines for Green Card applicants and H-1B workers, significantly altering the application process.",
+      "summaryTe": "కొత్త USCIS నియమాలు గ్రీన్ కార్డ్ అభ్యర్థులకు మరియు H-1B కార్మికులకు కట్టుదిట్టమైన గడువులను ఉంచుతున్నాయి. ఇది దరఖాస్తు ప్రక్రియను గణనీయంగా మార్చుతుంది.",
+      "relevanceScore": 10,
       "tags": [
-        "KLU",
-        "Education",
-        "Students"
+        "US",
+        "Green Card",
+        "H-1B"
       ],
-      "processedAt": "2026-10-11T18:21:46.607Z"
+      "processedAt": "2026-10-13T19:56:37.940Z"
+    },
+    {
+      "sourceId": "gn-india-us-relations",
+      "sourceName": "Google News — India-US",
+      "category": "america",
+      "language": "en",
+      "title": "Trump’s Targeting of Indian IT Firms Hits India-US Ties Again - The Diplomat – Asia-Pacific Current Affairs Magazine",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNV3I3NDdpSHlYdkVjTU5PcDlHTENxZ0xhaHFWOGp6MlJEaEtjUlBwVE40RGZxYl9nb1lwYjZVQmFkUXZ1dXA1SThrNXZyeGZhT0Yybm1nSV9PbXdqXzVWOVpudWo3Q0N1ZFR2LWNJMDliUlhXcDhVZVB4OThxZWhsb0dhMVdHY1NnRERGMDZNTV9oUmRqOWZlRA?oc=5",
+      "realLink": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNV3I3NDdpSHlYdkVjTU5PcDlHTENxZ0xhaHFWOGp6MlJEaEtjUlBwVE40RGZxYl9nb1lwYjZVQmFkUXZ1dXA1SThrNXZyeGZhT0Yybm1nSV9PbXdqXzVWOVpudWo3Q0N1ZFR2LWNJMDliUlhXcDhVZVB4OThxZWhsb0dhMVdHY1NnRERGMDZNTV9oUmRqOWZlRA?oc=5",
+      "summary": "Trump’s Targeting of Indian IT Firms Hits India-US Ties Again  The Diplomat – Asia-Pacific Current Affairs Magazine",
+      "image": "https://picsum.photos/seed/874/640/360",
+      "publishedAt": "2026-10-12T12:30:26.000Z",
+      "titleTe": "ట్రంప్ భారత ఐటీ సంస్థలపై దాడి చేస్తాడు, భారత-అమెరికా సంబంధాలకు మరలా దెబ్బ తీయడం",
+      "summaryEn": "Trump's actions targeting Indian IT firms have adversely affected India-US relations once again.",
+      "summaryTe": "ట్రంప్ భారత ఐటీ సంస్థలను లక్ష్యంగా చేసుకున్న చర్యలు ఒకసారి మరలా భారత్-అమెరికా సంబంధాలకు ప్రతికూలంగా ప్రభావితమయ్యాయి.",
+      "relevanceScore": 8,
+      "tags": [
+        "Trump",
+        "India-US",
+        "IT firms"
+      ],
+      "processedAt": "2026-10-13T19:56:37.940Z"
+    },
+    {
+      "sourceId": "gn-hyderabad-news",
+      "sourceName": "Google News — Hyderabad",
+      "category": "politics",
+      "language": "en",
+      "title": "TTF Hyderabad 2026 Concludes Successfully, Recording 50% Growth in Exhibitor Participation - Odisha Diary",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNcmkyOFdyVU80NHFJMkhSZzFnWVctZ3MzS1dObzBTaDFyYkROQ3BjUjloTkwxMXRYTUJQM3Q0OU4xdE1xdG9yOTNRaFU2UmdicHVGZC0tQXpSMDg0T1FpZXl4RFQwOHpmcy1udExiY0l5VFJfbmdueHpiZHgwNmxmTXU4ZUtkLVloWmJ2WnhZdXFMSE5EMVJKZEVSVEg0NmROM2R2N1U4R3hBb3hSVXZuelprTQ?oc=5",
+      "realLink": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNcmkyOFdyVU80NHFJMkhSZzFnWVctZ3MzS1dObzBTaDFyYkROQ3BjUjloTkwxMXRYTUJQM3Q0OU4xdE1xdG9yOTNRaFU2UmdicHVGZC0tQXpSMDg0T1FpZXl4RFQwOHpmcy1udExiY0l5VFJfbmdueHpiZHgwNmxmTXU4ZUtkLVloWmJ2WnhZdXFMSE5EMVJKZEVSVEg0NmROM2R2N1U4R3hBb3hSVXZuelprTQ?oc=5",
+      "summary": "TTF Hyderabad 2026 Concludes Successfully, Recording 50% Growth in Exhibitor Participation  Odisha Diary",
+      "image": "https://picsum.photos/seed/813/640/360",
+      "publishedAt": "2026-10-12T11:41:14.000Z",
+      "titleTe": "హైదరాబాద్ TTF 2026 విజయవంతంగా ముగిసింది, ప్రదర్శనదారుల భాగస్వామ్యంను 50% పెరిగిన రికార్డు అందుకుంది",
+      "summaryEn": "TTF Hyderabad 2026 concluded successfully with a 50% growth in exhibitor participation, showcasing regional potential.",
+      "summaryTe": "TTF హైదరాబాద్ 2026 విజయవంతంగా ముగిసింది. ప్రదర్శనదారుల భాగస్వామ్యం 50% పెరిగింది, ప్రవేశంలో ప్రదర్శనను కళాకాలం చేస్తుంది.",
+      "relevanceScore": 5,
+      "tags": [
+        "Hyderabad",
+        "TTF",
+        "exhibitors"
+      ],
+      "processedAt": "2026-10-13T19:56:37.940Z"
+    },
+    {
+      "sourceId": "gn-ap-chandrababu",
+      "sourceName": "Google News — AP Chandrababu TDP",
+      "category": "politics",
+      "language": "en",
+      "title": "Local body elections an acid test for coalition govt: CM Chandrababu Naidu - The New Indian Express",
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPc0hYeUI0Z1lUdUtJdUVObWRWbHB5eGFuRFJxb2NEMDdQdEhUZ3c5Ui1wQkhQWmZjNTNpYUJmVUZkRURWREtfQnBjeEc4cW5UV05TVFpuZy1RbG0zOVNGNDROZ3lXTjZzbTU1bzRsNEkxWE50Z1BfdjUzaXZpd1NQSW4yd0xOcldCUUl6M25OcGxhbTJRc21NZjBqMVhPazBMSUlXZWRSSjZyWHlNYWpoVkVaSXVEMmdrdjdXMUNRSmhJOWxINUF3aE9tZUdjSzVxd1VOMFJoNWpreEkwTXlDVWl1WFTSAeQBQVVfeXFMT3NIWHlCNGdZVHVLSXVFTm1kVmxweXhhbkRScW9jRDA3UHRIVGd3OVItcEJIUFpmYzUzaWFCZlVGZEVEVkRLX0JwY3hHOHFuVFdOU1RabmctUWxtMzlTRjQ0Tmd5V042c201NW80bDRJMVhOdGdQX3Y1M2l2aXdTUEluMndMTnJXQlFJejNuTnBsYW0yUXNtTWYwajFYT2swTElJV2VkUko2clh5TWFqaFZFWkl1RDJna3Y3VzFDUUpoSTlsSDVBd2hPbWVHY0s1cXdVTjBSaDVqa3hJME15Q1VpdVhU?oc=5",
+      "realLink": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPc0hYeUI0Z1lUdUtJdUVObWRWbHB5eGFuRFJxb2NEMDdQdEhUZ3c5Ui1wQkhQWmZjNTNpYUJmVUZkRURWREtfQnBjeEc4cW5UV05TVFpuZy1RbG0zOVNGNDROZ3lXTjZzbTU1bzRsNEkxWE50Z1BfdjUzaXZpd1NQSW4yd0xOcldCUUl6M25OcGxhbTJRc21NZjBqMVhPazBMSUlXZWRSSjZyWHlNYWpoVkVaSXVEMmdrdjdXMUNRSmhJOWxINUF3aE9tZUdjSzVxd1VOMFJoNWpreEkwTXlDVWl1WFTSAeQBQVVfeXFMT3NIWHlCNGdZVHVLSXVFTm1kVmxweXhhbkRScW9jRDA3UHRIVGd3OVItcEJIUFpmYzUzaWFCZlVGZEVEVkRLX0JwY3hHOHFuVFdOU1RabmctUWxtMzlTRjQ0Tmd5V042c201NW80bDRJMVhOdGdQX3Y1M2l2aXdTUEluMndMTnJXQlFJejNuTnBsYW0yUXNtTWYwajFYT2swTElJV2VkUko2clh5TWFqaFZFWkl1RDJna3Y3VzFDUUpoSTlsSDVBd2hPbWVHY0s1cXdVTjBSaDVqa3hJME15Q1VpdVhU?oc=5",
+      "summary": "Local body elections an acid test for coalition govt: CM Chandrababu Naidu  The New Indian Express",
+      "image": "https://picsum.photos/seed/983/640/360",
+      "publishedAt": "2026-10-12T04:06:00.000Z",
+      "titleTe": "Local body elections an acid test for coalition govt: CM Chandrababu Naidu - The New Indian Express",
+      "summaryEn": "Local body elections an acid test for coalition govt: CM Chandrababu Naidu  The New Indian Express",
+      "summaryTe": "",
+      "relevanceScore": 5,
+      "tags": [],
+      "processedAt": "2026-10-13T19:56:30.250Z"
+    },
+    {
+      "sourceId": "gn-cyber-fraud",
+      "sourceName": "Google News — Cyber Fraud India",
+      "category": "rights",
+      "language": "en",
+      "title": "Hyderabad Cybercrime Police Arrest 35 Across Nine States in September - The420.in",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBEb3ZWTXNseFRCUldTb2NTVlNDNkhaSHVud3RST2FpbUZ1LXk2NGY2VFV4Nzk1Skh3MVAyUnhFR3c5MW5wOW10R1h4d1ZJWmR4c21QbDZLa1BEUmxqa0kw?oc=5",
+      "realLink": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBEb3ZWTXNseFRCUldTb2NTVlNDNkhaSHVud3RST2FpbUZ1LXk2NGY2VFV4Nzk1Skh3MVAyUnhFR3c5MW5wOW10R1h4d1ZJWmR4c21QbDZLa1BEUmxqa0kw?oc=5",
+      "summary": "Hyderabad Cybercrime Police Arrest 35 Across Nine States in September  The420.in",
+      "image": "https://picsum.photos/seed/68/640/360",
+      "publishedAt": "2026-10-10T12:19:35.000Z",
+      "titleTe": "సెప్టెంబర్లో తొమ్మిది రాష్ట్రాల్లో 35 మంది అరెస్ట్: హైదరాబాద్ ఐటీ నేరజమీనం పోలీస్",
+      "summaryEn": "In September, Hyderabad Cybercrime Police arrested 35 individuals across nine states in connection with cyber fraud cases.",
+      "summaryTe": "సెప్టెంబర్లో హైదరాబాద్ ఐటీ నేరజమీనం పోలీసులు ఐటి నేరాలు సంబంధించి తొమ్మిది రాష్ట్రాల్లో 35 మందిని అరెస్ట్ చేశారు. ఇది దేశవ్యాప్తంగా తీవ్ర సమస్యగా మారుతోంది.",
+      "relevanceScore": 9,
+      "tags": [
+        "cybercrime",
+        "Hyderabad",
+        "arrest",
+        "police"
+      ],
+      "processedAt": "2026-10-13T19:56:07.087Z"
     },
     {
       "sourceId": "gn-cyber-fraud",
@@ -34,38 +137,17 @@
       "summary": "Hyderabad cyber fraud: Victims lose ₹17.34 Cr in September, 35 arrested  NewsMeter",
       "image": "https://picsum.photos/seed/29/640/360",
       "publishedAt": "2026-10-10T10:02:36.000Z",
-      "titleTe": "హైదరాబాద్ సైబర్ ఫ్రాడ్: సెకండ్ సెప్టెంబర్‌లో బాధితులు 17.34 కోట్ల నష్టాన్ని ఎదుర్కొన్నారు, 35 మందిని అరెస్టు చేశారు",
-      "summaryEn": "In September, Hyderabad witnessed cyber fraud resulting in victims losing ₹17.34 crores, with 35 arrests.",
-      "summaryTe": "సెప్టెంబర్‌లో, హైదరాబాద్‌లో సైబర్ మోసాలు జరిగి బాధితులు 17.34 కోట్ల నష్టాన్ని చవిచూసారు, 35 మందిని అరెస్టు చేశారు.",
-      "relevanceScore": 9,
+      "titleTe": "సెప్టంబర్లో బాధితులు 17.34 కోట్లు కోల్పోయారు, 35 మందిని అరెస్ట్ చేశారు: హైదరాబాద్ సైబర్ నేరం",
+      "summaryEn": "Victims of cyber fraud in Hyderabad lost ₹17.34 crore in September, and police arrested 35 individuals in connection with the crimes.",
+      "summaryTe": "హైదరాబాద్‌లో సైబర్ నేరాలకు బాధితులు సెప్టెంబర్లో 17.34 కోట్ల రూపాయలు కోల్పోయారు. ఈ నేరాలకు సంబంధించి 35 మందిని పోలీసులు అరెస్ట్ చేశారు.",
+      "relevanceScore": 10,
       "tags": [
         "cyber fraud",
         "Hyderabad",
-        "crime"
+        "crime",
+        "arrest"
       ],
-      "processedAt": "2026-10-11T18:21:31.345Z"
-    },
-    {
-      "sourceId": "gn-h1b-visa",
-      "sourceName": "Google News — H-1B Visa",
-      "category": "america",
-      "language": "en",
-      "title": "This Week in Immigration: October 9, 2026 - Boundless Immigration",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9RZUxCTVA5X1pNZllKOHAxcV9WSkQ4NGJPQ1BzMTBzZGFBbWFWdnFQcnd2dE9rS0Z2V0U5ODUyRDc1eFE1RXpES09aaEVURG5PQzJza2VuOWZsZFdYMUNSalM4b0RQa0ljMF93a09Fckctdw?oc=5",
-      "realLink": "https://news.google.com/rss/articles/CBMickFVX3lxTE9RZUxCTVA5X1pNZllKOHAxcV9WSkQ4NGJPQ1BzMTBzZGFBbWFWdnFQcnd2dE9rS0Z2V0U5ODUyRDc1eFE1RXpES09aaEVURG5PQzJza2VuOWZsZFdYMUNSalM4b0RQa0ljMF93a09Fckctdw?oc=5",
-      "summary": "This Week in Immigration: October 9, 2026  Boundless Immigration",
-      "image": "https://picsum.photos/seed/550/640/360",
-      "publishedAt": "2026-10-09T21:57:52.000Z",
-      "titleTe": "ఈ వారంలో వలసలపై సమీక్ష",
-      "summaryEn": "Insights into immigration developments as of October 9, 2026.",
-      "summaryTe": "అక్టోబర్ 9, 2026న వలసల అభివృద్ధి పై అవగాహనలను అందిస్తుంది. ఇది భారతీయ వలసలపై ప్రభావం చూపుతుంది.",
-      "relevanceScore": 4,
-      "tags": [
-        "Immigration",
-        "H-1B",
-        "US"
-      ],
-      "processedAt": "2026-10-11T18:21:46.607Z"
+      "processedAt": "2026-10-13T19:56:07.087Z"
     },
     {
       "sourceId": "gn-telugu-nri-usa",
@@ -78,60 +160,38 @@
       "summary": "Association of Indo Americans Hosts Dussehra Diwali Dhamaka 2026 in Pleasanton  Telugu Times",
       "image": "https://picsum.photos/seed/247/640/360",
       "publishedAt": "2026-10-09T10:45:36.000Z",
-      "titleTe": "ఇండో అమెరికన్లు 2026 దసరా దీపావళి డామాకా జరుపుతారు",
-      "summaryEn": "The Association of Indo Americans is hosting the Dussehra Diwali Dhamaka in Pleasanton.",
-      "summaryTe": "ఇండో అమెరికన్ల సమితి, ప్లెసంటాన్ లో దసరా దీపావళి డామాకా నిర్వహిస్తున్నది. ఇది సంస్కృతిక వైభవాన్ని చూపిస్తుంది.",
-      "relevanceScore": 8,
-      "tags": [
-        "celebration",
-        "India",
-        "USA"
-      ],
-      "processedAt": "2026-10-11T18:21:51.200Z"
-    },
-    {
-      "sourceId": "gn-india-us-relations",
-      "sourceName": "Google News — India-US",
-      "category": "america",
-      "language": "en",
-      "title": "US wants India to concede on trade and Russia. New Delhi should negotiate without fear - ThePrint",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQMEx1elRSQ2R3ZDNVcWp6Mk9jWEl1N2JIMlZRS3hyc0hRWTdvUDRQLWkwdDZGZVNfQWVYRzZLeFpnUlRsc25VLWZUeno5LUxlYzlnVUZxQ2htX2RtRzFlNlVEUlVZcG5KMHNuNV9Ja1FxdHFocUJuY1RDajlQVFJNeXNUR2E4Q3U0R1FvNmN6TUVOdzJlNmRQVzRYYVBhVUJWODZZbEVTRXNxM1M5ZjJKOEV4Zk1hQW1ERWVjdjlIRdIBxAFBVV95cUxNbU1KSjlmX3luX1k1cG10eDNTbEpmWUc1NTVlaXdQeWJUMWFfRG9aOFVtd3J0Z2pGdmg3RGhsVHEtYmtTQ2F4M1lLOTdQVmhTOHh1ZnpWeFlPWVRjNWRpQ2tHTU03U2ZMbjdrbERFaFZrOE1nMEZmNEFCOV9QYndMRlppWWQxZUFZSHFzNTBIR25EZ2tWLTNyWlNNMEZid3M4NS1UTENxazRHdWcwMlV1dmlGU0RVV2pGTkV3WTlYTXh1ZzR0?oc=5",
-      "realLink": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQMEx1elRSQ2R3ZDNVcWp6Mk9jWEl1N2JIMlZRS3hyc0hRWTdvUDRQLWkwdDZGZVNfQWVYRzZLeFpnUlRsc25VLWZUeno5LUxlYzlnVUZxQ2htX2RtRzFlNlVEUlVZcG5KMHNuNV9Ja1FxdHFocUJuY1RDajlQVFJNeXNUR2E4Q3U0R1FvNmN6TUVOdzJlNmRQVzRYYVBhVUJWODZZbEVTRXNxM1M5ZjJKOEV4Zk1hQW1ERWVjdjlIRdIBxAFBVV95cUxNbU1KSjlmX3luX1k1cG10eDNTbEpmWUc1NTVlaXdQeWJUMWFfRG9aOFVtd3J0Z2pGdmg3RGhsVHEtYmtTQ2F4M1lLOTdQVmhTOHh1ZnpWeFlPWVRjNWRpQ2tHTU03U2ZMbjdrbERFaFZrOE1nMEZmNEFCOV9QYndMRlppWWQxZUFZSHFzNTBIR25EZ2tWLTNyWlNNMEZid3M4NS1UTENxazRHdWcwMlV1dmlGU0RVV2pGTkV3WTlYTXh1ZzR0?oc=5",
-      "summary": "US wants India to concede on trade and Russia. New Delhi should negotiate without fear  ThePrint",
-      "image": "https://picsum.photos/seed/479/640/360",
-      "publishedAt": "2026-10-09T10:08:27.000Z",
-      "titleTe": "అమెరికా వాణిజ్యంపై భారతదేశాన్ని ఒప్పించమని కోరుతోంది",
-      "summaryEn": "The US is urging India to concede on trade and Russia, emphasizing the need for negotiations.",
-      "summaryTe": "వాణిజ్యం మరియు రష్యాపై భారతదేశాన్ని ఒప్పించమని అమెరికా కోరుతోంది. ఈ అంశాలను ఒక్క పరీక్షలో చర్చించాలి.",
+      "titleTe": "ఇండో అమెరికన్ల అసోసియేషన్ 2026లో దస్సెరా దీపావళి ధమాకా నిర్వహించింది",
+      "summaryEn": "The Indo American Association hosted the Dussehra Diwali Dhamaka 2026 event in Pleasanton, celebrating cultural ties.",
+      "summaryTe": "ఇండో అమెరికన్ అసోసియేషన్ 2026లో ప్లీజ్‌టన్‌లో దస్సెరా దీపావళి ధమాకా ఈవెంట్‌ను నిర్వహించింది. ఇది సాంస్కృతిక సంబంధాలను జరుపుతుంది.",
       "relevanceScore": 6,
       "tags": [
-        "US",
-        "India",
-        "trade"
+        "events",
+        "USA",
+        "Indo-Americans"
       ],
-      "processedAt": "2026-10-11T18:21:51.200Z"
+      "processedAt": "2026-10-13T19:56:37.940Z"
     },
     {
-      "sourceId": "gn-consumer-rights",
-      "sourceName": "Google News — Consumer Rights",
-      "category": "rights",
+      "sourceId": "gn-indian-techies-usa",
+      "sourceName": "Google News — Indian tech in USA",
+      "category": "america",
       "language": "en",
-      "title": "12 Per Cent Of Indian Respondents Scammed In Past Year: GSMA - Outlook Money",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOTDBTaWk2dmw4Q2dLdDh2dDdqcmdzMjRKZlFJMUhGUG9OTkZkcFJPTTFzWll4YzV6WGIxbHROUU45Y0pDUjVYLWk0UjNVY1cwc0doSnMxbmFqZXhmSGx0S3FpTnlSbHp3YWx0cHFSVWJjYVBhM2tVS29CbUpSZ2dvUW9pYTM1SmRla281YzhnX0Nsc0FaRVMzcGdwMmVBSGQxWFFLdVB30gGmAUFVX3lxTE5MMFNpaTZ2bDhDZ0t0OHZ0N2pyZ3MyNEpmUUkxSEZQb05ORmRwUk9NMXNaWXhjNXpYYjFsdE5RTjljSkNSNVgtaTRSM1VjVzBzR2hKczFuYWpleGZIbHRLcWlOeVJsendhbHRwcVJVYmNhUGEza1VLb0JtSlJnZ29Rb2lhMzVKZGVrbzVjOGdfQ2xzQVpFUzNwZ3AyZUFIZDFYUUt1UHc?oc=5",
-      "realLink": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOTDBTaWk2dmw4Q2dLdDh2dDdqcmdzMjRKZlFJMUhGUG9OTkZkcFJPTTFzWll4YzV6WGIxbHROUU45Y0pDUjVYLWk0UjNVY1cwc0doSnMxbmFqZXhmSGx0S3FpTnlSbHp3YWx0cHFSVWJjYVBhM2tVS29CbUpSZ2dvUW9pYTM1SmRla281YzhnX0Nsc0FaRVMzcGdwMmVBSGQxWFFLdVB30gGmAUFVX3lxTE5MMFNpaTZ2bDhDZ0t0OHZ0N2pyZ3MyNEpmUUkxSEZQb05ORmRwUk9NMXNaWXhjNXpYYjFsdE5RTjljSkNSNVgtaTRSM1VjVzBzR2hKczFuYWpleGZIbHRLcWlOeVJsendhbHRwcVJVYmNhUGEza1VLb0JtSlJnZ29Rb2lhMzVKZGVrbzVjOGdfQ2xzQVpFUzNwZ3AyZUFIZDFYUUt1UHc?oc=5",
-      "summary": "12 Per Cent Of Indian Respondents Scammed In Past Year: GSMA  Outlook Money",
-      "image": "https://picsum.photos/seed/319/640/360",
-      "publishedAt": "2026-10-09T09:33:15.000Z",
-      "titleTe": "పొరుగు సంవత్సరంలో 12 శాతం భారతదేశం వాసులు మోసాలకు గురయ్యారు: GSMA",
-      "summaryEn": "A GSMA report reveals that 12 percent of Indian respondents were scammed in the past year.",
-      "summaryTe": "చాలా భారతదేశం వాసులు గత సంవత్సరం 12 శాతం మోసాలకు గురయ్యారని GSMA నివేదిక వెల్లడిస్తుంది.",
-      "relevanceScore": 9,
+      "title": "Shubhanshu Shukla, the first Indian to travel to the International Space Station, and investor-entrepreneur Mohandas - MediaNews4U",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQOWxUOHQyQ1A2XzlnaklhYTdCbTVrMkhnN0xrQllnS1p1SDY4eDN4Y1lVZ0UybDJwQkk4X3RJOEpnSjR2N0d6WVRQOXpqbDVRT2NaM2Q4U3hGQXZISWw1X2RoZ01Vc1Z4QlZCdFVvSS1nQy1NeHlCNkhwVjRweEc5eEZva3Axd2NGSjZoNTdTd1RPN0ZqcW1ybjNMdTI4RTRGU0o0Tw?oc=5",
+      "realLink": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQOWxUOHQyQ1A2XzlnaklhYTdCbTVrMkhnN0xrQllnS1p1SDY4eDN4Y1lVZ0UybDJwQkk4X3RJOEpnSjR2N0d6WVRQOXpqbDVRT2NaM2Q4U3hGQXZISWw1X2RoZ01Vc1Z4QlZCdFVvSS1nQy1NeHlCNkhwVjRweEc5eEZva3Axd2NGSjZoNTdTd1RPN0ZqcW1ybjNMdTI4RTRGU0o0Tw?oc=5",
+      "summary": "Shubhanshu Shukla, the first Indian to travel to the International Space Station, and investor-entrepreneur Mohandas  MediaNews4U",
+      "image": "https://picsum.photos/seed/71/640/360",
+      "publishedAt": "2026-10-09T08:47:26.000Z",
+      "titleTe": "సార్వత్రిక అంతర్వేదనలో మొదటి భారతీయుడు అంతరిక్షం వెళ్లడం, పెట్టుబడిదారుడు-ఉద్యమి మోహన్ దాస్",
+      "summaryEn": "Shubhanshu Shukla becomes the first Indian to travel to the International Space Station, alongside entrepreneur Mohandas.",
+      "summaryTe": "శిభన్శు శుక్ల భారతదేశంలో అంతర్జాతీయ అంతరిక్ష కేంద్రానికి ప్రయాణించిన మొదటి భారతీయుడు అయ్యారు. ఆయనతోపాటు పెట్టుబడిదారు మోహన్ దాస్ కూడా ఉన్నారు.",
+      "relevanceScore": 5,
       "tags": [
-        "scams",
-        "statistics",
-        "India"
+        "space",
+        "India",
+        "scientist"
       ],
-      "processedAt": "2026-10-11T18:21:31.345Z"
+      "processedAt": "2026-10-13T19:56:37.940Z"
     },
     {
       "sourceId": "gn-ott-amazon-disney",
@@ -144,61 +204,34 @@
       "summary": "OTT Releases This Week Telugu (ఈ వారం తెలుగు OTT విడుదలలు) – 10th Oct to 16th Oct  Vi",
       "image": "https://picsum.photos/seed/786/640/360",
       "publishedAt": "2026-10-09T07:00:00.000Z",
-      "titleTe": "ఈ వారం తెలుగు OTT విడుదలలు (అక్టోబర్ 10 నుండి 16 వరకు)",
-      "summaryEn": "Information about Telugu OTT releases scheduled for this week.",
-      "summaryTe": "ఈ వారం తెలుగు OTT విడుదలలకు సంబంధించిన సమాచారాన్ని అందించారు. ఇది తెలుగు ప్రేక్షకులకు ఆసక్తికరమైన అంచనాలు కలిగిస్తుంది.",
+      "titleTe": "ఈ వారం తెలుగు OTT విడుదలలు (10 వ తేదీ నుండి 16 వ తేదీ వరకు)",
+      "summaryEn": "A list of Telugu OTT releases scheduled for the week from October 10th to 16th, highlighting new content for viewers.",
+      "summaryTe": "కోసం 10 వ తేదీ నుండి 16 వ తేదీ వరకుా తెలుగు OTT విడుదలల జాబితా, ప్రేక్షకులకు కొత్త కంటెంట్‌ను హైలైట్ చేస్తుంది.",
       "relevanceScore": 8,
       "tags": [
         "OTT",
         "Telugu",
         "releases"
       ],
-      "processedAt": "2026-10-11T18:21:51.200Z"
+      "processedAt": "2026-10-13T19:56:37.940Z"
     },
     {
       "sourceId": "gn-h1b-visa",
       "sourceName": "Google News — H-1B Visa",
       "category": "america",
       "language": "en",
-      "title": "The US has suspended major IT firms, including TCS, Infosys, Wipro, HCL and Cognizant, from the PERM green card programme amid alleged visa fraud investigations. Microsoft and Adobe are also affected. The move could delay permanent residency applic - Instagram",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1XRG9uUHNiNG8tUmJzTXM4c3ZoOVpkSzFxVDMtYXNxaElVWHIwODFuS19rSHI1VWFfT3ZjN1Z5MEVSUGRoczY3eXFvOEoydkIwOUE?oc=5",
-      "realLink": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1XRG9uUHNiNG8tUmJzTXM4c3ZoOVpkSzFxVDMtYXNxaElVWHIwODFuS19rSHI1VWFfT3ZjN1Z5MEVSUGRoczY3eXFvOEoydkIwOUE?oc=5",
-      "summary": "The US has suspended major IT firms, including TCS, Infosys, Wipro, HCL and Cognizant, from the PERM green card programme amid alleged visa fraud investigations. Microsoft and Adobe are also affected. The move could delay permanent residency applic  Instagram",
-      "image": "https://picsum.photos/seed/485/640/360",
-      "publishedAt": "2026-10-09T05:29:49.000Z",
-      "titleTe": "యుEss జాతీయ స్థాయిలో టీసీఎస్, ఇన్ఫోసిస్, విప్రో, HCL మరియు కాగ్నిజెంట్ వంటి ప్రముఖ IT సంస్థలను PERM గ్రీన్ కార్డ్ ప్రోగామ్లో నుండి సస్పెండ్ చేసింది",
-      "summaryEn": "The US has suspended major IT firms, including TCS, Infosys, Wipro, HCL, and Cognizant, from the PERM green card program amid visa fraud investigations.",
-      "summaryTe": "యునైటెడ్ స్టేట్స్, టీసీఎస్, ఇన్ఫోసిస్, విప్రో, HCL మరియు కాగ్నిజెంట్ వంటి ప్రధాన IT సంస్థలను PERM గ్రీన్ కార్డ్ ప్రోగ్రాంలో నుండి సస్పెండ్ చేసింది. వీసా కుంభకోణాల విచారణలు జరుగుతున్న నేపథ్యముంది.",
-      "relevanceScore": 10,
-      "tags": [
-        "IT",
-        "US",
-        "visa",
-        "fraud"
-      ],
-      "processedAt": "2026-10-11T18:21:51.200Z"
-    },
-    {
-      "sourceId": "gn-india-us-relations",
-      "sourceName": "Google News — India-US",
-      "category": "america",
-      "language": "en",
-      "title": "Jairam Ramesh Accuses Modi Govt Of Appeasing Trump, Links US Action Against Indian IT Professionals To Policy Concessions - Daily Excelsior",
-      "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQbDBnSkhnMGNsZHVmZmhlX0NPazZvUk1VNnVnYnBpQ0tWdUItRDFjOTZBNXB5eTRPTS1BdnBVcnlveFdNV1g1NXRXeDktZE9QWUt3eUN1THpnN1JvUFhGd0hfdGRUVWlMQ1NXSmlqcE1leFpMZWdFXzhGQXkycDBGTXlwOW9TcU9vdlR1ejE2ak02b2N5c3c1ZFR6Y19GNFg5UXhlMWEtN1pfVHdUYlNvaWpZX2VPU2M4Q2Y4OXRrUGtTeGxQOWR3TVNrSzhYaUZCQ3BtMWs2MHlVOUN3S2VSSUkwWXU1WTBuZnJF0gHrAUFVX3lxTFBsMGdKSGcwY2xkdWZmaGVfQ09rNm9STVU2dWdicGlDS1Z1Qi1EMWM5NkE1cHl5NE9NLUF2cFVyeW94V01XWDU1dFd4OS1kT1BZS3d5Q3VMemc3Um9QWEZ3SF90ZFRVaUxDU1dKaWpwTWV4WkxlZ0VfOEZBeTJwMEZNeXA5b1NxT292VHV6MTZqTTZvY3lzdzVkVHpjX0Y0WDlReGUxYS03Wl9Ud1RiU29pallfZU9TYzhDZjg5dGtQa1N4bFA5ZHdNU2tLOFhpRkJDcG0xazYweVU5Q3dLZVJJSTBZdTVZMG5mckU?oc=5",
-      "realLink": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQbDBnSkhnMGNsZHVmZmhlX0NPazZvUk1VNnVnYnBpQ0tWdUItRDFjOTZBNXB5eTRPTS1BdnBVcnlveFdNV1g1NXRXeDktZE9QWUt3eUN1THpnN1JvUFhGd0hfdGRUVWlMQ1NXSmlqcE1leFpMZWdFXzhGQXkycDBGTXlwOW9TcU9vdlR1ejE2ak02b2N5c3c1ZFR6Y19GNFg5UXhlMWEtN1pfVHdUYlNvaWpZX2VPU2M4Q2Y4OXRrUGtTeGxQOWR3TVNrSzhYaUZCQ3BtMWs2MHlVOUN3S2VSSUkwWXU1WTBuZnJF0gHrAUFVX3lxTFBsMGdKSGcwY2xkdWZmaGVfQ09rNm9STVU2dWdicGlDS1Z1Qi1EMWM5NkE1cHl5NE9NLUF2cFVyeW94V01XWDU1dFd4OS1kT1BZS3d5Q3VMemc3Um9QWEZ3SF90ZFRVaUxDU1dKaWpwTWV4WkxlZ0VfOEZBeTJwMEZNeXA5b1NxT292VHV6MTZqTTZvY3lzdzVkVHpjX0Y0WDlReGUxYS03Wl9Ud1RiU29pallfZU9TYzhDZjg5dGtQa1N4bFA5ZHdNU2tLOFhpRkJDcG0xazYweVU5Q3dLZVJJSTBZdTVZMG5mckU?oc=5",
-      "summary": "Jairam Ramesh Accuses Modi Govt Of Appeasing Trump, Links US Action Against Indian IT Professionals To Policy Concessions  Daily Excelsior",
-      "image": "https://picsum.photos/seed/833/640/360",
-      "publishedAt": "2026-10-09T05:24:19.000Z",
-      "titleTe": "జైరామ్ రాంశ్ మోడీ ప్రభుత్వాన్ని ట్రంప్‌ను పట్ల వంగిస్తున్నార",
-      "summaryEn": "Jairam Ramesh accuses the Modi government of appeasing Trump concerning IT professionals.",
-      "summaryTe": "జైరామ్ రాంశ్ మోడీ ప్రభుత్వం ట్రంప్‌కు అనుగుణంగా పిత్రవించి IT నిపుణులపై అమెరికా చర్యలను అనుసంధానిస్తున్నారు. ఇది దేశవ్యాప్తంగా చర్చ నడిపిస్తోంది.",
-      "relevanceScore": 8,
-      "tags": [
-        "politics",
-        "Jairam Ramesh",
-        "IT"
-      ],
-      "processedAt": "2026-10-11T18:21:51.200Z"
+      "title": "This Week in Immigration: October 9, 2026 - Boundless Immigration",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9RZUxCTVA5X1pNZllKOHAxcV9WSkQ4NGJPQ1BzMTBzZGFBbWFWdnFQcnd2dE9rS0Z2V0U5ODUyRDc1eFE1RXpES09aaEVURG5PQzJza2VuOWZsZFdYMUNSalM4b0RQa0ljMF93a09Fckctdw?oc=5",
+      "realLink": "https://news.google.com/rss/articles/CBMickFVX3lxTE9RZUxCTVA5X1pNZllKOHAxcV9WSkQ4NGJPQ1BzMTBzZGFBbWFWdnFQcnd2dE9rS0Z2V0U5ODUyRDc1eFE1RXpES09aaEVURG5PQzJza2VuOWZsZFdYMUNSalM4b0RQa0ljMF93a09Fckctdw?oc=5",
+      "summary": "This Week in Immigration: October 9, 2026  Boundless Immigration",
+      "image": "https://picsum.photos/seed/550/640/360",
+      "publishedAt": "2026-10-09T07:00:00.000Z",
+      "titleTe": "This Week in Immigration: October 9, 2026 - Boundless Immigration",
+      "summaryEn": "This Week in Immigration: October 9, 2026  Boundless Immigration",
+      "summaryTe": "",
+      "relevanceScore": 5,
+      "tags": [],
+      "processedAt": "2026-10-13T19:56:30.250Z"
     },
     {
       "sourceId": "gn-h1b-visa",
@@ -211,16 +244,38 @@
       "summary": "US green card suspension: What it means for Indian IT workers on H-1B visas  Business Standard",
       "image": "https://picsum.photos/seed/762/640/360",
       "publishedAt": "2026-10-09T02:37:40.000Z",
-      "titleTe": "యూ ఎస్ గ్రీన్ కార్డ్ అంతరాయాన్ని నివేదిక",
-      "summaryEn": "US green card suspension impacts Indian IT workers on H-1B visas.",
-      "summaryTe": "హెచ్-1బి వీసాలపై పనిచేసే భారతీయ ఐటీ ఉద్యోగులకు అమెరికా సచివాలయం మౌలిక భారం కలిగిస్తుంది. ఇది వలసలకు కీలకమైన సమాచారం.",
-      "relevanceScore": 5,
+      "titleTe": "అమెరికా గ్రీన్ కార్డ్ నిషేధం: ఇది H-1B వీసా కింద ఉన్న భారత ఐటీ కార్మికులకు ఏమిటి",
+      "summaryEn": "The US has suspended green card processing, significantly impacting Indian IT workers on H-1B visas who are seeking permanent residency.",
+      "summaryTe": "అమెరికా గ్రీన్ కార్డ్ ప్రాసెస్‌ను నిలిపివేసింది. ఇది H-1B వీసా కలిగిన భారత ఐటీ కార్మికులకు గణనీయంగా ప్రభావితం చేస్తుంది.",
+      "relevanceScore": 10,
       "tags": [
-        "Green Card",
+        "US",
         "H-1B",
-        "Immigration"
+        "Indian IT"
       ],
-      "processedAt": "2026-10-11T18:21:46.607Z"
+      "processedAt": "2026-10-13T19:56:37.940Z"
+    },
+    {
+      "sourceId": "gn-india-us-relations",
+      "sourceName": "Google News — India-US",
+      "category": "america",
+      "language": "en",
+      "title": "U.S. suspends Microsoft and other tech firms with India links from visa program - The Japan Times",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNazB2MDlaVklMeUxydk9KZWtlYS1zZldOZU1YRThrbXMxX05fYXlzYUFaUkFycFNCVXNzLUpITm5BQVkxQ2MtdVkxRWtwc1p3ZldsalBpUTFMQ29VZGYtR0thSTlJWTAtYlZiSmhVSzN3RDJScW5xUzNWTzdSbFFiSDE5LVFYZkdKOHhjQTJkSWFGS0U?oc=5",
+      "realLink": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNazB2MDlaVklMeUxydk9KZWtlYS1zZldOZU1YRThrbXMxX05fYXlzYUFaUkFycFNCVXNzLUpITm5BQVkxQ2MtdVkxRWtwc1p3ZldsalBpUTFMQ29VZGYtR0thSTlJWTAtYlZiSmhVSzN3RDJScW5xUzNWTzdSbFFiSDE5LVFYZkdKOHhjQTJkSWFGS0U?oc=5",
+      "summary": "U.S. suspends Microsoft and other tech firms with India links from visa program  The Japan Times",
+      "image": "https://picsum.photos/seed/632/640/360",
+      "publishedAt": "2026-10-09T02:12:00.000Z",
+      "titleTe": "అమెరికా భారత్‌కు సంబంధమున్న మైక్రోసాఫ్ట్ మరియు ఇతర సాంకేతిక సంస్థలను వీసా కార్యక్రమం నుండి నిషేధించింది",
+      "summaryEn": "The US has suspended Microsoft and other tech firms associated with India from the visa program, affecting international operations.",
+      "summaryTe": "అమెరికా భారత్‌కు సంబంధమున్న మైక్రోసాఫ్ట్ మరియు ఇతర సాంకేతిక సంస్థలను వీసా కార్యక్రమం నుండి నిషేధించింది.",
+      "relevanceScore": 9,
+      "tags": [
+        "US",
+        "Microsoft",
+        "visa"
+      ],
+      "processedAt": "2026-10-13T19:56:37.940Z"
     },
     {
       "sourceId": "gn-india-us-relations",
@@ -232,61 +287,17 @@
       "realLink": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQamxqS0FjNG9hTlRkV3JYcjQwQ3BUMjgyVHhsSVltVGpLSkVYWHE4UG5nOUhDSmdBMHpRWThDQ0V1eFRSYU5rZzJMVDhFVERyUjhFSzdmNkdTbW1nRko2S01TUFZzaFVrZU1MaUdUWmVMV3JBUExKQzNiNkdNN3Jwa1llalNYMFpNUmR0eE1udnZ3eEhEQ1Z0cEEwcnBVWWJaek05R3B3?oc=5",
       "summary": "White House calls India one of US’ strongest allies, highlights Trump-Modi ties  DD News",
       "image": "https://picsum.photos/seed/780/640/360",
-      "publishedAt": "2026-10-08T10:59:00.000Z",
-      "titleTe": "వైట్ హౌస్ నేటి భారతదేశాన్ని అత్యుత్తమ మిత్రభవిష్యత్తు గా గుర్తిస్తుంది",
-      "summaryEn": "The White House has labeled India as one of the US's strongest allies, highlighting the Trump-Modi relationship.",
-      "summaryTe": "వైట్ హౌస్, భారతదేశాన్ని అమెరికా యొక్క అత్యుత్తమ మిత్రంగా పేర్కొంది. ట్రంప్-మోద్గి సంబంధాన్ని ప్రస్తావించడం ద్వారా దీనికి మద్దతు చేకూరుస్తోంది.",
-      "relevanceScore": 7,
+      "publishedAt": "2026-10-08T07:53:00.000Z",
+      "titleTe": "వైట్ హౌస్ భారతదేశాన్ని యుఎస్ఇ ఫోర్స్ మిత్రులలో ఒకటిగా పిలుస్తుంది, ట్రంప్-మోడి సంబంధాలను గూఢాలు చేస్తుంది",
+      "summaryEn": "The White House recognized India as one of the US' strongest allies, highlighting the strong ties between Trump and Modi.",
+      "summaryTe": "వైట్ హౌస్ భారతదేశాన్ని యుఎస్ఇ యొక్క బలమైన అండచాయిలలో ఒకటిగా గుర్తించింది. ట్రంప్ మరియు మోడి మధ్య బలమైన సంబంధాలను హైలైట్ చేస్తుంది.",
+      "relevanceScore": 8,
       "tags": [
-        "US",
-        "India",
-        "politics"
+        "White House",
+        "India-US",
+        "Trump"
       ],
-      "processedAt": "2026-10-11T18:21:51.200Z"
-    },
-    {
-      "sourceId": "gn-telugu-nri-usa",
-      "sourceName": "Google News — Telugu NRI USA",
-      "category": "america",
-      "language": "en",
-      "title": "US immigration rules for Indians: When can visitors change nonimmigrant status without leaving America? | Hindustan Times - Hindustan Times",
-      "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOUTljMlVRbnVMSTNCd0RpWmxpSnlzRXVka0VKNEV4M0xiRXFpM1Q3dnp3dnlOSHZYTDhmZ3ZPT2lLckU5aGVOMl9PeDdJRHpuMGZ5dGtQNUVHdEliWHp0Y2loczhGZklzWEFDck9sVy1Wcm9LOUJrNE9mV2VGYnhyNHU3QmVhSWRSdXJLYXJPT09xcFMwdzRKNk9lX2tGYUVRU0tnbENub3F0NnJfbjUtZG0wWGxvYm80eDFrUzAyeGItWHhhV0I3NkhQeF9NaDdnSHNnbkw4UTJHaGsxaEVMbm5oX01qc2c5TFNaS2NB0gHzAUFVX3lxTE5rMWRIVS04WmhYMUx1TEY5ZWd5ZXRXZzRzeVc4OFNIT2sxM3dDRlN0UnJjS2FxUHIyejI3WUNKS0hGa1NRRjlsSTdfMm5ST01SZ1J0R0ZneHIyWHFuSFIxbnkwNHdDM2dsb0hpbEpHN2prWWp6aHl1aFNqZWNSUkcwOWI4c29jLUZEbEpvd1JzTFhNQTlHMUdHbDh4VXRTLUd4NWJpX2FOcVQ3VV9ZNmVuemlaR01fdHRPQjVXRV8xaEJUOEJJQUJwMTdUU3hjLWZXRFdpZ1hXLUt6ZUE5a3FOQUFpRFNBLVFOaXk4TXZPckluSQ?oc=5",
-      "realLink": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOUTljMlVRbnVMSTNCd0RpWmxpSnlzRXVka0VKNEV4M0xiRXFpM1Q3dnp3dnlOSHZYTDhmZ3ZPT2lLckU5aGVOMl9PeDdJRHpuMGZ5dGtQNUVHdEliWHp0Y2loczhGZklzWEFDck9sVy1Wcm9LOUJrNE9mV2VGYnhyNHU3QmVhSWRSdXJLYXJPT09xcFMwdzRKNk9lX2tGYUVRU0tnbENub3F0NnJfbjUtZG0wWGxvYm80eDFrUzAyeGItWHhhV0I3NkhQeF9NaDdnSHNnbkw4UTJHaGsxaEVMbm5oX01qc2c5TFNaS2NB0gHzAUFVX3lxTE5rMWRIVS04WmhYMUx1TEY5ZWd5ZXRXZzRzeVc4OFNIT2sxM3dDRlN0UnJjS2FxUHIyejI3WUNKS0hGa1NRRjlsSTdfMm5ST01SZ1J0R0ZneHIyWHFuSFIxbnkwNHdDM2dsb0hpbEpHN2prWWp6aHl1aFNqZWNSUkcwOWI4c29jLUZEbEpvd1JzTFhNQTlHMUdHbDh4VXRTLUd4NWJpX2FOcVQ3VV9ZNmVuemlaR01fdHRPQjVXRV8xaEJUOEJJQUJwMTdUU3hjLWZXRFdpZ1hXLUt6ZUE5a3FOQUFpRFNBLVFOaXk4TXZPckluSQ?oc=5",
-      "summary": "US immigration rules for Indians: When can visitors change nonimmigrant status without leaving America? | Hindustan Times  Hindustan Times",
-      "image": "https://picsum.photos/seed/192/640/360",
-      "publishedAt": "2026-10-05T03:49:22.000Z",
-      "titleTe": "భారతీయులకు అమెరికాలో వీసా మార్పు ప్రక్రియ గమనించడానికి కొన్ని సూచనలు",
-      "summaryEn": "The article discusses when visitors can change their nonimmigrant status without leaving the US.",
-      "summaryTe": "అమెరికాలో సందర్శకులు తమ అనివార్య స్థితిని మార్చుకొనే సమయాన్ని ఈ వ్యాసం అర్థం చేసుకునే ప్రయత్నిస్తోంది. ఇది భారతీయులకు ముఖ్యమైన సమాచారం.",
-      "relevanceScore": 9,
-      "tags": [
-        "US",
-        "visa",
-        "Indians"
-      ],
-      "processedAt": "2026-10-11T18:21:51.200Z"
-    },
-    {
-      "sourceId": "gn-ap-chandrababu",
-      "sourceName": "Google News — AP Chandrababu TDP",
-      "category": "politics",
-      "language": "en",
-      "title": "Survey projects TDP vote share at 46.9 percent - The New Indian Express",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNLTd6eWZ2ZS1ud1ZNeFNQbUlQaV9qRlprTXBSTHZqQTNGRFp1UXM1S1hXRVNUV2lVWUt2OWtxSWdjRlp5REx1MzhCdFV4d0t2bnpxWkkyRHFjeVA1QmpfZjZOcDItYzdtZkw3a0hPczlVRjAta2pLUXl3QzllZUVybExwa0lwSXNYYjc4NWlZc3hrZUM3YmdIWjB0VnRIa0Z5TmQtb3lHUVZncEc2dnJYUVRn0gG_AUFVX3lxTE05NUl4ejVfcUt2Q2NiWU9jN1hINVE3ZS1wa3EwT0dpb0p0b3cwSWl2Rkd0LXlTZ2I0QW0zMkRWVHlZeUxRdlZxZTdfc3VlSGRMRVN0dEhJUFFGVl9kakstNGNBcjZPeEk4R0x6aHY5NDU4bGZZSjJldE43cjZtbmNnaFQ2Z2swWC1YVm16YnlFWmNJNnE1N1J5eHVHeFI3VDUzRjItTE5Ya1VHanZsUlptVnVkcmRuczRxTzV2cnJn?oc=5",
-      "realLink": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNLTd6eWZ2ZS1ud1ZNeFNQbUlQaV9qRlprTXBSTHZqQTNGRFp1UXM1S1hXRVNUV2lVWUt2OWtxSWdjRlp5REx1MzhCdFV4d0t2bnpxWkkyRHFjeVA1QmpfZjZOcDItYzdtZkw3a0hPczlVRjAta2pLUXl3QzllZUVybExwa0lwSXNYYjc4NWlZc3hrZUM3YmdIWjB0VnRIa0Z5TmQtb3lHUVZncEc2dnJYUVRn0gG_AUFVX3lxTE05NUl4ejVfcUt2Q2NiWU9jN1hINVE3ZS1wa3EwT0dpb0p0b3cwSWl2Rkd0LXlTZ2I0QW0zMkRWVHlZeUxRdlZxZTdfc3VlSGRMRVN0dEhJUFFGVl9kakstNGNBcjZPeEk4R0x6aHY5NDU4bGZZSjJldE43cjZtbmNnaFQ2Z2swWC1YVm16YnlFWmNJNnE1N1J5eHVHeFI3VDUzRjItTE5Ya1VHanZsUlptVnVkcmRuczRxTzV2cnJn?oc=5",
-      "summary": "Survey projects TDP vote share at 46.9 percent  The New Indian Express",
-      "image": "https://picsum.photos/seed/359/640/360",
-      "publishedAt": "2026-10-01T07:00:00.000Z",
-      "titleTe": "టిడిపి ఓట్ల భాగస్వామ్యం 46.9 శాతంగా అంచనా",
-      "summaryEn": "A recent survey predicts TDP's vote share at 46.9 percent.",
-      "summaryTe": "కొత్త సర్వేలో టిడిపి ఓట్ల భాగస్వామ్యాన్ని 46.9 శాతంగా అంచనా వేస్తోంది. ఇది రాజకీయాలకు కీలకమైన సమాచారం.",
-      "relevanceScore": 7,
-      "tags": [
-        "TDP",
-        "Elections",
-        "Politics"
-      ],
-      "processedAt": "2026-10-11T18:21:46.607Z"
+      "processedAt": "2026-10-13T19:56:37.940Z"
     },
     {
       "sourceId": "yt-varandaa",
@@ -299,16 +310,16 @@
       "summary": "",
       "image": "https://picsum.photos/seed/489/640/360",
       "publishedAt": "2026-09-30T14:44:59.000Z",
-      "titleTe": "చూపులకు రంగూల స్నేహితులు.. ప్రతి సీన్ కథ మలుపు",
-      "summaryEn": "A discussion about mind-bending movies and their thrilling climaxes.",
-      "summaryTe": "సీన్ పై చర్చలు జరిగాయి మలుపులపై, మైండ్ బెండింగ్ సినిమాల గురించి. ఈ తరహా చిత్రాలు ప్రేక్షకుల మన్ననలు పొందంటున్నాయి.",
-      "relevanceScore": 5,
+      "titleTe": "మైండ్ బెండింగ్ సినిమాలు... ప్రతి సీన్ క్లైమాక్స్ ఎయ్... #సినిమా #థ్రిల్లర్ #బెస్ట్‌ఫిల్మ్",
+      "summaryEn": "An exploration of mind-bending movies, highlighting their climactic scenes and overall impact.",
+      "summaryTe": "మైండ్ బెండింగ్ సినిమాలను పర్యవేక్షించడం, వారి క్లైమాక్టిక్ సీన్ మరియు మొత్తం ప్రభావాన్ని హైలైట్ చేసుకుంటుంది.",
+      "relevanceScore": 4,
       "tags": [
         "movies",
         "thriller",
         "entertainment"
       ],
-      "processedAt": "2026-10-11T18:21:51.200Z"
+      "processedAt": "2026-10-13T19:56:37.940Z"
     },
     {
       "sourceId": "gn-ap-chandrababu",
@@ -321,38 +332,30 @@
       "summary": "YSRCP accuses Andhra Pradesh government of misusing relief fund  The News Mill",
       "image": "https://picsum.photos/seed/345/640/360",
       "publishedAt": "2026-09-27T07:00:00.000Z",
-      "titleTe": "YSRCP అంధ్రప్రదేశ్ ప్రభుత్వంపై దోపిడీ ఛార్జ్",
-      "summaryEn": "YSRCP accuses the Andhra Pradesh government of misusing relief funds.",
-      "summaryTe": "YSRCP, అ-Andhra Pradesh ప్రభుత్వాన్ని విరుద్దంగా రక్షణనిధులను దుర్వినియోగం చేయటానికి నిందిస్తోంది. ఇది రాజకీయ విప్రోత్పత్తికి కారణిస్తుంది.",
-      "relevanceScore": 6,
-      "tags": [
-        "YSRCP",
-        "Politics",
-        "Government"
-      ],
-      "processedAt": "2026-10-11T18:21:46.607Z"
+      "titleTe": "YSRCP accuses Andhra Pradesh government of misusing relief fund - The News Mill",
+      "summaryEn": "YSRCP accuses Andhra Pradesh government of misusing relief fund  The News Mill",
+      "summaryTe": "",
+      "relevanceScore": 5,
+      "tags": [],
+      "processedAt": "2026-10-13T19:56:30.250Z"
     },
     {
       "sourceId": "gn-telangana-revanth",
       "sourceName": "Google News — Telangana Revanth",
       "category": "politics",
       "language": "en",
-      "title": "Telangana CM Revanth Reddy receives Aryadan Muhammed-2026: Best Public Servant Award in Kerala - https://www.indiagazette.com/",
-      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPY1NYTmxtRzF3NFM1NGVzcVhnU3I4eHRRMmpPLWlRSVp6WmpzZklmLU1HekJFMFlldDFraDAyWi1LNjAyMnRocnYyYlh6NS05Q1VmNEVRMDJsV1BraVRJQ0pCczBzT1JzbjhRSnp1RkhQQWtBd2JsZmNwamF1SGpsREwtX25kb2lHcEhBSzZPV1N1QnlDNEFHV3JzLVNtQUVXaUNraFJDWFUwRmp0LTAwVWxKM0NEUm5ydXRuelZsRk4yYV9XQjU1MmtXQlltYmp2MVE4?oc=5",
-      "realLink": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPY1NYTmxtRzF3NFM1NGVzcVhnU3I4eHRRMmpPLWlRSVp6WmpzZklmLU1HekJFMFlldDFraDAyWi1LNjAyMnRocnYyYlh6NS05Q1VmNEVRMDJsV1BraVRJQ0pCczBzT1JzbjhRSnp1RkhQQWtBd2JsZmNwamF1SGpsREwtX25kb2lHcEhBSzZPV1N1QnlDNEFHV3JzLVNtQUVXaUNraFJDWFUwRmp0LTAwVWxKM0NEUm5ydXRuelZsRk4yYV9XQjU1MmtXQlltYmp2MVE4?oc=5",
-      "summary": "Telangana CM Revanth Reddy receives Aryadan Muhammed-2026: Best Public Servant Award in Kerala  https://www.indiagazette.com/",
-      "image": "https://picsum.photos/seed/520/640/360",
-      "publishedAt": "2026-09-25T22:29:00.000Z",
-      "titleTe": "తెలంగాణా CM రేవంత్ రెడ్డి ఉత్తమ జన సేవకుడుగా పురస్కారం పొందాడు",
-      "summaryEn": "Telangana CM Revanth Reddy receives Best Public Servant Award in Kerala.",
-      "summaryTe": "తెలంగాణా ముఖ్యమంత్రి రేవంత్ రెడ్డి కేరళలో ఉత్తమ ప్రజా సేవకుడు పురస్కారం అందుకున్నారు. ఇది రాష్ట్రానికి గర్వించదగిన విషయం.",
+      "title": "Telangana CM Revanth Reddy receives Aryadan Muhammed-2026: Best Public Servant Award in Kerala - ANI News",
+      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNMlFKRzU0Y1JfWkhlbkc4UjJnaTBPM2RQSWg1TEZXWE5YUjFOYk5TWjBCSmp3eEZnZG5sZlhRYi1GU2FMdGN3S01EUFY1VjBqRzRtbHM2VzdYTTZzS0xDRlJJTnVPWWI3bWF1Wjg1d1VxTTBEYmxBZ182NnFtZVJzRThKWjN2Wk1LNHhLemNrMjNwZzNSNWRJUjlGWmZHWkZka1FIbHg3WFl1R01MQzFvWVI2bjdkbC1fVFFNVUhLMDBPVUg1MGF4NlBrbVMxWG1GdFN4bHZpM280YzYtTDdNQzIwbjF2ckd0?oc=5",
+      "realLink": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNMlFKRzU0Y1JfWkhlbkc4UjJnaTBPM2RQSWg1TEZXWE5YUjFOYk5TWjBCSmp3eEZnZG5sZlhRYi1GU2FMdGN3S01EUFY1VjBqRzRtbHM2VzdYTTZzS0xDRlJJTnVPWWI3bWF1Wjg1d1VxTTBEYmxBZ182NnFtZVJzRThKWjN2Wk1LNHhLemNrMjNwZzNSNWRJUjlGWmZHWkZka1FIbHg3WFl1R01MQzFvWVI2bjdkbC1fVFFNVUhLMDBPVUg1MGF4NlBrbVMxWG1GdFN4bHZpM280YzYtTDdNQzIwbjF2ckd0?oc=5",
+      "summary": "Telangana CM Revanth Reddy receives Aryadan Muhammed-2026: Best Public Servant Award in Kerala  ANI News",
+      "image": "https://picsum.photos/seed/436/640/360",
+      "publishedAt": "2026-09-26T07:00:00.000Z",
+      "titleTe": "Telangana CM Revanth Reddy receives Aryadan Muhammed-2026: Best Public Servant Award in Kerala - ANI News",
+      "summaryEn": "Telangana CM Revanth Reddy receives Aryadan Muhammed-2026: Best Public Servant Award in Kerala  ANI News",
+      "summaryTe": "",
       "relevanceScore": 5,
-      "tags": [
-        "Revanth Reddy",
-        "Politics",
-        "Awards"
-      ],
-      "processedAt": "2026-10-11T18:21:46.607Z"
+      "tags": [],
+      "processedAt": "2026-10-13T19:56:30.250Z"
     },
     {
       "sourceId": "gn-prabhas",
@@ -365,38 +368,30 @@
       "summary": "Prabhas’ upcoming films Spirit and Fauzi spark fresh buzz, fans eagerly await Kalki 2 and Salaar 2  Adgully.com",
       "image": "https://picsum.photos/seed/654/640/360",
       "publishedAt": "2026-09-19T07:00:00.000Z",
-      "titleTe": "ప్రభాస్‌ తదుపరి చిత్రాలపై తాజా ప్రచారం",
-      "summaryEn": "Prabhas's upcoming films Spirit and Fauzi create buzz as fans anticipate Kalki 2 and Salaar 2.",
-      "summaryTe": "ప్రభాస్‌ యొక్క తదుపరి చిత్రాలు స్పిరిట్ మరియు ఫౌజీ విస్తృత ప్రచారాన్ని సృష్టిస్తున్నాయి. అభిమానులు కల్కి 2 మరియు సలార్ 2 కోసం ఊరుకుంటున్నారు.",
-      "relevanceScore": 9,
-      "tags": [
-        "Prabhas",
-        "Spirit",
-        "Fauzi"
-      ],
-      "processedAt": "2026-10-11T18:21:46.607Z"
+      "titleTe": "Prabhas’ upcoming films Spirit and Fauzi spark fresh buzz, fans eagerly await Kalki 2 and Salaar 2 - Adgully.com",
+      "summaryEn": "Prabhas’ upcoming films Spirit and Fauzi spark fresh buzz, fans eagerly await Kalki 2 and Salaar 2  Adgully.com",
+      "summaryTe": "",
+      "relevanceScore": 5,
+      "tags": [],
+      "processedAt": "2026-10-13T19:56:30.250Z"
     },
     {
-      "sourceId": "gn-ap-ysrcp-jagan",
-      "sourceName": "Google News — AP YSRCP Jagan",
-      "category": "politics",
+      "sourceId": "gn-prabhas",
+      "sourceName": "Google News — Prabhas",
+      "category": "entertainment",
       "language": "en",
-      "title": "YSRCP chief Jagan Mohan Reddy to begin padayatra across Andhra Pradesh ahead of 2029 general elections - CNBC TV18",
-      "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQN1FXTFZZbUpXc0dmZXBXMGVUcnJGNDJuOFRXcjVRVTJoUlhFQi1OR1hYVHhqQjJQemVwb09QUnF0TDdaLUZwcWxZUzNuT2d4aGRTOG5QdzRTSlM2Rm14cDh2czlfVEtHM1ROWHVHbWdJaWd4VEpLdXpxaXU3TG9nUFZWb1dKZU1UaGdiblo0WUFXenphNmllUVloM0IwcWRKSHZUejdtYWhnWFBZbFpyVmVrZi1KOUN1c1lEdHplNHBTRVhIVDRzUkJRODFuOUd2SnhPUDQwVU9NeVFmWjg4SkJEMGxuODVCRkhj0gHwAUFVX3lxTE5GNTJ4UXFGWXdreUlPU0JvYm4yelhKdkozMVFZMFk2c09MdEVmOVlnbTFlLXdCMFZvX29TVnRBYTZqNE83Tl8wNko2Q001ajhheTR6UEdnelBnNVBPTkM1alpuME16djNTSUg1eEJjbVVLR0JfcEJZVkJSMElwMUxsT0M3ckpxYXlXZHBmY2NTeUlKVGNwemVSbXBWUjE4d1VlazNoRmJzN1hKdkRTSHZZLUc3QzN2VUppT3UtSmdISmZ4WnpZZjBpZ1RZazNqakZhWmhERGRoZ2JaTV9IYTRVQnNBUy1PZDhCWHRlSS03SA?oc=5",
-      "realLink": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQN1FXTFZZbUpXc0dmZXBXMGVUcnJGNDJuOFRXcjVRVTJoUlhFQi1OR1hYVHhqQjJQemVwb09QUnF0TDdaLUZwcWxZUzNuT2d4aGRTOG5QdzRTSlM2Rm14cDh2czlfVEtHM1ROWHVHbWdJaWd4VEpLdXpxaXU3TG9nUFZWb1dKZU1UaGdiblo0WUFXenphNmllUVloM0IwcWRKSHZUejdtYWhnWFBZbFpyVmVrZi1KOUN1c1lEdHplNHBTRVhIVDRzUkJRODFuOUd2SnhPUDQwVU9NeVFmWjg4SkJEMGxuODVCRkhj0gHwAUFVX3lxTE5GNTJ4UXFGWXdreUlPU0JvYm4yelhKdkozMVFZMFk2c09MdEVmOVlnbTFlLXdCMFZvX29TVnRBYTZqNE83Tl8wNko2Q001ajhheTR6UEdnelBnNVBPTkM1alpuME16djNTSUg1eEJjbVVLR0JfcEJZVkJSMElwMUxsT0M3ckpxYXlXZHBmY2NTeUlKVGNwemVSbXBWUjE4d1VlazNoRmJzN1hKdkRTSHZZLUc3QzN2VUppT3UtSmdISmZ4WnpZZjBpZ1RZazNqakZhWmhERGRoZ2JaTV9IYTRVQnNBUy1PZDhCWHRlSS03SA?oc=5",
-      "summary": "YSRCP chief Jagan Mohan Reddy to begin padayatra across Andhra Pradesh ahead of 2029 general elections  CNBC TV18",
-      "image": "https://picsum.photos/seed/382/640/360",
-      "publishedAt": "2026-09-09T07:00:00.000Z",
-      "titleTe": "YSRCP అధ్యక్షుడు జగన్ మోహన్ రెడ్డి 2029 సాధారణ ఎన్నికల ముందు పట్టయాత్ర చేయబోతున్నారు",
-      "summaryEn": "YSRCP chief Jagan Mohan Reddy plans to begin a padayatra across Andhra Pradesh ahead of the 2029 general elections.",
-      "summaryTe": "YSRCP అధ్యక్షుడు జగన్ మోహన్ రెడ్డి 2029 సాధారణ ఎన్నికల ముందు ఆంధ్రప్రదేశ్‌లో పట్టయాత్ర ప్రారంభించడానికి సన్నాహాలు చేస్తున్నారు. ఇది రాజకీయ ప్ర‌భావం చూపించగలదన్నది అభిమతం.",
-      "relevanceScore": 9,
-      "tags": [
-        "politics",
-        "YSRCP",
-        "Andhra Pradesh"
-      ],
-      "processedAt": "2026-10-11T18:21:51.200Z"
+      "title": "Prabhas’ leaked looks from Spirit and Fauzi spark buzz; fans say, \"What a lineup!\" - Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPSzRyeUNkTEotNUNSTmYtc3hMUVdoN2gwQnNHaFBRdUNJeHVhM3YzU01YM25BVy1jTlBScWlkdzYwTkxaek41clFHekF4ZGh6VEhMUjk0Y24wYldFZmc1NXN3SElEVlQzLS1lRW9jTHY3TzRWWW93NHF6bjdpNnJHOTlHcUxjbEJUOXI4djR1TnphWl9ILS1SNGE1aVpUZkRkMkxPSTlBbG9EbXMybHBFX3ZrUVdHTEd1RTdiX2JNS2tCSmptWFk5X2VtV0hRM1lLSjUyOGxQTmdoQkdUc2lvcXJnajfSAeoBQVVfeXFMT2M1X1V2T19wTWNDQU85aEQteVlaSzNZZ2taQ1lKbjhWQko4ZHo5aUJTUHJCaEl3cF91b1ZHZ3oyc29HMEFValZKV2NWcGtRRnRzM284NFB2WmlnMmNyM3ZCTnNld3E4aktGTGxLb1p1U3l3RVIyRnhGOXlBeG80UjlFYkp6MHQ1b3dDQ09hQ3g2VVZ3LWYtYjFuRnByX18wRUxVNDJfbjBwTHlYY1liUmpDdTlfaVdZUVcxVURvMzdTb243YUVhaE1FcUY0Z3dUbms0TWQ3aVhZek12OVRPNEJGMnM4cWZ2azln?oc=5",
+      "realLink": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPSzRyeUNkTEotNUNSTmYtc3hMUVdoN2gwQnNHaFBRdUNJeHVhM3YzU01YM25BVy1jTlBScWlkdzYwTkxaek41clFHekF4ZGh6VEhMUjk0Y24wYldFZmc1NXN3SElEVlQzLS1lRW9jTHY3TzRWWW93NHF6bjdpNnJHOTlHcUxjbEJUOXI4djR1TnphWl9ILS1SNGE1aVpUZkRkMkxPSTlBbG9EbXMybHBFX3ZrUVdHTEd1RTdiX2JNS2tCSmptWFk5X2VtV0hRM1lLSjUyOGxQTmdoQkdUc2lvcXJnajfSAeoBQVVfeXFMT2M1X1V2T19wTWNDQU85aEQteVlaSzNZZ2taQ1lKbjhWQko4ZHo5aUJTUHJCaEl3cF91b1ZHZ3oyc29HMEFValZKV2NWcGtRRnRzM284NFB2WmlnMmNyM3ZCTnNld3E4aktGTGxLb1p1U3l3RVIyRnhGOXlBeG80UjlFYkp6MHQ1b3dDQ09hQ3g2VVZ3LWYtYjFuRnByX18wRUxVNDJfbjBwTHlYY1liUmpDdTlfaVdZUVcxVURvMzdTb243YUVhaE1FcUY0Z3dUbms0TWQ3aVhZek12OVRPNEJGMnM4cWZ2azln?oc=5",
+      "summary": "Prabhas’ leaked looks from Spirit and Fauzi spark buzz; fans say, \"What a lineup!\"  Moneycontrol.com",
+      "image": "https://picsum.photos/seed/173/640/360",
+      "publishedAt": "2026-09-19T07:00:00.000Z",
+      "titleTe": "Prabhas’ leaked looks from Spirit and Fauzi spark buzz; fans say, \"What a lineup!\" - Moneycontrol.com",
+      "summaryEn": "Prabhas’ leaked looks from Spirit and Fauzi spark buzz; fans say, \"What a lineup!\"  Moneycontrol.com",
+      "summaryTe": "",
+      "relevanceScore": 5,
+      "tags": [],
+      "processedAt": "2026-10-13T19:56:30.250Z"
     },
     {
       "sourceId": "gn-telangana-brs",
@@ -409,38 +404,16 @@
       "summary": "KTR moves Telangana Assembly motion over law and order  Awaz The Voice",
       "image": "https://picsum.photos/seed/330/640/360",
       "publishedAt": "2026-09-09T07:00:00.000Z",
-      "titleTe": "కేఏతిఆర్ తెలంగాణ అసెంబ్లీ చట్టం మరియు ఆదేశాలకు సంబంధించి నిర్ణయాలు తీసుకుంటున్నారు",
-      "summaryEn": "KTR moved a motion in the Telangana Assembly concerning law and order.",
-      "summaryTe": "కేఏతిఆర్ తెలంగాణ అసెంబ్లీకి చట్టం మరియు ఆదేశాల పై మోషన్ ను ప్రవేశపెట్టారు. ఇది రాష్ట్రంలో శాంతి మరియు క్రమశిక్షణను ప్రోత్సహించడానికి महत्वपूर्ण.",
-      "relevanceScore": 8,
+      "titleTe": "KTR తెలంగాణ అసెంబ్లీ మోషన్‌ను ప్రభుత్వ చట్టం మరియు సరైన నిర్వహణపైకి జరిపించారు",
+      "summaryEn": "KTR has tabled a motion in the Telangana Assembly regarding law and order issues, drawing attention to governance.",
+      "summaryTe": "KTR తెలంగాణ అసెంబ్లీలో ప్రభుత్వం చట్టం మరియు సరైన నిర్వహణపై మోషన్‌ను ప్రవేశపెట్టారు. ఇది నిర్వహణపై దృష్టి నిలిపిస్తుంది.",
+      "relevanceScore": 6,
       "tags": [
         "politics",
         "Telangana",
         "law"
       ],
-      "processedAt": "2026-10-11T18:21:51.200Z"
-    },
-    {
-      "sourceId": "gn-ott-netflix-telugu",
-      "sourceName": "Google News — Netflix Telugu",
-      "category": "ott",
-      "language": "en",
-      "title": "Friday OTT releases (September 11, 2026): 5 new movies & shows on Netflix, Prime Video, ZEE5 & more - GQ India",
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQTVJqRXl3dGxLVXYxa2NRaVlQNkFXV1U1ZUlYYXk5MXBpbmh1U0liSjVNUG1VRlloOXBPQUlUZFlmcFhGcEhyNDlsWC1jeVlaSDZXLUd3N3ozaTJSMjZ1OFJ5QlluNzlRVVAyU21uaGMxTkF0SE1ZdDRwR2NHX0RscVB3Ni1ScTZPWFdwX1YwMkM0STMydE1NRS1ma1ZJc29CbVRsUERHQ1g4OWJmWmw3aWxZQkg3TG5M?oc=5",
-      "realLink": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQTVJqRXl3dGxLVXYxa2NRaVlQNkFXV1U1ZUlYYXk5MXBpbmh1U0liSjVNUG1VRlloOXBPQUlUZFlmcFhGcEhyNDlsWC1jeVlaSDZXLUd3N3ozaTJSMjZ1OFJ5QlluNzlRVVAyU21uaGMxTkF0SE1ZdDRwR2NHX0RscVB3Ni1ScTZPWFdwX1YwMkM0STMydE1NRS1ma1ZJc29CbVRsUERHQ1g4OWJmWmw3aWxZQkg3TG5M?oc=5",
-      "summary": "Friday OTT releases (September 11, 2026): 5 new movies & shows on Netflix, Prime Video, ZEE5 & more  GQ India",
-      "image": "https://picsum.photos/seed/73/640/360",
-      "publishedAt": "2026-09-09T07:00:00.000Z",
-      "titleTe": "ఐదు కొత్త సినిమాలు మరియు షోలు: శుక్రవారం OTT విడుదలలు",
-      "summaryEn": "This Friday offers five new movies and shows on major OTT platforms.",
-      "summaryTe": "ఈ శుక్రవారం ప్రధాన OTT ప్లాట్‌ఫామ్స్‌లో ఐదు కొత్త సినిమాలు మరియు షోలు అందిస్తాయి. ఇది ప్రేక్షకులకు వైవిధ్యాన్ని అందిస్తుంది.",
-      "relevanceScore": 5,
-      "tags": [
-        "OTT",
-        "Friday Releases",
-        "Movies"
-      ],
-      "processedAt": "2026-10-11T18:21:46.607Z"
+      "processedAt": "2026-10-13T19:56:37.940Z"
     },
     {
       "sourceId": "gn-ott-netflix-telugu",
@@ -453,16 +426,12 @@
       "summary": "New Indian Movies & Series on Netflix: September 2026  What's on Netflix",
       "image": "https://picsum.photos/seed/745/640/360",
       "publishedAt": "2026-09-03T07:00:00.000Z",
-      "titleTe": "సెప్టెంబర్ 2026లో కొత్త భారతీయ చిత్రాలు మరియు సిరీస్",
-      "summaryEn": "New Indian movies and series will be available on Netflix in September 2026.",
-      "summaryTe": "సెప్టెంబర్ 2026లో నెట్‌ఫ్లిక్స్‌లో కొత్త భారతీయ చిత్రాలు మరియు సిరీస్ అందుబాటులో ఉన్నాయి. ఇది నెట్‌ఫ్లిక్స్ ప్రియులకు సంబందిస్తది.",
+      "titleTe": "New Indian Movies & Series on Netflix: September 2026 - What's on Netflix",
+      "summaryEn": "New Indian Movies & Series on Netflix: September 2026  What's on Netflix",
+      "summaryTe": "",
       "relevanceScore": 5,
-      "tags": [
-        "Netflix",
-        "Indian Movies",
-        "September"
-      ],
-      "processedAt": "2026-10-11T18:21:46.607Z"
+      "tags": [],
+      "processedAt": "2026-10-13T19:56:30.250Z"
     },
     {
       "sourceId": "gn-hyderabad-infra",
@@ -475,16 +444,17 @@
       "summary": "KNR Constructions secures 158 INR-Crore EPC order from GHMC  Biltrax Media",
       "image": "https://picsum.photos/seed/510/640/360",
       "publishedAt": "2026-08-31T07:00:00.000Z",
-      "titleTe": "కేఎన్‌ఆర్ కన్స్ట్రక్షన్స్ 158 కోట్ల ఇప్టీ ఆర్డర్‌ను జీహెచ్ఎంసీ నుండి పొందింది",
-      "summaryEn": "KNR Constructions has secured an EPC order worth ₹158 crores from GHMC.",
-      "summaryTe": "కేఎన్‌ఆರ್ కన్స్ట్రక్షన్స్ జీహెచ్ఎంసీ నుండి ₹158 కోట్ల విస్తరణ ప్రాజెక్టు ఆర్డర్‌ను పొందింది.",
-      "relevanceScore": 6,
+      "titleTe": "KNR కన్‌స్ట్రక్షన్స్ GHMC నుండి 158 కోట్ల EPC ఆదేశాల్ని పొందింది",
+      "summaryEn": "KNR Constructions has secured an EPC order worth ₹158 crore from the Greater Hyderabad Municipal Corporation.",
+      "summaryTe": "KNR కన్‌స్ట్రక్షన్స్ గ్రేటర్ హైదరాబాద్ మునిసిపల్ కార్పొరేషన్ నుండి 158 కోట్ల రూపాయల EPC ఆదేశాలను పొందింది. ఇది హైదరాబాద్ వాల్యూ నిర్మాణ రంగానికి పెద్ద పరిణామం.",
+      "relevanceScore": 7,
       "tags": [
-        "construction",
-        "Hyderabad",
-        "finance"
+        "KNR Constructions",
+        "EPC",
+        "GHMC",
+        "infrastructure"
       ],
-      "processedAt": "2026-10-11T18:21:31.345Z"
+      "processedAt": "2026-10-13T19:56:07.087Z"
     },
     {
       "sourceId": "gn-ott-aha",
@@ -497,38 +467,53 @@
       "summary": "4 South OTT Releases To Watch This Week: Prithviraj Sukumaran’s I, Nobody To Pluto  IIFA",
       "image": "https://picsum.photos/seed/927/640/360",
       "publishedAt": "2026-08-29T07:00:00.000Z",
-      "titleTe": "ఈ వారానికి చూసుకోవాలసిన 4 సౌత్ OTT విడుదలలు",
-      "summaryEn": "Highlights upcoming South OTT releases this week, including notable titles.",
-      "summaryTe": "ఈ వారానికి రాబోయే సౌత్ OTT విడుదలలను వివరిస్తుంది, ప్రధానమైన శీర్షకాలను అందిస్తుంది. ఇది OTT అభిమానులకు మంచి సమాచారం.",
-      "relevanceScore": 6,
-      "tags": [
-        "OTT",
-        "Releases",
-        "South"
-      ],
-      "processedAt": "2026-10-11T18:21:46.607Z"
+      "titleTe": "4 South OTT Releases To Watch This Week: Prithviraj Sukumaran’s I, Nobody To Pluto - IIFA",
+      "summaryEn": "4 South OTT Releases To Watch This Week: Prithviraj Sukumaran’s I, Nobody To Pluto  IIFA",
+      "summaryTe": "",
+      "relevanceScore": 5,
+      "tags": [],
+      "processedAt": "2026-10-13T19:56:30.250Z"
     },
     {
-      "sourceId": "gn-ap-chandrababu",
-      "sourceName": "Google News — AP Chandrababu TDP",
-      "category": "politics",
+      "sourceId": "gn-ott-netflix-telugu",
+      "sourceName": "Google News — Netflix Telugu",
+      "category": "ott",
       "language": "en",
-      "title": "Andhra Pradesh FDI Surges Six-Fold Under TDP Govt - Rediff MoneyWiz",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPcS1LQi0zX0hjRTBNOVNab0JXYWgzblZ3T2NHT2N5YkFJdFRtazRvUjdCdWo1ZTl5clJHR3p3VHp4cWhfZEVJcHZ4cUIzNkIwaEo4NlY3OUprRzB1QUlzSkFUVHdfMEdROWxxYVhkd1Q0Ny03U1RXOFdpZ2lkRWVJREVpQ1JPVm9ZMnJHcGFNZXpZVVpVa1lnYWJjNFdaa0t3QmJz0gGoAUFVX3lxTE5vR2YtTzNmMFYtMk83Ym8xdmx1cFJqQ3hVMzgtZVJCZ09mRlVPNXo3UkJQSE5XLXJjcUh3U1F3Mi1NWDlCcE1ZZnlacnVLdmNvNEtsNS1DQ0dVcEZsdEF1YVFCNWhwdW5MSDNWamozY0tJV3g0aURKQXJFZ1NnbUJTMWd5UE80VV9rWjNPYWJTMU92OWdqaWt4ZW8xYURUTzAyQ21uWThCRQ?oc=5",
-      "realLink": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPcS1LQi0zX0hjRTBNOVNab0JXYWgzblZ3T2NHT2N5YkFJdFRtazRvUjdCdWo1ZTl5clJHR3p3VHp4cWhfZEVJcHZ4cUIzNkIwaEo4NlY3OUprRzB1QUlzSkFUVHdfMEdROWxxYVhkd1Q0Ny03U1RXOFdpZ2lkRWVJREVpQ1JPVm9ZMnJHcGFNZXpZVVpVa1lnYWJjNFdaa0t3QmJz0gGoAUFVX3lxTE5vR2YtTzNmMFYtMk83Ym8xdmx1cFJqQ3hVMzgtZVJCZ09mRlVPNXo3UkJQSE5XLXJjcUh3U1F3Mi1NWDlCcE1ZZnlacnVLdmNvNEtsNS1DQ0dVcEZsdEF1YVFCNWhwdW5MSDNWamozY0tJV3g0aURKQXJFZ1NnbUJTMWd5UE80VV9rWjNPYWJTMU92OWdqaWt4ZW8xYURUTzAyQ21uWThCRQ?oc=5",
-      "summary": "Andhra Pradesh FDI Surges Six-Fold Under TDP Govt  Rediff MoneyWiz",
-      "image": "https://picsum.photos/seed/940/640/360",
-      "publishedAt": "2026-08-06T07:00:00.000Z",
-      "titleTe": "తెలంగాణా రాష్ట్రంలో FDI బహుళగుణంగా పెరుగుతుంది",
-      "summaryEn": "FDI in Andhra Pradesh reportedly surged six-fold under the TDP government.",
-      "summaryTe": "టిడిపి ప్రభుత్వంలో అ-Andhra Pradesh లో FDI తార్కికంగా ఆరు రెట్లు పెరిగిందని నివేదికలు చెబుతున్నాయి. ఇది ఆర్థిక ప్రాజెక్ట్‌కు అవసరం.",
+      "title": "Friday OTT releases (August 28, 2026): Babita Singh Reporting to Chumbak, 6 new films and series to watch on Netflix, JioHotstar, and more - India.com",
+      "link": "https://news.google.com/rss/articles/CBMijwJBVV95cUxQNXo2MFExVzBMMlozTW9CX0NZS0l3NjFiTjVPSGpmRFVkS1BweFZ0cWlrNlg0eVlXenVMWU1GVU9JUlFiR0ZFZTZDbFZwVkNIb3FpU3hwWmpHVzluSnVVM1NCRmE4MU5jNXZnU01zVE9UNEZNVmp6RnYwTG5XNzA4RVZPYjMtQ0d4R1dJNl84QkRhQkZOSHNENzhJV1lGNWJSc0c5b3VMRGlkZzNsMmhxTmJVeFdmUWRDQl9SSFdLSU5neVJDTktrNWhoOVpTLWpqMk1aNi1YMS1CUTZWYUhHRjJ0MEpaWUVvNkJvMmVLdzFqU1pVcUlJVFpIRm9NUHlmQ2Y3SWQ3OXBHaU43SU9Z?oc=5",
+      "realLink": "https://news.google.com/rss/articles/CBMijwJBVV95cUxQNXo2MFExVzBMMlozTW9CX0NZS0l3NjFiTjVPSGpmRFVkS1BweFZ0cWlrNlg0eVlXenVMWU1GVU9JUlFiR0ZFZTZDbFZwVkNIb3FpU3hwWmpHVzluSnVVM1NCRmE4MU5jNXZnU01zVE9UNEZNVmp6RnYwTG5XNzA4RVZPYjMtQ0d4R1dJNl84QkRhQkZOSHNENzhJV1lGNWJSc0c5b3VMRGlkZzNsMmhxTmJVeFdmUWRDQl9SSFdLSU5neVJDTktrNWhoOVpTLWpqMk1aNi1YMS1CUTZWYUhHRjJ0MEpaWUVvNkJvMmVLdzFqU1pVcUlJVFpIRm9NUHlmQ2Y3SWQ3OXBHaU43SU9Z?oc=5",
+      "summary": "Friday OTT releases (August 28, 2026): Babita Singh Reporting to Chumbak, 6 new films and series to watch on Netflix, JioHotstar, and more  India.com",
+      "image": "https://picsum.photos/seed/618/640/360",
+      "publishedAt": "2026-08-27T07:00:00.000Z",
+      "titleTe": "Friday OTT releases (August 28, 2026): Babita Singh Reporting to Chumbak, 6 new films and series to watch on Netflix, JioHotstar, and more - India.com",
+      "summaryEn": "Friday OTT releases (August 28, 2026): Babita Singh Reporting to Chumbak, 6 new films and series to watch on Netflix, JioHotstar, and more  India.com",
+      "summaryTe": "",
+      "relevanceScore": 5,
+      "tags": [],
+      "processedAt": "2026-10-13T19:56:30.250Z"
+    },
+    {
+      "sourceId": "gn-nri-achievements",
+      "sourceName": "Google News — NRI Achievements",
+      "category": "achievements",
+      "language": "en",
+      "title": "NRI Achievers Awards 2026 Singapore Celebrates Global Excellence - ThePrint",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOWENIT0wzT1QtMWhRcGxCaWFKNDlraWdrVTZDOTVOMGRGVUpENlA3b1lqQjctQmJWTFZFRzZqTFFYY21LWlEyRDJDNUR6MXhCRkM2SVFFYkJOVVY4eGNJdklhbTZEbnNOMlBJZUVwME1TSVA5Z25WUkpIR3dpazhVSUVCTHViRmpCOWl4NDM4Nk9KMlBidEc0MThsa0NxNTgyMEotd1VGV1RDSmhCaHdpZjdR0gG3AUFVX3lxTE53LXNwQ3ZzWnpFbHJtX2RUNVNwUmwwdnRDN0VPMVJDd2NCQlJCZ2l0cUlkZEFGVlktbnlPektId2Njd1NKc19MUGRodFpFR04zdGN6LWpBNlhVa2pucmhxSGxfcmtMNnhsVC1aWUR1cmlHa09zRVhMZXI0T05pVkMyMjhkTlVCUkQxeVd2QnhNXzlDNFBNeFJEQ2ZYZHF0bnRNbHhiQk4wTFRuSDRIbGRwdlNVUU5YUQ?oc=5",
+      "realLink": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOWENIT0wzT1QtMWhRcGxCaWFKNDlraWdrVTZDOTVOMGRGVUpENlA3b1lqQjctQmJWTFZFRzZqTFFYY21LWlEyRDJDNUR6MXhCRkM2SVFFYkJOVVY4eGNJdklhbTZEbnNOMlBJZUVwME1TSVA5Z25WUkpIR3dpazhVSUVCTHViRmpCOWl4NDM4Nk9KMlBidEc0MThsa0NxNTgyMEotd1VGV1RDSmhCaHdpZjdR0gG3AUFVX3lxTE53LXNwQ3ZzWnpFbHJtX2RUNVNwUmwwdnRDN0VPMVJDd2NCQlJCZ2l0cUlkZEFGVlktbnlPektId2Njd1NKc19MUGRodFpFR04zdGN6LWpBNlhVa2pucmhxSGxfcmtMNnhsVC1aWUR1cmlHa09zRVhMZXI0T05pVkMyMjhkTlVCUkQxeVd2QnhNXzlDNFBNeFJEQ2ZYZHF0bnRNbHhiQk4wTFRuSDRIbGRwdlNVUU5YUQ?oc=5",
+      "summary": "NRI Achievers Awards 2026 Singapore Celebrates Global Excellence  ThePrint",
+      "image": "https://picsum.photos/seed/605/640/360",
+      "publishedAt": "2026-08-05T07:00:00.000Z",
+      "titleTe": "NRI అచీవర్స్ అవార్డ్స్ 2026 సింగపూర్ ప్రపంచ ఉపాదేయతను జరుపుకుంటుంది",
+      "summaryEn": "The NRI Achievers Awards 2026 in Singapore celebrated global excellence among non-resident Indians.",
+      "summaryTe": "సింగపూర్‌లో జరిగిన NRI అచీవర్స్ అవార్డ్స్ 2026非 నివాస భారతీయుల అంతర్జాతీయ సాఫల్యాన్ని జరుపుకుంటున్నాయి. ఇది ప్రపంచవ్యాప్తంగా NRIలకు ఉన్న విశేష గుర్తింపుగా మారింది.",
       "relevanceScore": 6,
       "tags": [
-        "FDI",
-        "Economy",
-        "Politics"
+        "NRI",
+        "awards",
+        "excellence",
+        "Singapore"
       ],
-      "processedAt": "2026-10-11T18:21:46.607Z"
+      "processedAt": "2026-10-13T19:56:07.087Z"
     },
     {
       "sourceId": "gn-telugu-temples",
@@ -541,16 +526,16 @@
       "summary": "Shravan Maas 2026 Start Dates, Traditions and Puja Guide  IndianEagle",
       "image": "https://picsum.photos/seed/38/640/360",
       "publishedAt": "2026-08-03T07:00:00.000Z",
-      "titleTe": "శ్రావణ మాసం 2026 ప్రారంభ తారీఖులు, సంప్రదాయాలు మరియు పూజా మార్గదర్శకాలు",
-      "summaryEn": "A guide to the start dates, traditions, and rituals for Shravan Maas 2026.",
-      "summaryTe": "2026లో శ్రావణ మాసం ప్రారంభ తారీఖుల, సంప్రదాయాల మరియు పూజా మార్గదర్శకాలపై ఒక గైడ్ ఇవ్వబడింది. ఇది భక్తులకు ఉపయోగపడుతుంది.",
-      "relevanceScore": 8,
+      "titleTe": "శ్రావణ మాస 2026 మొదటి తేదీలు, సంప్రదాయాలు మరియు పూజా గైడ్",
+      "summaryEn": "A guide for the start dates, traditions, and pujas related to Shravan Maas 2026.",
+      "summaryTe": "శ్రావణ మాస 2026కు సంబంధించిన మొదటి తేదీలు, సంప్రదాయాలు మరియు పూజా గైడ్ కోసం ఇది.",
+      "relevanceScore": 6,
       "tags": [
-        "Shravan Maas",
-        "Telugu",
-        "traditions"
+        "Shravan",
+        "tradition",
+        "festivals"
       ],
-      "processedAt": "2026-10-11T18:21:51.200Z"
+      "processedAt": "2026-10-13T19:56:37.940Z"
     },
     {
       "sourceId": "gn-consumer-rights",
@@ -563,16 +548,16 @@
       "summary": "Empowering India's consumers: Inside Mission GraHAQ's fight against online scams  About Amazon India",
       "image": "https://picsum.photos/seed/883/640/360",
       "publishedAt": "2026-07-31T11:16:14.000Z",
-      "titleTe": "భారతదేశం వినియోగదారులను సశక్తీకరించడం: ఆన్‌లైన్ మోసాలపై మిషన్ గ్రహక్ యొక్క పోరాటం",
-      "summaryEn": "Mission GraHAQ aims to empower Indian consumers in the fight against online scams.",
-      "summaryTe": "ఆన్‌లైన్ మోసాలకు వ్యతిరేకంగా పోరాడడం కోసం మిషన్ గ్రహక్ భారతదేశం వినియోగదారులను సశక్తీకరించడం లక్ష్యంగా పెట్టుకుంది.",
-      "relevanceScore": 8,
+      "titleTe": "ఇండియాలో వినియోగదారులను బలం मिळించడం: ఆన్‌లైన్ మోసాలపై మిషన్ గ్రహాక్ యుద్ధం",
+      "summaryEn": "Mission GraHAQ is fighting against online scams to empower consumers in India.",
+      "summaryTe": "మిషన్ గ్రహాక్ ఆన్‌లైన్ మోసాలపై యుద్ధం చేస్తోంది, తద్వారా భారతదేశంలో వినియోగదారులకు బలం అందిస్తోంది.",
+      "relevanceScore": 5,
       "tags": [
         "consumer rights",
-        "empowerment",
-        "online scams"
+        "online scams",
+        "India"
       ],
-      "processedAt": "2026-10-11T18:21:31.345Z"
+      "processedAt": "2026-10-13T19:56:37.940Z"
     },
     {
       "sourceId": "gn-ott-aha",
@@ -585,16 +570,12 @@
       "summary": "DT Next OTT Watchlist | From Gatta Kusthi 2 to Heartbeat Season 3, check out titles releasing in the last week of July 2026  DT Next",
       "image": "https://picsum.photos/seed/177/640/360",
       "publishedAt": "2026-07-27T07:00:00.000Z",
-      "titleTe": "డిటి నెక్ట్స్ OTT వారమును చూసి, తాజా పేర్లను పరిశీలించండి",
-      "summaryEn": "DT Next highlights various titles releasing in the last week of July 2026.",
-      "summaryTe": "డిటి నెక్ట్స్ డేటాను చివరి నాటికి విడుద‌ల చేసేందుకు చేరుకున్న వివిధ శీర్షికలు ప్రదర్శించాయి. ఇది కొత్త సినిమాలపై చర్చ మొదలుపెడుతుంది.",
+      "titleTe": "DT Next OTT Watchlist | From Gatta Kusthi 2 to Heartbeat Season 3, check out titles releasing in the last week of July 2026 - DT Next",
+      "summaryEn": "DT Next OTT Watchlist | From Gatta Kusthi 2 to Heartbeat Season 3, check out titles releasing in the last week of July 2026  DT Next",
+      "summaryTe": "",
       "relevanceScore": 5,
-      "tags": [
-        "OTT",
-        "Releases",
-        "July"
-      ],
-      "processedAt": "2026-10-11T18:21:46.607Z"
+      "tags": [],
+      "processedAt": "2026-10-13T19:56:30.250Z"
     },
     {
       "sourceId": "gn-prabhas",
@@ -607,16 +588,12 @@
       "summary": "Spirit: Did Prabhas and Sandeep Reddy Vanga already wrap up 40 percent of the shoot? Here’s what we know  Pinkvilla",
       "image": "https://picsum.photos/seed/569/640/360",
       "publishedAt": "2026-07-20T07:00:00.000Z",
-      "titleTe": "స్పిరిట్: ప్రభాస్ మరియు సందీప్ రెడ్డి వంగ 40 శాతం షూట్ ముగించారా?",
-      "summaryEn": "Prabhas and director Sandeep Reddy Vanga reportedly wrap up 40% of the shoot for Spirit.",
-      "summaryTe": "ప్రభాస్ మరియు దర్శకుడు సందీప్ రెడ్డి వంగ స్పిరిట్ చిత్రానికి 40% షూట్‌ను ముగించారని నివేదికలు వెల్లడిస్తున్నాయి. ఇది అభిమానులకు మంచి వార్త.",
-      "relevanceScore": 8,
-      "tags": [
-        "Spirit",
-        "Prabhas",
-        "Sandeep Reddy Vanga"
-      ],
-      "processedAt": "2026-10-11T18:21:46.607Z"
+      "titleTe": "Spirit: Did Prabhas and Sandeep Reddy Vanga already wrap up 40 percent of the shoot? Here’s what we know - Pinkvilla",
+      "summaryEn": "Spirit: Did Prabhas and Sandeep Reddy Vanga already wrap up 40 percent of the shoot? Here’s what we know  Pinkvilla",
+      "summaryTe": "",
+      "relevanceScore": 5,
+      "tags": [],
+      "processedAt": "2026-10-13T19:56:30.250Z"
     },
     {
       "sourceId": "gn-consumer-rights",
@@ -629,16 +606,34 @@
       "summary": "Digital Arrest Scams and the Limits of Domestic Enforcement  orfonline.org",
       "image": "https://picsum.photos/seed/212/640/360",
       "publishedAt": "2026-07-18T07:00:00.000Z",
-      "titleTe": "డిజిటల్ అరెస్టు మోసాలు మరియు లోకల్ క్రిమినల్ చట్టానికీ పరిమితులు",
-      "summaryEn": "The article discusses digital arrest scams and the limitations of domestic enforcement mechanisms.",
-      "summaryTe": "ఈ ఆర్టికల్ డిజిటల్ అరెస్టు మోసాలు మరియు లోకల్ ఆంక్షల చర్యల పరిమితులపై చర్చిస్తుంది.",
-      "relevanceScore": 6,
+      "titleTe": "డిజిటల్ అరెస్ట్ మోసాలు మరియు దేశీ నిర్వహణ సీమితులు",
+      "summaryEn": "The article discusses digital arrest scams and the challenges of enforcing laws domestically.",
+      "summaryTe": "డిజిటల్ అరెస్ట్ మోసాలు మరియు దేశంలో చట్టాలను అమలుచేసే సవాళ్లు గురించి ఈ ఆర్టికల్ చర్చిస్తుంది.",
+      "relevanceScore": 4,
       "tags": [
-        "digital scams",
-        "law",
-        "enforcement"
+        "scams",
+        "law enforcement",
+        "digital"
       ],
-      "processedAt": "2026-10-11T18:21:31.345Z"
+      "processedAt": "2026-10-13T19:56:37.940Z"
+    },
+    {
+      "sourceId": "gn-ott-netflix-telugu",
+      "sourceName": "Google News — Netflix Telugu",
+      "category": "ott",
+      "language": "en",
+      "title": "Friday OTT releases (July 17, 2026): 5 new movies & shows on Netflix, JioHotstar & more - GQ India",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNTGlNZlVteEtpcDRKSFNNTDRQcElxcmVuWWp4akp1anVZLV84UmNZLTlwVFFHZlljRzF6YVd0MTlhR0hvVnZtZGxuZkd2Vy1SWWJ4bmpBWWFOLW8tVW9WTTlBdDA3Ym50NE5Idy1nRHpUb1pjXzdhRzkxb28zNHo3RVltMUJVYzZ0emZKdlRsX0dFaHI0cWdNaC0xU19FQzNzbDVMeVN2TWVZcmlIYm9rYkMySlFiRjVCbmc?oc=5",
+      "realLink": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNTGlNZlVteEtpcDRKSFNNTDRQcElxcmVuWWp4akp1anVZLV84UmNZLTlwVFFHZlljRzF6YVd0MTlhR0hvVnZtZGxuZkd2Vy1SWWJ4bmpBWWFOLW8tVW9WTTlBdDA3Ym50NE5Idy1nRHpUb1pjXzdhRzkxb28zNHo3RVltMUJVYzZ0emZKdlRsX0dFaHI0cWdNaC0xU19FQzNzbDVMeVN2TWVZcmlIYm9rYkMySlFiRjVCbmc?oc=5",
+      "summary": "Friday OTT releases (July 17, 2026): 5 new movies & shows on Netflix, JioHotstar & more  GQ India",
+      "image": "https://picsum.photos/seed/150/640/360",
+      "publishedAt": "2026-07-15T07:00:00.000Z",
+      "titleTe": "Friday OTT releases (July 17, 2026): 5 new movies & shows on Netflix, JioHotstar & more - GQ India",
+      "summaryEn": "Friday OTT releases (July 17, 2026): 5 new movies & shows on Netflix, JioHotstar & more  GQ India",
+      "summaryTe": "",
+      "relevanceScore": 5,
+      "tags": [],
+      "processedAt": "2026-10-13T19:56:30.250Z"
     },
     {
       "sourceId": "gn-allu-arjun",
@@ -651,16 +646,12 @@
       "summary": "Pushpa 3 Update: Allu Arjun’s Next Chapter Creates Excitement Among Fans  boldnewsonline.com",
       "image": "https://picsum.photos/seed/881/640/360",
       "publishedAt": "2026-07-13T07:00:00.000Z",
-      "titleTe": "పుష్ఫ 3 అప్డేట్: అల్లు అర్జున్‌ తదుపరి అధ్యాయం అభిమానులకు ఉల్లాసం",
-      "summaryEn": "Pushpa 3 creates excitement among fans with updates about Allu Arjun's next chapter.",
-      "summaryTe": "పుష్ఫ 3 పైకి అల్లు అర్జున్‌ తదుపరి అధ్యాయం గురించి తాజా అప్డేట్‌లుfans లో ఉల్లాసాన్ని సృష్టిస్తున్నాయి. ఇది అభిమానులను ఉత్సాహంగా ఉంచుతోంది.",
-      "relevanceScore": 8,
-      "tags": [
-        "Pushpa 3",
-        "Allu Arjun",
-        "Movies"
-      ],
-      "processedAt": "2026-10-11T18:21:46.607Z"
+      "titleTe": "Pushpa 3 Update: Allu Arjun’s Next Chapter Creates Excitement Among Fans - boldnewsonline.com",
+      "summaryEn": "Pushpa 3 Update: Allu Arjun’s Next Chapter Creates Excitement Among Fans  boldnewsonline.com",
+      "summaryTe": "",
+      "relevanceScore": 5,
+      "tags": [],
+      "processedAt": "2026-10-13T19:56:30.250Z"
     },
     {
       "sourceId": "gn-amaravati",
@@ -673,38 +664,16 @@
       "summary": "How Amaravati, A Shiny New Capital City, Left Landless Women Workers Jobless, Indebted  BehanBox",
       "image": "https://picsum.photos/seed/350/640/360",
       "publishedAt": "2026-07-07T07:00:00.000Z",
-      "titleTe": "అమరావతి: కొత్త రాజధాని  మహిళల‌కు నిరుద్యోగం కలిగించింది",
-      "summaryEn": "The development of Amaravati has left many landless women workers jobless and in debt.",
-      "summaryTe": "అమవతి నిర్మాణం అనంతరం అనేక మహిళలు నిరుద్యోగ పరిస్థితిలో ఉన్నారు మరియు అప్పుల భారాన్ని అనుభవిస్తున్నారు. ఇది సమాజంలో ఒక పెద్ద సమస్యగా మారింది.",
+      "titleTe": "అమరావతి: ఒక అద్భుతమైన కొత్త రాజధాని, భూహీన మహిళా కార్మికులను నిరాకరించి, అప్పులలోకి వేలాడుతుంది",
+      "summaryEn": "The article discusses how Amaravati, envisioned as a capital city, has left landless women workers jobless and in debt.",
+      "summaryTe": "ఈ ఆర్టికల్ అమరావతి, రాజధానిగా భావించినది, భూహీన మహిళా కార్మికులను దివాళా పోటీలతో విడిచిపెట్టిందని చర్చిస్తుంది.",
       "relevanceScore": 7,
       "tags": [
-        "politics",
         "Amaravati",
-        "women"
+        "women",
+        "employment"
       ],
-      "processedAt": "2026-10-11T18:21:51.200Z"
-    },
-    {
-      "sourceId": "gn-tollywood-latest",
-      "sourceName": "Google News — Tollywood Latest",
-      "category": "entertainment",
-      "language": "en",
-      "title": "Nagabandham Box Office Collection Day 1: Registers Tollywood’s 8th Biggest Opening Of 2026 In India - IMDb",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1MbHN4MlBPdDBIYm02a3JYWHoyczZjWS1RTkoydTlpb0hDR3BVZmNqX2VaMm5vNWFveFp3VDBqRGxJcjJaWTVvRm5JSUhzaHduX3c?oc=5",
-      "realLink": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1MbHN4MlBPdDBIYm02a3JYWHoyczZjWS1RTkoydTlpb0hDR3BVZmNqX2VaMm5vNWFveFp3VDBqRGxJcjJaWTVvRm5JSUhzaHduX3c?oc=5",
-      "summary": "Nagabandham Box Office Collection Day 1: Registers Tollywood’s 8th Biggest Opening Of 2026 In India  IMDb",
-      "image": "https://picsum.photos/seed/30/640/360",
-      "publishedAt": "2026-07-06T19:20:16.000Z",
-      "titleTe": "నాగబంధం బాక్స్ ఆఫీస్ సేకరణ భారతదేశంలో 2026లో టాలీవుడ్ యొక్క 8వ పెద్ద ప్రారంభాన్ని నమోదు చేసింది",
-      "summaryEn": "Nagabandham achieves the 8th biggest opening in Tollywood for 2026 on its first day at the box office.",
-      "summaryTe": "నాగబంధం బాక్స్ ఆఫీస్‌లో మొదటి రోజున 2026లో టాలీవుడ్‌కు 8వ పెద్ద ప్రారంభాన్ని నమోదు చేసుకుంది. ఇది చిత్రానికి మంచి విజయాన్ని సూచిస్తుంది.",
-      "relevanceScore": 8,
-      "tags": [
-        "Nagabandham",
-        "Box Office",
-        "Tollywood"
-      ],
-      "processedAt": "2026-10-11T18:21:46.607Z"
+      "processedAt": "2026-10-13T19:56:37.940Z"
     },
     {
       "sourceId": "gn-tirumala",
@@ -717,16 +686,16 @@
       "summary": "Sale Of Srivari Laddus In Tirumala Tirupati Breaks Record In June  NDTV",
       "image": "https://picsum.photos/seed/730/640/360",
       "publishedAt": "2026-07-03T07:00:00.000Z",
-      "titleTe": "తిరుపతి తిరుమలలో శ్రీవర కజ్జలు జూన్‌లో రికార్డును రద్దు చేసింది",
-      "summaryEn": "The sale of Srivari Laddus in Tirumala Tirupati broke records in June.",
-      "summaryTe": "తిరుమల తిరుపతిలో శ్రీవర కజ్జల విక్రయం జూన్‌లో రికార్డులను అధిగమించింది. ఇది భక్తుల గొప్ప ఆదరణను సూచిస్తుంది.",
-      "relevanceScore": 8,
+      "titleTe": "తిరుమల తిరుపతి శ్రీవారి లడ్డూల అమ్మకం జూన్‌లో రికార్డు ఏర్పాట్లు చేసింది",
+      "summaryEn": "Sales of Srivari laddus in Tirumala Tirupati have broken records in June, reflecting the popularity of the offerings.",
+      "summaryTe": "తిరుమల తిరుపతిలో శ్రీవారి లడ్డూల అమ్మకం జూన్‌లో రికార్డులను బ్రేక్ చేసింది. ఇది ఆ ఆహారాల ప్రాచుర్యాన్ని సూచిస్తుంది.",
+      "relevanceScore": 7,
       "tags": [
         "Tirupati",
         "laddus",
         "spiritual"
       ],
-      "processedAt": "2026-10-11T18:21:51.200Z"
+      "processedAt": "2026-10-13T19:56:37.940Z"
     },
     {
       "sourceId": "gn-consumer-rights",
@@ -739,38 +708,16 @@
       "summary": "Launch of the report \"Protecting Consumers from Financial Scams and Frauds\"  OECD",
       "image": "https://picsum.photos/seed/289/640/360",
       "publishedAt": "2026-06-16T07:00:00.000Z",
-      "titleTe": "\"ఇన్స్టాగ్రామ్ మోసాల నుండి వినియోగదారులను రక్షించటం\" నివేదిక విడుదల",
-      "summaryEn": "OECD launched a report focused on protecting consumers from financial scams and frauds.",
-      "summaryTe": "OECD మోసాలకు మరియు ֆինանսియల్ మోసాలకు వ్యతిరేకంగా వినియోగదారులను రక్షించడంపై దృష్టి పెట్టిన నివేదికను విడుదల చేసింది.",
-      "relevanceScore": 7,
+      "titleTe": "ఆర్థిక మోసాల నుండి వినియోగదారులను రక్షించడం కోసం నివేదిక ప్రారంభం",
+      "summaryEn": "The launch of a report focused on protecting consumers from financial scams and frauds.",
+      "summaryTe": "ఆర్థిక మోసాల నుండి వినియోగదారులను రక్షించడానికి కేంద్రీకృత నివేదికని ప్రారంభించడం.",
+      "relevanceScore": 4,
       "tags": [
         "consumer rights",
-        "scams",
-        "financial"
+        "finance",
+        "report"
       ],
-      "processedAt": "2026-10-11T18:21:31.345Z"
-    },
-    {
-      "sourceId": "gn-ott-amazon-disney",
-      "sourceName": "Google News — Amazon Disney Telugu",
-      "category": "ott",
-      "language": "en",
-      "title": "South OTT And Theatrical Releases This Week (June 8-14, 2026): Karuppu, Dridam, Varavu And More - Outlook India",
-      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPV2lxSm9JSEhCM2owbW1DeG02cEh1cEREdDIzWUtkaEJRMEhQX1JILUxRaWxhdVBRZjFvekVmaURCanB4Q2FoSUpwcjZ5ZlR2a29sd1dneXBVWGdYV1hnZlpLaDZST2hrM1lkSXhIMk1tZG5ZWTlhVkU5NnMtVjNGbnJlZEdYU2pYcUtYMWNJZndxZ1Y5VGxOdGpHSGpSb0x1N0YwTDhTSG9mcmZZc2hYQjhsU0lTMTRHc0HSAccBQVVfeXFMTUZxdlFxYzNNbW5vZkkyU1RkNTFUc0FaQnlOUGp5alJqYjc0ZXJmOUx4VVFKdER2VGpOR0VaVTFUTTNrU3g1YVRVeFZLQTBfRjlOaENtREN0OW0tbVZKeVo2dFpGWEtQN2hkWnd1MDdEYVNfUEJUV05ySHZ0dTRwMGxoNkY1Vmp1UkRDd1VkVERJTzNXa3l2XzYzQ2Z3OHRiMDdLZVlGQmpCcURUS3MtdXNvdFJaUXhTcno0d3JlMDU5dTFObk9HWQ?oc=5",
-      "realLink": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPV2lxSm9JSEhCM2owbW1DeG02cEh1cEREdDIzWUtkaEJRMEhQX1JILUxRaWxhdVBRZjFvekVmaURCanB4Q2FoSUpwcjZ5ZlR2a29sd1dneXBVWGdYV1hnZlpLaDZST2hrM1lkSXhIMk1tZG5ZWTlhVkU5NnMtVjNGbnJlZEdYU2pYcUtYMWNJZndxZ1Y5VGxOdGpHSGpSb0x1N0YwTDhTSG9mcmZZc2hYQjhsU0lTMTRHc0HSAccBQVVfeXFMTUZxdlFxYzNNbW5vZkkyU1RkNTFUc0FaQnlOUGp5alJqYjc0ZXJmOUx4VVFKdER2VGpOR0VaVTFUTTNrU3g1YVRVeFZLQTBfRjlOaENtREN0OW0tbVZKeVo2dFpGWEtQN2hkWnd1MDdEYVNfUEJUV05ySHZ0dTRwMGxoNkY1Vmp1UkRDd1VkVERJTzNXa3l2XzYzQ2Z3OHRiMDdLZVlGQmpCcURUS3MtdXNvdFJaUXhTcno0d3JlMDU5dTFObk9HWQ?oc=5",
-      "summary": "South OTT And Theatrical Releases This Week (June 8-14, 2026): Karuppu, Dridam, Varavu And More  Outlook India",
-      "image": "https://picsum.photos/seed/170/640/360",
-      "publishedAt": "2026-06-09T07:00:00.000Z",
-      "titleTe": "జూన్ 8-14, 2026: దక్షిణ భారత OTT మరియు థియేటర్ విడుదలలు",
-      "summaryEn": "Details about South OTT and theatrical releases for the specified week.",
-      "summaryTe": "ఇక్కడ పేర్కొన్న వారం దక్షిణ భారత OTT మరియు థియేటర్ విడుదలల వివరాలు ఉన్నాయి. ఇది ప్రేక్షకులకు సహాయపడవచ్చు.",
-      "relevanceScore": 7,
-      "tags": [
-        "OTT",
-        "theater",
-        "releases"
-      ],
-      "processedAt": "2026-10-11T18:21:51.200Z"
+      "processedAt": "2026-10-13T19:56:37.940Z"
     },
     {
       "sourceId": "gn-ap-farmers",
@@ -783,16 +730,38 @@
       "summary": "Assessing role of natural farming in enhancing ecosystem services and sustainable agriculture  Frontiers",
       "image": "https://picsum.photos/seed/494/640/360",
       "publishedAt": "2026-06-09T02:04:35.000Z",
-      "titleTe": "ప్రाकृतिक వ్యవసాయ భూముల పాత్రను అంచనా వేయడం",
-      "summaryEn": "The role of natural farming in enhancing ecosystem services and sustainable agriculture is being assessed.",
-      "summaryTe": "ప్రాకృతిక వ్యవసాయం పర్యావరణ సేవలను మరియు సుస్థిర వ్యవసాయాన్ని పెంపొందించడంలో నిష్కర్షాన్ని అంచనా వేయడం జరుగుతోంది. ఇది పర్యావరణానికి మేలు చేస్తుందని భావిస్తున్నారు.",
-      "relevanceScore": 6,
+      "titleTe": "ప్రाकृतिक వ్యవసాయానికి సంబంధించిన పర్యావరణ సేవలను మరియు స్థిరమైన వ్యవసాయాన్ని పెంచడం",
+      "summaryEn": "The article examines the role of natural farming in enhancing ecosystem services and promoting sustainable agriculture.",
+      "summaryTe": "ఈ ఆర్టికల్ సహజ వ్యవసాయానికి సంబంధించిన పర్యావరణ సేవలను పెంచడం మరియు స్థిరమైన వ్యవసాయం ప్రోత్సహించడం గురించి పరిశీలిస్తుంది.",
+      "relevanceScore": 5,
       "tags": [
         "farming",
         "sustainability",
-        "ecology"
+        "ecosystem"
       ],
-      "processedAt": "2026-10-11T18:21:51.200Z"
+      "processedAt": "2026-10-13T19:56:37.940Z"
+    },
+    {
+      "sourceId": "gn-tirumala",
+      "sourceName": "Google News — Tirumala TTD",
+      "category": "spiritual",
+      "language": "en",
+      "title": "ACCOMMODATION OCCUPANCY RATIO INCREASES BY 8% IN TIRUMALA - TTD News",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOZXJyZ2VseUExTGYtckd0b0VoX0Q1ay1ES283QkJvamJDczZJNFhhQm8yOXV1cVNlSFN3SldmQVdnYzNBVl82dDVVaDJENkI1bFBEaFhRcEgtSEdDUTIxejJjNmctX24zcjl1UEE2ZFRzRTdOZEZkSWtGWm90UmppRzd3Z3loODNIbmIw?oc=5",
+      "realLink": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOZXJyZ2VseUExTGYtckd0b0VoX0Q1ay1ES283QkJvamJDczZJNFhhQm8yOXV1cVNlSFN3SldmQVdnYzNBVl82dDVVaDJENkI1bFBEaFhRcEgtSEdDUTIxejJjNmctX24zcjl1UEE2ZFRzRTdOZEZkSWtGWm90UmppRzd3Z3loODNIbmIw?oc=5",
+      "summary": "ACCOMMODATION OCCUPANCY RATIO INCREASES BY 8% IN TIRUMALA  TTD News",
+      "image": "https://picsum.photos/seed/445/640/360",
+      "publishedAt": "2026-06-02T07:00:00.000Z",
+      "titleTe": "తిరుమలలో కట్టింగ్ గదుల ఆక్యుపెన్సీ రేషియో 8% పెరిగింది",
+      "summaryEn": "The accommodation occupancy ratio in Tirumala has increased by 8%, indicating a rise in pilgrims visiting the holy site.",
+      "summaryTe": "తిరుమలలో కట్టింగ్ గదుల ఆక్యుపెన్సీ రేషియో 8% పెరిగింది. ఇది పవిత్ర ప్రదేశానికి వచ్చే భక్తుల సంఖ్య పెరుగుతుందని సూచిస్తుంది.",
+      "relevanceScore": 7,
+      "tags": [
+        "Tirumala",
+        "pilgrimage",
+        "spiritual"
+      ],
+      "processedAt": "2026-10-13T19:56:37.940Z"
     },
     {
       "sourceId": "gn-tollywood-latest",
@@ -805,16 +774,12 @@
       "summary": "No Big Summer Releases: Tollywood’s important season goes quiet | Telugu Movie News  The Times of India",
       "image": "https://picsum.photos/seed/879/640/360",
       "publishedAt": "2026-05-25T07:00:00.000Z",
-      "titleTe": "ఎటువంటి పెద్ద వేసవి విడుదలలు లేవు: టాలీవుడ్ కీలక సీజన్లో ఖాళీ",
-      "summaryEn": "Tollywood experiences a quiet season with no major summer releases scheduled for this year.",
-      "summaryTe": "టాలీవుడ్ ఈ ఏడాది ప్రధాన వేసవి విడుదలలు లేకుండా ఖాళీ సీజన్‌ను అనుభవిస్తోంది. ఇది ప్రేక్షకులకు నిరాశను కలిగించనుంది.",
-      "relevanceScore": 7,
-      "tags": [
-        "Tollywood",
-        "Summer Releases",
-        "Movies"
-      ],
-      "processedAt": "2026-10-11T18:21:46.607Z"
+      "titleTe": "No Big Summer Releases: Tollywood’s important season goes quiet | Telugu Movie News - The Times of India",
+      "summaryEn": "No Big Summer Releases: Tollywood’s important season goes quiet | Telugu Movie News  The Times of India",
+      "summaryTe": "",
+      "relevanceScore": 5,
+      "tags": [],
+      "processedAt": "2026-10-13T19:56:30.250Z"
     },
     {
       "sourceId": "gn-ott-aha",
@@ -822,175 +787,57 @@
       "category": "ott",
       "language": "en",
       "title": "New OTT releases this weekend: 10 new movies and shows on Netflix, JioHotstar, Prime Video, ZEE5 & more - The Economic Times",
-      "link": "https://news.google.com/rss/articles/CBMipgJBVV95cUxORUF5ZHlvS1paY1F2RjNmVkU5YjZoR3duRDdycXFFUEtvQ2FXeG1iTWlzcTNlX0lRdW8yVFJ5OHVzU2VjNFR3UDMxQU9lX2ZtRmdrSHN4RHp6SWdxX1NGSlRkb0JNTlJDaFVKNzNJMVNJRDkwY2J3NHJBc3ZYcGVuX21fVnlQZk5vanZ1NjFCXzhLT09FTF9oaG81ZlBpSDc1TUt4NVQ0a1M3SkFBSHZBdlJ4NXBkM1R2WG03LXVEYUFNLTE1X2ljYTRPeVNCSTZQM3l3TmRyclVOT2F2V0tVQXNHZjN2ME80S0VCTExYVDU1Q3B1QUR3VERCS2Y4a0dWSVdfQlktYzg2TWgxUlBtSE84LUdhMm4xaVAyRC1mZVJSTktGTkE?oc=5",
-      "realLink": "https://news.google.com/rss/articles/CBMipgJBVV95cUxORUF5ZHlvS1paY1F2RjNmVkU5YjZoR3duRDdycXFFUEtvQ2FXeG1iTWlzcTNlX0lRdW8yVFJ5OHVzU2VjNFR3UDMxQU9lX2ZtRmdrSHN4RHp6SWdxX1NGSlRkb0JNTlJDaFVKNzNJMVNJRDkwY2J3NHJBc3ZYcGVuX21fVnlQZk5vanZ1NjFCXzhLT09FTF9oaG81ZlBpSDc1TUt4NVQ0a1M3SkFBSHZBdlJ4NXBkM1R2WG03LXVEYUFNLTE1X2ljYTRPeVNCSTZQM3l3TmRyclVOT2F2V0tVQXNHZjN2ME80S0VCTExYVDU1Q3B1QUR3VERCS2Y4a0dWSVdfQlktYzg2TWgxUlBtSE84LUdhMm4xaVAyRC1mZVJSTktGTkE?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxNN3puVXJ3V3k4Y2ZMbHNwN3BWNzBIejlGNGJPYW1fcVJOaGtmcjduSGp3VEx3WDE0VWJtNExpMTRQLTBaSURpSXh5cGllSkc2Y3RmNzRRb0RSem4tUTdQRGxRV1ktSTZ6Q2xTa01hSXB3dE9BZXB5SVJwTUZLb3VnNnd2QURTdXhqVXZ1Z1lsWEJJNWNNT1JyRk1hVllqNnZKamFzcjJHcmthVk5YRUdLUlV1ZmxvczlTWEZSa1RqaWRGU3ZaR05Yb1h5RnFBTVQtRWtUNlVxTFpQY0lIRGlWUUF5THUweTBneFpGOEppbmhQVWozcldyRDNuZm5oMzk3SEFIM3JIbXg4YWtZbTlqOGc2MHZCY1hXUlh2RGplNTFKOGVzNmUxQU90OEJNN0I4a0llcXdKcVA5OUk?oc=5",
+      "realLink": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxNN3puVXJ3V3k4Y2ZMbHNwN3BWNzBIejlGNGJPYW1fcVJOaGtmcjduSGp3VEx3WDE0VWJtNExpMTRQLTBaSURpSXh5cGllSkc2Y3RmNzRRb0RSem4tUTdQRGxRV1ktSTZ6Q2xTa01hSXB3dE9BZXB5SVJwTUZLb3VnNnd2QURTdXhqVXZ1Z1lsWEJJNWNNT1JyRk1hVllqNnZKamFzcjJHcmthVk5YRUdLUlV1ZmxvczlTWEZSa1RqaWRGU3ZaR05Yb1h5RnFBTVQtRWtUNlVxTFpQY0lIRGlWUUF5THUweTBneFpGOEppbmhQVWozcldyRDNuZm5oMzk3SEFIM3JIbXg4YWtZbTlqOGc2MHZCY1hXUlh2RGplNTFKOGVzNmUxQU90OEJNN0I4a0llcXdKcVA5OUk?oc=5",
       "summary": "New OTT releases this weekend: 10 new movies and shows on Netflix, JioHotstar, Prime Video, ZEE5 & more  The Economic Times",
       "image": "https://picsum.photos/seed/18/640/360",
       "publishedAt": "2026-05-01T07:00:00.000Z",
-      "titleTe": "ఈ వారాంతానికి కొత్త OTT విడుదలలు: 10 కొత్త సినిమాలు మరియు షోలు",
-      "summaryEn": "New weekend OTT releases include 10 new movies and shows across various platforms.",
-      "summaryTe": "మొదలైన వారం చివరకు 10 కొత్త సినిమాలు మరియు షోలు ఉన్న కొత్త OTT విడుదలలు. ఇది ప్రేక్షకులకు ఎన్నుకునే ఎంపికలను అందిస్తుంది.",
-      "relevanceScore": 6,
-      "tags": [
-        "OTT",
-        "New Releases",
-        "Weekend"
-      ],
-      "processedAt": "2026-10-11T18:21:46.607Z"
+      "titleTe": "New OTT releases this weekend: 10 new movies and shows on Netflix, JioHotstar, Prime Video, ZEE5 & more - The Economic Times",
+      "summaryEn": "New OTT releases this weekend: 10 new movies and shows on Netflix, JioHotstar, Prime Video, ZEE5 & more  The Economic Times",
+      "summaryTe": "",
+      "relevanceScore": 5,
+      "tags": [],
+      "processedAt": "2026-10-13T19:56:30.250Z"
     },
     {
-      "sourceId": "gn-ap-farmers",
-      "sourceName": "Google News — AP Farmers",
-      "category": "farmers",
+      "sourceId": "gn-ap-ysrcp-jagan",
+      "sourceName": "Google News — AP YSRCP Jagan",
+      "category": "politics",
       "language": "en",
-      "title": "India’s farms do ecological work that no policy has accounted [Commentary] - Mongabay India",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNQVFuNnRyZjBDaUNVRmZkbU5zVTB6ZGRtaW1WNGp6Y3VrZWM5OWRIbnBTamFGRXF4b25aV1ZxazBQdGp6bHRnTW1IVFdQbEVsSlFhOUszaHpxNzJCVlBJMHNUVkJPRzFsdDdrdW9qZzZPZnBYcHlnU3hnVkpFeGx4WVNvWEtQZlBJOV84MlBxZDkwODg5SzhLMXo0OHJRV3lTeTdpcml3bFlsTjA?oc=5",
-      "realLink": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNQVFuNnRyZjBDaUNVRmZkbU5zVTB6ZGRtaW1WNGp6Y3VrZWM5OWRIbnBTamFGRXF4b25aV1ZxazBQdGp6bHRnTW1IVFdQbEVsSlFhOUszaHpxNzJCVlBJMHNUVkJPRzFsdDdrdW9qZzZPZnBYcHlnU3hnVkpFeGx4WVNvWEtQZlBJOV84MlBxZDkwODg5SzhLMXo0OHJRV3lTeTdpcml3bFlsTjA?oc=5",
-      "summary": "India’s farms do ecological work that no policy has accounted [Commentary]  Mongabay India",
-      "image": "https://picsum.photos/seed/789/640/360",
-      "publishedAt": "2026-04-29T07:00:00.000Z",
-      "titleTe": "భారత రైతుల పంటలు నిస్సంగత సేవలను అందిస్తున్నాయి",
-      "summaryEn": "India’s farms provide ecological services that current policies have not recognized.",
-      "summaryTe": "భారతదేశంలో రైతుల పంటలు తీసుకునే ప్రక్రియలు పర్యావరణ సేవలను అందిస్తున్నాయి. కానీ ప్రస్తుత విధానాలు వాటిని గుర్తించడం లేదు.",
-      "relevanceScore": 6,
-      "tags": [
-        "farmers",
-        "ecology",
-        "agriculture"
-      ],
-      "processedAt": "2026-10-11T18:21:51.200Z"
-    },
-    {
-      "sourceId": "gn-ap-farmers",
-      "sourceName": "Google News — AP Farmers",
-      "category": "farmers",
-      "language": "en",
-      "title": "Union Agriculture Minister Shri Shivraj Singh Chouhan approves procurement of 20 lakh MT potatoes in Uttar Pradesh, relief for farmers from distressed prices - PIB",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5RemNDUXA3VW9zUHV6UzJwUGhwWFB4SncwaXM1WGZmVFlMdTUxYWJQTU9zT1lZSXVMazRWcjZtN2VLRmFmUEdqS2V4MDBxNXFmSElibGEza0FZVVI2cGJ6eDRLem9KUUw4?oc=5",
-      "realLink": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5RemNDUXA3VW9zUHV6UzJwUGhwWFB4SncwaXM1WGZmVFlMdTUxYWJQTU9zT1lZSXVMazRWcjZtN2VLRmFmUEdqS2V4MDBxNXFmSElibGEza0FZVVI2cGJ6eDRLem9KUUw4?oc=5",
-      "summary": "Union Agriculture Minister Shri Shivraj Singh Chouhan approves procurement of 20 lakh MT potatoes in Uttar Pradesh, relief for farmers from distressed prices  PIB",
-      "image": "https://picsum.photos/seed/342/640/360",
-      "publishedAt": "2026-04-18T07:00:00.000Z",
-      "titleTe": "యూనియన్ వ్యవసాయ మంత్రివర్గం 20 లక్షల MT బంగాళాది కొనుగోలు ఆమోదించింది",
-      "summaryEn": "Union Agriculture Minister approved the procurement of 20 lakh MT of potatoes in Uttar Pradesh to relieve farmers from distressed prices.",
-      "summaryTe": "ఉత్తరప్రదేశ్‌లో రైతులకు నష్టపరిహారం అందించే విధంగా 20 లక్షల MT బంగాళాదుంకు కొనుగోలుకు యూనియన్ వ్యవసాయ మంత్రివర్గం ఆమోదాన్ని తెలిపింది. ఇది రైతుల కోసం సానుకూల మార్పు.",
-      "relevanceScore": 9,
-      "tags": [
-        "farmers",
-        "agriculture",
-        "Uttar Pradesh"
-      ],
-      "processedAt": "2026-10-11T18:21:51.200Z"
-    },
-    {
-      "sourceId": "gn-telugu-temples",
-      "sourceName": "Google News — Telugu Temples",
-      "category": "spiritual",
-      "language": "en",
-      "title": "April 2026 Festival Calendar: Hanuman Jayanti, Easter, Baisakhi, Bihu, Akshaya Tritiya And More - News18",
-      "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQVWNxU0VnTi1mTmZHTW95d2RlTnlTWHNSVEJkLWFsZkpQM2R4TEEyMGNEMkxNREJSZ1p5VzF5VWJGaFdjdDlhZk5MZ3drRHBGRWZkLUJEZUNjYmtPbzNkc1gtMFR6bVUzX3FwREZZSEI5UUNYalF5ckVuVm96OGNsRmdrNzFTY1lEaWNHMGNKTThVOXVtMWFIM1h5d2ZVQ0hVOXVRZExGRjVxX0NpZEJEazBLMkFTSGtUNWhBazg4b19sdWV4NW9DMWMtOW9taXFYel9TREVCeU5yQTJrM195d1h5LS1YRGhyWU1tbmNmSTRhTlVjUHfSAfsBQVVfeXFMUHRfSzg5NnBCNXVNT0FieTdWNV92cnFmc0ZIaUFxeUxBY3Y5c3FfSVJ2aHJiVmhJcHNZY0NYQzlkS2twYjBDTEQ2LURnN0pGdEV0Vm1fX19XcnZINEFJNU5KOTRpS3JxVnk3NnRXWUpEcjgyYUhHUXZ6Q3p4ci1ZRk9LSFBBNjVpTU1rNWpuajRWUFFfNVhLT0p6cTJnY3dkM1dZNW9PN3IwZEUzUjhDUW51UGMwWlFVejBzdXkzczlVN2hqQkNlWTdBc0tCV2lzcGVtOHBtRm5iSnNmZ0tRakRQOXBJaWlMOFlOVWZEMFMycmxBQ2hSRXpmLUU?oc=5",
-      "realLink": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQVWNxU0VnTi1mTmZHTW95d2RlTnlTWHNSVEJkLWFsZkpQM2R4TEEyMGNEMkxNREJSZ1p5VzF5VWJGaFdjdDlhZk5MZ3drRHBGRWZkLUJEZUNjYmtPbzNkc1gtMFR6bVUzX3FwREZZSEI5UUNYalF5ckVuVm96OGNsRmdrNzFTY1lEaWNHMGNKTThVOXVtMWFIM1h5d2ZVQ0hVOXVRZExGRjVxX0NpZEJEazBLMkFTSGtUNWhBazg4b19sdWV4NW9DMWMtOW9taXFYel9TREVCeU5yQTJrM195d1h5LS1YRGhyWU1tbmNmSTRhTlVjUHfSAfsBQVVfeXFMUHRfSzg5NnBCNXVNT0FieTdWNV92cnFmc0ZIaUFxeUxBY3Y5c3FfSVJ2aHJiVmhJcHNZY0NYQzlkS2twYjBDTEQ2LURnN0pGdEV0Vm1fX19XcnZINEFJNU5KOTRpS3JxVnk3NnRXWUpEcjgyYUhHUXZ6Q3p4ci1ZRk9LSFBBNjVpTU1rNWpuajRWUFFfNVhLT0p6cTJnY3dkM1dZNW9PN3IwZEUzUjhDUW51UGMwWlFVejBzdXkzczlVN2hqQkNlWTdBc0tCV2lzcGVtOHBtRm5iSnNmZ0tRakRQOXBJaWlMOFlOVWZEMFMycmxBQ2hSRXpmLUU?oc=5",
-      "summary": "April 2026 Festival Calendar: Hanuman Jayanti, Easter, Baisakhi, Bihu, Akshaya Tritiya And More  News18",
-      "image": "https://picsum.photos/seed/753/640/360",
-      "publishedAt": "2026-03-31T07:00:00.000Z",
-      "titleTe": "ఏప్రిల్ 2026 ఉత్సవాల కేలెండర్: హనుమాన్ జయంతి, ఈస్టర్, బైతుల, బిహు, అక్షయ తృతీయ మరియు మరిన్నీ",
-      "summaryEn": "The April 2026 Festival Calendar includes major celebrations such as Hanuman Jayanti, Easter, Baisakhi, Bihu, and Akshaya Tritiya.",
-      "summaryTe": "ఏప్రిల్ 2026 ఉత్సవాల కేలండర్‌లో హనుమాన్ జయంతి, ఈస్టర్, బైతుల, బిహు మరియు అక్షయ తృతీయ వంటి ముఖ్య ఉత్సవాలు ఉన్నాయి.",
-      "relevanceScore": 8,
-      "tags": [
-        "festivals",
-        "Hindu",
-        "celebrations"
-      ],
-      "processedAt": "2026-10-11T18:21:31.345Z"
-    },
-    {
-      "sourceId": "gn-cyber-fraud",
-      "sourceName": "Google News — Cyber Fraud India",
-      "category": "rights",
-      "language": "en",
-      "title": "Andhra MLA loses Rs 12 lakh in online fraud via fake RTA link - Telangana Today",
-      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNWDltT0dnUW5BQ0EzaTRNb21pZk9Gd0QyQVVkUHNxbDZHTUFpOERSaGQtbkI3Q05zbmNsNmgtSlR1Ym9JSGxBZEtMSXVTZHlneVdORHk3cm9EWkVZZGZZME9FcS01LS1WdzlqQnZkUnNzeGlYYXk1cE01aXRlblVyRi1YZ1k5MnE5Q21KeDNicXhzQQ?oc=5",
-      "realLink": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNWDltT0dnUW5BQ0EzaTRNb21pZk9Gd0QyQVVkUHNxbDZHTUFpOERSaGQtbkI3Q05zbmNsNmgtSlR1Ym9JSGxBZEtMSXVTZHlneVdORHk3cm9EWkVZZGZZME9FcS01LS1WdzlqQnZkUnNzeGlYYXk1cE01aXRlblVyRi1YZ1k5MnE5Q21KeDNicXhzQQ?oc=5",
-      "summary": "Andhra MLA loses Rs 12 lakh in online fraud via fake RTA link  Telangana Today",
-      "image": "https://picsum.photos/seed/323/640/360",
-      "publishedAt": "2026-03-22T07:00:00.000Z",
-      "titleTe": "ఆంధ్రా ఎమ్మెల్యే అబద్దమైన ఆర్‌టిఏ లింక్ ద్వారా 12 లక్షలు మోసపోయారు",
-      "summaryEn": "An Andhra MLA lost ₹12 lakhs in an online fraud through a fake RTA link.",
-      "summaryTe": "ఒక ఆంధ్ర ఎమ్మెల్యే అబద్దమైన ఆర్‌టిఏ లింక్ ద్వారా 12 లక్షలు మోసపోయారు.",
-      "relevanceScore": 8,
-      "tags": [
-        "fraud",
-        "politics",
-        "Andhra"
-      ],
-      "processedAt": "2026-10-11T18:21:31.345Z"
-    },
-    {
-      "sourceId": "gn-telugu-temples",
-      "sourceName": "Google News — Telugu Temples",
-      "category": "spiritual",
-      "language": "en",
-      "title": "Telugu New Year 2026: Know the exact Ugadi date, shubh muhurat and puja rituals here - Moneycontrol.com",
-      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPTmh3S0cxdVhpNF9tWkU3ZW4yLUNPVkQxX3E3LVVVUHc5a05RTFI5UUFXaV9VRmVCakZ1TnBtaEh0ZFRfUzJUOXZCUDh3dG0wRUUxelFWWU15Tk5EUDExY1VaSlRibWRXdmdkUks1QWxuaDR0UFM3X0t3MFR4aTYzN210YUlDTGRvUXh4dmE2Z2dxLW9hdGtHeFRvY1ZHcVZ3UlBUQVhCbkZQUjY4Wk01V25GZm1ra25VbkJUQTFXVUlpeGszMVJXNXhIMzRROHNNZk1uaFlLenRMQdIB3wFBVV95cUxNMC1qWTdrZ01xSVZGczE1ajdib1J0UUZ0M0pPQ2ZGS2VsandxdWt6cWdvTE9xckVpeUJrcW1RNWJ4QXZKMDRsR2RXbnJnd19YYXk4Qzg4bnNKNFNMR055aFd4RmJta0Y0M1lvRERyWjFwS1ZYejN1Vm5pNS1aeWZaTFBOblhsVERoWUxFczF6c0FkV2VaYV84X3I2NTR5M2ZHcWFkOUZnakc5UllYUUNlNlNCVGJwcTI1WU1BYlNXdGl3aXdpTUstYWZOUUZnMEJEemVTa0ZGY2pSRFZMX09B?oc=5",
-      "realLink": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPTmh3S0cxdVhpNF9tWkU3ZW4yLUNPVkQxX3E3LVVVUHc5a05RTFI5UUFXaV9VRmVCakZ1TnBtaEh0ZFRfUzJUOXZCUDh3dG0wRUUxelFWWU15Tk5EUDExY1VaSlRibWRXdmdkUks1QWxuaDR0UFM3X0t3MFR4aTYzN210YUlDTGRvUXh4dmE2Z2dxLW9hdGtHeFRvY1ZHcVZ3UlBUQVhCbkZQUjY4Wk01V25GZm1ra25VbkJUQTFXVUlpeGszMVJXNXhIMzRROHNNZk1uaFlLenRMQdIB3wFBVV95cUxNMC1qWTdrZ01xSVZGczE1ajdib1J0UUZ0M0pPQ2ZGS2VsandxdWt6cWdvTE9xckVpeUJrcW1RNWJ4QXZKMDRsR2RXbnJnd19YYXk4Qzg4bnNKNFNMR055aFd4RmJta0Y0M1lvRERyWjFwS1ZYejN1Vm5pNS1aeWZaTFBOblhsVERoWUxFczF6c0FkV2VaYV84X3I2NTR5M2ZHcWFkOUZnakc5UllYUUNlNlNCVGJwcTI1WU1BYlNXdGl3aXdpTUstYWZOUUZnMEJEemVTa0ZGY2pSRFZMX09B?oc=5",
-      "summary": "Telugu New Year 2026: Know the exact Ugadi date, shubh muhurat and puja rituals here  Moneycontrol.com",
-      "image": "https://picsum.photos/seed/910/640/360",
-      "publishedAt": "2026-02-25T08:00:00.000Z",
-      "titleTe": "2026 ఉగాదీ: ఖచ్చితంగా పత్రికలు, శుభ ముహూర్తం మరియు పూజా విధులు",
-      "summaryEn": "Details about the Telugu New Year 2026, including date, auspicious timings, and rituals.",
-      "summaryTe": "2026 ఉగాదీకి సంబంధించిన తేదీ, శుభ ముహూర్తాలు మరియు పూజా విధులు తెలియజేస్తున్నాయి. తెలుగు భక్తులకు అత్యంత ప్రాముఖ్యత ఇది.",
-      "relevanceScore": 8,
-      "tags": [
-        "New Year",
-        "Telugu",
-        "celebration"
-      ],
-      "processedAt": "2026-10-11T18:21:51.200Z"
-    },
-    {
-      "sourceId": "gn-tirumala",
-      "sourceName": "Google News — Tirumala TTD",
-      "category": "spiritual",
-      "language": "en",
-      "title": "“MARRIAGE PROCEEDINGS TO BE MADE ON-LINE SOON”-TTD EO - TTD News",
-      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNTW9nbXJQUWJjWWJ3OC1vV0phNzliem9MVGQ2ZDdIWlA4bFlFc08xMW5Bd2owRGltUzdwT2FTcDdUcnVnNkRmUlI3QngtcV9rV0ZKVzllYl9odXVXakptUVB3b2MwSVFWdmoxMlJVenFkSzRNZF95QUU0WmdQRUtiRDVzWkI?oc=5",
-      "realLink": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNTW9nbXJQUWJjWWJ3OC1vV0phNzliem9MVGQ2ZDdIWlA4bFlFc08xMW5Bd2owRGltUzdwT2FTcDdUcnVnNkRmUlI3QngtcV9rV0ZKVzllYl9odXVXakptUVB3b2MwSVFWdmoxMlJVenFkSzRNZF95QUU0WmdQRUtiRDVzWkI?oc=5",
-      "summary": "“MARRIAGE PROCEEDINGS TO BE MADE ON-LINE SOON”-TTD EO  TTD News",
-      "image": "https://picsum.photos/seed/397/640/360",
-      "publishedAt": "2026-02-25T08:00:00.000Z",
-      "titleTe": "“శ్రీవారి వివాహ ప్రక్రియలు త్వరలో ఆన్‌లైన్‌లో చేయబడతాయి” - TTD EO",
-      "summaryEn": "TTD Executive Officer announced that marriage proceedings will soon be available online.",
-      "summaryTe": "TTD కార్యనిర్వాహక అధికారి, వివాహ ప్రక్రియలు త్వరలో ఆన్‌లైన్‌లో అందుబాటులో ఉంటాయని తెలిపారు. ఇది భక్తులకు సౌకర్యాన్ని అందించడానికి సాయపడనుంది.",
+      "title": "YSRCP chief Jagan hits out at Opposition over Women’s Bill defeat - Telangana Today",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNTHJHVFJBUS0xbkhMbHlhNzJDMGlWMTNZSVZ0c0NQV3BqVG1ERURVdDNvbmY4VDAzMHQySWdmckVRWkxSaENTNkdXTnJVUnhmTGFhSE9FTFhTdm1FSEEweUcxbTg1ZlJ6RFRhQmJlbmVDNlpTVUI3TE54d2hwQjlUMzFoY1F1NHR2NndjN1RvVnRnYmMyVGc?oc=5",
+      "realLink": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNTHJHVFJBUS0xbkhMbHlhNzJDMGlWMTNZSVZ0c0NQV3BqVG1ERURVdDNvbmY4VDAzMHQySWdmckVRWkxSaENTNkdXTnJVUnhmTGFhSE9FTFhTdm1FSEEweUcxbTg1ZlJ6RFRhQmJlbmVDNlpTVUI3TE54d2hwQjlUMzFoY1F1NHR2NndjN1RvVnRnYmMyVGc?oc=5",
+      "summary": "YSRCP chief Jagan hits out at Opposition over Women’s Bill defeat  Telangana Today",
+      "image": "https://picsum.photos/seed/85/640/360",
+      "publishedAt": "2026-04-17T07:00:00.000Z",
+      "titleTe": "YSRCP చీఫ్ జగన్ మహిళా బిల్లుకు వ్యతిరేకంగా ప్రతిపక్షాన్ని చెలరేగించారు",
+      "summaryEn": "YSRCP chief Jagan criticized the opposition over the defeat of the Women's Bill, emphasizing the party's stance.",
+      "summaryTe": "YSRCP చీఫ్ జగన్ మహిళా బిల్లుకు విఫలతపై ప్రతిపక్షంపై దృఢమైన విమర్శలు చేశారు. పార్టీ యొక్క స్థానం పై ఆయన డొంకించారు.",
       "relevanceScore": 7,
       "tags": [
-        "TTD",
-        "spiritual",
-        "marriage"
+        "politics",
+        "women's rights",
+        "Jagan"
       ],
-      "processedAt": "2026-10-11T18:21:51.200Z"
+      "processedAt": "2026-10-13T19:56:37.940Z"
     },
     {
-      "sourceId": "gn-ott-amazon-disney",
-      "sourceName": "Google News — Amazon Disney Telugu",
+      "sourceId": "gn-ott-aha",
+      "sourceName": "Google News — Aha OTT",
       "category": "ott",
       "language": "en",
-      "title": "Broadcast details for ICC Men’s T20 World Cup 2026 announced - ICC",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPWkswRUZ2VWZKTDF0X212dmZCMlJRenM0TEsxVFNiT1Y3Q1hrUDVYYzI3cmtfQk5ST3VxNGNNSFNQUGx2Z0M5UjdYemw0c0ZSZXlFckE5dGZFTEVORnQwZG5lU3ZueGxwMFZ2XzJFRHdqcF9PYUwtaDZGTUFEaEw0a2ptR3VMS3lhNi1FaElaRFVVTTJDZm9GNEpqQmhMQngzX0lMYjFR?oc=5",
-      "realLink": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPWkswRUZ2VWZKTDF0X212dmZCMlJRenM0TEsxVFNiT1Y3Q1hrUDVYYzI3cmtfQk5ST3VxNGNNSFNQUGx2Z0M5UjdYemw0c0ZSZXlFckE5dGZFTEVORnQwZG5lU3ZueGxwMFZ2XzJFRHdqcF9PYUwtaDZGTUFEaEw0a2ptR3VMS3lhNi1FaElaRFVVTTJDZm9GNEpqQmhMQngzX0lMYjFR?oc=5",
-      "summary": "Broadcast details for ICC Men’s T20 World Cup 2026 announced  ICC",
-      "image": "https://picsum.photos/seed/988/640/360",
-      "publishedAt": "2026-02-05T08:00:00.000Z",
-      "titleTe": "ICC పురుషుల T20 ప్రపంచ కప్ 2026కి ప్రసార వివరాలు ప్రకటించారు",
-      "summaryEn": "Broadcast details for the ICC Men’s T20 World Cup 2026 have been announced.",
-      "summaryTe": "ICC పురుషుల T20 ప్రపంచ కప్ 2026కి సంబంధించిన ప్రసార వివరాలు ప్రకటించబడ్డాయి. క్రికెట్ అభిమానులకు ఇది ఆనందంగా ఉండబోదునది.",
-      "relevanceScore": 6,
-      "tags": [
-        "cricket",
-        "ICC",
-        "T20"
-      ],
-      "processedAt": "2026-10-11T18:21:51.200Z"
+      "title": "OTT releases this week: New Tamil, Telugu, Malayalam, Kannada movies, web series to watch over the weekend - Livemint",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPcHhYa09WTnM2NFZEa2tDLUR5VDNCa0t5QUVlemVUd1RmNmhEWU52R2Y2clBEeW1LVjdfQVEzM3FxdUVnVlVvaGlZODVHMG9yRXVtSG1lMFhJQUVRZndkU2FfdHBmMThVUkhOTDJiYkVibEdRTEI1RDNabTBWN0VJQ0VhU0NPZkZKak95QkFMZVpfSmNIMFRWaTZTZWc1aWFDZThLZm9SRGpyQ181b1dIMXNZNExpY1VJa0xRWWRFdXFVTlJiRWI3eFd2LW5tME5NSjFHN0FjSmZBbzJLR0ZDc2J6UmNNWFA5WUUySEdVT3BkQdIB9wFBVV95cUxPTi1Mb3d2VDVFRUZjUDRfakQ1Q3BxY05Sei1FaGo2TVQteUNCUzBJLUdjV1lzYnRTRkVsQXNaMUF2WWc0Z3lLN2N1U1h0TVZveG52UHFzQktmdmhfQzVoMlhvOUtxY3lreXdLaFNwZXlMbDNZamdfazF6T21uWGMzLTQtekQwSm03anFuUGl2MVRsNXE4TUQwZjNSVWVzRXpUcWtHU2lZU01BUXY5Qnc4SzlwYk9IMldxcks4T2JXZ1B1TjByem5HaWhGbjYyaDFLeDMwWmczQTY4SjhkdzFpaFBHckpBbEVZdnUtRExFeW9tRzVsWlRv?oc=5",
+      "realLink": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPcHhYa09WTnM2NFZEa2tDLUR5VDNCa0t5QUVlemVUd1RmNmhEWU52R2Y2clBEeW1LVjdfQVEzM3FxdUVnVlVvaGlZODVHMG9yRXVtSG1lMFhJQUVRZndkU2FfdHBmMThVUkhOTDJiYkVibEdRTEI1RDNabTBWN0VJQ0VhU0NPZkZKak95QkFMZVpfSmNIMFRWaTZTZWc1aWFDZThLZm9SRGpyQ181b1dIMXNZNExpY1VJa0xRWWRFdXFVTlJiRWI3eFd2LW5tME5NSjFHN0FjSmZBbzJLR0ZDc2J6UmNNWFA5WUUySEdVT3BkQdIB9wFBVV95cUxPTi1Mb3d2VDVFRUZjUDRfakQ1Q3BxY05Sei1FaGo2TVQteUNCUzBJLUdjV1lzYnRTRkVsQXNaMUF2WWc0Z3lLN2N1U1h0TVZveG52UHFzQktmdmhfQzVoMlhvOUtxY3lreXdLaFNwZXlMbDNZamdfazF6T21uWGMzLTQtekQwSm03anFuUGl2MVRsNXE4TUQwZjNSVWVzRXpUcWtHU2lZU01BUXY5Qnc4SzlwYk9IMldxcks4T2JXZ1B1TjByem5HaWhGbjYyaDFLeDMwWmczQTY4SjhkdzFpaFBHckpBbEVZdnUtRExFeW9tRzVsWlRv?oc=5",
+      "summary": "OTT releases this week: New Tamil, Telugu, Malayalam, Kannada movies, web series to watch over the weekend  Livemint",
+      "image": "https://picsum.photos/seed/668/640/360",
+      "publishedAt": "2026-03-04T08:00:00.000Z",
+      "titleTe": "OTT releases this week: New Tamil, Telugu, Malayalam, Kannada movies, web series to watch over the weekend - Livemint",
+      "summaryEn": "OTT releases this week: New Tamil, Telugu, Malayalam, Kannada movies, web series to watch over the weekend  Livemint",
+      "summaryTe": "",
+      "relevanceScore": 5,
+      "tags": [],
+      "processedAt": "2026-10-13T19:56:30.250Z"
     },
     {
       "sourceId": "gn-tollywood-latest",
@@ -1003,38 +850,12 @@
       "summary": "January Box-office: Great Start for Telugu Cinema  Telugu360",
       "image": "https://picsum.photos/seed/857/640/360",
       "publishedAt": "2026-02-01T08:00:00.000Z",
-      "titleTe": "జనవరి బాక్స్ ఆఫీస్: తెలుగు సినిమాకు మంచి ప్రారంభం",
-      "summaryEn": "January marks a great start for Telugu cinema with impressive box office collections.",
-      "summaryTe": "జనవరి తెలుగు సినిమాకు అద్భుతమైన ప్రారంభాన్ని సూచిస్తుంది, బాక్స్ ఆఫీస్ సేకరణలు ముఖ్యంగా ఉన్నాయి. ఇది టాలీవుడ్‌కు మంచి సంకేతం.",
-      "relevanceScore": 8,
-      "tags": [
-        "Telugu Cinema",
-        "Box Office",
-        "January"
-      ],
-      "processedAt": "2026-10-11T18:21:46.607Z"
-    },
-    {
-      "sourceId": "gn-prabhas",
-      "sourceName": "Google News — Prabhas",
-      "category": "entertainment",
-      "language": "en",
-      "title": "Prabhas gears up for back-to-back shoots of Kalki 2 and Spirit in 2026: Report - India Today",
-      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNUDBQRmRzN2o2ZE5wT2RtZFdydC1sVDVqNTVHME1acG9LZzZROGFyWURVWlNvVFNGQVlRT2J5RGVPOTgzb2ZXcE9hSVFUakcyalpILVZFamt2bzN5Zko2VUpvOG5qeFBfdk5zSkg3aWlmYk5BbnVJdEM0R1RqSmJCMDg1T0FMTEc3b0tMQ1JERjFZeFozTUJfVGduSDdDUHNyWGdySGc0VWp5cjZ4MjdfSXJTTlo3d2ttOGN3Rm1oMzRqM2pIS0llQTFOdVFRQ0RSU01KaVMwYktlQU85anFYczBhQzViQdIB6wFBVV95cUxOamJ1VmxTVnF3R0tCY3VvTF9pVTROQ1QtcHJYaTVKMjR5R3FCbGc4VkFaWGVFMm83VU5PVHZ2WTVEVVRXRFF6bDlFV2lKRnNJckw4b0RhZ2hvTkVRMEFSVDBCLUd4RUpyS3draWxSaEk5MmJIQUN1emxEaHNjYmtDM0NLUU9FUEttcXlLV0dIQlg1cHdxaWZkaWx3d0lxYUpZaEJmWVVuYlpGbU0zYW5sX2Q5Rm1NNWNjcDJQV01jS3hoU29XaktONTRUenJhaV93VDhURkxSUFhQV294d2dWRW9GcF9rQkFqQkRR?oc=5",
-      "realLink": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNUDBQRmRzN2o2ZE5wT2RtZFdydC1sVDVqNTVHME1acG9LZzZROGFyWURVWlNvVFNGQVlRT2J5RGVPOTgzb2ZXcE9hSVFUakcyalpILVZFamt2bzN5Zko2VUpvOG5qeFBfdk5zSkg3aWlmYk5BbnVJdEM0R1RqSmJCMDg1T0FMTEc3b0tMQ1JERjFZeFozTUJfVGduSDdDUHNyWGdySGc0VWp5cjZ4MjdfSXJTTlo3d2ttOGN3Rm1oMzRqM2pIS0llQTFOdVFRQ0RSU01KaVMwYktlQU85anFYczBhQzViQdIB6wFBVV95cUxOamJ1VmxTVnF3R0tCY3VvTF9pVTROQ1QtcHJYaTVKMjR5R3FCbGc4VkFaWGVFMm83VU5PVHZ2WTVEVVRXRFF6bDlFV2lKRnNJckw4b0RhZ2hvTkVRMEFSVDBCLUd4RUpyS3draWxSaEk5MmJIQUN1emxEaHNjYmtDM0NLUU9FUEttcXlLV0dIQlg1cHdxaWZkaWx3d0lxYUpZaEJmWVVuYlpGbU0zYW5sX2Q5Rm1NNWNjcDJQV01jS3hoU29XaktONTRUenJhaV93VDhURkxSUFhQV294d2dWRW9GcF9rQkFqQkRR?oc=5",
-      "summary": "Prabhas gears up for back-to-back shoots of Kalki 2 and Spirit in 2026: Report  India Today",
-      "image": "https://picsum.photos/seed/125/640/360",
-      "publishedAt": "2026-01-29T08:00:00.000Z",
-      "titleTe": "ప్రభాస్ కల్కి 2 మరియు స్పిరిట్ కోసం బిట్‌బ్యాక్ షూట్‌లకు రెడీ",
-      "summaryEn": "Prabhas is preparing to shoot Kalki 2 and Spirit back-to-back in 2026.",
-      "summaryTe": "ప్రభాస్ 2026లో కల్కి 2 మరియు స్పిరిట్ షూట్‌లను విజ్ఞానం చేసేందుకు ప్రణాళికలు చేస్తున్నాడు. ఇది ఆయన అభిమానులకు ఉత్తమమైన వార్త.",
-      "relevanceScore": 9,
-      "tags": [
-        "Prabhas",
-        "Kalki 2",
-        "Spirit"
-      ],
-      "processedAt": "2026-10-11T18:21:46.607Z"
+      "titleTe": "January Box-office: Great Start for Telugu Cinema - Telugu360",
+      "summaryEn": "January Box-office: Great Start for Telugu Cinema  Telugu360",
+      "summaryTe": "",
+      "relevanceScore": 5,
+      "tags": [],
+      "processedAt": "2026-10-13T19:56:30.250Z"
     },
     {
       "sourceId": "gn-allu-arjun",
@@ -1047,16 +868,30 @@
       "summary": "Salman Khan to join Allu Arjun’s Pushpa 3: The Rampage? Here's what new report says  WION",
       "image": "https://picsum.photos/seed/822/640/360",
       "publishedAt": "2026-01-20T08:00:00.000Z",
-      "titleTe": "సల్మాన్ ఖాన్ అల్లు అర్జున్ పుష్ఫ 3లో చేరనున్నారా?",
-      "summaryEn": "Salman Khan may join Allu Arjun in Pushpa 3, according to new reports.",
-      "summaryTe": "కొత్త నివేదికల ప్రకారం సల్మాన్ ఖాన్ అల్లు అర్జున్ పుష్ఫ 3లో చేరగలడు. ఇది అభిమానులను మరింత ఆసక్తిగా తయారు చేస్తోంది.",
-      "relevanceScore": 7,
-      "tags": [
-        "Salman Khan",
-        "Pushpa 3",
-        "Allu Arjun"
-      ],
-      "processedAt": "2026-10-11T18:21:46.607Z"
+      "titleTe": "Salman Khan to join Allu Arjun’s Pushpa 3: The Rampage? Here's what new report says - WION",
+      "summaryEn": "Salman Khan to join Allu Arjun’s Pushpa 3: The Rampage? Here's what new report says  WION",
+      "summaryTe": "",
+      "relevanceScore": 5,
+      "tags": [],
+      "processedAt": "2026-10-13T19:56:30.250Z"
+    },
+    {
+      "sourceId": "gn-tollywood-latest",
+      "sourceName": "Google News — Tollywood Latest",
+      "category": "entertainment",
+      "language": "en",
+      "title": "Will 2026 Be the Redemption Year for Tollywood? - Gulte",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdGVaQ3JJb2Z4alJHRWFsR2R1OVNqSkpfOTNpNmFFV3BHc0ZmTEszS2lOYW9Hcld1N2dNVTV3aGxtLWliYWpkNmlOZ3IxZzg4S2U4TkhYRjdaQUVRU0JPY1FuRmZSRVh0RDdvVG5pM3lzX1c2alEtb0ttYkFDZFFzVUxKcTVIWnE1cmJUeU930gGTAUFVX3lxTE9XLVpCcEVBYU41ZC0tWmlhczdoemdyaTFkNkFzY3h3ZC0yOVpNNWk2VGlXY2pncDNPZ2t0cDFYSmEtRFZhSVdHREZIdDJ0XzZiRDM1b29HTEpfTEV6cUR6T1lwaUdNbTFhRGF5NkdqZWdSc2RYZlZKRUdIMFVrVU9Zb3J4ZGJkOVdDSmZIYmhHbXhLZw?oc=5",
+      "realLink": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdGVaQ3JJb2Z4alJHRWFsR2R1OVNqSkpfOTNpNmFFV3BHc0ZmTEszS2lOYW9Hcld1N2dNVTV3aGxtLWliYWpkNmlOZ3IxZzg4S2U4TkhYRjdaQUVRU0JPY1FuRmZSRVh0RDdvVG5pM3lzX1c2alEtb0ttYkFDZFFzVUxKcTVIWnE1cmJUeU930gGTAUFVX3lxTE9XLVpCcEVBYU41ZC0tWmlhczdoemdyaTFkNkFzY3h3ZC0yOVpNNWk2VGlXY2pncDNPZ2t0cDFYSmEtRFZhSVdHREZIdDJ0XzZiRDM1b29HTEpfTEV6cUR6T1lwaUdNbTFhRGF5NkdqZWdSc2RYZlZKRUdIMFVrVU9Zb3J4ZGJkOVdDSmZIYmhHbXhLZw?oc=5",
+      "summary": "Will 2026 Be the Redemption Year for Tollywood?  Gulte",
+      "image": "https://picsum.photos/seed/127/640/360",
+      "publishedAt": "2026-01-01T08:00:00.000Z",
+      "titleTe": "Will 2026 Be the Redemption Year for Tollywood? - Gulte",
+      "summaryEn": "Will 2026 Be the Redemption Year for Tollywood?  Gulte",
+      "summaryTe": "",
+      "relevanceScore": 5,
+      "tags": [],
+      "processedAt": "2026-10-13T19:56:30.250Z"
     }
   ]
 }
